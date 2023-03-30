@@ -1,0 +1,8 @@
+{
+    contents: [
+        '/site/coral.ru/markup/mixins/main-styles.pug',
+        '/site/coral.ru/markup/kazan/intro.pug',
+        '/site/coral.ru/markup/kazan/hot.pug',
+        '/site/coral.ru/markup/mixins/main-scripts.pug'
+    ]
+}

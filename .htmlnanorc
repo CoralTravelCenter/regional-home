@@ -1,0 +1,9 @@
+{
+    minifySvg: false,
+    deduplicateAttributeValues: false,
+    removeAttributeQuotes: false,
+    collapseBooleanAttributes: false,
+    sortAttributesWithLists: false,
+    sortAttributes: false,
+    normalizeAttributeValues: false
+}

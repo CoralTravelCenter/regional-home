@@ -1,0 +1,46 @@
+mixin intro(city)
+    style
+        | header.site-header .container-logo {
+        |   background: url(#{ city.logoDecor }) center bottom no-repeat;
+        |   background-size: 100% auto;
+        | }
+        for destination, idx in city.destinations
+            | .visual:nth-child(#{ idx+1 }) {
+            |   background-image: url(#{ destination.visual.desktop });
+            | }
+            | @media screen and (max-width:768px) {
+            |   .visual:nth-child(#{ idx+1 }) {
+            |       background-image: url(#{ destination.visual.mobile });
+            |   }
+            | }
+
+    section.hero.underbrow.intro
+        .visuals-wrap
+            for destination, idx in city.destinations
+                .visual(class={ shown: idx === 0 })
+        article
+            .contenu
+                h3!= city.h3
+                h2.h1!= city.h2
+                .actions.eternal-package-search
+                    for destination, idx in city.destinations
+                        button(
+                            class={ hovered: idx === 0 },
+                            data-lookup-destination=destination.button.data_lookup_destination,
+                            data-lookup-depth-days=destination.button.data_lookup_depth_days)= destination.button.label
+
+mixin hot(city, commons)
+    script!= `var preferred_destination_order = ${ city.preferredDestinationOrder && JSON.stringify(city.preferredDestinationOrder) || JSON.stringify(commons.preferredDestinationOrder) };`
+    section.hero.hot
+        article
+            .contenu
+                .burning-hot-offers
+                    h3: span: span Горящие предложения
+                    .burning-offers
+                        .tabs-container
+                            .scroll-left &laquo;
+                            .scroll-right &raquo;
+                            ul.tabs-selector
+                        .destinations-container
+                    h3: span: span Горячие Акции
+                    .hot-promos

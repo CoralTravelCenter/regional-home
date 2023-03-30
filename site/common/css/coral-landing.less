@@ -1,0 +1,57 @@
+@import "/site/common/css/coral-fonts.less";
+@import "/site/common/css/coral-colors.less";
+@import "/site/common/css/layout.less";
+
+section.hero {
+	>article {
+		font-family: museosans;
+		font-weight: 300;
+		h1, h2, h3, h4, h5 {
+			font-weight: 700;
+		}
+		strong, b {
+			font-weight: 700;
+		}
+		a {
+			font-family: inherit;
+			font-size: inherit;
+			font-weight: inherit;
+			line-height: inherit;
+			text-decoration: underline;
+		}
+		.actions {
+			>button, >a {
+				font-family: inherit;
+				font-size: inherit!important;
+				line-height: inherit;
+				.interactive;
+				outline: none!important;
+				display: inline-flex;
+				justify-content: center;
+				align-items: center;
+				padding: 0 1.5em;
+				height: (48/20em);
+				//background: linear-gradient(45.62deg, #FB7099 0%, #F0AB13 100%);
+				background: @coral-main-yellow;
+				border-radius: .5em;
+				border: 0;
+				color: white!important;
+				cursor: pointer;
+				.transit(background);
+				&:hover {
+					background: @coral-main-yellow-accent;
+				}
+				&.with-down-arrow {
+					&:after {
+						content: '';
+						width: .75em;
+						height: .75em;
+						background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTEiIHZpZXdCb3g9IjAgMCAxOCAxMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE3IDFMOC41NjM2NCA5TDEgMSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+Cg==") center no-repeat;
+						background-size: contain;
+						margin-left: 1em;
+					}
+				}
+			}
+		}
+	}
+}

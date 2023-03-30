@@ -1,0 +1,40 @@
+{
+    locals: {
+        commons: {
+            preferredDestinationOrder: ['Турция', 'Таиланд', 'Египет', 'ОАЭ', 'Бахрейн', 'Мальдивы', 'Шри-Ланка']
+        },
+        cities: {
+            kazan: {
+                h2: 'Из Казани без пересадок',
+                h3: 'Выбирай и лети',
+                name: 'Казань',
+                url: '/kazan/',
+                logoDecor: '/site/coral.ru/assets/logo-decor-kazan.png',
+//                preferredDestinationOrder: ['Египет', 'Турция', 'Таиланд', 'ОАЭ', 'Бахрейн', 'Мальдивы', 'Шри-Ланка'],
+                destinations: [
+                    {
+                        button: {label: 'Турция', data_lookup_destination: 'Турция', data_lookup_depth_days: 14},
+                        visual: {
+                            desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+                            mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                        }
+                    },
+                    {
+                        button: {label: 'ОАЭ', data_lookup_destination: 'ОАЭ', data_lookup_depth_days: 12},
+                        visual: {
+                            desktop: '/site/coral.ru/assets/intro-uae-desktop.jpg',
+                            mobile: '/site/coral.ru/assets/intro-uae-mobile.jpg'
+                        }
+                    },
+                    {
+                        button: {label: 'Таиланд', data_lookup_destination: 'Таиланд', data_lookup_depth_days: 14},
+                        visual: {
+                            desktop: '/site/coral.ru/assets/intro-tailand-desktop.jpg',
+                            mobile: '/site/coral.ru/assets/intro-tailand-mobile.jpg'
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

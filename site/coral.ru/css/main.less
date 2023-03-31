@@ -60,6 +60,8 @@ section.intro {
 	}
 }
 
+@hot-border-radius: 8px;
+
 section.hot {
 	>article {
 		>.contenu {
@@ -70,10 +72,16 @@ section.hot {
 				grid-template-rows: auto auto;
 				grid-template-areas: "head1 head2" "content1 content2";
 				grid-gap: 1em;
+				@media screen and (max-width: @mobile-breakpoint) {
+				    display: block;
+				}
 				h3 {
 					font-size: (24/20em);
 					font-weight: 900;
 					text-transform: uppercase;
+					@media screen and (max-width: @mobile-breakpoint) {
+						margin: 1.5em 0 1em;
+					}
 					>span {
 						background: linear-gradient(58.39deg, #FC709A -5.95%, #FFCC00 102.54%);
 						-webkit-background-clip: text;
@@ -121,22 +129,22 @@ section.hot {
 							pointer-events: none;
 							.transit(opacity);
 							cursor: pointer;
-							backdrop-filter: blur(2px);
+							//backdrop-filter: blur(2px);
 						}
 						>.scroll-left {
 							left: 0;
 							padding: 0 1.5em 0 0.5em;
 							color: white;
-							border-radius: 1em 0 0 0;
-							background: linear-gradient(to right, fade(@coral-main-yellow, 80%) 70%, fade(@coral-main-yellow, 0) 100%);
+							border-radius: @hot-border-radius 0 0 0;
+							background: linear-gradient(to right, @coral-main-yellow 70%, fade(@coral-main-yellow, 0) 100%);
 							//background: linear-gradient(58.39deg, #FC709A -5.95%, #FFCC00 102.54%);
 						}
 						>.scroll-right {
 							right: 0;
 							padding: 0 0.5em 0 1.5em;
 							color: white;
-							border-radius: 0 1em 0 0;
-							background: linear-gradient(to left, fade(@coral-main-yellow, 80%) 70%, fade(@coral-main-yellow, 0) 100%);
+							border-radius: 0 @hot-border-radius 0 0;
+							background: linear-gradient(to left, @coral-main-yellow 70%, fade(@coral-main-yellow, 0) 100%);
 						}
 					}
 					ul.tabs-selector {
@@ -153,7 +161,7 @@ section.hot {
 						margin: 0;
 						font-size: 16/14em;
 						background-color: #e6e7e8;
-						border-radius: 1em 1em 0 0;
+						border-radius: @hot-border-radius @hot-border-radius 0 0;
 						list-style: none;
 						>li {
 							position: relative;
@@ -162,7 +170,7 @@ section.hot {
 							white-space: nowrap;
 							padding: .7em 1em;
 							text-align: center;
-							border-radius: 1em 1em 0 0;
+							border-radius: @hot-border-radius @hot-border-radius 0 0;
 							cursor: pointer;
 							.transit(background);
 							.transit(color);
@@ -192,36 +200,75 @@ section.hot {
 					}
 					.destinations-container {
 						font-size: (14/20em);
-						background-color: white;
+						//background-color: white;
 						border-radius: 0 0 1.5em 1.5em;
 						.destination-slider {
 							display: flex;
+							flex-wrap: wrap;
+							justify-content: center;
+							align-items: center;
 							.transit(opacity);
 							.transit(filter);
+							//&:not(.shown) {
+							//	display: none;
+							//}
 							&.disabled {
 								pointer-events: none;
 								opacity: .3;
 								filter: blur(2px);
 							}
-
 							&.flickity-enabled {
-								display: block;
+								display: flex;
 							}
-
 							.flickity-viewport {
+								order: 1;
+								width: 100%;
 								overflow: hidden;
+								background-color: white;
+								border-radius: 0 0 @hot-border-radius @hot-border-radius;
 							}
-
-							.flickity-page-dots {
-								padding: 1.5em;
-
-								.dot {
-									width: 16/14em;
-									height: 16/14em;
-									cursor: pointer;
+							.flickity-prev-next-button {
+								.interactive();
+								.flex-center();
+								border: 0;
+								background: transparent;
+								width: 2em;
+								height: 2em;
+								padding: 0.3em;
+								cursor: pointer;
+								.transit(opacity);
+								&[disabled] {
+									opacity: 0;
+								}
+								&.previous {
+									order: 2;
+								}
+								&.next {
+									order: 4;
 								}
 							}
-
+							.flickity-page-dots {
+								order: 3;
+								display: flex;
+								justify-content: center;
+								padding: 1.5em 0;
+								list-style: none;
+								margin: 0;
+								.dot {
+									flex-shrink: 0;
+									width: (16/14em);
+									height: (16/14em);
+									cursor: pointer;
+									margin: 0 0.5em;
+									background-color: #D9D9D9;
+									border-radius: 50%;
+									.transit(background);
+									&.is-selected {
+										pointer-events: none;
+										background-color: #888888;
+									}
+								}
+							}
 							.best-deal-card {
 								flex: 0 0 auto;
 								width: (100% / 3);
@@ -341,7 +388,6 @@ section.hot {
 
 				.hot-promos {
 					grid-area: content2;
-					border: 1px solid #000;
 					padding: 2em;
 					background-color: #def;
 				}

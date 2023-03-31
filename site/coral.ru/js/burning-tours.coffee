@@ -72,7 +72,7 @@ export selectDestinationTab = (tab_el, $flickityReady) ->
                     wrapAround: no
                     groupCells: yes
                     contain: yes
-                    prevNextButtons: no
+                    prevNextButtons: yes
                     pageDots: yes
                 $('.flickity-enabled').flickity 'resize'
 

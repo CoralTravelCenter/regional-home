@@ -14,8 +14,8 @@ export $get = (url) ->
 
 export $post = (url, param) ->
     if window.location.hostname == 'localhost'
-        if local_cache_post_by_optionId[param.data.optionId]
-            return $.get(local_cache_post_by_optionId[param.data.optionId])
-        else throw "NO LOCAL CACHE MAPPING FOR #{ param.data.optionId }; request wil certainly fail"
+        if local_cache_post_by_optionId[param.optionId]
+            return $.get(local_cache_post_by_optionId[param.optionId])
+        else throw "NO LOCAL CACHE MAPPING FOR #{ param.optionId }; request wil certainly fail"
     else
         return $.post url, param

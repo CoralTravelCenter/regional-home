@@ -44,3 +44,8 @@ mixin hot(city, commons)
                         .destinations-container
                     h3: span: span Горячие Акции
                     .hot-promos
+                        - var hot_promos = city.hotPromos || commons.hotPromos
+                        .hot-slider(class={ 'single-slide': hot_promos.length === 1 })
+                            for promo in hot_promos
+                                .hot-slide
+                                    img(src=promo.visual)

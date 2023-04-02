@@ -1,7 +1,17 @@
 {
     locals: {
         commons: {
-            preferredDestinationOrder: ['Турция', 'Таиланд', 'Египет', 'ОАЭ', 'Бахрейн', 'Мальдивы', 'Шри-Ланка']
+            preferredDestinationOrder: ['Турция', 'Таиланд', 'Египет', 'ОАЭ', 'Бахрейн', 'Мальдивы', 'Шри-Ланка'],
+            hotPromos: [
+                {
+                    visual: '/site/coral.ru/assets/hot-promos/redwings-egyptair-in-december.jpg',
+                    href: 'https://www.coral.ru/'
+                },
+                {
+                    visual: '/site/coral.ru/assets/hot-promos/redwings-egyptair-in-december.jpg',
+                    href: 'https://www.coral.ru/'
+                }
+            ]
         },
         cities: {
             kazan: {

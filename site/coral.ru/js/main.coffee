@@ -69,3 +69,19 @@ ASAP ->
         $(document).on 'click', '.burning-offers [data-destination-name]', ->
             selectDestinationTab this, $flickityReady
             $('.flickity-enabled').flickity 'resize'
+
+    $.when($flickityReady).done ->
+        $('.hot-slider').flickity
+            cellSelector: '.hot-slide'
+            cellAlign: 'center'
+            wrapAround: yes
+            prevNextButtons: yes
+            pageDots: yes
+
+    $(document).on 'wheel', '.flickity-enabled', _.debounce (e) ->
+        e.stopPropagation()
+        if e.originalEvent.deltaX > 0
+            $(this).flickity('next')
+        else if e.originalEvent.deltaX < 0
+            $(this).flickity('previous')
+    , 40, leading: yes, trailing: no

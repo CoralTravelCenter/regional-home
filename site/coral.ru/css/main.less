@@ -397,9 +397,11 @@ section.hot {
 							border-radius: @hot-border-radius;
 						}
 						.hot-slide {
-							width: 620/16em;
-							height: 420/620 * 16em;
+							width: (620/16em);
+							height: (420/16em);
+							position: relative;
 							>img {
+								.abs100x100();
 								object-fit: cover;
 							}
 						}

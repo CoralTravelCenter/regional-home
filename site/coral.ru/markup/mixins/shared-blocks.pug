@@ -41,7 +41,9 @@ mixin hot(city, commons)
                             .scroll-left &laquo;
                             .scroll-right &raquo;
                             ul.tabs-selector
+                                // ...
                         .destinations-container
+                            // ...
                     h3: span: span Горячие Акции
                     .hot-promos
                         - var hot_promos = city.hotPromos || commons.hotPromos
@@ -49,4 +51,31 @@ mixin hot(city, commons)
                             for promo in hot_promos
                                 .hot-slide
                                     img(src=promo.visual)
-                                    a(href=promo.href, target='_blank')
+                                    a(href=promo.href, target='_blank') &zwj;
+
+mixin available-destinations(city, commons)
+    section.hero.available-destinations
+        article
+            .contenu
+                .available-flight-widget(data-preferred-destination='Индия')
+                    .head
+                        .head-item: span.labeled.takeoff Выберите город вылета
+                        .head-item: span.labeled.destination Выберите страну
+                        .head-item.dbl
+                            span.labeled.landing Аэропорт прилета
+                            span.labeled.closest-date Ближайший вылет
+                    .body
+                        .data-column.depart-from: .scrollable
+                            // ...
+                        .data-column.destination-to: .scrollable
+                            // ...
+                        .data-column.dbl.destination-airport-closest-date: .scrollable
+                            // ...
+                    .foot
+                        .pad
+                            .selection-info-comp
+                                span.label Вы&nbsp;выбрали:
+                                .selection-info
+                                    // ...
+                            button(data-action='select-tour' disabled='') Выбрать тур
+

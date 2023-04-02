@@ -417,6 +417,216 @@ section.hot {
 	}
 }
 
+@pad-base: 1em;
+section.available-destinations {
+	>article {
+		>.contenu {
+			.available-flight-widget {
+				.bbox;
+				width: 100%;
+				max-width: @wide-breakpoint;
+				margin: 5% auto;
+				//.fluid-fontsize(1.15vw);
+				font-weight: 300;
+				//@media screen and (max-width: 1439px) {
+				//	max-width: 1130px;
+				//}
+				@media screen and (max-width: @mobile-breakpoint) {
+					font-size: 3vw;
+					margin: 10% auto;
+				}
+				.head {
+					position: relative;
+					display: flex;
+					background-color: white;
+					border-radius: @pad-base;
+					filter: drop-shadow(0 0 1em rgba(0,0,0,.15));
+					@media screen and (max-width: @mobile-breakpoint) {
+						display: none;
+					}
+				}
+				.head-item {
+					flex: 0 0 25%;
+					padding-left: @pad-base;
+					margin: @pad-base 0;
+					display: flex;
+					@media screen and (max-width: @mobile-breakpoint) {
+						position: relative;
+						z-index: 1;
+						background-color: white;
+						margin: 0;
+						padding: @pad-base;
+						border-radius: @pad-base;
+						filter: drop-shadow(0 0 0.5em rgba(0,0,0,.15));
+					}
+					&.dbl {
+						flex-basis: 50%;
+					}
+					&:nth-child(n+2) {
+						border-left: 1px solid #eee;
+					}
+					.labeled {
+						flex: 1 1 10%;
+						display: flex;
+						align-items: center;
+						&:before {
+							flex-shrink: 0;
+							content: '';
+							width: 2em;
+							height: 2em;
+							background: center no-repeat;
+							background-size: contain;
+							margin-right: @pad-base;
+						}
+						&.takeoff:before {
+							background-image: url(data-url:/site/coral.ru/inline-assets/icon-takeoff.svg);
+						}
+						&.destination:before {
+							background-image: url(data-url:/site/coral.ru/inline-assets/icon-destination.svg);
+						}
+						&.landing:before {
+							background-image: url(data-url:/site/coral.ru/inline-assets/icon-landing.svg);
+						}
+						&.closest-date:before {
+							background-image: url(data-url:/site/coral.ru/inline-assets/icon-closest-date.svg);
+						}
+					}
+				}
+				.body {
+					display: flex;
+					background-color: white;
+					padding-top: @pad-base;
+					margin-top: -@pad-base;
+					@media screen and (max-width: @mobile-breakpoint) {
+						display: block;
+						padding-bottom: @pad-base;
+					}
+					.data-column {
+						flex: 0 0 25%;
+						padding: 0 @pad-base;
+						margin: @pad-base 0;
+						&.dbl {
+							flex-basis: 50%;
+						}
+						&:nth-child(n+2) {
+							border-left: 1px solid #eee;
+						}
+						.scrollable {
+							position: relative;
+							overflow: hidden;
+							max-height: 6em;
+							@media screen and (max-width: @mobile-breakpoint) {
+								max-height: 9em;
+							}
+							&.ps--active-y {
+								padding-right: @pad-base;
+							}
+						}
+						.item {
+							line-height: 1;
+							padding: @pad-base / 2;
+							border-radius: .25em;
+							.transit(background-color);
+							cursor: pointer;
+							@media screen and (max-width: @mobile-breakpoint) {
+								padding: @pad-base;
+							}
+							&.dbl {
+								display: flex;
+								>* {
+									flex: 1 1 10%;
+								}
+							}
+							&.selected {
+								pointer-events: none;
+								background-color: #EAF3FB;
+							}
+						}
+					}
+				}
+				.foot {
+					background-color: white;
+					padding: 0 @pad-base @pad-base;
+					border-radius: 0 0 @pad-base @pad-base;
+					font-weight: bold;
+					@media screen and (max-width: @mobile-breakpoint) {
+						border-radius: @pad-base;
+						margin-top: -@pad-base;
+						filter: drop-shadow(0 0 0.5em rgba(0,0,0,.15));
+					}
+					.pad {
+						width: 100%;
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						padding-top: @pad-base;
+						border-top: 1px solid #dedede;
+						@media screen and (max-width: @mobile-breakpoint) {
+							flex-direction: column;
+							align-items: center;
+							border: 0;
+						}
+						.selection-info-comp {
+							display: flex;
+							align-items: baseline;
+							@media screen and (max-width: @mobile-breakpoint) {
+								flex-direction: column;
+								align-items: center;
+								margin: 1em auto;
+							}
+							.label {
+								margin-right: 1em;
+							}
+							.selection-info {
+								display: flex;
+								align-items: center;
+								@media screen and (max-width: @mobile-breakpoint) {
+									margin-top: @pad-base;
+								}
+								>* {
+									display: inline-flex;
+									align-items: center;
+									@media screen and (max-width: @mobile-breakpoint) {
+										line-height: 1.2;
+									}
+									&:nth-child(n+2) {
+										&:before {
+											content: '>';
+											margin: 0 @pad-base/2;
+											font-size: 1.5em;
+											font-weight: normal;
+										}
+									}
+								}
+							}
+						}
+						[data-action='select-tour'] {
+							.interactive;
+							outline: none;
+							.flex-center;
+							line-height: 1;
+							height: 2.6em;
+							padding: 0 2em;
+							border-radius: @pad-base / 2;
+							color: white;
+							background-color: #F0AB00;
+							border: 0;
+							cursor: pointer;
+							.transit(opacity);
+							.transit(background);
+							&[disabled] {
+								pointer-events: none;
+								background-color: #999;
+								opacity: .5;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 .flickity-enabled {
 	outline: none;
 }

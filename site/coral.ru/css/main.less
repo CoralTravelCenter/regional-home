@@ -397,11 +397,13 @@ section.hot {
 							border-radius: @hot-border-radius;
 						}
 						.hot-slide {
+							.proportional(620/420);
 							width: (620/16em);
-							height: (420/16em);
 							position: relative;
+							@media screen and (max-width: @mobile-breakpoint) {
+								width: 100%;
+							}
 							>img {
-								.abs100x100();
 								object-fit: cover;
 							}
 						}

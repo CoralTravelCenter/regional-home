@@ -57,7 +57,7 @@ mixin available-destinations(city, commons)
     section.hero.available-destinations
         article
             .contenu
-                .available-flight-widget(data-preferred-destination='Индия')
+                .available-flight-widget(data-preferred-destination=(city.preferredDestination || commons.preferredDestination))
                     .head
                         .head-item: span.labeled.takeoff Выберите город вылета
                         .head-item: span.labeled.destination Выберите страну

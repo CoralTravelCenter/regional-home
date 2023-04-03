@@ -7,7 +7,7 @@ isPreferredDestinationAvailable = (list, prefer) ->
 
 export updateSelectionWithOrigin = (origin_name) ->
     $origin_item = $ $('.data-column.depart-from .item').toArray().find (item) -> $(item).text() == origin_name
-    selectOriginItem $origin_item
+    selectOriginItem $origin_item, 'dont-fallback'
 
 selectOriginItem = ($item, dont_fallback_to_moscow) ->
     $item = $($item)
@@ -19,7 +19,7 @@ selectOriginItem = ($item, dont_fallback_to_moscow) ->
                 $item.addClass('selected')
             else
                 $item.addClass('selected')
-                $item.closest('.scrollable').scrollTo $item, 500, offset: -30, complete: -> $item.addClass('selected')
+            $item.closest('.scrollable').scrollTo $item, 500, offset: -30, complete: -> $item.addClass('selected')
             rebuildDestinationsListWithData response
         else
             if dont_fallback_to_moscow
@@ -31,7 +31,7 @@ selectOriginItem = ($item, dont_fallback_to_moscow) ->
                 ,0
     updateSelectionInfo()
 
-selectDestinationItem = ($item, dont_scroll) ->
+export selectDestinationItem = ($item, dont_scroll) ->
     rebuildAirportsListWithData []
     $item = $($item)
     $item.siblings().removeClass 'selected'
@@ -42,12 +42,12 @@ selectDestinationItem = ($item, dont_scroll) ->
     req_params =
         fromAreaId: $('.data-column.depart-from .item.selected').attr('data-departureid')
         toCountryId: $item.attr('data-id')
-    ajaxGet 'https://www.coral.ru/v1/flight/availabledate', req_params
+    ajaxGet '/v1/flight/availabledate', req_params
     .then (response) ->
         rebuildAirportsListWithData response.Result
     updateSelectionInfo()
 
-selectAirportListItem = ($item, dont_scroll) ->
+export selectAirportListItem = ($item, dont_scroll) ->
     $item = $($item)
     $item.siblings().removeClass 'selected'
     if dont_scroll

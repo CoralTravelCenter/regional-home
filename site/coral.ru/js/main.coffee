@@ -1,6 +1,6 @@
 import { fixLayout, autoplayVimeo, ASAP, preload, responsiveHandler, observeElementProp } from '/site/common/js/utils.coffee'
 import { $fetchAndBuildBestDeals, selectDestinationTab } from './burning-tours.coffee'
-import { updateSelectionWithOrigin } from './available-destinations.coffee'
+import { updateSelectionWithOrigin, selectDestinationItem, selectAirportListItem } from './available-destinations.coffee'
 import { getActiveDeparture } from './local-proxy.coffee'
 
 Number::formatPrice = () ->
@@ -122,7 +122,7 @@ ASAP ->
     $.when($libsReady, $scrolltoReady).done ->
         $('.scrollable', $available_flight_widget).each (idx, el) ->
             el.perfectscrollbar = new PerfectScrollbar(el, { minScrollbarLength: 20, wheelPropagation: false })
-        updateSelectionWithOrigin getActiveDeparture()?.name
+        updateSelectionWithOrigin getActiveDeparture().name
 
         $(document).on 'click', '.data-column.depart-from .item', (e) ->
             selectOriginItem this, 'dont_fallback'

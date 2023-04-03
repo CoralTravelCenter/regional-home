@@ -76,7 +76,7 @@ export selectDestinationTab = (tab_el, $flickityReady) ->
                     pageDots: yes
                 $('.flickity-enabled').flickity 'resize'
 
-export $fetchAndBuildAvailableDestinations = (destination_preferred_order=[]) ->
+export $fetchAndBuildBestDeals = (destination_preferred_order=[]) ->
     $promise = $.Deferred()
 #    $.get('/').done (home_html) ->
     $get('/').done (home_html) ->

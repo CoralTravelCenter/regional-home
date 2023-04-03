@@ -65,6 +65,19 @@ export responsiveHandler = (media_query, match_handler, unmatch_handler) ->
     if layout.matches then match_handler() else unmatch_handler()
     layout
 
+export observeElementProp = (el, prop, callback) ->
+    proto = Object.getPrototypeOf(el)
+    if proto.hasOwnProperty(prop)
+        descr = Object.getOwnPropertyDescriptor proto, prop
+        Object.defineProperty el, prop,
+            get: () -> descr.get.apply this, arguments
+            set: (v) ->
+                oldv = this[prop]
+                descr.set.apply this, arguments
+                newv = v
+                setTimeout(callback.bind(this, newv, oldv), 0) if newv != oldv
+
+
 export autoplayVimeo = (lookup_selector = '.vimeo-video-box [data-vimeo-vid]', vid_attr = 'data-vimeo-vid', observer_options = {}) ->
     vboxes = document.querySelectorAll(lookup_selector)
     if vboxes.length

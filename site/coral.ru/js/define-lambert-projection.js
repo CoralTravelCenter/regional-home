@@ -1,4 +1,4 @@
-export function defineLambertProjection(ymaps) {
+export function defineLambertProjection() {
 
     ymaps.modules.define('projection.LambertConformalConic', [
         'util.defineClass',
@@ -91,5 +91,12 @@ export function defineLambertProjection(ymaps) {
         provide(LambertConformalConic);
     });
 
+    return new Promise((resolve, reject) => {
+        ymaps.modules.require('projection.LambertConformalConic', function (module) {
+            resolve(module);
+        }, function (ex) {
+            reject(ex);
+        });
+    });
 
-};
+}

@@ -30,8 +30,10 @@ export class LambertYmap
     ymapsInit: () ->
         console.log '*** ymapsInit'
 
-        defineLambertProjection(ymaps)
-        LAMBERT_PROJECTION = new ymaps.projection.LambertConformalConic();
+        zzz = await defineLambertProjection()
+#        debugger
+#        LAMBERT_PROJECTION = new ymaps.projection.LambertConformalConic();
+        LAMBERT_PROJECTION = new zzz();
 
         @ymap = new ymaps.Map @$ymap.get(0),
             center:   [60, 100],
@@ -43,20 +45,39 @@ export class LambertYmap
             projection: LAMBERT_PROJECTION
         @ymap.controls.get('zoomControl').options.set size: 'small'
 
+        # Добавляем фон.
+        pane = new ymaps.pane.StaticPane @ymap,
+            css: width: '100%', height: '100%', backgroundColor: '#485668'
+            zIndex: 100
+        @ymap.panes.append 'greyBackground', pane
 
-        @$scrollZoomHint = $('.scrollzoom-hint')
-        @scrollZoomTimeout = 0
-        @scrollZoomUsed = false
-        @ymap.events.add 'wheel', (e) =>
-            if @zoom_modifier_down
-                @$scrollZoomHint.removeClass 'shown'
-                @scrollZoomUsed = true
-            else
-                e.preventDefault()
-                unless @scrollZoomUsed
-                    @$scrollZoomHint.addClass 'shown'
-                    clearTimeout @scrollZoomTimeout
-                    @scrollZoomTimeout = setTimeout () =>
-                        @$scrollZoomHint.removeClass 'shown'
-                    , 1000
+        # Загружаем и добавляем регионы России на карту.
+        ymaps.borders.load 'RU', lang: 'ru'
+        .then (result) =>
+            debugger
+            regions = new ymaps.GeoObjectCollection null,
+                fillColor:   '#051c3a',
+                strokeColor: '#9299a2',
+                hasHint:     false,
+                cursor:      'default'
+            for feature in result.features
+                regions.add new ymaps.GeoObject feature;
+            @ymap.geoObjects.add regions
+
+
+#        @$scrollZoomHint = $('.scrollzoom-hint')
+#        @scrollZoomTimeout = 0
+#        @scrollZoomUsed = false
+#        @ymap.events.add 'wheel', (e) =>
+#            if @zoom_modifier_down
+#                @$scrollZoomHint.removeClass 'shown'
+#                @scrollZoomUsed = true
+#            else
+#                e.preventDefault()
+#                unless @scrollZoomUsed
+#                    @$scrollZoomHint.addClass 'shown'
+#                    clearTimeout @scrollZoomTimeout
+#                    @scrollZoomTimeout = setTimeout () =>
+#                        @$scrollZoomHint.removeClass 'shown'
+#                    , 1000
 

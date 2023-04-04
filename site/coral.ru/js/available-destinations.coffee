@@ -19,7 +19,6 @@ selectOriginItem = ($item, dont_fallback_to_moscow) ->
                 $item.addClass('selected')
             else
                 $item.addClass('selected')
-            $item.closest('.scrollable').scrollTo $item, 500, offset: -30, complete: -> $item.addClass('selected')
             rebuildDestinationsListWithData response
         else
             if dont_fallback_to_moscow
@@ -29,6 +28,7 @@ selectOriginItem = ($item, dont_fallback_to_moscow) ->
                 setTimeout ->
                     selectOriginItem $('.data-column.depart-from .item[data-departureid="2671"]')
                 ,0
+        $item.closest('.scrollable').scrollTo $item, 500, offset: -30, complete: -> $item.addClass('selected')
     updateSelectionInfo()
 
 export selectDestinationItem = ($item, dont_scroll) ->

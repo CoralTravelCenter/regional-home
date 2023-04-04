@@ -57,6 +57,8 @@ mixin available-destinations(city, commons)
     section.hero.available-destinations
         article
             .contenu
+                h2 Куда можно поехать отдохнуть прямо сейчас
+                p Посмотрите все доступные направления для вылета из&nbsp;вашего&nbsp;города
                 .available-flight-widget(data-preferred-destination=(city.preferredDestination || commons.preferredDestination))
                     .head
                         .head-item: span.labeled.takeoff Выберите город вылета
@@ -79,3 +81,9 @@ mixin available-destinations(city, commons)
                                     // ...
                             button(data-action='select-tour' disabled='') Выбрать тур
 
+                .closest-origin-widget
+                    h4.disclose Если в&nbsp;вашем городе нет подходящих направлений, рекомендуем рассмотреть ближайшие&nbsp;города
+                    .interactive-map
+                        .loading-msg Загрузка карты...
+                        .ymap
+                            // ...

@@ -2,6 +2,7 @@ import { fixLayout, autoplayVimeo, ASAP, preload, responsiveHandler, observeElem
 import { $fetchAndBuildBestDeals, selectDestinationTab } from './burning-tours.coffee'
 import { updateSelectionWithOrigin, selectDestinationItem, selectAirportListItem } from './available-destinations.coffee'
 import { getActiveDeparture } from './local-proxy.coffee'
+import { LambertYmap } from "./LambertYmap.coffee"
 
 Number::formatPrice = () ->
     s = String(Math.round(this))
@@ -185,3 +186,17 @@ ASAP ->
                         else
                             alert 'Нет вариантов размещения'
                             window.global.travelloader.hide()
+
+    # map handling
+    lambert_map = null
+    $('.closest-origin-widget .disclose').on 'click', (e) ->
+        $this = $(this)
+        $this.toggleClass 'open'
+        $map_wrap = $('.interactive-map')
+        if $this.hasClass 'open'
+            unless lambert_map
+                lambert_map = new LambertYmap el: $('.ymap').get(0)
+                lambert_map.init()
+            $map_wrap.slideDown()
+        else
+            $map_wrap.slideUp()

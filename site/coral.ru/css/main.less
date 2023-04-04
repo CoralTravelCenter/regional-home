@@ -623,6 +623,43 @@ section.available-destinations {
 					}
 				}
 			}
+
+			.closest-origin-widget {
+				width: 100%;
+				box-shadow: 0 0 32px rgba(0, 0, 0, 0.15);
+				border-radius: 1em;
+				background: white;
+				.disclose {
+					font-size: 1em;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					padding: 1.5em 1.5em 1.5em 1em;
+					cursor: pointer;
+					&:after {
+						flex-shrink: 0;
+						content: '';
+						width: 1.2em;
+						height: .6em;
+						background: url("data-url:/site/coral.ru/inline-assets/arrow-down.svg") center / cover no-repeat;
+						@media screen and (max-width: @mobile-breakpoint) {
+							width: 2em;
+							height: 1em;
+						}
+					}
+				}
+				.interactive-map {
+					display: none;
+					.proportional(3/1);
+					.loading-msg {
+						.flex-center();
+					}
+					.ymap {
+
+					}
+				}
+			}
+
 		}
 	}
 }

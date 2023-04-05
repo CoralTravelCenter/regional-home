@@ -10,7 +10,16 @@ Number::formatPrice = () ->
     s = String(Math.round(this))
     s.split('').reverse().join('').replace(/\d{3}/g, "$& ").split('').reverse().join('').replace(/^\s+/, '')
 
-
+Array::distanceFrom = (from) ->
+    f1 = this[0] * Math.PI / 180
+    f2 = from[0] * Math.PI / 180
+    df = (from[0] - this[0]) * Math.PI / 180
+    dl = (from[1] - this[1]) * Math.PI / 180
+    a = Math.sin(df / 2) * Math.sin(df / 2) + Math.cos(f1) * Math.cos(f2) * Math.sin(dl / 2) * Math.sin(dl / 2)
+    c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
+    d = 6371 * c
+    
+    
 fixLayout()
 autoplayVimeo()
 
@@ -199,5 +208,13 @@ ASAP ->
                 lambert_map = new LambertYmap el: $('.ymap').get(0)
                 lambert_map.init()
             $map_wrap.slideDown()
+            await lambert_map.bordersLoaded
+            home_city = _.find reference.cities, eeID: Number(getActiveDeparture().value)
+            reference.cities.sort (a, b) ->
+                a.distanceFromHome = da = a.latlng.distanceFrom(home_city.latlng)
+                b.distanceFromHome = db = b.latlng.distanceFrom(home_city.latlng)
+                if da < db then -1 else if da > db then 1 else 0
+            console.log reference.cities
+            lambert_map.setHomeCity home_city
         else
             $map_wrap.slideUp()

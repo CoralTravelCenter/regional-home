@@ -8,8 +8,14 @@ export class LambertYmap
             el: '#ymap'
             ymaps_api: '//api-maps.yandex.ru/2.1.64/?apikey=49de5080-fb39-46f1-924b-dee5ddbad2f1&lang=ru-RU'
             appState: null
+            worldFill: '#EAF3FB'
+            genericFill: '#B6D7E3'
+            genericStroke: '#FFFFFF'
+            homeRegionFill: '#1EBDFF'
+#            homeRegionFill: '#0093D0'
             options...
         }
+        @bordersLoaded = new Promise (resolve) => @bordersLoadedResolve = resolve
     init: () ->
         @$ymap = $ @options.el
         ymaps_api_callback = "ymaps_loaded_#{ Math.round(Math.random() * 1000000) }"
@@ -20,7 +26,7 @@ export class LambertYmap
             cache: true
         .done () =>
             console.log "*** ymaps_api loaded"
-        # what for wheel zoom modifier key (Alt)
+        # wait for wheel zoom modifier key (Alt)
         $(document).on 'keyup keydown', (e) =>
             if [18].indexOf(e.which) >= 0
                 @zoom_modifier_down = e.type == 'keydown'
@@ -30,38 +36,35 @@ export class LambertYmap
     ymapsInit: () ->
         console.log '*** ymapsInit'
 
-        zzz = await defineLambertProjection()
-#        debugger
-#        LAMBERT_PROJECTION = new ymaps.projection.LambertConformalConic();
-        LAMBERT_PROJECTION = new zzz();
+        LAMBERT_PROJECTION = await defineLambertProjection()
 
-        @ymap = new ymaps.Map @$ymap.get(0),
+        window.ymap = @ymap = new ymaps.Map @$ymap.get(0),
             center:   [60, 100],
             zoom:     2,
             type:     null,
             controls: ['zoomControl']
         ,
             minZoom: 1,
-            projection: LAMBERT_PROJECTION
+            projection: new LAMBERT_PROJECTION()
         @ymap.controls.get('zoomControl').options.set size: 'small'
 
-        # Добавляем фон.
         pane = new ymaps.pane.StaticPane @ymap,
-            css: width: '100%', height: '100%', backgroundColor: '#EAF3FB'
+            css: width: '100%', height: '100%', backgroundColor: @options.worldFill
             zIndex: 100
         @ymap.panes.append 'coralPageBackground', pane
 
-        # Загружаем и добавляем регионы России на карту.
-        ymaps.borders.load 'RU', lang: 'ru'
+        ymaps.borders.load 'RU', lang: 'ru', quality: 1
         .then (result) =>
-            regions = new ymaps.GeoObjectCollection null,
-                fillColor:   '#B6D7E3',
-                strokeColor: '#FFFFFF',
+            console.log result
+            @regions = new ymaps.GeoObjectCollection null,
+                fillColor:   @options.genericFill,
+                strokeColor: @options.genericStroke,
                 hasHint:     false,
                 cursor:      'default'
             for feature in result.features
-                regions.add new ymaps.GeoObject feature;
-            @ymap.geoObjects.add regions
+                @regions.add new ymaps.GeoObject feature
+            @ymap.geoObjects.add @regions
+            @bordersLoadedResolve yes
 #            @ymap.setBounds @ymap.geoObjects.getBounds(), duration: 1000
 
 
@@ -80,4 +83,13 @@ export class LambertYmap
 #                    @scrollZoomTimeout = setTimeout () =>
 #                        @$scrollZoomHint.removeClass 'shown'
 #                    , 1000
+
+    findRegionByCity: (city) ->
+        @regions.toArray().find (region) -> region.geometry.contains city.latlng
+
+    setHomeCity: (city) ->
+        city_placemark = new ymaps.Placemark city.latlng
+        @ymap.geoObjects.add city_placemark
+        home_region = @findRegionByCity city
+        home_region.options.set 'fillColor', @options.homeRegionFill
 

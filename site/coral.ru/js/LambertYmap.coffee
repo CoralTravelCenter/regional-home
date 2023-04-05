@@ -37,7 +37,7 @@ export class LambertYmap
 
         @ymap = new ymaps.Map @$ymap.get(0),
             center:   [60, 100],
-            zoom:     1,
+            zoom:     2,
             type:     null,
             controls: ['zoomControl']
         ,
@@ -47,22 +47,22 @@ export class LambertYmap
 
         # Добавляем фон.
         pane = new ymaps.pane.StaticPane @ymap,
-            css: width: '100%', height: '100%', backgroundColor: '#485668'
+            css: width: '100%', height: '100%', backgroundColor: '#EAF3FB'
             zIndex: 100
-        @ymap.panes.append 'greyBackground', pane
+        @ymap.panes.append 'coralPageBackground', pane
 
         # Загружаем и добавляем регионы России на карту.
         ymaps.borders.load 'RU', lang: 'ru'
         .then (result) =>
-            debugger
             regions = new ymaps.GeoObjectCollection null,
-                fillColor:   '#051c3a',
-                strokeColor: '#9299a2',
+                fillColor:   '#B6D7E3',
+                strokeColor: '#FFFFFF',
                 hasHint:     false,
                 cursor:      'default'
             for feature in result.features
                 regions.add new ymaps.GeoObject feature;
             @ymap.geoObjects.add regions
+#            @ymap.setBounds @ymap.geoObjects.getBounds(), duration: 1000
 
 
 #        @$scrollZoomHint = $('.scrollzoom-hint')

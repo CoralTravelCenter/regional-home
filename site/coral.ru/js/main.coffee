@@ -4,6 +4,8 @@ import { updateSelectionWithOrigin, selectDestinationItem, selectAirportListItem
 import { getActiveDeparture } from './local-proxy.coffee'
 import { LambertYmap } from "./LambertYmap.coffee"
 
+import reference from '../data/reference.yaml'
+
 Number::formatPrice = () ->
     s = String(Math.round(this))
     s.split('').reverse().join('').replace(/\d{3}/g, "$& ").split('').reverse().join('').replace(/^\s+/, '')
@@ -105,9 +107,8 @@ ASAP ->
             $('.data-column .scrollable').each (idx, el) ->
                 el.perfectscrollbar?.update()
 
-    nodes_array = $('.geolocation-list li').map (idx, li) ->
-        $li = $(li)
-        $('<div class="item"></div>').text($li.text()).attr('data-departureid': $li.attr('data-departureid')).get(0)
+    nodes_array = reference.cities.map (city) ->
+        $('<div class="item"></div>').text(city.name).attr('data-departureid': city.eeID).get(0)
     $('.data-column.depart-from .scrollable').empty().append nodes_array
 
     libs = [

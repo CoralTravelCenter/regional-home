@@ -7,7 +7,7 @@ cities:
       latlng: [53.36, 83.76]
     - name: Владивосток
       eeID: 2984
-      latlng: [3.11, 131.87]
+      latlng: [43.11, 131.87]
     - name: Волгоград
       eeID: 2989
       latlng: [48.72, 44.5]

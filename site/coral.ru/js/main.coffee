@@ -1,6 +1,6 @@
 import { fixLayout, autoplayVimeo, ASAP, preload, responsiveHandler, observeElementProp } from '/site/common/js/utils.coffee'
 import { $fetchAndBuildBestDeals, selectDestinationTab } from './burning-tours.coffee'
-import { updateSelectionWithOrigin, selectDestinationItem, selectAirportListItem } from './available-destinations.coffee'
+import { updateSelectionWithOrigin, selectDestinationItem, selectAirportListItem, pagePreferredDestination } from './available-destinations.coffee'
 import { getActiveDeparture } from './local-proxy.coffee'
 import { LambertYmap } from "./LambertYmap.coffee"
 import { AppState } from './app-state.js'
@@ -31,7 +31,8 @@ doHover = () ->
     $('.intro .visual').eq(idx).addClass('shown').siblings().removeClass('shown')
 
 ASAP ->
-    appState = new AppState()
+    window.appState = appState = new AppState
+        preferredDestination: pagePreferredDestination()
 
     do ->
         do_auto_play = yes
@@ -218,3 +219,10 @@ ASAP ->
             appState.set 'homeCity', _.find reference.cities, eeID: Number(getActiveDeparture().value)
         else
             $map_wrap.slideUp()
+    # watch for destination change in search field
+    mo = new MutationObserver (mutation_list, observer) ->
+        for mutation in mutation_list
+            if mutation.type == 'attributes'
+                country_id = Number mutation.target.getAttribute 'countryid'
+                appState.set 'preferredDestination', country_id if country_id
+    mo.observe $('.packageSearch__destinationInput').get(0), attributeFilter: ['countryid']

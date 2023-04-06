@@ -1,5 +1,5 @@
 import { defineLambertProjection } from './define-lambert-projection.js'
-import { fetchAvailableDestinationsFromID } from './available-destinations.coffee'
+import { $fetchAvailableDestinationsFromID } from './available-destinations.coffee'
 
 export class LambertYmap
     constructor: (options) ->
@@ -9,6 +9,7 @@ export class LambertYmap
             el: '#ymap'
             ymaps_api: '//api-maps.yandex.ru/2.1.64/?apikey=49de5080-fb39-46f1-924b-dee5ddbad2f1&lang=ru-RU'
             appState: null
+            acceptableDistance: 1000
             worldFill: '#EAF3FB'
             genericFill: '#B6D7E3'
             genericStroke: '#FFFFFF'
@@ -87,29 +88,53 @@ export class LambertYmap
     appStateChanged: (e, ...changes_list) ->
         if changes_list.includes 'homeCity'
             await @bordersLoaded
-            home_city = @appState.get 'homeCity'
-            @cities.sort (a, b) ->
-                a.distanceFromHome = da = a.latlng.distanceFrom(home_city.latlng)
-                b.distanceFromHome = db = b.latlng.distanceFrom(home_city.latlng)
-                if da < db then -1 else if da > db then 1 else 0
-            console.log @cities
-            @setHomeCity home_city
+            await @setHomeCity @appState.get 'homeCity'
+            @setPreferredDestination @appState.get 'preferredDestination'
         if changes_list.includes 'preferredDestination'
-            1
+            @setPreferredDestination @appState.get 'preferredDestination'
 
     findRegionByCity: (city) ->
         @regions.toArray().find (region) -> region.geometry.contains city.latlng
 
+    getHomeCity: () -> _.find @cities, 'isHomecity'
+
     setHomeCity: (city) ->
-        if city.placemark
-            city.placemark.remove()
-            delete city.placemark
-            delete city.isHomecity
-        city.placemark = new ymaps.Placemark city.latlng
-        @ymap.geoObjects.add city.placemark
-        home_region = @findRegionByCity city
-        home_region.options.set 'fillColor', @options.homeRegionFill
-        city.isHomecity = yes
-        fetchAvailableDestinationsFromID city.eeID
-            .then (destinations_response) -> city.availableDestinations = destinations_response
+        homecity = @getHomeCity()
+        if homecity and city != homecity
+            homecity.placemark.remove()
+            homecity.region.options.set 'fillColor', @options.genericFill
+            delete homecity.isHomecity
+        if city != homecity
+            return new Promise (resolve) =>
+                city.placemark = new ymaps.Placemark city.latlng unless city.placemark
+                @ymap.geoObjects.add city.placemark
+                city.region ||= @findRegionByCity city
+                city.region.options.set 'fillColor', @options.homeRegionFill
+                city.isHomecity = yes
+                @cities.sort (a, b) ->
+                    a.distanceFromHome = da = a.latlng.distanceFrom(city.latlng)
+                    b.distanceFromHome = db = b.latlng.distanceFrom(city.latlng)
+                    if da < db then -1 else if da > db then 1 else 0
+                if city.availableDestinations
+                    resolve yes
+                else
+                    $fetchAvailableDestinationsFromID city.eeID
+                        .then (destinations_response) ->
+                            city.availableDestinations = destinations_response
+                            resolve yes
+        yes
+
+    setPreferredDestination: (destination_name_or_id) ->
+        home_city = @getHomeCity()
+        console.log "+++ setPreferredDestination: %o", destination_name_or_id
+        preferred_destination_available = home_city.availableDestinations.find (d) -> d.Name == destination_name_or_id or d.Id == destination_name_or_id
+        cities2check = @cities.filter (city, idx) => idx != 0 and city.distanceFromHome < @options.acceptableDistance or city.eeID == 2671
+        cities_with_preferred_destination = cities2check.filter (city) =>
+            ad = city.availableDestinations or await new Promise (resolve) ->
+                $fetchAvailableDestinationsFromID(city.eeID).then (r) ->
+                    city.availableDestinations = r
+                    resolve r
+            console.log ad
+            ad.find (d) -> d.Name == destination_name_or_id or d.Id == destination_name_or_id
+        console.log "+++ cities_with_preferred_destination: %o", cities_with_preferred_destination
 

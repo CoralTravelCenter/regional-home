@@ -1,9 +1,10 @@
-#import { AppState } from './app-state.js'
-
 import { defineLambertProjection } from './define-lambert-projection.js'
+import { fetchAvailableDestinationsFromID } from './available-destinations.coffee'
 
 export class LambertYmap
     constructor: (options) ->
+        @appState = options.appState
+        @cities = options.cities
         @options = {
             el: '#ymap'
             ymaps_api: '//api-maps.yandex.ru/2.1.64/?apikey=49de5080-fb39-46f1-924b-dee5ddbad2f1&lang=ru-RU'
@@ -17,6 +18,8 @@ export class LambertYmap
         }
         @bordersLoaded = new Promise (resolve) => @bordersLoadedResolve = resolve
     init: () ->
+        $(@appState).on 'changed', (...params) => @appStateChanged(...params)
+
         @$ymap = $ @options.el
         ymaps_api_callback = "ymaps_loaded_#{ Math.round(Math.random() * 1000000) }"
         window[ymaps_api_callback] = () => @ymapsInit()
@@ -27,26 +30,23 @@ export class LambertYmap
         .done () =>
             console.log "*** ymaps_api loaded"
         # wait for wheel zoom modifier key (Alt)
-        $(document).on 'keyup keydown', (e) =>
-            if [18].indexOf(e.which) >= 0
-                @zoom_modifier_down = e.type == 'keydown'
-        @options.appState && $(@options.appState).on 'changed', => @selectionChanged()
+#        $(document).on 'keyup keydown', (e) =>
+#            if [18].indexOf(e.which) >= 0
+#                @zoom_modifier_down = e.type == 'keydown'
         @
 
     ymapsInit: () ->
         console.log '*** ymapsInit'
-
         LAMBERT_PROJECTION = await defineLambertProjection()
-
         window.ymap = @ymap = new ymaps.Map @$ymap.get(0),
-            center:   [60, 100],
+            center:   [65, 90],
             zoom:     2,
             type:     null,
             controls: ['zoomControl']
         ,
             minZoom: 1,
             projection: new LAMBERT_PROJECTION()
-        @ymap.controls.get('zoomControl').options.set size: 'small'
+#        @ymap.controls.get('zoomControl').options.set size: 'small'
 
         pane = new ymaps.pane.StaticPane @ymap,
             css: width: '100%', height: '100%', backgroundColor: @options.worldFill
@@ -84,12 +84,32 @@ export class LambertYmap
 #                        @$scrollZoomHint.removeClass 'shown'
 #                    , 1000
 
+    appStateChanged: (e, ...changes_list) ->
+        if changes_list.includes 'homeCity'
+            await @bordersLoaded
+            home_city = @appState.get 'homeCity'
+            @cities.sort (a, b) ->
+                a.distanceFromHome = da = a.latlng.distanceFrom(home_city.latlng)
+                b.distanceFromHome = db = b.latlng.distanceFrom(home_city.latlng)
+                if da < db then -1 else if da > db then 1 else 0
+            console.log @cities
+            @setHomeCity home_city
+        if changes_list.includes 'preferredDestination'
+            1
+
     findRegionByCity: (city) ->
         @regions.toArray().find (region) -> region.geometry.contains city.latlng
 
     setHomeCity: (city) ->
-        city_placemark = new ymaps.Placemark city.latlng
-        @ymap.geoObjects.add city_placemark
+        if city.placemark
+            city.placemark.remove()
+            delete city.placemark
+            delete city.isHomecity
+        city.placemark = new ymaps.Placemark city.latlng
+        @ymap.geoObjects.add city.placemark
         home_region = @findRegionByCity city
         home_region.options.set 'fillColor', @options.homeRegionFill
+        city.isHomecity = yes
+        fetchAvailableDestinationsFromID city.eeID
+            .then (destinations_response) -> city.availableDestinations = destinations_response
 

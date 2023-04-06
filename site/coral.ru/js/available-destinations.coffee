@@ -9,10 +9,13 @@ export updateSelectionWithOrigin = (origin_name) ->
     $origin_item = $ $('.data-column.depart-from .item').toArray().find (item) -> $(item).text() == origin_name
     selectOriginItem $origin_item, 'dont-fallback'
 
+export fetchAvailableDestinationsFromID = (area_id) ->
+    ajaxGet('/v1/geography/tocountryfilter', areaid: area_id)
+
 selectOriginItem = ($item, dont_fallback_to_moscow) ->
     $item = $($item)
     $item.siblings().removeClass 'selected'
-    ajaxGet('/v1/geography/tocountryfilter', areaid: $item.attr('data-departureid'))
+    fetchAvailableDestinationsFromID $item.attr('data-departureid')
     .then (response) ->
         if isPreferredDestinationAvailable response
             if dont_fallback_to_moscow

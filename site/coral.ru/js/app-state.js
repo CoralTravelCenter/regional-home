@@ -42,14 +42,18 @@ export class AppState {
 
     set(property_path_or_object, value) {
         let hasBeenChanged = false;
+        let changes_list = []
         if (typeof property_path_or_object === 'string') {
             hasBeenChanged = this.setPropertyPath(property_path_or_object, value);
+            hasBeenChanged && changes_list.push(property_path_or_object);
         } else {
             for (let prop_path in property_path_or_object) {
-                hasBeenChanged = this.setPropertyPath(prop_path, property_path_or_object[prop_path]) || hasBeenChanged;
+                let justChanged = this.setPropertyPath(prop_path, property_path_or_object[prop_path]);
+                justChanged && changes_list.push(prop_path);
+                hasBeenChanged = justChanged || hasBeenChanged;
             }
         }
-        hasBeenChanged && $(this).trigger('changed');
+        hasBeenChanged && $(this).trigger('changed', changes_list);
         return hasBeenChanged;
     }
 

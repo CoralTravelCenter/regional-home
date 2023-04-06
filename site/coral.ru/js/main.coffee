@@ -3,6 +3,7 @@ import { $fetchAndBuildBestDeals, selectDestinationTab } from './burning-tours.c
 import { updateSelectionWithOrigin, selectDestinationItem, selectAirportListItem } from './available-destinations.coffee'
 import { getActiveDeparture } from './local-proxy.coffee'
 import { LambertYmap } from "./LambertYmap.coffee"
+import { AppState } from './app-state.js'
 
 import reference from '../data/reference.yaml'
 
@@ -30,6 +31,8 @@ doHover = () ->
     $('.intro .visual').eq(idx).addClass('shown').siblings().removeClass('shown')
 
 ASAP ->
+    appState = new AppState()
+
     do ->
         do_auto_play = yes
         $navs = $('.intro .eternal-package-search > *')
@@ -133,6 +136,7 @@ ASAP ->
     $.when($libsReady, $scrolltoReady).done ->
         $('.scrollable', $available_flight_widget).each (idx, el) ->
             el.perfectscrollbar = new PerfectScrollbar(el, { minScrollbarLength: 20, wheelPropagation: false })
+
         updateSelectionWithOrigin getActiveDeparture().name
 
         $(document).on 'click', '.data-column.depart-from .item', (e) ->
@@ -205,16 +209,12 @@ ASAP ->
         $map_wrap = $('.interactive-map')
         if $this.hasClass 'open'
             unless lambert_map
-                lambert_map = new LambertYmap el: $('.ymap').get(0)
+                lambert_map = new LambertYmap
+                    appState: appState
+                    cities: reference.cities
+                    el: $('.ymap').get(0)
                 lambert_map.init()
             $map_wrap.slideDown()
-            await lambert_map.bordersLoaded
-            home_city = _.find reference.cities, eeID: Number(getActiveDeparture().value)
-            reference.cities.sort (a, b) ->
-                a.distanceFromHome = da = a.latlng.distanceFrom(home_city.latlng)
-                b.distanceFromHome = db = b.latlng.distanceFrom(home_city.latlng)
-                if da < db then -1 else if da > db then 1 else 0
-            console.log reference.cities
-            lambert_map.setHomeCity home_city
+            appState.set 'homeCity', _.find reference.cities, eeID: Number(getActiveDeparture().value)
         else
             $map_wrap.slideUp()

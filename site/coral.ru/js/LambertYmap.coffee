@@ -1,6 +1,9 @@
 import { defineLambertProjection } from './define-lambert-projection.js'
 import { $fetchAvailableDestinationsFromID } from './available-destinations.coffee'
 
+import placemark_home from 'data-url:/site/coral.ru/inline-assets/placemark-home.svg'
+import placemark_available from 'data-url:/site/coral.ru/inline-assets/placemark-available.svg'
+
 export class LambertYmap
     constructor: (options) ->
         @appState = options.appState
@@ -15,6 +18,7 @@ export class LambertYmap
             genericStroke: '#FFFFFF'
             homeRegionFill: '#1EBDFF'
 #            homeRegionFill: '#0093D0'
+            availableDestinationFill: '#F0AB0099'
             options...
         }
         @bordersLoaded = new Promise (resolve) => @bordersLoadedResolve = resolve
@@ -39,6 +43,7 @@ export class LambertYmap
     ymapsInit: () ->
         console.log '*** ymapsInit'
         LAMBERT_PROJECTION = await defineLambertProjection()
+        @PlacemarkLayout = ymaps.templateLayoutFactory.createClass "<div class='city-placemark-label'>$[properties.iconContent]</div>"
         window.ymap = @ymap = new ymaps.Map @$ymap.get(0),
             center:   [65, 90],
             zoom:     2,
@@ -101,16 +106,10 @@ export class LambertYmap
     setHomeCity: (city) ->
         homecity = @getHomeCity()
         if homecity and city != homecity
-            homecity.placemark.remove()
-            homecity.region.options.set 'fillColor', @options.genericFill
-            delete homecity.isHomecity
+            @setStateForCity city, 'generic'
         if city != homecity
             return new Promise (resolve) =>
-                city.placemark = new ymaps.Placemark city.latlng unless city.placemark
-                @ymap.geoObjects.add city.placemark
-                city.region ||= @findRegionByCity city
-                city.region.options.set 'fillColor', @options.homeRegionFill
-                city.isHomecity = yes
+                @setStateForCity city, 'homecity'
                 @cities.sort (a, b) ->
                     a.distanceFromHome = da = a.latlng.distanceFrom(city.latlng)
                     b.distanceFromHome = db = b.latlng.distanceFrom(city.latlng)
@@ -124,17 +123,56 @@ export class LambertYmap
                             resolve yes
         yes
 
+    makeCityPlacemark: (city, imageHref) ->
+        new ymaps.Placemark city.latlng,
+            city: city
+            iconContent: city.correctName ? city.name
+        ,
+            iconLayout: 'default#imageWithContent'
+#            iconImageHref: imageHref
+            iconImageSize: [33, 43]
+            iconImageOffset: [-16, -43]
+            iconContentOffset: [0, 2]
+            iconContentLayout: @PlacemarkLayout
+
+    setStateForCity: (city, state='generic') ->
+        city.region ||= @findRegionByCity city
+        switch state
+            when 'homecity'
+                city.placemark ||= @makeCityPlacemark city
+                city.placemark.options.set 'iconImageHref', placemark_home
+                @ymap.geoObjects.add city.placemark
+                regionFill = @options.homeRegionFill
+                city.isHomecity = yes
+            when 'available'
+                city.placemark ||= @makeCityPlacemark city
+                city.placemark.options.set 'iconImageHref', placemark_available
+                @ymap.geoObjects.add city.placemark
+                unless city.region.options.get('fillColor') == @options.homeRegionFill
+                    regionFill = @options.availableDestinationFill
+                city.isPreferredDestinationAvailable = yes
+            else
+                delete city.isHomecity
+                delete city.isPreferredDestinationAvailable
+                regionFill = @options.genericFill
+                city.placemark?.remove()
+        city.region.options.set 'fillColor', regionFill if regionFill
+
     setPreferredDestination: (destination_name_or_id) ->
         home_city = @getHomeCity()
         console.log "+++ setPreferredDestination: %o", destination_name_or_id
-        preferred_destination_available = home_city.availableDestinations.find (d) -> d.Name == destination_name_or_id or d.Id == destination_name_or_id
+        preferred_destination_available_in_homecity = home_city.availableDestinations.find (d) -> d.Name == destination_name_or_id or d.Id == destination_name_or_id
         cities2check = @cities.filter (city, idx) => idx != 0 and city.distanceFromHome < @options.acceptableDistance or city.eeID == 2671
-        cities_with_preferred_destination = cities2check.filter (city) =>
-            ad = city.availableDestinations or await new Promise (resolve) ->
-                $fetchAvailableDestinationsFromID(city.eeID).then (r) ->
-                    city.availableDestinations = r
-                    resolve r
-            console.log ad
-            ad.find (d) -> d.Name == destination_name_or_id or d.Id == destination_name_or_id
-        console.log "+++ cities_with_preferred_destination: %o", cities_with_preferred_destination
+        await Promise.all cities2check.map (city) ->
+            if city.availableDestinations
+                return Promise.resolve()
+            else
+                return new Promise (resolve) ->
+                    $fetchAvailableDestinationsFromID(city.eeID).then (ad) -> city.availableDestinations = ad; resolve()
+        cities_with_preferred_destination_available = cities2check.filter (city) ->
+            city.availableDestinations.find (d) -> d.Name == destination_name_or_id or d.Id == destination_name_or_id
+
+        @setStateForCity city, 'available' for city in cities_with_preferred_destination_available
+
+
 

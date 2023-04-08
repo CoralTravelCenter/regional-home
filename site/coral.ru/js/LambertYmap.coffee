@@ -43,15 +43,17 @@ export class LambertYmap
     ymapsInit: () ->
         console.log '*** ymapsInit'
         LAMBERT_PROJECTION = await defineLambertProjection()
+        @projection = new LAMBERT_PROJECTION()
         @PlacemarkLayout = ymaps.templateLayoutFactory.createClass "<div class='city-placemark-label'>$[properties.iconContent]</div>"
         window.ymap = @ymap = new ymaps.Map @$ymap.get(0),
-            center:   [65, 90],
-            zoom:     2,
-            type:     null,
+            center:   [65, 90]
+            zoom:     2
+            type:     null
             controls: ['zoomControl']
         ,
-            minZoom: 1,
-            projection: new LAMBERT_PROJECTION()
+            minZoom: 1
+            maxZoom: 12
+            projection: @projection
 #        @ymap.controls.get('zoomControl').options.set size: 'small'
 
         pane = new ymaps.pane.StaticPane @ymap,
@@ -71,7 +73,7 @@ export class LambertYmap
                 @regions.add new ymaps.GeoObject feature
             @ymap.geoObjects.add @regions
             @bordersLoadedResolve yes
-#            @ymap.setBounds @ymap.geoObjects.getBounds(), duration: 1000
+            # @ymap.setBounds @ymap.geoObjects.getBounds(), duration: 1000
 
 
 #        @$scrollZoomHint = $('.scrollzoom-hint')
@@ -158,6 +160,16 @@ export class LambertYmap
                 city.placemark?.remove()
         city.region.options.set 'fillColor', regionFill if regionFill
 
+    getBoundsOfCitiesList: (cities_list) ->
+        coords_list = cities_list.map (city) -> city.placemark.geometry.getCoordinates()
+        coords_list.reduce (bnd, coords) ->
+            bnd[0][0] = Math.min bnd[0][0], coords[0]
+            bnd[0][1] = Math.min bnd[0][1], coords[1]
+            bnd[1][0] = Math.max bnd[1][0], coords[0]
+            bnd[1][1] = Math.max bnd[1][1], coords[1]
+            bnd
+        , [[Infinity,Infinity],[-Infinity,-Infinity]]
+
     setPreferredDestination: (destination_name_or_id) ->
         home_city = @getHomeCity()
         console.log "+++ setPreferredDestination: %o", destination_name_or_id
@@ -171,8 +183,16 @@ export class LambertYmap
                     $fetchAvailableDestinationsFromID(city.eeID).then (ad) -> city.availableDestinations = ad; resolve()
         cities_with_preferred_destination_available = cities2check.filter (city) ->
             city.availableDestinations.find (d) -> d.Name == destination_name_or_id or d.Id == destination_name_or_id
-
         @setStateForCity city, 'available' for city in cities_with_preferred_destination_available
+
+        clist = cities_with_preferred_destination_available.concat home_city
+        coords = clist.map (c) -> c.placemark.geometry.getCoordinates()
+        bounds = ymaps.util.bounds.fromPoints coords #, @projection
+        console.log bounds
+
+        @ymap.setBounds bounds, duration: 1000, zoomMargin: 30, checkZoomRange: yes
+
+
 
 
 

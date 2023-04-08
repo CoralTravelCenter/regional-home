@@ -31,6 +31,9 @@ export function defineLambertProjection() {
             this._degToRad = function (point) {
                 return point * Math.PI / 180;
             };
+            this._radToDeg = function (rad) {
+                return rad / (Math.PI / 180);
+            };
 
             // Широта и долгота точки, которая служит началом координат в декартовой системе проекции.
             this._fi0 = this._degToRad(0);
@@ -73,10 +76,26 @@ export function defineLambertProjection() {
             // Если вам нужно переводить глобальные пиксельные координаты в широту и долготу, необходимо реализовать
             // метод fromGlobalPixels. Это может понадобиться, например, если вы захотите воспользоваться линейкой.
             fromGlobalPixels: function (point, zoom) {
-                if (ymaps.meta.debug) {
-                    console.log('projection.LambertConformalConic#fromGlobalPixels не имплементировано');
-                }
-                return [0, 0];
+                // if (ymaps.meta.debug) {
+                //     console.log('projection.LambertConformalConic#fromGlobalPixels не имплементировано');
+                // }
+                // return [0, 0];
+                var x = point[0], y = point[1];
+                x /= 128 * Math.pow(2, zoom);
+                y /= 128 * Math.pow(2, zoom);
+
+                var n = (Math.log(Math.cos(this._fi1) / Math.cos(this._fi2))) / (Math.log(Math.tan(0.25 * Math.PI + 0.5 * this._fi2) / Math.tan(0.25 * Math.PI + 0.5 * this._fi1)));
+                var F = (Math.cos(this._fi1) * Math.pow(Math.tan(0.25 * Math.PI + 0.5 * this._fi1), n)) / (n);
+                var p0 = F * Math.pow(1 / Math.tan(0.25 * Math.PI + 0.5 * this._fi0), n);
+
+                var p = Math.sign(n) * Math.sqrt(x * x + (p0 - y) * (p0 - y));
+                var th = Math.atan(x / (p0 - y));
+
+                var fi = 2 * Math.atan(Math.pow(F / p, 1 / n)) - (Math.PI / 2);
+                var l = this._l0 + th / n;
+
+                return [this._radToDeg(fi), this._radToDeg(l)];
+
             },
 
             isCycled: function () {

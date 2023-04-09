@@ -49,6 +49,7 @@ export class LambertYmap
             center:   [65, 90]
             zoom:     2
             type:     null
+            margin: [70, 30, 10, 70]
             controls: ['zoomControl']
         ,
             minZoom: 2
@@ -147,6 +148,7 @@ export class LambertYmap
                 city.placemark.options.set 'iconImageHref', placemark_home
                 @ymap.geoObjects.add city.placemark
                 regionFill = @options.homeRegionFill
+                zIndex = 100
                 city.isHomecity = yes
             when 'available'
                 city.placemark ||= @makeCityPlacemark city
@@ -167,6 +169,7 @@ export class LambertYmap
                     regionFill = @options.genericFill
                 city.placemark?.getParent().remove(city.placemark)
         city.region.options.set 'fillColor', regionFill if regionFill
+        city.region.options.set 'zIndex', zIndex
 
     getBoundsOfCitiesList: (cities_list) ->
         coords_list = cities_list.map (city) -> city.placemark.geometry.getCoordinates()
@@ -199,7 +202,7 @@ export class LambertYmap
         bounds = ymaps.util.bounds.fromPoints coords #, @projection
         console.log bounds
 
-        @ymap.setBounds bounds, duration: 1000, useMapMargin: yes, zoomMargin: [60, 30, 30, 30] #, checkZoomRange: yes
+        @ymap.setBounds bounds, duration: 1000, zoomMargin: [70, 30, 10, 70] #, checkZoomRange: yes
 
 
 

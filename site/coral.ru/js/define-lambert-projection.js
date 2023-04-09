@@ -37,7 +37,7 @@ export function defineLambertProjection() {
 
             // Широта и долгота точки, которая служит началом координат в декартовой системе проекции.
             this._fi0 = this._degToRad(0);
-            this._l0 = this._degToRad(-2);
+            this._l0 = this._degToRad(-10);
 
             // Стандартные параллели.
             this._fi1 = this._degToRad(70);

@@ -94,7 +94,7 @@ export function defineLambertProjection() {
                 var fi = 2 * Math.atan(Math.pow(F / p, 1 / n)) - (Math.PI / 2);
                 var l = this._l0 + th / n;
 
-                return [this._radToDeg(fi), this._radToDeg(l)];
+                return latLongOrder ? [this._radToDeg(fi), this._radToDeg(l)] : [this._radToDeg(l), this._radToDeg(fi)];
 
             },
 

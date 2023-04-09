@@ -51,8 +51,8 @@ export class LambertYmap
             type:     null
             controls: ['zoomControl']
         ,
-            minZoom: 1
-            maxZoom: 12
+            minZoom: 2
+            maxZoom: 6
             projection: @projection
 #        @ymap.controls.get('zoomControl').options.set size: 'small'
 
@@ -105,6 +105,8 @@ export class LambertYmap
 
     getHomeCity: () -> _.find @cities, 'isHomecity'
 
+    getAvailableCities: () -> _.filter @cities, 'isPreferredDestinationAvailable'
+
     setHomeCity: (city) ->
         homecity = @getHomeCity()
         if homecity and city != homecity
@@ -137,7 +139,7 @@ export class LambertYmap
             iconContentOffset: [0, 2]
             iconContentLayout: @PlacemarkLayout
 
-    setStateForCity: (city, state='generic') ->
+    setStateForCity: (city, state) ->
         city.region ||= @findRegionByCity city
         switch state
             when 'homecity'
@@ -153,11 +155,17 @@ export class LambertYmap
                 unless city.region.options.get('fillColor') == @options.homeRegionFill
                     regionFill = @options.availableDestinationFill
                 city.isPreferredDestinationAvailable = yes
-            else
+            when 'generic'
                 delete city.isHomecity
                 delete city.isPreferredDestinationAvailable
                 regionFill = @options.genericFill
-                city.placemark?.remove()
+                city.placemark?.getParent().remove(city.placemark)
+            else
+                delete city.isHomecity
+                delete city.isPreferredDestinationAvailable
+                unless city.region.options.get('fillColor') == @options.homeRegionFill
+                    regionFill = @options.genericFill
+                city.placemark?.getParent().remove(city.placemark)
         city.region.options.set 'fillColor', regionFill if regionFill
 
     getBoundsOfCitiesList: (cities_list) ->
@@ -171,8 +179,9 @@ export class LambertYmap
         , [[Infinity,Infinity],[-Infinity,-Infinity]]
 
     setPreferredDestination: (destination_name_or_id) ->
-        home_city = @getHomeCity()
         console.log "+++ setPreferredDestination: %o", destination_name_or_id
+        home_city = @getHomeCity()
+        @setStateForCity city for city in @getAvailableCities()
         preferred_destination_available_in_homecity = home_city.availableDestinations.find (d) -> d.Name == destination_name_or_id or d.Id == destination_name_or_id
         cities2check = @cities.filter (city, idx) => idx != 0 and city.distanceFromHome < @options.acceptableDistance or city.eeID == 2671
         await Promise.all cities2check.map (city) ->
@@ -190,7 +199,7 @@ export class LambertYmap
         bounds = ymaps.util.bounds.fromPoints coords #, @projection
         console.log bounds
 
-        @ymap.setBounds bounds, duration: 1000, zoomMargin: 30, checkZoomRange: yes
+        @ymap.setBounds bounds, duration: 1000, useMapMargin: yes, zoomMargin: [60, 30, 30, 30] #, checkZoomRange: yes
 
 
 

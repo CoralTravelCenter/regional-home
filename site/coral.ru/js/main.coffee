@@ -210,7 +210,7 @@ ASAP ->
         $map_wrap = $('.interactive-map')
         if $this.hasClass 'open'
             unless lambert_map
-                lambert_map = new LambertYmap
+                window.lambert_map = lambert_map = new LambertYmap
                     appState: appState
                     cities: reference.cities
                     el: $('.ymap').get(0)
@@ -226,3 +226,4 @@ ASAP ->
                 country_id = Number mutation.target.getAttribute 'countryid'
                 appState.set 'preferredDestination', country_id if country_id
     mo.observe $('.packageSearch__destinationInput').get(0), attributeFilter: ['countryid']
+

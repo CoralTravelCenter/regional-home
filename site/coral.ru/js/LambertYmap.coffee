@@ -44,12 +44,12 @@ export class LambertYmap
         console.log '*** ymapsInit'
         LAMBERT_PROJECTION = await defineLambertProjection()
         @projection = new LAMBERT_PROJECTION()
-        @PlacemarkLayout = ymaps.templateLayoutFactory.createClass "<div class='city-placemark-label'>$[properties.iconContent]</div>"
+        @PlacemarkLayout = ymaps.templateLayoutFactory.createClass "<div class='city-placemark-label'>$[properties.iconContent]<span class='distance-from-home'>$[properties.distance2show]</span></div>"
         window.ymap = @ymap = new ymaps.Map @$ymap.get(0),
             center:   [65, 90]
             zoom:     2
             type:     null
-            margin: [70, 30, 10, 70]
+#            margin: [70, 30, 10, 70]
             controls: ['zoomControl']
         ,
             minZoom: 2
@@ -57,10 +57,14 @@ export class LambertYmap
             projection: @projection
 #        @ymap.controls.get('zoomControl').options.set size: 'small'
 
-        pane = new ymaps.pane.StaticPane @ymap,
+        @backdropPane = new ymaps.pane.StaticPane @ymap,
             css: width: '100%', height: '100%', backgroundColor: @options.worldFill
             zIndex: 100
-        @ymap.panes.append 'coralPageBackground', pane
+        @ymap.panes.append 'backdropPane', @backdropPane
+        @routesPane = new ymaps.pane.MovablePane @ymap,
+            css: width: '100%', height: '100%'
+            zIndex: 300
+        @ymap.panes.append 'routesPane', @routesPane
 
         ymaps.borders.load 'RU', lang: 'ru', quality: 1
         .then (result) =>
@@ -131,7 +135,7 @@ export class LambertYmap
     makeCityPlacemark: (city, imageHref) ->
         new ymaps.Placemark city.latlng,
             city: city
-            iconContent: city.correctName ? city.name
+            iconContent: (city.correctName ? city.name)
         ,
             iconLayout: 'default#imageWithContent'
 #            iconImageHref: imageHref
@@ -146,6 +150,7 @@ export class LambertYmap
             when 'homecity'
                 city.placemark ||= @makeCityPlacemark city
                 city.placemark.options.set 'iconImageHref', placemark_home
+                city.placemark.properties.set 'distance2show', undefined
                 @ymap.geoObjects.add city.placemark
                 regionFill = @options.homeRegionFill
                 zIndex = 100
@@ -153,6 +158,7 @@ export class LambertYmap
             when 'available'
                 city.placemark ||= @makeCityPlacemark city
                 city.placemark.options.set 'iconImageHref', placemark_available
+                city.placemark.properties.set 'distance2show', " (#{ Math.round(city.distanceFromHome) } км)"
                 @ymap.geoObjects.add city.placemark
                 unless city.region.options.get('fillColor') == @options.homeRegionFill
                     regionFill = @options.availableDestinationFill
@@ -161,6 +167,7 @@ export class LambertYmap
                 delete city.isHomecity
                 delete city.isPreferredDestinationAvailable
                 regionFill = @options.genericFill
+                city.placemark.properties.set 'distance2show', undefined
                 city.placemark?.getParent().remove(city.placemark)
             else
                 delete city.isHomecity
@@ -170,6 +177,25 @@ export class LambertYmap
                 city.placemark?.getParent().remove(city.placemark)
         city.region.options.set 'fillColor', regionFill if regionFill
         city.region.options.set 'zIndex', zIndex
+
+    drawRoutes: () ->
+        routes_el = @routesPane.getElement()
+#        routes_viewport = @routesPane.getViewport()
+        unless @draw
+            @draw = SVG().attr(id: 'routes-svg')
+            @draw.addTo routes_el
+            @ymap.events.add 'boundschange', (e) => @drawRoutes()
+            @ymap.events.add 'actionend', (e) => @drawRoutes()
+            # @routesPane.events.add 'clientpixelschange', (e) => @drawRoutes()
+        [[tl_x, tl_y], [br_x, br_y]] = @ymap.getGlobalPixelBounds()
+        @draw.viewbox tl_x, tl_y, br_x - tl_x, br_y - tl_y
+        from_p = @getHomeCity().placemark.geometry.getPixelGeometry().getCoordinates()
+        @draw.find('*').remove()
+        for city in @getAvailableCities()
+            to_p = city.placemark.geometry.getPixelGeometry().getCoordinates()
+            @draw.path("M #{from_p[0] } #{ from_p[1] } L #{ to_p[0] } #{ to_p[1] }").stroke width: 1.5, color: 'black'
+
+
 
     getBoundsOfCitiesList: (cities_list) ->
         coords_list = cities_list.map (city) -> city.placemark.geometry.getCoordinates()
@@ -199,10 +225,11 @@ export class LambertYmap
 
         clist = cities_with_preferred_destination_available.concat home_city
         coords = clist.map (c) -> c.placemark.geometry.getCoordinates()
-        bounds = ymaps.util.bounds.fromPoints coords #, @projection
+        bounds = ymaps.util.bounds.fromPoints coords, @projection
         console.log bounds
 
-        @ymap.setBounds bounds, duration: 1000, zoomMargin: [70, 30, 10, 70] #, checkZoomRange: yes
+        @ymap.setBounds bounds, duration: 500, checkZoomRange: yes
+        setTimeout (=> @drawRoutes()), 501
 
 
 

@@ -1,6 +1,6 @@
 import { fixLayout, autoplayVimeo, ASAP, preload, responsiveHandler, observeElementProp } from '/site/common/js/utils.coffee'
 import { $fetchAndBuildBestDeals, selectDestinationTab } from './burning-tours.coffee'
-import { updateSelectionWithOrigin, selectDestinationItem, selectAirportListItem, pagePreferredDestination } from './available-destinations.coffee'
+import { updateSelectionWithOrigin, selectDestinationItem, selectAirportListItem, pagePreferredDestination, selectOriginItem } from './available-destinations.coffee'
 import { getActiveDeparture } from './local-proxy.coffee'
 import { LambertYmap } from "./LambertYmap.coffee"
 import { AppState } from './app-state.js'

@@ -42,6 +42,8 @@ export function defineLambertProjection() {
             // Стандартные параллели.
             this._fi1 = this._degToRad(70);
             this._fi2 = this._degToRad(40);
+            // this._fi1 = this._degToRad(80);
+            // this._fi2 = this._degToRad(20);
         }
 
         defineClass(LambertConformalConic, {
@@ -80,7 +82,7 @@ export function defineLambertProjection() {
                 //     console.log('projection.LambertConformalConic#fromGlobalPixels не имплементировано');
                 // }
                 // return [0, 0];
-                var x = point[0], y = point[1];
+                var y = point[0], x = point[1];
                 x /= 128 * Math.pow(2, zoom);
                 y /= 128 * Math.pow(2, zoom);
 

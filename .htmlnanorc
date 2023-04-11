@@ -5,5 +5,6 @@
     collapseBooleanAttributes: false,
     sortAttributesWithLists: false,
     sortAttributes: false,
-    normalizeAttributeValues: false
+    normalizeAttributeValues: false,
+    removeComments: false
 }

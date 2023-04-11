@@ -67,18 +67,14 @@ mixin available-destinations(city, commons)
                             span.labeled.landing Аэропорт прилета
                             span.labeled.closest-date Ближайший вылет
                     .body
-                        .data-column.depart-from: .scrollable
-                            // ...
-                        .data-column.destination-to: .scrollable
-                            // ...
-                        .data-column.dbl.destination-airport-closest-date: .scrollable
-                            // ...
+                        .data-column.depart-from: .scrollable &zwj;
+                        .data-column.destination-to: .scrollable &zwj;
+                        .data-column.dbl.destination-airport-closest-date: .scrollable &zwj;
                     .foot
                         .pad
                             .selection-info-comp
                                 span.label Вы&nbsp;выбрали:
-                                .selection-info
-                                    // ...
+                                .selection-info &zwj;
                             button(data-action='select-tour' disabled='') Выбрать тур
 
                 .closest-origin-widget
@@ -87,4 +83,13 @@ mixin available-destinations(city, commons)
                         .loading-msg Загрузка карты...
                         .ymap
                             // ...
-                #svg
+
+mixin why-us(city, commons)
+    section.hero.why-us
+        article
+            .contenu
+                h2 Почему выбирают нас
+                ul
+                    li
+                        .icon
+                        .label

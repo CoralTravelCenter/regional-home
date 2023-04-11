@@ -17,7 +17,7 @@ export pagePreferredDestination = () ->
     selected_in_search_field = Number $('.packageSearch__destinationInput').attr 'countryid'
     selected_in_search_field || selected_in_widget
 
-selectOriginItem = ($item, dont_fallback_to_moscow) ->
+export selectOriginItem = ($item, dont_fallback_to_moscow) ->
     $item = $($item)
     $item.siblings().removeClass 'selected'
     $fetchAvailableDestinationsFromID $item.attr('data-departureid')

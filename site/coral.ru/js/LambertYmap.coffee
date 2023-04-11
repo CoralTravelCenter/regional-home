@@ -54,6 +54,7 @@ export class LambertYmap
         ,
             minZoom: 2
             maxZoom: 6
+#            avoidFractionalZoom: no
             projection: @projection
 #        @ymap.controls.get('zoomControl').options.set size: 'small'
 
@@ -226,9 +227,11 @@ export class LambertYmap
         clist = cities_with_preferred_destination_available.concat home_city
         coords = clist.map (c) -> c.placemark.geometry.getCoordinates()
         bounds = ymaps.util.bounds.fromPoints coords, @projection
-        console.log bounds
+        console.log "bounds with ymaps.util: %o", bounds
+        bounds2 = @getBoundsOfCitiesList clist
+        console.log "bounds with @getBoundsOfCitiesList: %o", bounds2
 
-        @ymap.setBounds bounds, duration: 500, checkZoomRange: yes
+        @ymap.setBounds bounds2, duration: 500, zoomMargin: 30
         setTimeout (=> @drawRoutes()), 501
 
 

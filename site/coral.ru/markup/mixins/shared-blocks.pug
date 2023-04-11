@@ -58,7 +58,7 @@ mixin available-destinations(city, commons)
         article
             .contenu
                 h2 Куда можно поехать отдохнуть прямо сейчас
-                p Посмотрите все доступные направления для вылета из&nbsp;вашего&nbsp;города
+                p Посмотрите все доступные направления для вылета из вашего города
                 .available-flight-widget(data-preferred-destination=(city.preferredDestination || commons.preferredDestination))
                     .head
                         .head-item: span.labeled.takeoff Выберите город вылета
@@ -73,12 +73,12 @@ mixin available-destinations(city, commons)
                     .foot
                         .pad
                             .selection-info-comp
-                                span.label Вы&nbsp;выбрали:
+                                span.label Вы выбрали:
                                 .selection-info &zwj;
                             button(data-action='select-tour' disabled='') Выбрать тур
 
                 .closest-origin-widget
-                    h4.disclose Если в&nbsp;вашем городе нет подходящих направлений, рекомендуем рассмотреть ближайшие&nbsp;города
+                    h4.disclose Если в вашем городе нет подходящих направлений, рекомендуем рассмотреть ближайшие города
                     .interactive-map
                         .loading-msg Загрузка карты...
                         .ymap
@@ -89,7 +89,36 @@ mixin why-us(city, commons)
         article
             .contenu
                 h2 Почему выбирают нас
-                ul
-                    li
-                        .icon
-                        .label
+                .list-marque
+                    ul.our-benefits
+                        li
+                            .icon(style='background-image: url(/site/coral.ru/assets/icon-pay-online.png)')
+                            .label Оплачивайте туры онлайн. <br>С нами безопасно.
+                        li
+                            .icon(style='background-image: url(/site/coral.ru/assets/icon-prepay-10.png)')
+                            .label Предоплата составляет всего 10%. <br>Остальное перед рейсом
+                        li
+                            .icon(style='background-image: url(/site/coral.ru/assets/icon-changable.png)')
+                            .label Возможность изменить условия <br>тура или оформить возврат
+                        li
+                            .icon(style='background-image: url(/site/coral.ru/assets/icon-payment-options.png)')
+                            .label Доступны разные способы <br>оплаты, рассрочка и кредит
+                        li
+                            .icon(style='background-image: url(/site/coral.ru/assets/icon-special-promos.png)')
+                            .label Специальные акции и предложения <br>для постоянных туристов
+                        li
+                            .icon(style='background-image: url(/site/coral.ru/assets/icon-28-years.png)')
+                            .label 28 лет на рынке <br>в России
+                        li
+                            .icon(style='background-image: url(/site/coral.ru/assets/icon-form-autofill.png)')
+                            .label Функция автоматического <br>заполнения полей по фото
+                        li
+                            .icon(style='background-image: url(/site/coral.ru/assets/icon-support-24-7.png)')
+                            .label Круглосуточная <br>поддержка колл-центра
+                .faq-on-buying
+                    .inhalt
+                        h3 Популярные вопросы о покупке тура
+                        .actions
+                            a(href='https://www.coral.ru/poleznaya-informatsiya/faq-po-pokupke-tura-onlayn/', target='_blank') Узнать подробнее
+
+    script(type='module', src='/site/coral.ru/js/list-marque.coffee')

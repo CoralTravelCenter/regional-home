@@ -103,7 +103,7 @@ updateSelectionInfo = ($ctx = '.available-flight-widget') ->
             $button.attr disabled: 'disabled'
     , 1000
 
-fetchDestinationWithFallback = (primary_id, fallback_id) ->
+export fetchDestinationWithFallback = (primary_id, fallback_id) ->
     $promise = $.Deferred()
     $.get '/v1/destination/destinationbyid', destinationId: primary_id
         .done (destination_response) ->

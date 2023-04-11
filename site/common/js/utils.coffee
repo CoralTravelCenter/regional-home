@@ -109,7 +109,7 @@ export autoplayVimeo = (lookup_selector = '.vimeo-video-box [data-vimeo-vid]', v
 export watchIntersection = (targets, options, yes_handler, no_handler) ->
     io = new IntersectionObserver (entries, observer) ->
         for entry in entries
-            if entry.isIntersecting then yes_handler?.call(entry.target) else no_handler?.call(entry.target)
+            if entry.isIntersecting then yes_handler?.call(entry.target, observer) else no_handler?.call(entry.target, observer)
     , { threshold: 1, options... }
     io.observe target for target in arrayOfNodesWith targets
     io

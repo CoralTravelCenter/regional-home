@@ -669,6 +669,86 @@ section.available-destinations {
 	}
 }
 
+section.why-us {
+	> article {
+		> .contenu {
+			.list-marque {
+				max-width: 100%;
+			}
+			ul.our-benefits {
+				font-size: (16/20em);
+				display: flex;
+				.transit(transform, 2000s);
+				&.run {
+					transform: translateX(-300000px);
+				}
+				>li {
+					display: flex;
+					align-items: center;
+					opacity: 0;
+					.transit(opacity);
+					&.in-view {
+						opacity: 1;
+					}
+					&:nth-child(n+2) {
+						margin-left: 3em;
+					}
+					.icon {
+						flex-shrink: 0;
+						.proportional(1/1);
+						width: (84/16em);
+						max-width: 84px;
+						background: center / contain no-repeat;
+						margin-right: 1em;
+					}
+					.label {
+						line-height: 1.2;
+						white-space: nowrap;
+					}
+				}
+			}
+			.faq-on-buying {
+				width: 100%;
+				border-radius: 1em;
+				background: @coral-ramp-bg;
+				padding: 2px;
+				.inhalt {
+					width: 100%;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					background: @coral-page-bg;
+					border-radius: calc(~"1em - 2px");
+					padding: 1.5em;
+					@media screen and (max-width: @mobile-breakpoint) {
+					    flex-direction: column;
+					}
+					h3 {
+						font-weight: 500;
+						display: flex;
+						align-items: center;
+						@media screen and (max-width: @mobile-breakpoint) {
+							font-size: 1.2em;
+							margin-bottom: 1em;
+						}
+						&:before {
+							content: '';
+							width: 1.5em;
+							height: 1.5em;
+							background: url("data-url:/site/coral.ru/inline-assets/icon-qmark.svg") center / contain no-repeat;
+							margin-right: .5em;
+						}
+					}
+					a {
+						text-decoration: none;
+						font-weight: 500;
+					}
+				}
+			}
+		}
+	}
+}
+
 #routes-svg {
 	.abs100x100();
 	path {

@@ -1,5 +1,6 @@
 local_cache_get =
     '/': '/site/coral.ru/assets/dev-cache/coral-home.html'
+    '/main/coral/reviewsvotes/': '/site/coral.ru/assets/dev-cache/coral-reviewsvotes.html'
     '/v1/geography/tocountryfilter?areaid=2529': '/site/coral.ru/assets/dev-cache/tocountryfilter-2529.json'
     '/v1/geography/tocountryfilter?areaid=2705': '/site/coral.ru/assets/dev-cache/tocountryfilter-2705.json'
     '/v1/geography/tocountryfilter?areaid=2504': '/site/coral.ru/assets/dev-cache/tocountryfilter-2504.json'

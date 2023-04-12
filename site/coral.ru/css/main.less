@@ -718,7 +718,8 @@ section.why-us {
 					display: flex;
 					justify-content: space-between;
 					align-items: center;
-					background: @coral-page-bg;
+					//background: @coral-page-bg;
+					background: #f1f7fc;
 					border-radius: calc(~"1em - 2px");
 					padding: 1.5em;
 					@media screen and (max-width: @mobile-breakpoint) {
@@ -882,6 +883,102 @@ section.xlinks {
 									text-decoration: underline;
 								}
 							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+section.reviews-and-thanks {
+	>article {
+		>.contenu {
+			> a {
+				text-decoration: none;
+				h4 {
+					display: inline-flex;
+					align-items: center;
+					&:after {
+						content: '>';
+						margin-left: .5em;
+					}
+				}
+			}
+			.all-reviews {
+				display: flex;
+				align-items: flex-start;
+				overflow: auto;
+				//&:after {
+				//	content: '';
+				//	position: fixed;
+				//	top: 0;
+				//	right: 0;
+				//	width: 5em;
+				//	height: 100%;
+				//	background: linear-gradient(to right, fade(#f1f7fc, 0%), #f1f7fc);
+				//}
+				.review-block {
+					flex: 0 0 calc(~"30% - .6666em");
+					.flex-column();
+					border-radius: 1em;
+					background: white;
+					overflow: hidden;
+					@media screen and (max-width: @mobile-breakpoint) {
+						flex: 0 0 calc(~"70% - .6666em");
+					}
+					&:nth-child(n+2) {
+						margin-left: 1em;
+					}
+					.head-body {
+						.flex-column();
+						background: white;
+						border-radius: 1em;
+						box-shadow: 0 0 16px fade(black, 20%);
+						padding: 1em 1.5em;
+						height: 16em;
+						h4 {
+							font-size: 1em;
+							margin-bottom: .5em;
+						}
+						.body {
+							flex-grow: 1;
+							font-size: (16/20em);
+							line-height: 1.2;
+							overflow: hidden;
+							&.overflown {
+								position: relative;
+								cursor: pointer;
+								&:after {
+									content: '';
+									position: absolute;
+									left: 0;
+									bottom: 0;
+									width: 100%;
+									height: 2em;
+									background:
+											url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAyOCAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTI3IDFMMTMuODE4MiAxM0wxIDEiIHN0cm9rZT0iI0YwQUIwMCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+Cg==") center bottom / auto 50% no-repeat,
+											linear-gradient(to bottom, fade(white, 0%), white 33%);
+								}
+							}
+						}
+					}
+					.foot {
+						display: flex;
+						justify-content: space-between;
+						padding: .75em 1.5em;
+						line-height: 1.1;
+						font-weight: 700;
+						>* {
+							font-size: (12/20em);
+						}
+						.author {
+							white-space: nowrap;
+							overflow: hidden;
+							text-overflow: ellipsis;
+						}
+						.date {
+							margin-left: 2em;
 						}
 					}
 				}

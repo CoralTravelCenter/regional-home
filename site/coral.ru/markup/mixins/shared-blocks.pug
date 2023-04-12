@@ -170,3 +170,14 @@ mixin xlinks(city, commons)
                     for xlinks_data in xlinks
                         +xlinks-drawer(xlinks_data)
 
+mixin reviews-and-thanks(city, commons)
+    section.hero.reviews-and-thanks
+        article
+            .contenu
+                h2 Благодарности
+                a(href='https://www.coral.ru/main/coral/reviewsvotes/', target='_blank')
+                    h4 Все отзывы
+
+                .all-reviews &nbsp;
+
+    script(type='module', src='/site/coral.ru/js/reviews-and-thanks.coffee')

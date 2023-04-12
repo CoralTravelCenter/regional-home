@@ -12,6 +12,34 @@
                     visual: '/site/coral.ru/assets/hot-promos/redwings-egyptair-in-december.jpg',
                     href: 'https://www.coral.ru/'
                 }
+            ],
+            leasureGuides: [
+                {
+                    visual: 'https://cdn.coral.ru/content/img/gid_po_otdyhu/coral_tc_for_main-4.jpg',
+                    href: 'https://www.coral.ru/poleznaya-informatsiya/gid-po-otdyhu/kuda-poehat-prazdniki/?banner_on_site=gid-prazd'
+                },
+                {
+                    visual: 'https://cdn.coral.ru/content/img/gid_po_otdyhu/327x217_gid_thai_3.jpg',
+                    href: 'https://www.coral.ru/amazing-tayland/?banner_on_site=gid-tayland'
+                },
+                {
+                    visual: 'https://cdn.coral.ru/content/img/gid_po_otdyhu/327x217_bahrain.jpg',
+                    href: 'https://www.coral.ru/packagetours/moskva-to-bahreyn-tours/?q=%7b%22Bgn%22%3a%2210.04.2023%22%2c%22End%22%3a%2216.04.2023%22%2c%22Dr%22%3a%223%22%2c%22Acc%22%3a%227%2c8%2c9%2c10%2c11%2c12%2c13%2c14%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%2221%2b6cO3TqxiPH7gQlR64eXMC%2bzp7zCzLPm%2bhIHnR5yHsoiD1vjs7OJS1u3SSGdiATwNrzBdDlqyicuMwNfrBrkjjL7G3aWpD65kcA3ArQGi0Fv41IyASb%2b8kgZ8XHbU%2bfXj7KzznHEKdLQbdfW3JmQ%3d%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d&f={%22Rh%22:false,%22Ao%22:[%22available%22]}&page=1&banner_on_site=gid-bahreyn'
+                },
+                {
+                    visual: 'https://cdn.coral.ru/content/img/gid_po_otdyhu/327x217_turkiye.jpg',
+                    href: 'https://www.coral.ru/visit-turkey/regions-antalia/?banner_on_site=gid-antalia'
+                },
+            ],
+            payAttention: [
+                {
+                    visual: '/site/coral.ru/assets/pay-attention/coral-bonus.jpg',
+                    href: 'https://www.coral.ru/poleznaya-informatsiya/offers/coralbonus/?banner_on_site=coralbonus'
+                },
+                {
+                    visual: '/site/coral.ru/assets/pay-attention/gift-cards.jpg',
+                    href: 'https://www.coral.ru/podarochnye-karty/?banner_on_site=giftcard'
+                },
             ]
         },
         cities: {
@@ -23,6 +51,9 @@
                 logoDecor: '/site/coral.ru/assets/logo-decor-kazan.png',
 //                preferredDestinationOrder: ['Египет', 'Турция', 'Таиланд', 'ОАЭ', 'Бахрейн', 'Мальдивы', 'Шри-Ланка'],
 //                preferredDestination: 'ОАЭ',
+                dictionary: {
+                    wording_fromCityName: 'из Казани'
+                },
                 destinations: [
                     {
                         button: {label: 'Турция', data_lookup_destination: 'Турция', data_lookup_depth_days: 14},
@@ -45,6 +76,58 @@
                             mobile: '/site/coral.ru/assets/intro-tailand-mobile.jpg'
                         }
                     }
+                ],
+                xlinks: [
+                    {
+                        heading: 'Египет из Казани',
+                        links: [
+                            {label: 'Туры в Египет из Казани', href: '/kazan/egypt/'},
+                            {label: 'Туры в Хургаду из Казани', href: '/kazan/egypt/hurgada/'},
+                            {label: 'Туры в Шарм-эш-Шейх из Казани', href: '/kazan/egypt/sharm/'},
+                        ]
+                    },
+                    {
+                        heading: 'ОАЭ из Казани',
+                        links: [
+                            {label: 'Туры в ОАЭ из Казани', href: '/kazan/uae/'},
+                            {label: 'Туры в Дубай из Казани', href: '/kazan/uae/dubai/'},
+                        ]
+                    },
+                    {
+                        heading: 'Мальдивы из Казани',
+                        links: [
+                            {label: 'Туры на Мальдивы из Казани', href: '/kazan/maldives/'},
+                        ]
+                    },
+                    {
+                        heading: 'Россия из Казани',
+                        links: [
+                            {label: 'Туры по России из Казани', href: '/kazan/russia/'},
+                            {label: 'Туры в Санкт-Петербург из Казани', href: '/kazan/russia/peterburg/'},
+                            {label: 'Туры в Сочи из Казани', href: '/kazan/russia/sochi/'},
+                            {label: 'Горящие туры в Сочи из Казани', href: '/kazan/russia/goryashchie-tury-v-sochi/'},
+                        ]
+                    },
+                    {
+                        heading: 'Турция из Казани',
+                        links: [
+                            {label: 'Туры в Турцию из Казани', href: '/kazan/turkey/'},
+                            {label: 'Дешевые туры в Турцию из Казани', href: '/kazan/turkey/deshevye-tury-v-turciyu/'},
+                            {label: 'Туры в Турцию из Казани всё включено', href: '/kazan/turkey/vse-vklucheno/'},
+                            {label: 'Туры в Турцию из Казани в июле', href: '/kazan/turkey/tury-v-turciyu-v-iyule/'},
+                            {label: 'Туры в Турцию из Казани в августе', href: '/kazan/turkey/tury-v-turciyu-v-avguste/'},
+                            {label: 'Туры в Турцию из Казани в сентябре', href: '/kazan/turkey/tury-v-turciyu-v-sentyabre/'},
+                            {label: 'Туры в Турцию из Казани в октябре', href: '/kazan/turkey/tury-v-turciyu-v-oktyabre/'},
+                            {label: 'Туры в Турцию из Казани в ноябре', href: '/kazan/turkey/tury-v-turciyu-v-noyabre/'},
+                            {label: 'Туры в Турцию из Казани в декабре', href: '/kazan/turkey/tury-v-turciyu-v-dekabre/'},
+                        ]
+                    },
+                    {
+                        heading: 'Туры по предпочтениям',
+                        links: [
+                            {label: 'Горящие туры в Турцию из Казани', href: '/kazan/turkey/goryashchie-tury-v-turciyu/'},
+                        ]
+                    },
                 ]
             }
         }

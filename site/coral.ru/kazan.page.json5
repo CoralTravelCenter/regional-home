@@ -5,6 +5,11 @@
         '/site/coral.ru/markup/kazan/hot.pug',
         '/site/coral.ru/markup/kazan/available-destinations.pug',
         '/site/coral.ru/markup/mixins/why-us.pug',
+        '/site/coral.ru/markup/kazan/recommended-tours.pug',
+        '/site/coral.ru/dev-markup/hotels-block-kazan.html',
+        '/site/coral.ru/markup/kazan/leasure-guide.pug',
+        '/site/coral.ru/markup/kazan/pay-attention.pug',
+        '/site/coral.ru/markup/kazan/xlinks.pug',
         '/site/coral.ru/markup/mixins/main-scripts.pug'
     ]
 }

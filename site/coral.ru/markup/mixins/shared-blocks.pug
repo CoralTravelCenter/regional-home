@@ -122,3 +122,51 @@ mixin why-us(city, commons)
                             a(href='https://www.coral.ru/poleznaya-informatsiya/faq-po-pokupke-tura-onlayn/', target='_blank') Узнать подробнее
 
     script(type='module', src='/site/coral.ru/js/list-marque.coffee')
+
+mixin recommended-tours(city, commons)
+    section.hero
+        article
+            .contenu
+                h2 Рекомендованые туры
+                h4 прямым рейсом #{ city.dictionary.wording_fromCityName }
+
+mixin leasure-guide(city, commons)
+    section.hero.leasure-guide
+        article
+            .contenu
+                h2 Гид по отдыху
+                a(href='https://www.coral.ru/poleznaya-informatsiya/gid-po-otdyhu/?banner_on_site=gid-all', target='_blank')
+                    h4 Все статьи
+                .leasure-guides-grid
+                    - var guides = city.leasureGuides || commons.leasureGuides
+                    for guide in guides
+                        a(href=guide.href, target='_blank', style={ 'background-image': `url(${ guide.visual })` })
+
+mixin pay-attention(city, commons)
+    section.hero.pay-attention
+        article
+            .contenu
+                h2 Обратите внимание
+                .banners-grid
+                    - var banners = city.payAttention || commons.payAttention
+                    for banner in banners
+                        a(href=banner.href, target='_blank', style={ 'background-image': `url(${ banner.visual })` })
+
+mixin xlinks-drawer(xlinks)
+    .xlinks
+        - var tmpid = 'toggler-' + Math.round(Math.random() * 100000)
+        input(type='checkbox', id=tmpid)
+        label.heading(for=tmpid)!= xlinks.heading
+        ul.drawer
+            for l in xlinks.links
+                li: a(href=l.href, target='_blank')!= l.label
+
+mixin xlinks(city, commons)
+    section.hero.xlinks
+        article
+            .contenu
+                .xlinks-grid
+                    - var xlinks = city.xlinks || commons.xlinks
+                    for xlinks_data in xlinks
+                        +xlinks-drawer(xlinks_data)
+

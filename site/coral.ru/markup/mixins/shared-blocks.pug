@@ -162,13 +162,14 @@ mixin xlinks-drawer(xlinks)
                 li: a(href=l.href, target='_blank')!= l.label
 
 mixin xlinks(city, commons)
-    section.hero.xlinks
-        article
-            .contenu
-                .xlinks-grid
-                    - var xlinks = city.xlinks || commons.xlinks
-                    for xlinks_data in xlinks
-                        +xlinks-drawer(xlinks_data)
+    - var xlinks = city.xlinks || commons.xlinks
+    if xlinks
+        section.hero.xlinks
+            article
+                .contenu
+                    .xlinks-grid
+                        for xlinks_data in xlinks
+                            +xlinks-drawer(xlinks_data)
 
 mixin reviews-and-thanks(city, commons)
     section.hero.reviews-and-thanks

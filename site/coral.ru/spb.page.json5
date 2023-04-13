@@ -1,0 +1,16 @@
+{
+    contents: [
+        '/site/coral.ru/markup/mixins/main-styles.pug',
+        '/site/coral.ru/markup/spb/intro.pug',
+        '/site/coral.ru/markup/spb/hot.pug',
+        '/site/coral.ru/markup/spb/available-destinations.pug',
+        '/site/coral.ru/markup/mixins/why-us.pug',
+        '/site/coral.ru/markup/spb/recommended-tours.pug',
+        '/site/coral.ru/dev-markup/hotels-block-kazan.html',
+        '/site/coral.ru/markup/spb/leasure-guide.pug',
+        '/site/coral.ru/markup/spb/pay-attention.pug',
+        '/site/coral.ru/markup/spb/xlinks.pug',
+        '/site/coral.ru/markup/mixins/reviews-and-thanks.pug',
+        '/site/coral.ru/markup/mixins/main-scripts.pug'
+    ]
+}

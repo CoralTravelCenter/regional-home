@@ -38,6 +38,7 @@ export $post = (url, param) ->
 export getActiveDeparture = () ->
     if window.location.hostname == 'localhost'
 #        return name: "Москва", value: "2671"
-        return name: "Казань", value: "2529"
+#        return name: "Казань", value: "2529"
+        return name: "Санкт-Петербург", value: "2817"
     else
         window.global.getActiveDeparture()

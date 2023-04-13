@@ -15,3 +15,10 @@ ASAP ->
         $(document).on 'click', '.review-block .body.overflown', ->
             $(this).removeClass('overflown').parent().css height: 'auto'
 
+        $rw = $('.all-reviews')
+        watchIntersection '.all-reviews > *:first-child', root: $rw.get(0),
+            (observer) -> $(observer.root).parent().removeClass 'scrollable-left'
+            (observer) -> $(observer.root).parent().addClass 'scrollable-left'
+        watchIntersection '.all-reviews > *:last-child', root: $rw.get(0),
+            (observer) -> $(observer.root).parent().removeClass 'scrollable-right'
+            (observer) -> $(observer.root).parent().addClass 'scrollable-right'

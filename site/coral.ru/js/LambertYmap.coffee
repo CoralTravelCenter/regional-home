@@ -134,16 +134,18 @@ export class LambertYmap
         yes
 
     makeCityPlacemark: (city, imageHref) ->
-        new ymaps.Placemark city.latlng,
+        placemark = new ymaps.Placemark city.latlng,
             city: city
             iconContent: (city.correctName ? city.name)
         ,
             iconLayout: 'default#imageWithContent'
-#            iconImageHref: imageHref
             iconImageSize: [33, 43]
             iconImageOffset: [-16, -43]
             iconContentOffset: [0, 2]
             iconContentLayout: @PlacemarkLayout
+        placemark.events.add 'click', (e) ->
+            $(document).trigger 'change-origin', [city]
+        placemark
 
     setStateForCity: (city, state) ->
         city.region ||= @findRegionByCity city

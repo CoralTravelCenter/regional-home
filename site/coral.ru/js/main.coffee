@@ -130,6 +130,10 @@ ASAP ->
     $libsReady = $.Deferred()
     preload libs, -> $libsReady.resolve()
 
+    $(document).on 'change-origin', (e, city) ->
+        $item = $(".data-column.depart-from .item[data-departureid='#{ city.eeID }']")
+        selectOriginItem $item, 'dont_fallback'
+
     unless window.location.hostname == 'localhost'
         observeElementProp $('input.packageSearch__departureInput').get(0), 'value', (new_origin) ->
             updateSelectionWithOrigin new_origin if new_origin

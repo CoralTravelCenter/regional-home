@@ -11,5 +11,6 @@ ASAP ->
             if $this.hasClass 'in-view'
                 setTimeout =>
                     observer.observe $(this).clone().appendTo($this.parent()).get(0)
+                    observer.unobserve this
                 , 500
             $this.removeClass 'in-view'

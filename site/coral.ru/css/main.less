@@ -1056,3 +1056,13 @@ body {
 .widgetcontainer.oti-content-typography:first-of-type {
 	display: none;
 }
+
+// silly insider fix
+body .widgetcontainer.hero.new-submenu__wrapper {
+	@media screen and (max-width: @mobile-breakpoint) {
+		border: unset!important;
+		padding: 0;
+		margin: unset!important;
+		width: unset!important;
+	}
+}

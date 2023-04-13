@@ -133,6 +133,7 @@ ASAP ->
     $(document).on 'change-origin', (e, city) ->
         $item = $(".data-column.depart-from .item[data-departureid='#{ city.eeID }']")
         selectOriginItem $item, 'dont_fallback'
+        $(window).scrollTo '.available-flight-widget', 500, offset: -150
 
     unless window.location.hostname == 'localhost'
         observeElementProp $('input.packageSearch__departureInput').get(0), 'value', (new_origin) ->

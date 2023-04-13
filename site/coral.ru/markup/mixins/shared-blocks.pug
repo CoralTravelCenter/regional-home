@@ -140,7 +140,7 @@ mixin leasure-guide(city, commons)
                 .leasure-guides-grid
                     - var guides = city.leasureGuides || commons.leasureGuides
                     for guide in guides
-                        a(href=guide.href, target='_blank', style={ 'background-image': `url(${ guide.visual })` })
+                        a(href=guide.href, target='_blank', style={ 'background-image': `url(${ guide.visual })` }): span &nbsp;
 
 mixin pay-attention(city, commons)
     section.hero.pay-attention
@@ -150,7 +150,7 @@ mixin pay-attention(city, commons)
                 .banners-grid
                     - var banners = city.payAttention || commons.payAttention
                     for banner in banners
-                        a(href=banner.href, target='_blank', style={ 'background-image': `url(${ banner.visual })` })
+                        a(href=banner.href, target='_blank', style={ 'background-image': `url(${ banner.visual })` }): span &nbsp;
 
 mixin xlinks-drawer(xlinks)
     .xlinks

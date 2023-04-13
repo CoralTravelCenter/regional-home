@@ -629,6 +629,8 @@ section.available-destinations {
 				box-shadow: 0 0 32px rgba(0, 0, 0, 0.15);
 				border-radius: 1em;
 				background: white;
+				overflow: hidden;
+				color: white;
 				.disclose {
 					font-size: 1em;
 					display: flex;
@@ -636,12 +638,26 @@ section.available-destinations {
 					align-items: center;
 					padding: 1.5em 1.5em 1.5em 1em;
 					cursor: pointer;
+					background: @coral-ramp-bg;
+					.transit(background);
+					.transit(color);
+					&.open {
+						color: black;
+						background: linear-gradient(white,white);
+						&:after {
+							filter: none;
+							transform: rotate(180deg);
+						}
+					}
 					&:after {
 						flex-shrink: 0;
 						content: '';
 						width: 1.2em;
 						height: .6em;
 						background: url("data-url:/site/coral.ru/inline-assets/arrow-down.svg") center / cover no-repeat;
+						filter: invert(1);
+						.transit(transform);
+						.transit(filter);
 						@media screen and (max-width: @mobile-breakpoint) {
 							width: 2em;
 							height: 1em;
@@ -654,11 +670,10 @@ section.available-destinations {
 					@media screen and (max-width: @mobile-breakpoint) {
 						.proportional(1/1);
 					}
-
 					.loading-msg {
 						.flex-center();
+						color: black;
 					}
-
 					.ymap {
 
 					}
@@ -679,7 +694,7 @@ section.why-us {
 				font-size: (16/20em);
 				display: flex;
 				//.transit(transform, 2000s);
-				transition: transform 3000s linear;
+				transition: transform 6000s linear;
 				&.run {
 					transform: translateX(-300000px);
 				}

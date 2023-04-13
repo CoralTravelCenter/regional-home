@@ -79,11 +79,9 @@
                 ],
                 xlinks: [
                     {
-                        heading: 'Египет из Казани',
+                        heading: 'Египет из Москвы',
                         links: [
-                            {label: 'Туры в Египет из Казани', href: '/kazan/egypt/'},
-                            {label: 'Туры в Хургаду из Казани', href: '/kazan/egypt/hurgada/'},
-                            {label: 'Туры в Шарм-эш-Шейх из Казани', href: '/kazan/egypt/sharm/'},
+                            {label: 'Туры в Египет из Москвы', href: '/main/egypt/'},
                         ]
                     },
                     {
@@ -94,9 +92,9 @@
                         ]
                     },
                     {
-                        heading: 'Мальдивы из Казани',
+                        heading: 'Мальдивы из Москвы',
                         links: [
-                            {label: 'Туры на Мальдивы из Казани', href: '/kazan/maldives/'},
+                            {label: 'Туры на Мальдивы из Москвы', href: '/main/maldives/'},
                         ]
                     },
                     {

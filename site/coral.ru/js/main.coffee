@@ -37,12 +37,13 @@ ASAP ->
     do ->
         do_auto_play = yes
         $navs = $('.intro .eternal-package-search > *')
+        delay = window.innerWidth <= 768 and 2500 or 5000
         intro_autoplay_interval = setInterval =>
             if do_auto_play
                 idx = $('.intro .eternal-package-search > .hovered').index()
                 idx = 0 if ++idx >= $navs.length
                 doHover.apply $navs.eq(idx)
-        , 2500
+        , delay
         $(document)
         .on 'mouseenter', '.intro .eternal-package-search > *', (e) =>
             do_auto_play = no

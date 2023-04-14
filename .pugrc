@@ -158,6 +158,59 @@
                         }
                     }
                 ],
+                xlinks: [
+                    {
+                        heading: 'Турция из Санкт-Петербурга',
+                        links: [
+                            { label: 'Туры в Турцию из Санкт-Петербурга', href: '/spb/turkey/' },
+                            { label: 'Туры в Турцию из Санкт-Петербурга все включено', href: '/spb/turkey/vse-vklucheno/' },
+                            { label: 'Горящие туры в Турцию из Санкт-Петербурга', href: '/spb/turkey/goryashchie-tury-v-turciyu/' },
+                            { label: 'Туры в Турцию из Санкт-Петербурга в июне', href: '/spb/turkey/tury-v-turciyu-v-iyune/' },
+                            { label: 'Туры в Турцию из Санкт-Петербурга в июле', href: '/spb/turkey/tury-v-turciyu-v-iyule/' },
+                            { label: 'Туры в Турцию из Санкт-Петербурга в августе', href: '/spb/turkey/tury-v-turciyu-v-avguste/' },
+                            { label: 'Туры в Турцию из Санкт-Петербурга в сентябре', href: '/spb/turkey/tury-v-turciyu-v-sentyabre/' },
+                            { label: 'Туры в Турцию из Санкт-Петербурга в октябре', href: '/spb/turkey/tury-v-turciyu-v-oktyabre/' },
+                            { label: 'Туры в Турцию из Санкт-Петербурга в ноябре', href: '/spb/turkey/tury-v-turciyu-v-noyabre/' },
+                            { label: 'Путевки в Турцию из Санкт-Петербурга', href: '/spb/turkey/putevki-v-turciyu/' },
+                            { label: 'Отдых в Турции из Санкт-Петербурга', href: '/spb/turkey/otdyh-v-turciyu/' },
+                            { label: 'Дешевые туры в Турцию из Санкт-Петербурга', href: '/spb/turkey/deshevye-tury-v-turciyu/' },
+                        ]
+                    },
+                    {
+                        heading: 'Египет из Москвы',
+                        links: [
+                            { label: 'Туры в Египет из Москвы', href: '/main/egypt/' }
+                        ]
+                    },
+                    {
+                        heading: 'ОАЭ из Санкт-Петербурга',
+                        links: [
+                            { label: 'Туры в ОАЭ из Санкт-Петербурга', href: '/spb/uae/' },
+                            { label: 'Туры в Дубай из Санкт-Петербурга', href: '/spb/uae/dubai/' }
+                        ]
+                    },
+                    {
+                        heading: 'Мальдивы из Москвы',
+                        links: [
+                            { label: 'Туры на Мальдивы из Москвы', href: '/main/maldives/' }
+                        ]
+                    },
+                    {
+                        heading: 'Таиланд из Москвы',
+                        links: [
+                            { label: 'Туры в Таиланд из Москвы', href: '/main/thailand/' }
+                        ]
+                    },
+                    {
+                        heading: 'Россия из Санкт-Петербурга',
+                        links: [
+                            { label: 'Туры по России из Санкт-Петербурга', href: '/spb/russia/' },
+                            { label: 'Туры в Казань из Санкт-Петербурга', href: '/spb/russia/kazan/' },
+                            { label: 'Туры в Шерегеш из Санкт-Петербурга', href: '/spb/russia/sheregesh/' },
+                            { label: 'Туры в Сочи из Санкт-Петербурга', href: '/spb/russia/sochi/' },
+                        ]
+                    },
+                ]
             },
         }
     }

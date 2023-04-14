@@ -216,12 +216,21 @@ export class LambertYmap
         @setStateForCity city for city in @getAvailableCities()
         preferred_destination_available_in_homecity = home_city.availableDestinations.find (d) -> d.Name == destination_name_or_id or d.Id == destination_name_or_id
         cities2check = @cities.filter (city, idx) => idx != 0 and city.distanceFromHome < @options.acceptableDistance or city.eeID == 2671
+
+        spinner_timeout = setTimeout ->
+            $('.interactive-map').addClass 'block-interaction'
+        , 500
+
         await Promise.all cities2check.map (city) ->
             if city.availableDestinations
                 return Promise.resolve()
             else
                 return new Promise (resolve) ->
                     $fetchAvailableDestinationsFromID(city.eeID).then (ad) -> city.availableDestinations = ad; resolve()
+
+        clearTimeout spinner_timeout
+        $('.interactive-map').removeClass 'block-interaction'
+
         cities_with_preferred_destination_available = cities2check.filter (city) ->
             city.availableDestinations.find (d) -> d.Name == destination_name_or_id or d.Id == destination_name_or_id
         @setStateForCity city, 'available' for city in cities_with_preferred_destination_available

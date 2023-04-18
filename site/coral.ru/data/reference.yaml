@@ -13,6 +13,7 @@ cities:
       latlng: [48.72, 44.5]
     - name: Екатеринбург
       eeID: 2449
+      pathname: /ekb/
       latlng: [56.85, 60.61]
     - name: Ижевск
       eeID: 2504
@@ -22,6 +23,7 @@ cities:
       latlng: [52.3, 104.3]
     - name: Казань
       eeID: 2529
+      pathname: /kazan/
       latlng: [55.79, 49.12]
     - name: Калининград
       eeID: 2512
@@ -50,6 +52,7 @@ cities:
       latlng: [55.64, 51.82]
     - name: Новосибирск
       eeID: 2724
+      pathname: /novosibirsk/
       latlng: [55.04, 82.93]
     - name: Омск
       eeID: 2739
@@ -65,6 +68,7 @@ cities:
       latlng: [53.2, 50.15]
     - name: Санкт-Петербург
       eeID: 2817
+      pathname: /spb/
       latlng: [59.94, 30.31]
     - name: Саратов
       eeID: 2827
@@ -80,6 +84,7 @@ cities:
       latlng: [57.15, 65.53]
     - name: Уфа
       eeID: 2935
+      pathname: /ufa/
       latlng: [54.74, 55.97]
     - name: Хабаровск
       eeID: 2533

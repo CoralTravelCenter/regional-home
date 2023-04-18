@@ -96,6 +96,7 @@ ASAP ->
             cellSelector: '.hot-slide'
             cellAlign: 'center'
             wrapAround: yes
+            autoPlay: 5000
             prevNextButtons: yes
             pageDots: yes
 

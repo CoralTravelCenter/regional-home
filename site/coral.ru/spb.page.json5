@@ -2,6 +2,7 @@
     contents: [
         '/site/coral.ru/markup/mixins/main-styles.pug',
         '/site/coral.ru/markup/spb/intro.pug',
+        '/site/coral.ru/markup/region-redirect.pug',
         '/site/coral.ru/markup/spb/hot.pug',
         '/site/coral.ru/markup/spb/available-destinations.pug',
         '/site/coral.ru/markup/mixins/why-us.pug',

@@ -1,10 +1,12 @@
-mixin intro(city)
+mixin intro(city, commons)
+    - var destinations = city.destinations || commons.destinations
     style
-        | header.site-header .container-logo {
-        |   background: url(#{ city.logoDecor }) center bottom no-repeat;
-        |   background-size: 100% auto;
-        | }
-        for destination, idx in city.destinations
+        if city.logoDecor
+            | header.site-header .container-logo {
+            |   background: url(#{ city.logoDecor }) center bottom no-repeat;
+            |   background-size: 100% auto;
+            | }
+        for destination, idx in destinations
             | .visual:nth-child(#{ idx+1 }) {
             |   background-image: url(#{ destination.visual.desktop });
             | }
@@ -16,14 +18,14 @@ mixin intro(city)
 
     section.hero.underbrow.intro
         .visuals-wrap
-            for destination, idx in city.destinations
+            for destination, idx in destinations
                 .visual(class={ shown: idx === 0 })
         article
             .contenu
                 h3!= city.h3
                 h2.h1!= city.h2
                 .actions.eternal-package-search
-                    for destination, idx in city.destinations
+                    for destination, idx in destinations
                         button(
                             class={ hovered: idx === 0 },
                             data-lookup-destination=destination.button.data_lookup_destination,

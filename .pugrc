@@ -54,7 +54,14 @@
                 },
                 destinations: [
                     {
-                        button: {label: 'Турция', data_lookup_destination: 'Турция', data_lookup_depth_days: 14},
+                        button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
+                        visual: {
+                            desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+                            mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                        }
+                    },
+                    {
+                        button: {label: 'Эгейское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[29, 17, 18, 210, 209, 30, 19, 10732, 20, 21, 22, 32, 23, 24, 33, 25, 28, 27, 42, 63, 46, 8995, 55, 57, 11080, 130, 59, 60, 58, 14551, 61]'},
                         visual: {
                             desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
                             mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
@@ -67,13 +74,6 @@
                             mobile: '/site/coral.ru/assets/intro-uae-mobile.jpg'
                         }
                     },
-                    {
-                        button: {label: 'Таиланд', data_lookup_destination: 'Таиланд', data_lookup_depth_days: 14},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-tailand-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-tailand-mobile.jpg'
-                        }
-                    }
                 ],
                 xlinks: [
                     {
@@ -137,7 +137,14 @@
                 },
                 destinations: [
                     {
-                        button: {label: 'Турция', data_lookup_destination: 'Турция', data_lookup_depth_days: 14},
+                        button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
+                        visual: {
+                            desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+                            mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                        }
+                    },
+                    {
+                        button: {label: 'Эгейское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[29, 17, 18, 210, 209, 30, 19, 10732, 20, 21, 22, 32, 23, 24, 33, 25, 28, 27, 42, 63, 46, 8995, 55, 57, 11080, 130, 59, 60, 58, 14551, 61]'},
                         visual: {
                             desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
                             mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
@@ -150,13 +157,6 @@
                             mobile: '/site/coral.ru/assets/intro-uae-mobile.jpg'
                         }
                     },
-                    {
-                        button: {label: 'Таиланд', data_lookup_destination: 'Таиланд', data_lookup_depth_days: 14},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-tailand-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-tailand-mobile.jpg'
-                        }
-                    }
                 ],
                 xlinks: [
                     {

@@ -27,7 +27,8 @@ mixin intro(city)
                         button(
                             class={ hovered: idx === 0 },
                             data-lookup-destination=destination.button.data_lookup_destination,
-                            data-lookup-depth-days=destination.button.data_lookup_depth_days)= destination.button.label
+                            data-lookup-depth-days=destination.button.data_lookup_depth_days
+                            data-lookup-regions=destination.button.data_lookup_regions)= destination.button.label
 
 mixin hot(city, commons)
     script!= `var preferred_destination_order = ${ city.preferredDestinationOrder && JSON.stringify(city.preferredDestinationOrder) || JSON.stringify(commons.preferredDestinationOrder) };`

@@ -14,8 +14,8 @@
                 {
                     button: {label: 'Эгейское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[29, 17, 18, 210, 209, 30, 19, 10732, 20, 21, 22, 32, 23, 24, 33, 25, 28, 27, 42, 63, 46, 8995, 55, 57, 11080, 130, 59, 60, 58, 14551, 61]'},
                     visual: {
-                        desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
-                        mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                        desktop: '/site/coral.ru/assets/intro-aegean-desktop.jpg',
+                        mobile: '/site/coral.ru/assets/intro-aegean-mobile.jpg'
                     }
                 },
                 {
@@ -185,6 +185,196 @@
                             { label: 'Туры в Казань из Санкт-Петербурга', href: '/spb/russia/kazan/' },
                             { label: 'Туры в Шерегеш из Санкт-Петербурга', href: '/spb/russia/sheregesh/' },
                             { label: 'Туры в Сочи из Санкт-Петербурга', href: '/spb/russia/sochi/' },
+                        ]
+                    },
+                ]
+            },
+            novosibirsk: {
+                h2: 'Из Новосибирска без пересадок',
+                h3: 'Выбирай и лети',
+                name: 'Новосибирск',
+                url: '/novosibirsk/',
+                logoDecor: '/site/coral.ru/assets/logo-decor-novosib.png',
+                dictionary: {
+                    wording_fromCityName: 'из Новосибирска'
+                },
+                xlinks: [
+                    {
+                        heading: 'Турция из Новосибирска',
+                        links: [
+                            { label: 'Туры в Турцию из Новосибирска', href: '/novosibirsk/turkey/' },
+                            { label: 'Горящие туры в Турцию из Новосибирска', href: '/novosibirsk/turkey/goryashchie-tury-v-turciyu/' },
+                            { label: 'Туры в Турцию из Новосибирска все включено', href: '/novosibirsk/turkey/vse-vklucheno/' },
+                            { label: 'Туры в Турцию из Новосибирска в июле', href: '/novosibirsk/turkey/tury-v-turciyu-v-iyule/' },
+                            { label: 'Туры в Турцию из Новосибирска в августе', href: '/novosibirsk/turkey/tury-v-turciyu-v-avguste/' },
+                            { label: 'Туры в Турцию из Новосибирска в сентябре', href: '/novosibirsk/turkey/tury-v-turciyu-v-sentyabre/' },
+                            { label: 'Туры в Турцию из Новосибирска в октябре', href: '/novosibirsk/turkey/tury-v-turciyu-v-oktyabre/' },
+                            { label: 'Туры в Турцию из Новосибирска в ноябре', href: '/novosibirsk/turkey/tury-v-turciyu-v-noyabre/' },
+                            { label: 'Туры в Турцию из Новосибирска в декабре', href: '/novosibirsk/turkey/tury-v-turciyu-v-dekabre/' },
+                            { label: 'Дешевые туры в Турцию из Новосибирска', href: '/novosibirsk/turkey/deshevye-tury-v-turciyu/' },
+                            { label: 'Отдых в Турции из Новосибирска', href: '/novosibirsk/turkey/otdyh-v-turciyu/' },
+                            { label: 'Путевки в Турцию из Новосибирскf', href: '/novosibirsk/turkey/putevki-v-turciyu/' },
+                        ]
+                    },
+                    {
+                        heading: 'Египет из Москвы',
+                        links: [
+                            { label: 'Туры в Египет из Москвы', href: '/main/egypt/' },
+                        ]
+                    },
+                    {
+                        heading: 'ОАЭ из Москвы',
+                        links: [
+                            { label: 'Туры в ОАЭ из Москвы', href: '/main/uae/' },
+                        ]
+                    },
+                    {
+                        heading: 'Таиланд из Новосибирска',
+                        links: [
+                            { label: 'Туры в Таиланд из Новосибирска', href: '/main/thailand/' },
+                        ]
+                    },
+                    {
+                        heading: 'Шри-Ланка из Новосибирска',
+                        links: [
+                            { label: 'Туры на Шри-Ланку из Новосибирска', href: '/main/srilanka/' },
+                        ]
+                    },
+                    {
+                        heading: 'Россия из Новосибирска',
+                        links: [
+                            { label: 'Туры по России из Новосибирска', href: '/novosibirsk/russia/' },
+                            { label: 'Горящие туры в Сочи из Новосибирска', href: '/novosibirsk/russia/goryashchie-tury-v-sochi/' },
+                            { label: 'Туры в Санкт-Петербург из Новосибирска', href: '/novosibirsk/russia/peterburg/' },
+                            { label: 'Туры в Сочи из Новосибирска', href: '/novosibirsk/russia/sochi/' },
+                        ]
+                    },
+                ]
+            },
+            ekb: {
+                h2: 'Из Екатеринбурга без пересадок',
+                h3: 'Выбирай и лети',
+                name: 'Екатеринбург',
+                url: '/ekb/',
+                logoDecor: '/site/coral.ru/assets/logo-decor-ekb.png',
+                dictionary: {
+                    wording_fromCityName: 'из Екатеринбурга'
+                },
+                xlinks: [
+                    {
+                        heading: 'Турция из Екатеринбурга',
+                        links: [
+                            { label: 'Туры в Турцию из Екатеринбурга', href: '/ekaterinburg/turkey/' },
+                            { label: 'Туры в Турцию из Екатеринбурга всё включено', href: '/ekaterinburg/turkey/vse-vklucheno/' },
+                            { label: 'Туры в Турцию из Екатеринбурга в июне', href: '/ekaterinburg/turkey/tury-v-turciyu-v-iyune/' },
+                            { label: 'Туры в Турцию из Екатеринбурга в июле', href: '/ekaterinburg/turkey/tury-v-turciyu-v-iyule/' },
+                            { label: 'Туры в Турцию из Екатеринбурга в августе', href: '/ekaterinburg/turkey/tury-v-turciyu-v-avguste/' },
+                            { label: 'Туры в Турцию из Екатеринбурга в сентябре', href: '/ekaterinburg/turkey/tury-v-turciyu-v-sentyabre/' },
+                            { label: 'Туры в Турцию из Екатеринбурга в октябре', href: '/ekaterinburg/turkey/tury-v-turciyu-v-oktyabre/' },
+                            { label: 'Туры в Турцию из Екатеринбурга в ноябре', href: '/ekaterinburg/turkey/tury-v-turciyu-v-noyabre/' },
+                            { label: 'Туры в Турцию из Екатеринбурга в декабре', href: '/ekaterinburg/turkey/tury-v-turciyu-v-dekabre/' },
+                            { label: 'Путевки в Турцию из Екатеринбургf', href: '/ekaterinburg/turkey/putevki-v-turciyu/' },
+                        ]
+                    },
+                    {
+                        heading: 'Египет из Москвы',
+                        links: [
+                            { label: 'Туры в Египет из Москвы', href: '/main/egypt/' },
+                        ]
+                    },
+                    {
+                        heading: 'ОАЭ из Екатеринбурга',
+                        links: [
+                            { label: 'Туры в ОАЭ из Екатеринбурга', href: '/ekb/uae/' },
+                            { label: 'Туры в Дубай из Екатеринбурга', href: '/ekb/uae/dubai/' },
+                            { label: 'Туры в Шарджу из Екатеринбурга', href: '/ekb/uae/sharjah/' },
+                        ]
+                    },
+                    {
+                        heading: 'Таиланд из Москвы',
+                        links: [
+                            { label: 'Туры в Таиланд из Москвы', href: '/main/thailand/' },
+                        ]
+                    },
+                    {
+                        heading: 'Шри-Ланка из Москвы',
+                        links: [
+                            { label: 'Туры на Шри-Ланку из Москвы', href: '/main/srilanka/' },
+                        ]
+                    },
+                    {
+                        heading: 'Россия из Екатеринбурга',
+                        links: [
+                            { label: 'Туры по России из Екатеринбурга', href: '/ekb/russia/' },
+                            { label: 'Туры в Сочи из Екатеринбурга', href: '/ekb/russia/sochi/' },
+                            { label: 'Горящие туры в Сочи из Екатеринбурга', href: '/ekb/russia/goryashchie-tury-v-sochi/' },
+                            { label: 'Туры в Казань из Екатеринбурга', href: '/ekb/russia/kazan/' },
+                            { label: 'Туры в Санкт-Петербург из Екатеринбурга', href: '/ekb/russia/peterburg/' },
+                        ]
+                    },
+                ]
+            },
+            ufa: {
+                h2: 'Из Уфы без пересадок',
+                h3: 'Выбирай и лети',
+                name: 'Уфа',
+                url: '/ufa/',
+                logoDecor: '/site/coral.ru/assets/logo-decor-ufa.png',
+                dictionary: {
+                    wording_fromCityName: 'из Уфы'
+                },
+                xlinks: [
+                    {
+                        heading: 'Турция из Уфы',
+                        links: [
+                            { label: 'Туры в Турцию из Уфы', href: '/ufa/turkey/' },
+                            { label: 'Туры в Турцию из Уфы все включено', href: '/ufa/turkey/vse-vklucheno/' },
+                            { label: 'Горящие туры в Турцию из Уфы', href: '/ufa/turkey/goryashchie-tury-v-turciyu/' },
+                            { label: 'Туры в Турцию в мае из Уфы', href: '/ufa/turkey/tury-v-turciyu-v-mae/' },
+                            { label: 'Туры в Турцию в июне из Уфы', href: '/ufa/turkey/tury-v-turciyu-v-iyune/' },
+                            { label: 'Туры в Турцию в июле из Уфы', href: '/ufa/turkey/tury-v-turciyu-v-iyule/' },
+                            { label: 'Туры в Турцию в августе из Уфы', href: '/ufa/turkey/tury-v-turciyu-v-avguste/' },
+                            { label: 'Туры в Турцию в сентябре из Уфы', href: '/ufa/turkey/tury-v-turciyu-v-sentyabre/' },
+                            { label: 'Туры в Турцию в октябре из Уфы', href: '/ufa/turkey/tury-v-turciyu-v-oktyabre/' },
+                            { label: 'Туры в Турцию из Уфы в ноябре', href: '/ufa/turkey/tury-v-turciyu-v-noyabre/' },
+                            { label: 'Туры в Турцию из Уфы в декабре', href: '/ufa/turkey/tury-v-turciyu-v-dekabre/' },
+                            { label: 'Дешевые туры в Турцию из Уфы', href: '/ufa/turkey/deshevye-tury-v-turciyu/' },
+                            { label: 'Отдых в Турции из Уфы', href: '/ufa/turkey/otdyh-v-turciyu/' },
+                            { label: 'Путевки в Турцию из Уфы', href: '/ufa/turkey/putevki-v-turciyu/' },
+                        ]
+                    },
+                    {
+                        heading: 'Египет из Москвы',
+                        links: [
+                            { label: 'Туры в Египет из Москвы', href: '/main/egypt/' },
+                        ]
+                    },
+                    {
+                        heading: 'ОАЭ из Уфы',
+                        links: [
+                            { label: 'Туры в ОАЭ из Уфы', href: '/ufa/uae/' },
+                            { label: 'Туры в Дубай из Уфы', href: '/ufa/uae/dubai/' },
+                            { label: 'Туры в Шарджу из Уфы', href: '/ufa/uae/sharjah/' },
+                        ]
+                    },
+                    {
+                        heading: 'Таиланд из Москвы',
+                        links: [
+                            { label: 'Туры в Таиланд из Москвы', href: '/main/thailand/' },
+                        ]
+                    },
+                    {
+                        heading: 'Мальдивы из Москвы',
+                        links: [
+                            { label: 'Туры на Мальдивы из Москвы', href: '/main/maldives/' },
+                        ]
+                    },
+                    {
+                        heading: 'Россия из Уфы',
+                        links: [
+                            { label: 'Туры в Санкт-Петербург из Уфы', href: '/ufa/peterburg/' },
+                            { label: 'Туры в Казань из Уфы', href: '/ufa/russia/kazan/' },
+                            { label: 'Туры в Сочи из Уфы', href: '/ufa/russia/sochi/' },
                         ]
                     },
                 ]

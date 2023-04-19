@@ -1,0 +1,17 @@
+{
+    contents: [
+        '/site/coral.ru/markup/mixins/main-styles.pug',
+        '/site/coral.ru/markup/ekb/intro.pug',
+        '/site/coral.ru/markup/region-redirect.pug',
+        '/site/coral.ru/markup/ekb/hot.pug',
+        '/site/coral.ru/markup/ekb/available-destinations.pug',
+        '/site/coral.ru/markup/mixins/why-us.pug',
+        '/site/coral.ru/markup/ekb/recommended-tours.pug',
+        '/site/coral.ru/dev-markup/hotels-block-ekb.html',
+        '/site/coral.ru/markup/ekb/leasure-guide.pug',
+        '/site/coral.ru/markup/ekb/pay-attention.pug',
+        '/site/coral.ru/markup/ekb/xlinks.pug',
+        '/site/coral.ru/markup/mixins/reviews-and-thanks.pug',
+        '/site/coral.ru/markup/mixins/main-scripts.pug'
+    ]
+}

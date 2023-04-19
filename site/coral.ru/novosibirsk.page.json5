@@ -1,0 +1,17 @@
+{
+    contents: [
+        '/site/coral.ru/markup/mixins/main-styles.pug',
+        '/site/coral.ru/markup/novosibirsk/intro.pug',
+        '/site/coral.ru/markup/region-redirect.pug',
+        '/site/coral.ru/markup/novosibirsk/hot.pug',
+        '/site/coral.ru/markup/novosibirsk/available-destinations.pug',
+        '/site/coral.ru/markup/mixins/why-us.pug',
+        '/site/coral.ru/markup/novosibirsk/recommended-tours.pug',
+        '/site/coral.ru/dev-markup/hotels-block-novosibirsk.html',
+        '/site/coral.ru/markup/novosibirsk/leasure-guide.pug',
+        '/site/coral.ru/markup/novosibirsk/pay-attention.pug',
+        '/site/coral.ru/markup/novosibirsk/xlinks.pug',
+        '/site/coral.ru/markup/mixins/reviews-and-thanks.pug',
+        '/site/coral.ru/markup/mixins/main-scripts.pug'
+    ]
+}

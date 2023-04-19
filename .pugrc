@@ -1,7 +1,7 @@
 {
     locals: {
         commons: {
-            preferredDestinationOrder: ['Турция', 'Таиланд', 'Египет', 'ОАЭ', 'Бахрейн', 'Мальдивы', 'Шри-Ланка'],
+            preferredDestinationOrder: ['Турция', 'ОАЭ', 'Бахрейн', 'Россия', 'Мальдивы'],
             preferredDestination: 'Турция',
             destinations: [
                 {
@@ -25,16 +25,65 @@
                         mobile: '/site/coral.ru/assets/intro-uae-mobile.jpg'
                     }
                 },
+                {
+                    button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
+                    visual: {
+                        desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
+                        mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
+                    }
+                },
             ],
             hotPromos: [
                 {
-                    visual: '/site/coral.ru/assets/hot-promos/redwings-egyptair-in-december.jpg',
-                    href: 'https://www.coral.ru/'
+                    description: 'Куда рвануть на каникулы и майские праздники',
+                    visual: '/site/coral.ru/assets/hot-promos/where2go-on-may.jpg',
+                    href: 'https://www.coral.ru/poleznaya-informatsiya/gid-po-otdyhu/kuda-poehat-prazdniki//'
                 },
                 {
-                    visual: '/site/coral.ru/assets/hot-promos/redwings-egyptair-in-december.jpg',
-                    href: 'https://www.coral.ru/'
-                }
+                    description: 'Раннее бронирование',
+                    visual: '/site/coral.ru/assets/hot-promos/early-booking.jpg',
+                    href: 'https://www.coral.ru/hot-offers/rannee-bronirovanie-leto/'
+                },
+                {
+                    description: 'Сеть отелей Coral Group',
+                    visual: '/site/coral.ru/assets/hot-promos/coral-group-network.jpg',
+                    href: 'https://www.coral.ru/concepts/coralgroup-hotels-and-resorts/'
+                },
+                {
+                    description: 'Наша летняя коллекция отелей 2023',
+                    visual: '/site/coral.ru/assets/hot-promos/our-summer-collection.jpg',
+                    href: 'https://www.coral.ru/concepts/our-summer-collection-hotels/'
+                },
+                {
+                    description: '50 оттенков синего (Эгейское побережье)',
+                    visual: '/site/coral.ru/assets/hot-promos/fifty-shades-of-blue.jpg',
+                    href: 'https://www.coral.ru/visit-turkey/regions-aegean/'
+                },
+                {
+                    description: 'Без пересадок на любимые курорты ОАЭ',
+                    visual: '/site/coral.ru/assets/hot-promos/directly-to-lovely-uae.jpg',
+                    href: 'https://www.coral.ru/osenne-zimniy-otdyh-v-oae/'
+                },
+                {
+                    description: 'Элитный отдых для тех, кто ценит комфорт',
+                    visual: '/site/coral.ru/assets/hot-promos/elite-villas.jpg',
+                    href: 'https://www.coral.ru/concepts/villas-and-suits/'
+                },
+                {
+                    description: 'Coral Bonus',
+                    visual: '/site/coral.ru/assets/hot-promos/coral-bonus.jpg',
+                    href: 'https://www.coral.ru/poleznaya-informatsiya/offers/coralbonus/'
+                },
+                {
+                    description: 'Летняя коллекция отелей по России',
+                    visual: '/site/coral.ru/assets/hot-promos/russia-summer-collection.jpg',
+                    href: 'https://www.coral.ru/poleznaya-informatsiya/info/concepts/letnyaya-kollektsiya-oteley-po-rossii/'
+                },
+                {
+                    description: 'Туры в рассрочку и кредит',
+                    visual: '/site/coral.ru/assets/hot-promos/tours-credits.jpg',
+                    href: 'https://www.coral.ru/poleznaya-informatsiya/onlinetour/payment/'
+                },
             ],
             leasureGuides: [
                 {

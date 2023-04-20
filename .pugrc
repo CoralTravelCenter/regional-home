@@ -41,7 +41,7 @@
                 },
                 {
                     description: 'Раннее бронирование',
-                    visual: '/site/coral.ru/assets/hot-promos/early-booking.jpg',
+                    visual: '/site/coral.ru/assets/hot-promos/early-booking-02.jpg',
                     href: 'https://www.coral.ru/hot-offers/rannee-bronirovanie-leto/'
                 },
                 {
@@ -56,12 +56,12 @@
                 },
                 {
                     description: '50 оттенков синего (Эгейское побережье)',
-                    visual: '/site/coral.ru/assets/hot-promos/fifty-shades-of-blue.jpg',
+                    visual: '/site/coral.ru/assets/hot-promos/fifty-shades-of-blue-02.jpg',
                     href: 'https://www.coral.ru/visit-turkey/regions-aegean/'
                 },
                 {
                     description: 'Без пересадок на любимые курорты ОАЭ',
-                    visual: '/site/coral.ru/assets/hot-promos/directly-to-lovely-uae.jpg',
+                    visual: '/site/coral.ru/assets/hot-promos/directly-to-lovely-uae-02.jpg',
                     href: 'https://www.coral.ru/osenne-zimniy-otdyh-v-oae/'
                 },
                 {
@@ -69,11 +69,11 @@
                     visual: '/site/coral.ru/assets/hot-promos/elite-villas.jpg',
                     href: 'https://www.coral.ru/concepts/villas-and-suits/'
                 },
-                {
-                    description: 'Coral Bonus',
-                    visual: '/site/coral.ru/assets/hot-promos/coral-bonus.jpg',
-                    href: 'https://www.coral.ru/poleznaya-informatsiya/offers/coralbonus/'
-                },
+//                {
+//                    description: 'Coral Bonus',
+//                    visual: '/site/coral.ru/assets/hot-promos/coral-bonus.jpg',
+//                    href: 'https://www.coral.ru/poleznaya-informatsiya/offers/coralbonus/'
+//                },
                 {
                     description: 'Летняя коллекция отелей по России',
                     visual: '/site/coral.ru/assets/hot-promos/russia-summer-collection.jpg',

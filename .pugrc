@@ -37,12 +37,13 @@
                 {
                     description: 'Куда рвануть на каникулы и майские праздники',
                     visual: '/site/coral.ru/assets/hot-promos/where2go-on-may.jpg',
-                    href: 'https://www.coral.ru/poleznaya-informatsiya/gid-po-otdyhu/kuda-poehat-prazdniki//'
+                    href: 'https://www.coral.ru/poleznaya-informatsiya/gid-po-otdyhu/kuda-poehat-prazdniki/',
                 },
                 {
                     description: 'Раннее бронирование',
                     visual: '/site/coral.ru/assets/hot-promos/early-booking-02.jpg',
-                    href: 'https://www.coral.ru/hot-offers/rannee-bronirovanie-leto/'
+                    href: 'https://www.coral.ru/hot-offers/rannee-bronirovanie-leto/',
+                    until: '2023-05-01'
                 },
                 {
                     description: 'Сеть отелей Coral Group',

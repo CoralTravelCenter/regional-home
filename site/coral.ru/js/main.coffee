@@ -81,7 +81,7 @@ ASAP ->
                     $tabs_container.toggleClass 'scrollable-left', not entry.isIntersecting
                 else if entry.target == last_tab_el
                     $tabs_container.toggleClass 'scrollable-right', not entry.isIntersecting
-        , threshold: 0.5, root: $tabs_container.get(0)
+        , threshold: .95, root: $tabs_container.get(0)
         io.observe first_tab_el
         io.observe last_tab_el
 
@@ -92,7 +92,13 @@ ASAP ->
             $('.flickity-enabled').flickity 'resize'
 
     $.when($flickityReady).done ->
-        $('.hot-slider').flickity
+        $hot_slider = $('.hot-slider')
+        $hot_slider.children().filter (idx, slide) ->
+            $slide = $(slide)
+            now = moment()
+            not now.isBetween ($slide.attr('data-active-since') or '2000-01-01'), ($slide.attr('data-active-until') or '2100-01-01')
+        .remove()
+        $hot_slider.flickity
             cellSelector: '.hot-slide'
             cellAlign: 'center'
             wrapAround: yes

@@ -52,7 +52,7 @@ mixin hot(city, commons)
                         - var hot_promos = city.hotPromos || commons.hotPromos
                         .hot-slider(class={ 'single-slide': hot_promos.length === 1 })
                             for promo in hot_promos
-                                .hot-slide
+                                .hot-slide(data-active-since=promo.since, data-active-until=promo.until)
                                     img(src=promo.visual)
                                     a(href=promo.href, target='_blank') &zwj;
 

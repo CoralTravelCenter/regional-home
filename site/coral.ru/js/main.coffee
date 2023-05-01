@@ -222,14 +222,14 @@ ASAP ->
         $this.toggleClass 'open'
         $map_wrap = $('.interactive-map')
         if $this.hasClass 'open'
-            unless lambert_map
-                window.lambert_map = lambert_map = new LambertYmap
-                    appState: appState
-                    cities: reference.cities
-                    el: $('.ymap').get(0)
-                lambert_map.init()
-            $map_wrap.slideDown()
-            appState.set 'homeCity', _.find reference.cities, eeID: Number(getActiveDeparture().value)
+            $map_wrap.slideDown ->
+                unless lambert_map
+                    window.lambert_map = lambert_map = new LambertYmap
+                        appState: appState
+                        cities: reference.cities
+                        el: $('.ymap').get(0)
+                    lambert_map.init()
+                    appState.set 'homeCity', _.find reference.cities, eeID: Number(getActiveDeparture().value)
         else
             $map_wrap.slideUp()
     # watch for destination change in search field

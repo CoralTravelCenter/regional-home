@@ -1,0 +1,17 @@
+{
+    contents: [
+        '/site/coral.ru/markup/mixins/main-styles.pug',
+        '/site/coral.ru/markup/kaliningrad/intro.pug',
+        '/site/coral.ru/markup/region-redirect.pug',
+        '/site/coral.ru/markup/kaliningrad/hot.pug',
+        '/site/coral.ru/markup/kaliningrad/available-destinations.pug',
+        '/site/coral.ru/markup/mixins/why-us.pug',
+        '/site/coral.ru/markup/kaliningrad/recommended-tours.pug',
+        '/site/coral.ru/dev-markup/hotels-block-kaliningrad.html',
+        '/site/coral.ru/markup/kaliningrad/leasure-guide.pug',
+        '/site/coral.ru/markup/kaliningrad/pay-attention.pug',
+        '/site/coral.ru/markup/kaliningrad/xlinks.pug',
+        '/site/coral.ru/markup/mixins/reviews-and-thanks.pug',
+        '/site/coral.ru/markup/mixins/main-scripts.pug'
+    ]
+}

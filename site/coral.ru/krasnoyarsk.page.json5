@@ -1,0 +1,17 @@
+{
+    contents: [
+        '/site/coral.ru/markup/mixins/main-styles.pug',
+        '/site/coral.ru/markup/krasnoyarsk/intro.pug',
+        '/site/coral.ru/markup/region-redirect.pug',
+        '/site/coral.ru/markup/krasnoyarsk/hot.pug',
+        '/site/coral.ru/markup/krasnoyarsk/available-destinations.pug',
+        '/site/coral.ru/markup/mixins/why-us.pug',
+        '/site/coral.ru/markup/krasnoyarsk/recommended-tours.pug',
+        '/site/coral.ru/dev-markup/hotels-block-krasnoyarsk.html',
+        '/site/coral.ru/markup/krasnoyarsk/leasure-guide.pug',
+        '/site/coral.ru/markup/krasnoyarsk/pay-attention.pug',
+        '/site/coral.ru/markup/krasnoyarsk/xlinks.pug',
+        '/site/coral.ru/markup/mixins/reviews-and-thanks.pug',
+        '/site/coral.ru/markup/mixins/main-scripts.pug'
+    ]
+}

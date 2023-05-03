@@ -1,0 +1,17 @@
+{
+    contents: [
+        '/site/coral.ru/markup/mixins/main-styles.pug',
+        '/site/coral.ru/markup/sochi/intro.pug',
+        '/site/coral.ru/markup/region-redirect.pug',
+        '/site/coral.ru/markup/sochi/hot.pug',
+        '/site/coral.ru/markup/sochi/available-destinations.pug',
+        '/site/coral.ru/markup/mixins/why-us.pug',
+        '/site/coral.ru/markup/sochi/recommended-tours.pug',
+        '/site/coral.ru/dev-markup/hotels-block-sochi.html',
+        '/site/coral.ru/markup/sochi/leasure-guide.pug',
+        '/site/coral.ru/markup/sochi/pay-attention.pug',
+        '/site/coral.ru/markup/sochi/xlinks.pug',
+        '/site/coral.ru/markup/mixins/reviews-and-thanks.pug',
+        '/site/coral.ru/markup/mixins/main-scripts.pug'
+    ]
+}

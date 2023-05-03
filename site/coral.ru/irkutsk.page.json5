@@ -1,0 +1,17 @@
+{
+    contents: [
+        '/site/coral.ru/markup/mixins/main-styles.pug',
+        '/site/coral.ru/markup/irkutsk/intro.pug',
+        '/site/coral.ru/markup/region-redirect.pug',
+        '/site/coral.ru/markup/irkutsk/hot.pug',
+        '/site/coral.ru/markup/irkutsk/available-destinations.pug',
+        '/site/coral.ru/markup/mixins/why-us.pug',
+        '/site/coral.ru/markup/irkutsk/recommended-tours.pug',
+        '/site/coral.ru/dev-markup/hotels-block-irkutsk.html',
+        '/site/coral.ru/markup/irkutsk/leasure-guide.pug',
+        '/site/coral.ru/markup/irkutsk/pay-attention.pug',
+        '/site/coral.ru/markup/irkutsk/xlinks.pug',
+        '/site/coral.ru/markup/mixins/reviews-and-thanks.pug',
+        '/site/coral.ru/markup/mixins/main-scripts.pug'
+    ]
+}

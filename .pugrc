@@ -54,20 +54,15 @@
                     href: 'https://www.coral.ru/visit-turkey/regions-aegean/'
                 },
                 {
-                    description: 'Без пересадок на любимые курорты ОАЭ',
-                    visual: '/site/coral.ru/assets/hot-promos/directly-to-lovely-uae-02.jpg',
-                    href: 'https://www.coral.ru/osenne-zimniy-otdyh-v-oae/'
+                    description: 'Лето в ОАЭ: выгодные цены и никаких очередей',
+                    visual: '/site/coral.ru/assets/hot-promos/uae-in-summer-01.jpg',
+                    href: 'https://www.coral.ru/main/uae/otdyh-v-uae-letom/'
                 },
                 {
                     description: 'Элитный отдых для тех, кто ценит комфорт',
                     visual: '/site/coral.ru/assets/hot-promos/elite-villas.jpg',
                     href: 'https://www.coral.ru/concepts/villas-and-suits/'
                 },
-//                {
-//                    description: 'Coral Bonus',
-//                    visual: '/site/coral.ru/assets/hot-promos/coral-bonus.jpg',
-//                    href: 'https://www.coral.ru/poleznaya-informatsiya/offers/coralbonus/'
-//                },
                 {
                     description: 'Летняя коллекция отелей по России',
                     visual: '/site/coral.ru/assets/hot-promos/russia-summer-collection.jpg',
@@ -517,6 +512,7 @@
                 h3: 'Выбирай и лети',
                 name: 'Челябинск',
                 url: '/chelyabinsk/',
+                logoDecor: '/site/coral.ru/assets/logo-decor-chelyabinsk.png',
                 dictionary: {
                     wording_fromCityName: 'из Челябинска'
                 },
@@ -570,12 +566,29 @@
                         ]
                     },
                 ],
+                destinations: [
+                    {
+                        button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
+                        visual: {
+                            desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+                            mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                        }
+                    },
+                    {
+                        button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
+                        visual: {
+                            desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
+                            mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
+                        }
+                    },
+                ]
             },
             irkutsk: {
                 h2: 'Из Иркутска без пересадок',
                 h3: 'Выбирай и лети',
                 name: 'Иркутск',
                 url: '/irkutsk/',
+                logoDecor: '/site/coral.ru/assets/logo-decor-irkutsk.png',
                 dictionary: {
                     wording_fromCityName: 'из Иркутска'
                 },
@@ -600,12 +613,29 @@
                         ]
                     },
                 ],
+                destinations: [
+                    {
+                        button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
+                        visual: {
+                            desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+                            mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                        }
+                    },
+                    {
+                        button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
+                        visual: {
+                            desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
+                            mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
+                        }
+                    },
+                ]
             },
             kaliningrad: {
                 h2: 'Из Калининграда без пересадок',
                 h3: 'Выбирай и лети',
                 name: 'Калининград',
                 url: '/kaliningrad/',
+                logoDecor: '/site/coral.ru/assets/logo-decor-kaliningrad.png',
                 dictionary: {
                     wording_fromCityName: 'из Калининграда'
                 },
@@ -655,12 +685,29 @@
                         ]
                     },
                 ],
+                destinations: [
+                    {
+                        button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
+                        visual: {
+                            desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+                            mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                        }
+                    },
+                    {
+                        button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
+                        visual: {
+                            desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
+                            mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
+                        }
+                    },
+                ]
             },
             krasnoyarsk: {
                 h2: 'Из Красноярска без пересадок',
                 h3: 'Выбирай и лети',
                 name: 'Красноярск',
                 url: '/krasnoyarsk/',
+                logoDecor: '/site/coral.ru/assets/logo-decor-krasnoyarsk.png',
                 dictionary: {
                     wording_fromCityName: 'из Красноярска'
                 },
@@ -702,12 +749,29 @@
                         ]
                     },
                 ],
+                destinations: [
+                    {
+                        button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
+                        visual: {
+                            desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+                            mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                        }
+                    },
+                    {
+                        button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
+                        visual: {
+                            desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
+                            mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
+                        }
+                    },
+                ]
             },
             mineralnyevody: {
                 h2: 'Из Минеральных Вод без пересадок',
                 h3: 'Выбирай и лети',
                 name: 'Минеральные Воды',
                 url: '/mineralnye-vody/',
+                logoDecor: '/site/coral.ru/assets/logo-decor-mineralnyevody.png',
                 dictionary: {
                     wording_fromCityName: 'из Минеральных Вод'
                 },
@@ -749,12 +813,29 @@
                         ]
                     },
                 ],
+                destinations: [
+                    {
+                        button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
+                        visual: {
+                            desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+                            mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                        }
+                    },
+                    {
+                        button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
+                        visual: {
+                            desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
+                            mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
+                        }
+                    },
+                ]
             },
             nnovgorod: {
                 h2: 'Из Нижнего Новгорода без пересадок',
                 h3: 'Выбирай и лети',
                 name: 'Нижний Новгород',
                 url: '/nnovgorod/',
+                logoDecor: '/site/coral.ru/assets/logo-decor-nnovgorod.png',
                 dictionary: {
                     wording_fromCityName: 'из Нижнего Новгорода'
                 },
@@ -804,12 +885,29 @@
                         ]
                     },
                 ],
+                destinations: [
+                    {
+                        button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
+                        visual: {
+                            desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+                            mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                        }
+                    },
+                    {
+                        button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
+                        visual: {
+                            desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
+                            mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
+                        }
+                    },
+                ]
             },
             omsk: {
                 h2: 'Из Омска без пересадок',
                 h3: 'Выбирай и лети',
                 name: 'Омск',
                 url: '/omsk/',
+                logoDecor: '/site/coral.ru/assets/logo-decor-omsk.png',
                 dictionary: {
                     wording_fromCityName: 'из Омска'
                 },
@@ -851,6 +949,22 @@
                         ]
                     },
                 ],
+                destinations: [
+                    {
+                        button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
+                        visual: {
+                            desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+                            mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                        }
+                    },
+                    {
+                        button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
+                        visual: {
+                            desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
+                            mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
+                        }
+                    },
+                ]
             },
             orenburg: {
                 h2: 'Из Оренбурга без пересадок',
@@ -898,12 +1012,29 @@
                         ]
                     },
                 ],
+                destinations: [
+                    {
+                        button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
+                        visual: {
+                            desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+                            mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                        }
+                    },
+                    {
+                        button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
+                        visual: {
+                            desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
+                            mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
+                        }
+                    },
+                ]
             },
             perm: {
                 h2: 'Из Перми без пересадок',
                 h3: 'Выбирай и лети',
                 name: 'Пермь',
                 url: '/perm/',
+                logoDecor: '/site/coral.ru/assets/logo-decor-perm.png',
                 dictionary: {
                     wording_fromCityName: 'из Перми'
                 },
@@ -959,12 +1090,29 @@
                         ]
                     },
                 ],
+                destinations: [
+                    {
+                        button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
+                        visual: {
+                            desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+                            mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                        }
+                    },
+                    {
+                        button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
+                        visual: {
+                            desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
+                            mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
+                        }
+                    },
+                ]
             },
             samara: {
                 h2: 'Из Самары без пересадок',
                 h3: 'Выбирай и лети',
                 name: 'Самара',
                 url: '/samara/',
+                logoDecor: '/site/coral.ru/assets/logo-decor-samara.png',
                 dictionary: {
                     wording_fromCityName: 'из Самары'
                 },
@@ -1020,12 +1168,29 @@
                         ]
                     },
                 ],
+                destinations: [
+                    {
+                        button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
+                        visual: {
+                            desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+                            mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                        }
+                    },
+                    {
+                        button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
+                        visual: {
+                            desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
+                            mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
+                        }
+                    },
+                ]
             },
             sochi: {
                 h2: 'Из Сочи без пересадок',
                 h3: 'Выбирай и лети',
                 name: 'Сочи',
                 url: '/sochi/',
+                logoDecor: '/site/coral.ru/assets/logo-decor-sochi.png',
                 dictionary: {
                     wording_fromCityName: 'из Сочи'
                 },
@@ -1067,12 +1232,29 @@
                         ]
                     },
                 ],
+                destinations: [
+                    {
+                        button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
+                        visual: {
+                            desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+                            mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                        }
+                    },
+                    {
+                        button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
+                        visual: {
+                            desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
+                            mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
+                        }
+                    },
+                ]
             },
             tyumen: {
                 h2: 'Из Тюмени без пересадок',
                 h3: 'Выбирай и лети',
                 name: 'Тюмень',
                 url: '/tyumen/',
+                logoDecor: '/site/coral.ru/assets/logo-decor-tyumen.png',
                 dictionary: {
                     wording_fromCityName: 'из Тюмени'
                 },
@@ -1114,6 +1296,22 @@
                         ]
                     },
                 ],
+                destinations: [
+                    {
+                        button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
+                        visual: {
+                            desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+                            mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                        }
+                    },
+                    {
+                        button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
+                        visual: {
+                            desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
+                            mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
+                        }
+                    },
+                ]
             },
         }
     }

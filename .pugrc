@@ -1,7 +1,8 @@
 {
     locals: {
         commons: {
-            preferredDestinationOrder: ['Турция', 'ОАЭ', 'Бахрейн', 'Россия', 'Мальдивы'],
+            bestDealsBox_HomePageSet_TabName: 'Эксклюзивно у Coral Travel',
+            preferredDestinationOrder: ['Эксклюзивно у Coral Travel', 'Турция', 'ОАЭ', 'Бахрейн', 'Россия', 'Египет', 'Мальдивы'],
             preferredDestination: 'Турция',
             destinations: [
                 {
@@ -28,17 +29,6 @@
             ],
             hotPromos: [
                 {
-                    description: 'Куда рвануть на каникулы и майские праздники',
-                    visual: '/site/coral.ru/assets/hot-promos/where2go-on-may.jpg',
-                    href: 'https://www.coral.ru/poleznaya-informatsiya/gid-po-otdyhu/kuda-poehat-prazdniki/',
-                },
-                {
-                    description: 'Раннее бронирование',
-                    visual: '/site/coral.ru/assets/hot-promos/early-booking-02.jpg',
-                    href: 'https://www.coral.ru/hot-offers/rannee-bronirovanie-leto/',
-                    until: '2023-05-12'
-                },
-                {
                     description: 'Сеть отелей Coral Group',
                     visual: '/site/coral.ru/assets/hot-promos/coral-group-network.jpg',
                     href: 'https://www.coral.ru/concepts/coralgroup-hotels-and-resorts/'
@@ -50,12 +40,14 @@
                 },
                 {
                     description: '50 оттенков синего (Эгейское побережье)',
-                    visual: '/site/coral.ru/assets/hot-promos/fifty-shades-of-blue-02.jpg',
+//                    visual: '/site/coral.ru/assets/hot-promos/fifty-shades-of-blue-02.jpg',
+                    visual: 'https://cdn.coral.ru/content/img/actions/aegean_desk_с.png',
                     href: 'https://www.coral.ru/visit-turkey/regions-aegean/'
                 },
                 {
                     description: 'Лето в ОАЭ: выгодные цены и никаких очередей',
-                    visual: '/site/coral.ru/assets/hot-promos/uae-in-summer-01.jpg',
+//                    visual: '/site/coral.ru/assets/hot-promos/uae-in-summer-01.jpg',
+                    visual: 'https://cdn.coral.ru/content/img/actions/uae_desk_с.png',
                     href: 'https://www.coral.ru/main/uae/otdyh-v-uae-letom/'
                 },
                 {

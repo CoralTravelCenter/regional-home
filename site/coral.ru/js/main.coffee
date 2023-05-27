@@ -65,7 +65,7 @@ ASAP ->
             $scroll_this.scrollTo $scroll_this.children(':last'), 500
 
 
-    $.when($fetchAndBuildBestDeals(preferred_destination_order)).done (available_destinations) ->
+    $.when($fetchAndBuildBestDeals(preferred_destination_order, bestDealsBox_HomePageSet_TabName)).done (available_destinations) ->
         $tabs_selector = $('.burning-offers .tabs-selector')
         $tabs_container = $tabs_selector.closest('.tabs-container')
         lis_html = available_destinations.map (d) ->

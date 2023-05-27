@@ -33,7 +33,9 @@ mixin intro(city, commons)
                             data-lookup-regions=destination.button.data_lookup_regions)= destination.button.label
 
 mixin hot(city, commons)
-    script!= `var preferred_destination_order = ${ city.preferredDestinationOrder && JSON.stringify(city.preferredDestinationOrder) || JSON.stringify(commons.preferredDestinationOrder) };`
+    script
+        != `var preferred_destination_order = ${ city.preferredDestinationOrder && JSON.stringify(city.preferredDestinationOrder) || JSON.stringify(commons.preferredDestinationOrder) };`
+        != `var bestDealsBox_HomePageSet_TabName = ${ (city.bestDealsBox_HomePageSet_TabName && JSON.stringify(city.bestDealsBox_HomePageSet_TabName) || (commons.bestDealsBox_HomePageSet_TabName && JSON.stringify(commons.bestDealsBox_HomePageSet_TabName)) || null) };`
     section.hero.hot
         article
             .contenu

@@ -12,7 +12,6 @@ $fetchBestDeals = (params) ->
             isHomePageRequest: yes
             viewType: 'Box'
         request = Object.assign request, params
-#        $.post 'https://www.coral.ru/v1/destination/renderbestdealsbydestination',
         $post 'https://www.coral.ru/v1/destination/renderbestdealsbydestination', request
         .done (response) ->
             LOCAL_CHACHE_BY_DESTINATION[params.destinationName] = response
@@ -76,27 +75,32 @@ export selectDestinationTab = (tab_el, $flickityReady) ->
                     pageDots: yes
                 $('.flickity-enabled').flickity 'resize'
 
-export $fetchAndBuildBestDeals = (destination_preferred_order=[]) ->
+export $fetchAndBuildBestDeals = (destination_preferred_order=[], home_tab_name) ->
     $promise = $.Deferred()
-#    $.get('/').done (home_html) ->
     $get('/').done (home_html) ->
         domparser = new DOMParser()
         doc = domparser.parseFromString home_html, 'text/html'
         bestdealsbox = doc.querySelector '[data-module="bestdealsbox"]'
         links = Array.from bestdealsbox.querySelectorAll '.nav-link[data-optionid]'
-        uniq_links = links.filter (nav_link) -> !!nav_link.getAttribute 'data-optionid'
+        if home_tab_name
+            uniq_links = links
+        else
+            uniq_links = links.filter (nav_link) -> !!nav_link.getAttribute 'data-optionid'
         uniq_links = _.uniqBy uniq_links, (nav_link) -> nav_link.getAttribute 'data-optionid'
         available_destinations = uniq_links.map (nav_link) ->
+            destination_name = nav_link.getAttribute 'data-name'
+            destination_name = home_tab_name if destination_name == 'Все'
             data =
-                destination_name: nav_link.getAttribute 'data-name'
+                destination_name: destination_name
                 destination_id: nav_link.getAttribute 'data-id'
                 destination_url: nav_link.getAttribute 'data-url'
-                option_id: nav_link.getAttribute 'data-optionid'
+                option_id: nav_link.getAttribute('data-optionid') or bestdealsbox.getAttribute('data-option-id')
         .sort (a,b) ->
             aidx = destination_preferred_order.indexOf a.destination_name
             aidx = Infinity if aidx < 0
             bidx = destination_preferred_order.indexOf b.destination_name
             bidx = Infinity if bidx < 0
             if aidx < bidx then -1 else if aidx > bidx then 1 else 0
+        console.log('+++ available_destinations: %o', available_destinations)
         $promise.resolve available_destinations
     $promise

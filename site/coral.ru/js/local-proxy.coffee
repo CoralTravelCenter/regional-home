@@ -17,7 +17,7 @@ local_cache_get =
     '/v1/flight/availabledate?fromAreaId=2529&toCountryId=1': '/site/coral.ru/assets/dev-cache/availabledate-from-2529-to-1.json'
 
 local_cache_post_by_optionId =
-    '7c5ec50a-c9d6-490a-a867-ad8700e553ba': '/site/coral.ru/assets/dev-cache/turkey-best-deals.html'
+    'df3f5f95-251c-4909-9601-afe300a46a07': '/site/coral.ru/assets/dev-cache/turkey-best-deals.html'
 
 export $get = (url) ->
     if window.location.hostname == 'localhost'

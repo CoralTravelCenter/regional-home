@@ -1,0 +1,17 @@
+{
+    contents: [
+        '/site/sunmar.ru/markup/mixins/main-styles.pug',
+        '/site/sunmar.ru/markup/chelyabinsk/intro.pug',
+        '/site/sunmar.ru/markup/region-redirect.pug',
+        '/site/sunmar.ru/markup/chelyabinsk/hot.pug',
+        '/site/sunmar.ru/markup/chelyabinsk/available-destinations.pug',
+        '/site/sunmar.ru/markup/mixins/why-us.pug',
+        '/site/sunmar.ru/markup/chelyabinsk/recommended-tours.pug',
+        '/site/sunmar.ru/dev-markup/hotels-block-chelyabinsk.html',
+        '/site/sunmar.ru/markup/chelyabinsk/leasure-guide.pug',
+        '/site/sunmar.ru/markup/chelyabinsk/pay-attention.pug',
+        '/site/sunmar.ru/markup/chelyabinsk/xlinks.pug',
+        '/site/sunmar.ru/markup/mixins/reviews-and-thanks.pug',
+        '/site/sunmar.ru/markup/mixins/main-scripts.pug'
+    ]
+}

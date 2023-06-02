@@ -1,0 +1,17 @@
+{
+    contents: [
+        '/site/sunmar.ru/markup/mixins/main-styles.pug',
+        '/site/sunmar.ru/markup/spb/intro.pug',
+        '/site/sunmar.ru/markup/region-redirect.pug',
+        '/site/sunmar.ru/markup/spb/hot.pug',
+        '/site/sunmar.ru/markup/spb/available-destinations.pug',
+        '/site/sunmar.ru/markup/mixins/why-us.pug',
+        '/site/sunmar.ru/markup/spb/recommended-tours.pug',
+        '/site/sunmar.ru/dev-markup/hotels-block-spb.html',
+        '/site/sunmar.ru/markup/spb/leasure-guide.pug',
+        '/site/sunmar.ru/markup/spb/pay-attention.pug',
+        '/site/sunmar.ru/markup/spb/xlinks.pug',
+        '/site/sunmar.ru/markup/mixins/reviews-and-thanks.pug',
+        '/site/sunmar.ru/markup/mixins/main-scripts.pug'
+    ]
+}

@@ -1,0 +1,188 @@
+mixin intro(city, commons)
+    - var destinations = city.destinations || commons.destinations
+    style
+        if city.logoDecor
+            | header.site-header .container-logo {
+            |   background: url(#{ city.logoDecor }) center bottom no-repeat;
+            |   background-size: 100% auto;
+            | }
+        for destination, idx in destinations
+            | .visual:nth-child(#{ idx+1 }) {
+            |   background-image: url(#{ destination.visual.desktop });
+            | }
+            | @media screen and (max-width:768px) {
+            |   .visual:nth-child(#{ idx+1 }) {
+            |       background-image: url(#{ destination.visual.mobile });
+            |   }
+            | }
+
+    section.hero.underbrow.intro
+        .visuals-wrap
+            for destination, idx in destinations
+                .visual(class={ shown: idx === 0 })
+        article
+            .contenu
+                h3!= city.h3
+                h2.h1!= city.h2
+                .actions.eternal-package-search
+                    for destination, idx in destinations
+                        button(
+                            class={ hovered: idx === 0 },
+                            data-lookup-destination=destination.button.data_lookup_destination,
+                            data-lookup-depth-days=destination.button.data_lookup_depth_days
+                            data-lookup-regions=destination.button.data_lookup_regions)= destination.button.label
+
+mixin hot(city, commons)
+    script
+        != `var preferred_destination_order = ${ city.preferredDestinationOrder && JSON.stringify(city.preferredDestinationOrder) || JSON.stringify(commons.preferredDestinationOrder) };`
+        != `var bestDealsBox_HomePageSet_TabName = ${ (city.bestDealsBox_HomePageSet_TabName && JSON.stringify(city.bestDealsBox_HomePageSet_TabName) || (commons.bestDealsBox_HomePageSet_TabName && JSON.stringify(commons.bestDealsBox_HomePageSet_TabName)) || null) };`
+    section.hero.hot
+        article
+            .contenu
+                .burning-hot-offers
+                    h3: span: span Горящие предложения
+                    .burning-offers
+                        .tabs-container
+                            .scroll-left &laquo;
+                            .scroll-right &raquo;
+                            ul.tabs-selector
+                                // ...
+                        .destinations-container
+                            // ...
+                    h3: span: span Горячие Акции
+                    .hot-promos
+                        - var hot_promos = city.hotPromos || commons.hotPromos
+                        .hot-slider(class={ 'single-slide': hot_promos.length === 1 })
+                            for promo in hot_promos
+                                .hot-slide(data-active-since=promo.since, data-active-until=promo.until)
+                                    img(src=promo.visual)
+                                    a(href=promo.href, target='_blank') &zwj;
+
+mixin available-destinations(city, commons)
+    section.hero.available-destinations
+        article
+            .contenu
+                h2 Куда можно поехать отдохнуть прямо сейчас
+                p Посмотрите все доступные направления для вылета из вашего города
+                .available-flight-widget(data-preferred-destination=(city.preferredDestination || commons.preferredDestination))
+                    .head
+                        .head-item: span.labeled.takeoff Выберите город вылета
+                        .head-item: span.labeled.destination Выберите страну
+                        .head-item.dbl
+                            span.labeled.landing Аэропорт прилета
+                            span.labeled.closest-date Ближайший вылет
+                    .body
+                        .data-column.depart-from: .scrollable &zwj;
+                        .data-column.destination-to: .scrollable &zwj;
+                        .data-column.dbl.destination-airport-closest-date: .scrollable &zwj;
+                    .foot
+                        .pad
+                            .selection-info-comp
+                                span.label Вы выбрали:
+                                .selection-info &zwj;
+                            button(data-action='select-tour' disabled='') Выбрать тур
+
+                .closest-origin-widget
+                    h4.disclose Если в вашем городе нет подходящих направлений, рекомендуем рассмотреть ближайшие города
+                    .interactive-map
+                        .loading-msg Загрузка карты...
+                        .ymap
+                            // ...
+                        .block-interaction
+                            .loader
+                                // ...
+
+mixin why-us()
+    section.hero.why-us
+        article
+            .contenu
+                h2 Наши преимущества
+                a.arrlink(href='https://www.sunmar.ru/our-advantages/', target='_blank') Посмотреть все
+                .list-marque
+                    ul.our-benefits
+                        li
+                            .icon(style='background-image: url(/site/sunmar.ru/assets/icon-flexy-flight-chart.png)')
+                            .label
+                                :typo
+                                    Гибкая полетная программа с вылетами из вашего города
+                        li
+                            .icon(style='background-image: url(/site/sunmar.ru/assets/icon-cozy-booking.png)')
+                            .label
+                                :typo
+                                    Удобное бронирование туров online, по телефону или в офисе продаж
+                        li
+                            .icon(style='background-image: url(/site/sunmar.ru/assets/icon-affordable.png)')
+                            .label
+                                :typo
+                                    Широкий выбор туров по привлекательным ценам и в рассрочку
+                        li
+                            .icon(style='background-image: url(/site/sunmar.ru/assets/icon-personal-offers.png)')
+                            .label
+                                :typo
+                                    Персональные цены для постоянных туристов и выгодные предложения
+                .faq-on-buying
+                    .inhalt
+                        h3 Популярные вопросы о покупке тура
+                        .actions
+                            a(href='https://www.sunmar.ru/poleznaya-informatsiya/faq-po-pokupke-tura-onlayn/', target='_blank') Узнать подробнее
+
+mixin recommended-tours(city, commons)
+    section.hero
+        article
+            .contenu
+                h2 Рекомендованные туры
+                h4 прямым рейсом #{ city.dictionary.wording_fromCityName }
+
+mixin leasure-guide(city, commons)
+    section.hero.leasure-guide
+        article
+            .contenu
+                h2 Гид по отдыху
+                a(href='https://www.sunmar.ru/poleznaya-informatsiya/gid-po-otdyhu/?banner_on_site=gid-all', target='_blank')
+                    h4 Все статьи
+                .leasure-guides-grid
+                    - var guides = city.leasureGuides || commons.leasureGuides
+                    for guide in guides
+                        a(href=guide.href, target='_blank', style={ 'background-image': `url(${ guide.visual })` }): span &nbsp;
+
+mixin pay-attention(city, commons)
+    section.hero.pay-attention
+        article
+            .contenu
+                h2 Обратите внимание
+                .banners-grid
+                    - var banners = city.payAttention || commons.payAttention
+                    for banner in banners
+                        a(href=banner.href, target='_blank', style={ 'background-image': `url(${ banner.visual })` }): span &nbsp;
+
+mixin xlinks-drawer(xlinks)
+    .xlinks
+        - var tmpid = 'toggler-' + Math.round(Math.random() * 100000)
+        input(type='checkbox', id=tmpid)
+        label.heading(for=tmpid)!= xlinks.heading
+        ul.drawer
+            for l in xlinks.links
+                li: a(href=l.href, target='_blank')!= l.label
+
+mixin xlinks(city, commons)
+    - var xlinks = city.xlinks || commons.xlinks
+    if xlinks
+        section.hero.xlinks
+            article
+                .contenu
+                    .xlinks-grid
+                        for xlinks_data in xlinks
+                            +xlinks-drawer(xlinks_data)
+
+mixin reviews-and-thanks()
+    section.hero.reviews-and-thanks
+        article
+            .contenu
+                h2 Благодарности
+                a(href='https://www.sunmar.ru/otzyv/', target='_blank')
+                    h4 Все отзывы
+
+                .reviews-wrap
+                    .all-reviews &nbsp;
+
+    script(type='module', src='/site/sunmar.ru/js/reviews-and-thanks.coffee')

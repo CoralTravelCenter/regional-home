@@ -1,0 +1,17 @@
+{
+    contents: [
+        '/site/sunmar.ru/markup/mixins/main-styles.pug',
+        '/site/sunmar.ru/markup/krasnoyarsk/intro.pug',
+        '/site/sunmar.ru/markup/region-redirect.pug',
+        '/site/sunmar.ru/markup/krasnoyarsk/hot.pug',
+        '/site/sunmar.ru/markup/krasnoyarsk/available-destinations.pug',
+        '/site/sunmar.ru/markup/mixins/why-us.pug',
+        '/site/sunmar.ru/markup/krasnoyarsk/recommended-tours.pug',
+        '/site/sunmar.ru/dev-markup/hotels-block-krasnoyarsk.html',
+        '/site/sunmar.ru/markup/krasnoyarsk/leasure-guide.pug',
+        '/site/sunmar.ru/markup/krasnoyarsk/pay-attention.pug',
+        '/site/sunmar.ru/markup/krasnoyarsk/xlinks.pug',
+        '/site/sunmar.ru/markup/mixins/reviews-and-thanks.pug',
+        '/site/sunmar.ru/markup/mixins/main-scripts.pug'
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    contents: [
+        '/site/sunmar.ru/markup/mixins/main-styles.pug',
+        '/site/sunmar.ru/markup/novosibirsk/intro.pug',
+        '/site/sunmar.ru/markup/region-redirect.pug',
+        '/site/sunmar.ru/markup/novosibirsk/hot.pug',
+        '/site/sunmar.ru/markup/novosibirsk/available-destinations.pug',
+        '/site/sunmar.ru/markup/mixins/why-us.pug',
+        '/site/sunmar.ru/markup/novosibirsk/recommended-tours.pug',
+        '/site/sunmar.ru/dev-markup/hotels-block-novosibirsk.html',
+        '/site/sunmar.ru/markup/novosibirsk/leasure-guide.pug',
+        '/site/sunmar.ru/markup/novosibirsk/pay-attention.pug',
+        '/site/sunmar.ru/markup/novosibirsk/xlinks.pug',
+        '/site/sunmar.ru/markup/mixins/reviews-and-thanks.pug',
+        '/site/sunmar.ru/markup/mixins/main-scripts.pug'
+    ]
+}

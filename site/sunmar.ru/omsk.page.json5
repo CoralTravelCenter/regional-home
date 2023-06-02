@@ -1,0 +1,17 @@
+{
+    contents: [
+        '/site/sunmar.ru/markup/mixins/main-styles.pug',
+        '/site/sunmar.ru/markup/omsk/intro.pug',
+        '/site/sunmar.ru/markup/region-redirect.pug',
+        '/site/sunmar.ru/markup/omsk/hot.pug',
+        '/site/sunmar.ru/markup/omsk/available-destinations.pug',
+        '/site/sunmar.ru/markup/mixins/why-us.pug',
+        '/site/sunmar.ru/markup/omsk/recommended-tours.pug',
+        '/site/sunmar.ru/dev-markup/hotels-block-omsk.html',
+        '/site/sunmar.ru/markup/omsk/leasure-guide.pug',
+        '/site/sunmar.ru/markup/omsk/pay-attention.pug',
+        '/site/sunmar.ru/markup/omsk/xlinks.pug',
+        '/site/sunmar.ru/markup/mixins/reviews-and-thanks.pug',
+        '/site/sunmar.ru/markup/mixins/main-scripts.pug'
+    ]
+}

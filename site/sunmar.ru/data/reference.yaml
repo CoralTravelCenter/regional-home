@@ -1,0 +1,106 @@
+cities:
+    - name: Москва
+      eeID: 2671
+      latlng: [55.75, 37.62]
+    - name: Барнаул
+      eeID: 2370
+      latlng: [53.36, 83.76]
+    - name: Владивосток
+      eeID: 2984
+      latlng: [43.11, 131.87]
+    - name: Волгоград
+      eeID: 2989
+      latlng: [48.72, 44.5]
+    - name: Екатеринбург
+      eeID: 2449
+      pathname: /ekb/
+      latlng: [56.85, 60.61]
+    - name: Ижевск
+      eeID: 2504
+      latlng: [56.85, 53.2]
+    - name: Иркутск
+      eeID: 2498
+      pathname: /irkutsk/
+      latlng: [52.3, 104.3]
+    - name: Казань
+      eeID: 2529
+      pathname: /kazan/
+      latlng: [55.79, 49.12]
+    - name: Калининград
+      eeID: 2512
+      pathname: /kaliningrad/
+      latlng: [54.71, 20.51]
+    - name: Кемерово
+      eeID: 2531
+      latlng: [55.33, 86.08]
+    - name: Красноярск
+      eeID: 2586
+      pathname: /krasnoyarsk/
+      latlng: [56.02, 92.87]
+    - name: Махачкала
+      eeID: 8995
+      latlng: [42.98, 47.5]
+    - name: Минеральные воды
+      eeID: 2662
+      pathname: /mineralnye-vody/
+      latlng: [44.21, 43.14]
+    - name: Н. Новгород
+      correctName: Нижний Новгород
+      eeID: 2679
+      pathname: /nnovgorod/
+      latlng: [56.33, 44]
+    - name: Нижневартовск
+      eeID: 2707
+      latlng: [60.93, 76.55]
+    - name: Нижнекамск
+      eeID: 2705
+      latlng: [55.64, 51.82]
+    - name: Новосибирск
+      eeID: 2724
+      pathname: /novosibirsk/
+      latlng: [55.04, 82.93]
+    - name: Омск
+      eeID: 2739
+      pathname: /omsk/
+      latlng: [54.99, 73.37]
+    - name: Оренбург
+      eeID: 2743
+      pathname: /orenburg/
+      latlng: [51.77, 55.1]
+    - name: Пермь
+      eeID: 2763
+      pathname: /perm/
+      latlng: [58.01, 56.25]
+    - name: Самара
+      eeID: 2823
+      pathname: /samara/
+      latlng: [53.2, 50.15]
+    - name: Санкт-Петербург
+      eeID: 2817
+      pathname: /spb/
+      latlng: [59.94, 30.31]
+    - name: Саратов
+      eeID: 2827
+      latlng: [51.54, 46.01]
+    - name: Сочи
+      eeID: 2873
+      pathname: /sochi/
+      latlng: [43.6, 39.73]
+    - name: Сургут
+      eeID: 2897
+      latlng: [61.25, 73.42]
+    - name: Тюмень
+      eeID: 2927
+      pathname: /tyumen/
+      latlng: [57.15, 65.53]
+    - name: Уфа
+      eeID: 2935
+      pathname: /ufa/
+      latlng: [54.74, 55.97]
+    - name: Хабаровск
+      eeID: 2533
+      latlng: [48.48, 135.08]
+    - name: Челябинск
+      eeID: 2416
+      pathname: /chelyabinsk/
+      latlng: [55.15, 61.43]

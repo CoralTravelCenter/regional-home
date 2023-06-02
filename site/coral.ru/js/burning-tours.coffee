@@ -12,7 +12,7 @@ $fetchBestDeals = (params) ->
             isHomePageRequest: yes
             viewType: 'Box'
         request = Object.assign request, params
-        $post 'https://www.coral.ru/v1/destination/renderbestdealsbydestination', request
+        $post '/v1/destination/renderbestdealsbydestination', request
         .done (response) ->
             LOCAL_CHACHE_BY_DESTINATION[params.destinationName] = response
             $promise.resolve(response)

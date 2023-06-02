@@ -1,1310 +1,1315 @@
 {
     locals: {
-        commons: {
-            bestDealsBox_HomePageSet_TabName: 'Эксклюзивно у Coral Travel',
-            preferredDestinationOrder: ['Эксклюзивно у Coral Travel', 'Турция', 'ОАЭ', 'Бахрейн', 'Россия', 'Египет', 'Мальдивы'],
-            preferredDestination: 'Турция',
-            destinations: [
-                {
-                    button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
-                    visual: {
-                        desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
-                        mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
-                    }
+        coral: {
+            commons: {
+                bestDealsBox_HomePageSet_TabName: 'Эксклюзивно у Coral Travel',
+                preferredDestinationOrder: ['Эксклюзивно у Coral Travel', 'Турция', 'ОАЭ', 'Бахрейн', 'Россия', 'Египет', 'Мальдивы'],
+                preferredDestination: 'Турция',
+                destinations: [
+                    {
+                        button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
+                        visual: {
+                            desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+                            mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                        }
+                    },
+                    {
+                        button: {label: 'ОАЭ', data_lookup_destination: 'ОАЭ', data_lookup_depth_days: 12},
+                        visual: {
+                            desktop: '/site/coral.ru/assets/intro-uae-desktop.jpg',
+                            mobile: '/site/coral.ru/assets/intro-uae-mobile.jpg'
+                        }
+                    },
+                    {
+                        button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
+                        visual: {
+                            desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
+                            mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
+                        }
+                    },
+                ],
+                hotPromos: [
+                    {
+                        description: 'Сеть отелей Coral Group',
+                        visual: '/site/coral.ru/assets/hot-promos/coral-group-network.jpg',
+                        href: 'https://www.coral.ru/concepts/coralgroup-hotels-and-resorts/'
+                    },
+                    {
+                        description: 'Наша летняя коллекция отелей 2023',
+                        visual: '/site/coral.ru/assets/hot-promos/our-summer-collection.jpg',
+                        href: 'https://www.coral.ru/concepts/our-summer-collection-hotels/'
+                    },
+                    {
+                        description: '50 оттенков синего (Эгейское побережье)',
+                        //                    visual: '/site/coral.ru/assets/hot-promos/fifty-shades-of-blue-02.jpg',
+                        visual: 'https://cdn.coral.ru/content/img/actions/aegean_desk_с.png',
+                        href: 'https://www.coral.ru/visit-turkey/regions-aegean/'
+                    },
+                    {
+                        description: 'Лето в ОАЭ: выгодные цены и никаких очередей',
+                        //                    visual: '/site/coral.ru/assets/hot-promos/uae-in-summer-01.jpg',
+                        visual: 'https://cdn.coral.ru/content/img/actions/uae_desk_с.png',
+                        href: 'https://www.coral.ru/main/uae/otdyh-v-uae-letom/'
+                    },
+                    {
+                        description: 'Элитный отдых для тех, кто ценит комфорт',
+                        visual: '/site/coral.ru/assets/hot-promos/elite-villas.jpg',
+                        href: 'https://www.coral.ru/concepts/villas-and-suits/'
+                    },
+                    {
+                        description: 'Летняя коллекция отелей по России',
+                        visual: '/site/coral.ru/assets/hot-promos/russia-summer-collection.jpg',
+                        href: 'https://www.coral.ru/poleznaya-informatsiya/info/concepts/letnyaya-kollektsiya-oteley-po-rossii/'
+                    },
+                    {
+                        description: 'Туры в рассрочку и кредит',
+                        visual: '/site/coral.ru/assets/hot-promos/tours-credits.jpg',
+                        href: 'https://www.coral.ru/poleznaya-informatsiya/onlinetour/payment/'
+                    },
+                ],
+                leasureGuides: [
+                    {
+                        visual: 'https://cdn.coral.ru/content/img/gid_po_otdyhu/coral_tc_for_main-4.jpg',
+                        href: 'https://www.coral.ru/poleznaya-informatsiya/gid-po-otdyhu/kuda-poehat-prazdniki/?banner_on_site=gid-prazd'
+                    },
+                    {
+                        visual: 'https://cdn.coral.ru/content/img/gid_po_otdyhu/327x217_gid_thai_3.jpg',
+                        href: 'https://www.coral.ru/amazing-tayland/?banner_on_site=gid-tayland'
+                    },
+                    {
+                        visual: 'https://cdn.coral.ru/content/img/gid_po_otdyhu/327x217_bahrain.jpg',
+                        href: 'https://www.coral.ru/packagetours/moskva-to-bahreyn-tours/?q=%7b%22Bgn%22%3a%2210.04.2023%22%2c%22End%22%3a%2216.04.2023%22%2c%22Dr%22%3a%223%22%2c%22Acc%22%3a%227%2c8%2c9%2c10%2c11%2c12%2c13%2c14%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%2221%2b6cO3TqxiPH7gQlR64eXMC%2bzp7zCzLPm%2bhIHnR5yHsoiD1vjs7OJS1u3SSGdiATwNrzBdDlqyicuMwNfrBrkjjL7G3aWpD65kcA3ArQGi0Fv41IyASb%2b8kgZ8XHbU%2bfXj7KzznHEKdLQbdfW3JmQ%3d%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d&f={%22Rh%22:false,%22Ao%22:[%22available%22]}&page=1&banner_on_site=gid-bahreyn'
+                    },
+                    {
+                        visual: 'https://cdn.coral.ru/content/img/gid_po_otdyhu/327x217_turkiye.jpg',
+                        href: 'https://www.coral.ru/visit-turkey/regions-antalia/?banner_on_site=gid-antalia'
+                    },
+                ],
+                payAttention: [
+                    {
+                        visual: '/site/coral.ru/assets/pay-attention/coral-bonus.jpg',
+                        href: 'https://www.coral.ru/poleznaya-informatsiya/offers/coralbonus/?banner_on_site=coralbonus'
+                    },
+                    {
+                        visual: '/site/coral.ru/assets/pay-attention/gift-cards.jpg',
+                        href: 'https://www.coral.ru/podarochnye-karty/?banner_on_site=giftcard'
+                    },
+                ]
+            },
+            cities: {
+                kazan: {
+                    h2: 'Из Казани без пересадок',
+                    h3: 'Выбирай и лети',
+                    name: 'Казань',
+                    url: '/kazan/',
+                    logoDecor: '/site/coral.ru/assets/logo-decor-kazan.png',
+                    dictionary: {
+                        wording_fromCityName: 'из Казани'
+                    },
+                    destinations: [
+                        {
+                            button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                            }
+                        },
+                        {
+                            button: {label: 'Эгейское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[29, 17, 18, 210, 209, 30, 19, 10732, 20, 21, 22, 32, 23, 24, 33, 25, 28, 27, 42, 63, 46, 8995, 55, 57, 11080, 130, 59, 60, 58, 14551, 61]'},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-aegean-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-aegean-mobile.jpg'
+                            }
+                        },
+                        {
+                            button: {label: 'ОАЭ', data_lookup_destination: 'ОАЭ', data_lookup_depth_days: 12},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-uae-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-uae-mobile.jpg'
+                            }
+                        },
+                        {
+                            button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
+                            }
+                        },
+                    ],
+                    xlinks: [
+                        {
+                            heading: 'Египет из Москвы',
+                            links: [
+                                {label: 'Туры в Египет из Москвы', href: '/main/egypt/'},
+                            ]
+                        },
+                        {
+                            heading: 'ОАЭ из Казани',
+                            links: [
+                                {label: 'Туры в ОАЭ из Казани', href: '/kazan/uae/'},
+                                {label: 'Туры в Дубай из Казани', href: '/kazan/uae/dubai/'},
+                            ]
+                        },
+                        {
+                            heading: 'Мальдивы из Москвы',
+                            links: [
+                                {label: 'Туры на Мальдивы из Москвы', href: '/main/maldives/'},
+                            ]
+                        },
+                        {
+                            heading: 'Россия из Казани',
+                            links: [
+                                {label: 'Туры по России из Казани', href: '/kazan/russia/'},
+                                {label: 'Туры в Санкт-Петербург из Казани', href: '/kazan/russia/peterburg/'},
+                                {label: 'Туры в Сочи из Казани', href: '/kazan/russia/sochi/'},
+                                {label: 'Горящие туры в Сочи из Казани', href: '/kazan/russia/goryashchie-tury-v-sochi/'},
+                            ]
+                        },
+                        {
+                            heading: 'Турция из Казани',
+                            links: [
+                                {label: 'Туры в Турцию из Казани', href: '/kazan/turkey/'},
+                                {label: 'Дешевые туры в Турцию из Казани', href: '/kazan/turkey/deshevye-tury-v-turciyu/'},
+                                {label: 'Туры в Турцию из Казани всё включено', href: '/kazan/turkey/vse-vklucheno/'},
+                                {label: 'Туры в Турцию из Казани в июле', href: '/kazan/turkey/tury-v-turciyu-v-iyule/'},
+                                {label: 'Туры в Турцию из Казани в августе', href: '/kazan/turkey/tury-v-turciyu-v-avguste/'},
+                                {label: 'Туры в Турцию из Казани в сентябре', href: '/kazan/turkey/tury-v-turciyu-v-sentyabre/'},
+                                {label: 'Туры в Турцию из Казани в октябре', href: '/kazan/turkey/tury-v-turciyu-v-oktyabre/'},
+                                {label: 'Туры в Турцию из Казани в ноябре', href: '/kazan/turkey/tury-v-turciyu-v-noyabre/'},
+                                {label: 'Туры в Турцию из Казани в декабре', href: '/kazan/turkey/tury-v-turciyu-v-dekabre/'},
+                            ]
+                        },
+                        {
+                            heading: 'Туры по предпочтениям',
+                            links: [
+                                {label: 'Горящие туры в Турцию из Казани', href: '/kazan/turkey/goryashchie-tury-v-turciyu/'},
+                            ]
+                        },
+                    ]
                 },
-                {
-                    button: {label: 'ОАЭ', data_lookup_destination: 'ОАЭ', data_lookup_depth_days: 12},
-                    visual: {
-                        desktop: '/site/coral.ru/assets/intro-uae-desktop.jpg',
-                        mobile: '/site/coral.ru/assets/intro-uae-mobile.jpg'
-                    }
+                spb: {
+                    h2: 'Из Санкт-Петербурга без пересадок',
+                    h3: 'Выбирай и лети',
+                    name: 'Санкт-Петербург',
+                    url: '/spb/',
+                    logoDecor: '/site/coral.ru/assets/logo-decor-spb.png',
+                    dictionary: {
+                        wording_fromCityName: 'из Санкт-Петербурга'
+                    },
+                    destinations: [
+                        {
+                            button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                            }
+                        },
+                        {
+                            button: {label: 'Эгейское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[29, 17, 18, 210, 209, 30, 19, 10732, 20, 21, 22, 32, 23, 24, 33, 25, 28, 27, 42, 63, 46, 8995, 55, 57, 11080, 130, 59, 60, 58, 14551, 61]'},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-aegean-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-aegean-mobile.jpg'
+                            }
+                        },
+                        {
+                            button: {label: 'ОАЭ', data_lookup_destination: 'ОАЭ', data_lookup_depth_days: 12},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-uae-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-uae-mobile.jpg'
+                            }
+                        },
+                        {
+                            button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
+                            }
+                        },
+                    ],
+                    xlinks: [
+                        {
+                            heading: 'Турция из Санкт-Петербурга',
+                            links: [
+                                { label: 'Туры в Турцию из Санкт-Петербурга', href: '/spb/turkey/' },
+                                { label: 'Туры в Турцию из Санкт-Петербурга все включено', href: '/spb/turkey/vse-vklucheno/' },
+                                { label: 'Горящие туры в Турцию из Санкт-Петербурга', href: '/spb/turkey/goryashchie-tury-v-turciyu/' },
+                                { label: 'Туры в Турцию из Санкт-Петербурга в июне', href: '/spb/turkey/tury-v-turciyu-v-iyune/' },
+                                { label: 'Туры в Турцию из Санкт-Петербурга в июле', href: '/spb/turkey/tury-v-turciyu-v-iyule/' },
+                                { label: 'Туры в Турцию из Санкт-Петербурга в августе', href: '/spb/turkey/tury-v-turciyu-v-avguste/' },
+                                { label: 'Туры в Турцию из Санкт-Петербурга в сентябре', href: '/spb/turkey/tury-v-turciyu-v-sentyabre/' },
+                                { label: 'Туры в Турцию из Санкт-Петербурга в октябре', href: '/spb/turkey/tury-v-turciyu-v-oktyabre/' },
+                                { label: 'Туры в Турцию из Санкт-Петербурга в ноябре', href: '/spb/turkey/tury-v-turciyu-v-noyabre/' },
+                                { label: 'Путевки в Турцию из Санкт-Петербурга', href: '/spb/turkey/putevki-v-turciyu/' },
+                                { label: 'Отдых в Турции из Санкт-Петербурга', href: '/spb/turkey/otdyh-v-turciyu/' },
+                                { label: 'Дешевые туры в Турцию из Санкт-Петербурга', href: '/spb/turkey/deshevye-tury-v-turciyu/' },
+                            ]
+                        },
+                        {
+                            heading: 'Египет из Москвы',
+                            links: [
+                                { label: 'Туры в Египет из Москвы', href: '/main/egypt/' }
+                            ]
+                        },
+                        {
+                            heading: 'ОАЭ из Санкт-Петербурга',
+                            links: [
+                                { label: 'Туры в ОАЭ из Санкт-Петербурга', href: '/spb/uae/' },
+                                { label: 'Туры в Дубай из Санкт-Петербурга', href: '/spb/uae/dubai/' }
+                            ]
+                        },
+                        {
+                            heading: 'Мальдивы из Москвы',
+                            links: [
+                                { label: 'Туры на Мальдивы из Москвы', href: '/main/maldives/' }
+                            ]
+                        },
+                        {
+                            heading: 'Таиланд из Москвы',
+                            links: [
+                                { label: 'Туры в Таиланд из Москвы', href: '/main/thailand/' }
+                            ]
+                        },
+                        {
+                            heading: 'Россия из Санкт-Петербурга',
+                            links: [
+                                { label: 'Туры по России из Санкт-Петербурга', href: '/spb/russia/' },
+                                { label: 'Туры в Казань из Санкт-Петербурга', href: '/spb/russia/kazan/' },
+                                { label: 'Туры в Шерегеш из Санкт-Петербурга', href: '/spb/russia/sheregesh/' },
+                                { label: 'Туры в Сочи из Санкт-Петербурга', href: '/spb/russia/sochi/' },
+                            ]
+                        },
+                    ]
                 },
-                {
-                    button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
-                    visual: {
-                        desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
-                        mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
-                    }
+                novosibirsk: {
+                    h2: 'Из Новосибирска без пересадок',
+                    h3: 'Выбирай и лети',
+                    name: 'Новосибирск',
+                    url: '/novosibirsk/',
+                    logoDecor: '/site/coral.ru/assets/logo-decor-novosib.png',
+                    dictionary: {
+                        wording_fromCityName: 'из Новосибирска'
+                    },
+                    xlinks: [
+                        {
+                            heading: 'Турция из Новосибирска',
+                            links: [
+                                { label: 'Туры в Турцию из Новосибирска', href: '/novosibirsk/turkey/' },
+                                { label: 'Горящие туры в Турцию из Новосибирска', href: '/novosibirsk/turkey/goryashchie-tury-v-turciyu/' },
+                                { label: 'Туры в Турцию из Новосибирска все включено', href: '/novosibirsk/turkey/vse-vklucheno/' },
+                                { label: 'Туры в Турцию из Новосибирска в июле', href: '/novosibirsk/turkey/tury-v-turciyu-v-iyule/' },
+                                { label: 'Туры в Турцию из Новосибирска в августе', href: '/novosibirsk/turkey/tury-v-turciyu-v-avguste/' },
+                                { label: 'Туры в Турцию из Новосибирска в сентябре', href: '/novosibirsk/turkey/tury-v-turciyu-v-sentyabre/' },
+                                { label: 'Туры в Турцию из Новосибирска в октябре', href: '/novosibirsk/turkey/tury-v-turciyu-v-oktyabre/' },
+                                { label: 'Туры в Турцию из Новосибирска в ноябре', href: '/novosibirsk/turkey/tury-v-turciyu-v-noyabre/' },
+                                { label: 'Туры в Турцию из Новосибирска в декабре', href: '/novosibirsk/turkey/tury-v-turciyu-v-dekabre/' },
+                                { label: 'Дешевые туры в Турцию из Новосибирска', href: '/novosibirsk/turkey/deshevye-tury-v-turciyu/' },
+                                { label: 'Отдых в Турции из Новосибирска', href: '/novosibirsk/turkey/otdyh-v-turciyu/' },
+                                { label: 'Путевки в Турцию из Новосибирскf', href: '/novosibirsk/turkey/putevki-v-turciyu/' },
+                            ]
+                        },
+                        {
+                            heading: 'Египет из Москвы',
+                            links: [
+                                { label: 'Туры в Египет из Москвы', href: '/main/egypt/' },
+                            ]
+                        },
+                        {
+                            heading: 'ОАЭ из Москвы',
+                            links: [
+                                { label: 'Туры в ОАЭ из Москвы', href: '/main/uae/' },
+                            ]
+                        },
+                        {
+                            heading: 'Таиланд из Новосибирска',
+                            links: [
+                                { label: 'Туры в Таиланд из Новосибирска', href: '/main/thailand/' },
+                            ]
+                        },
+                        {
+                            heading: 'Шри-Ланка из Новосибирска',
+                            links: [
+                                { label: 'Туры на Шри-Ланку из Новосибирска', href: '/main/srilanka/' },
+                            ]
+                        },
+                        {
+                            heading: 'Россия из Новосибирска',
+                            links: [
+                                { label: 'Туры по России из Новосибирска', href: '/novosibirsk/russia/' },
+                                { label: 'Горящие туры в Сочи из Новосибирска', href: '/novosibirsk/russia/goryashchie-tury-v-sochi/' },
+                                { label: 'Туры в Санкт-Петербург из Новосибирска', href: '/novosibirsk/russia/peterburg/' },
+                                { label: 'Туры в Сочи из Новосибирска', href: '/novosibirsk/russia/sochi/' },
+                            ]
+                        },
+                    ],
                 },
-            ],
-            hotPromos: [
-                {
-                    description: 'Сеть отелей Coral Group',
-                    visual: '/site/coral.ru/assets/hot-promos/coral-group-network.jpg',
-                    href: 'https://www.coral.ru/concepts/coralgroup-hotels-and-resorts/'
+                ekb: {
+                    h2: 'Из Екатеринбурга без пересадок',
+                    h3: 'Выбирай и лети',
+                    name: 'Екатеринбург',
+                    url: '/ekb/',
+                    logoDecor: '/site/coral.ru/assets/logo-decor-ekb.png',
+                    dictionary: {
+                        wording_fromCityName: 'из Екатеринбурга'
+                    },
+                    destinations: [
+                        {
+                            button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                            }
+                        },
+                        {
+                            button: {label: 'Эгейское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[29, 17, 18, 210, 209, 30, 19, 10732, 20, 21, 22, 32, 23, 24, 33, 25, 28, 27, 42, 63, 46, 8995, 55, 57, 11080, 130, 59, 60, 58, 14551, 61]'},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-aegean-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-aegean-mobile.jpg'
+                            }
+                        },
+                        {
+                            button: {label: 'ОАЭ', data_lookup_destination: 'ОАЭ', data_lookup_depth_days: 12},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-uae-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-uae-mobile.jpg'
+                            }
+                        },
+                        {
+                            button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
+                            }
+                        },
+                    ],
+                    xlinks: [
+                        {
+                            heading: 'Турция из Екатеринбурга',
+                            links: [
+                                { label: 'Туры в Турцию из Екатеринбурга', href: '/ekaterinburg/turkey/' },
+                                { label: 'Туры в Турцию из Екатеринбурга всё включено', href: '/ekaterinburg/turkey/vse-vklucheno/' },
+                                { label: 'Туры в Турцию из Екатеринбурга в июне', href: '/ekaterinburg/turkey/tury-v-turciyu-v-iyune/' },
+                                { label: 'Туры в Турцию из Екатеринбурга в июле', href: '/ekaterinburg/turkey/tury-v-turciyu-v-iyule/' },
+                                { label: 'Туры в Турцию из Екатеринбурга в августе', href: '/ekaterinburg/turkey/tury-v-turciyu-v-avguste/' },
+                                { label: 'Туры в Турцию из Екатеринбурга в сентябре', href: '/ekaterinburg/turkey/tury-v-turciyu-v-sentyabre/' },
+                                { label: 'Туры в Турцию из Екатеринбурга в октябре', href: '/ekaterinburg/turkey/tury-v-turciyu-v-oktyabre/' },
+                                { label: 'Туры в Турцию из Екатеринбурга в ноябре', href: '/ekaterinburg/turkey/tury-v-turciyu-v-noyabre/' },
+                                { label: 'Туры в Турцию из Екатеринбурга в декабре', href: '/ekaterinburg/turkey/tury-v-turciyu-v-dekabre/' },
+                                { label: 'Путевки в Турцию из Екатеринбургf', href: '/ekaterinburg/turkey/putevki-v-turciyu/' },
+                            ]
+                        },
+                        {
+                            heading: 'Египет из Москвы',
+                            links: [
+                                { label: 'Туры в Египет из Москвы', href: '/main/egypt/' },
+                            ]
+                        },
+                        {
+                            heading: 'ОАЭ из Екатеринбурга',
+                            links: [
+                                { label: 'Туры в ОАЭ из Екатеринбурга', href: '/ekb/uae/' },
+                                { label: 'Туры в Дубай из Екатеринбурга', href: '/ekb/uae/dubai/' },
+                                { label: 'Туры в Шарджу из Екатеринбурга', href: '/ekb/uae/sharjah/' },
+                            ]
+                        },
+                        {
+                            heading: 'Таиланд из Москвы',
+                            links: [
+                                { label: 'Туры в Таиланд из Москвы', href: '/main/thailand/' },
+                            ]
+                        },
+                        {
+                            heading: 'Шри-Ланка из Москвы',
+                            links: [
+                                { label: 'Туры на Шри-Ланку из Москвы', href: '/main/srilanka/' },
+                            ]
+                        },
+                        {
+                            heading: 'Россия из Екатеринбурга',
+                            links: [
+                                { label: 'Туры по России из Екатеринбурга', href: '/ekb/russia/' },
+                                { label: 'Туры в Сочи из Екатеринбурга', href: '/ekb/russia/sochi/' },
+                                { label: 'Горящие туры в Сочи из Екатеринбурга', href: '/ekb/russia/goryashchie-tury-v-sochi/' },
+                                { label: 'Туры в Казань из Екатеринбурга', href: '/ekb/russia/kazan/' },
+                                { label: 'Туры в Санкт-Петербург из Екатеринбурга', href: '/ekb/russia/peterburg/' },
+                            ]
+                        },
+                    ]
                 },
-                {
-                    description: 'Наша летняя коллекция отелей 2023',
-                    visual: '/site/coral.ru/assets/hot-promos/our-summer-collection.jpg',
-                    href: 'https://www.coral.ru/concepts/our-summer-collection-hotels/'
+                ufa: {
+                    h2: 'Из Уфы без пересадок',
+                    h3: 'Выбирай и лети',
+                    name: 'Уфа',
+                    url: '/ufa/',
+                    logoDecor: '/site/coral.ru/assets/logo-decor-ufa.png',
+                    dictionary: {
+                        wording_fromCityName: 'из Уфы'
+                    },
+                    xlinks: [
+                        {
+                            heading: 'Турция из Уфы',
+                            links: [
+                                { label: 'Туры в Турцию из Уфы', href: '/ufa/turkey/' },
+                                { label: 'Туры в Турцию из Уфы все включено', href: '/ufa/turkey/vse-vklucheno/' },
+                                { label: 'Горящие туры в Турцию из Уфы', href: '/ufa/turkey/goryashchie-tury-v-turciyu/' },
+                                { label: 'Туры в Турцию в мае из Уфы', href: '/ufa/turkey/tury-v-turciyu-v-mae/' },
+                                { label: 'Туры в Турцию в июне из Уфы', href: '/ufa/turkey/tury-v-turciyu-v-iyune/' },
+                                { label: 'Туры в Турцию в июле из Уфы', href: '/ufa/turkey/tury-v-turciyu-v-iyule/' },
+                                { label: 'Туры в Турцию в августе из Уфы', href: '/ufa/turkey/tury-v-turciyu-v-avguste/' },
+                                { label: 'Туры в Турцию в сентябре из Уфы', href: '/ufa/turkey/tury-v-turciyu-v-sentyabre/' },
+                                { label: 'Туры в Турцию в октябре из Уфы', href: '/ufa/turkey/tury-v-turciyu-v-oktyabre/' },
+                                { label: 'Туры в Турцию из Уфы в ноябре', href: '/ufa/turkey/tury-v-turciyu-v-noyabre/' },
+                                { label: 'Туры в Турцию из Уфы в декабре', href: '/ufa/turkey/tury-v-turciyu-v-dekabre/' },
+                                { label: 'Дешевые туры в Турцию из Уфы', href: '/ufa/turkey/deshevye-tury-v-turciyu/' },
+                                { label: 'Отдых в Турции из Уфы', href: '/ufa/turkey/otdyh-v-turciyu/' },
+                                { label: 'Путевки в Турцию из Уфы', href: '/ufa/turkey/putevki-v-turciyu/' },
+                            ]
+                        },
+                        {
+                            heading: 'Египет из Москвы',
+                            links: [
+                                { label: 'Туры в Египет из Москвы', href: '/main/egypt/' },
+                            ]
+                        },
+                        {
+                            heading: 'ОАЭ из Уфы',
+                            links: [
+                                { label: 'Туры в ОАЭ из Уфы', href: '/ufa/uae/' },
+                                { label: 'Туры в Дубай из Уфы', href: '/ufa/uae/dubai/' },
+                                { label: 'Туры в Шарджу из Уфы', href: '/ufa/uae/sharjah/' },
+                            ]
+                        },
+                        {
+                            heading: 'Таиланд из Москвы',
+                            links: [
+                                { label: 'Туры в Таиланд из Москвы', href: '/main/thailand/' },
+                            ]
+                        },
+                        {
+                            heading: 'Мальдивы из Москвы',
+                            links: [
+                                { label: 'Туры на Мальдивы из Москвы', href: '/main/maldives/' },
+                            ]
+                        },
+                        {
+                            heading: 'Россия из Уфы',
+                            links: [
+                                { label: 'Туры в Санкт-Петербург из Уфы', href: '/ufa/peterburg/' },
+                                { label: 'Туры в Казань из Уфы', href: '/ufa/russia/kazan/' },
+                                { label: 'Туры в Сочи из Уфы', href: '/ufa/russia/sochi/' },
+                            ]
+                        },
+                    ],
                 },
-                {
-                    description: '50 оттенков синего (Эгейское побережье)',
-//                    visual: '/site/coral.ru/assets/hot-promos/fifty-shades-of-blue-02.jpg',
-                    visual: 'https://cdn.coral.ru/content/img/actions/aegean_desk_с.png',
-                    href: 'https://www.coral.ru/visit-turkey/regions-aegean/'
+                chelyabinsk: {
+                    h2: 'Из Челябинска без пересадок',
+                    h3: 'Выбирай и лети',
+                    name: 'Челябинск',
+                    url: '/chelyabinsk/',
+                    logoDecor: '/site/coral.ru/assets/logo-decor-chelyabinsk.png',
+                    dictionary: {
+                        wording_fromCityName: 'из Челябинска'
+                    },
+                    xlinks: [
+                        {
+                            heading: 'Турция',
+                            links: [
+                                { label: 'Туры в Турцию из Челябинска', href: '/chelyabinsk/turkey/' },
+                                { label: 'Туры в Анталью из Челябинска', href: '/chelyabinsk/turkey/antalya/' },
+                                { label: 'Туры в Турцию из Челябинска все включено', href: '/chelyabinsk/turkey/vse-vklucheno/' },
+                                { label: 'Горящие туры в Турцию из Челябинска', href: '/chelyabinsk/turkey/goryashchie-tury-v-turciyu/' },
+                                { label: 'Отдых в Турции из Челябинска', href: '/chelyabinsk/turkey/otdyh-v-turciyu/' },
+                                { label: 'Путевки в Турцию из Челябинска', href: '/chelyabinsk/turkey/putevki-v-turciyu/' },
+                                { label: 'Туры в Турцию из Челябинска в сентябре', href: '/chelyabinsk/turkey/tury-v-turciyu-v-sentyabre/' },
+                                { label: 'Туры в Турцию из Челябинска в октябре', href: '/chelyabinsk/turkey/tury-v-turciyu-v-oktyabre/' },
+                                { label: 'Туры в Турцию из Челябинска в ноябре', href: '/chelyabinsk/turkey/tury-v-turciyu-v-noyabre/' },
+                                { label: 'Туры в Турцию из Челябинска в декабре', href: '/chelyabinsk/turkey/tury-v-turciyu-v-dekabre/' },
+                                { label: 'Дешевые туры в Турцию из Челябинска', href: '/chelyabinsk/turkey/deshevye-tury-v-turciyu/' },
+                                { label: 'Туры в ОАЭ из Челябинска', href: '/chelyabinsk/uae/' },
+                            ]
+                        },
+                        {
+                            heading: 'Египет из Москвы',
+                            links: [
+                                { label: 'Туры в Египет из Москвы', href: '/main/egypt/' },
+                            ]
+                        },
+                        {
+                            heading: 'ОАЭ',
+                            links: [
+                                { label: 'Туры в ОАЭ из Челябинска', href: '/chelyabinsk/uae/' },
+                            ]
+                        },
+                        {
+                            heading: 'Мальдивы из Москвы',
+                            links: [
+                                { label: 'Туры на Мальдивы из Москвы', href: '/main/maldives/' },
+                            ]
+                        },
+                        {
+                            heading: 'Россия',
+                            links: [
+                                { label: 'Туры в Казань из Челябинска', href: '/chelyabinsk/russia/kazan/' },
+                                { label: 'Туры в Санкт-Петербург из Челябинска', href: '/chelyabinsk/russia/peterburg/' },
+                            ]
+                        },
+                        {
+                            heading: 'Шри-Ланка из Москвы',
+                            links: [
+                                { label: 'Туры на Шри-Ланку из Москвы', href: '/main/srilanka/' },
+                            ]
+                        },
+                    ],
+                    destinations: [
+                        {
+                            button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                            }
+                        },
+                        {
+                            button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
+                            }
+                        },
+                    ]
                 },
-                {
-                    description: 'Лето в ОАЭ: выгодные цены и никаких очередей',
-//                    visual: '/site/coral.ru/assets/hot-promos/uae-in-summer-01.jpg',
-                    visual: 'https://cdn.coral.ru/content/img/actions/uae_desk_с.png',
-                    href: 'https://www.coral.ru/main/uae/otdyh-v-uae-letom/'
+                irkutsk: {
+                    h2: 'Из Иркутска без пересадок',
+                    h3: 'Выбирай и лети',
+                    name: 'Иркутск',
+                    url: '/irkutsk/',
+                    logoDecor: '/site/coral.ru/assets/logo-decor-irkutsk.png',
+                    dictionary: {
+                        wording_fromCityName: 'из Иркутска'
+                    },
+                    xlinks: [
+                        {
+                            heading: 'Турция',
+                            links: [
+                                { label: 'Туры в Турцию из Иркутска', href: '/irkutsk/turkey/' },
+                                { label: 'Туры в Анталью из Иркутска', href: '/irkutsk/turkey/antalya/' },
+                            ]
+                        },
+                        {
+                            heading: 'Россия',
+                            links: [
+                                { label: 'Туры по России из Иркутска', href: '/main/russia/' },
+                            ]
+                        },
+                        {
+                            heading: 'Египет из Москвы',
+                            links: [
+                                { label: 'Туры в Египет из Москвы', href: '/main/egypt/' },
+                            ]
+                        },
+                    ],
+                    destinations: [
+                        {
+                            button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                            }
+                        },
+                        {
+                            button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
+                            }
+                        },
+                    ]
                 },
-                {
-                    description: 'Элитный отдых для тех, кто ценит комфорт',
-                    visual: '/site/coral.ru/assets/hot-promos/elite-villas.jpg',
-                    href: 'https://www.coral.ru/concepts/villas-and-suits/'
+                kaliningrad: {
+                    h2: 'Из Калининграда без пересадок',
+                    h3: 'Выбирай и лети',
+                    name: 'Калининград',
+                    url: '/kaliningrad/',
+                    logoDecor: '/site/coral.ru/assets/logo-decor-kaliningrad.png',
+                    dictionary: {
+                        wording_fromCityName: 'из Калининграда'
+                    },
+                    xlinks: [
+                        {
+                            heading: 'Турция',
+                            links: [
+                                { label: 'Туры в Турцию из Калининграда', href: '/kaliningrad/turkey/' },
+                                { label: 'Туры в Турцию из Калининграда все включено', href: '/kaliningrad/turkey/vse-vklucheno/' },
+                                { label: 'Горящие туры в Турцию из Калининграда', href: '/kaliningrad/turkey/goryashchie-tury-v-turciyu/' },
+                                { label: 'Отдых в Турции из Калининграда', href: '/kaliningrad/turkey/otdyh-v-turciyu/' },
+                                { label: 'Туры в Турцию из Калининграда в октябре', href: '/kaliningrad/turkey/tury-v-turciyu-v-oktyabre/' },
+                                { label: 'Туры в Турцию из Калининграда в ноябре', href: '/kaliningrad/turkey/tury-v-turciyu-v-noyabre/' },
+                                { label: 'Туры в Турцию из Калининграда в декабре', href: '/kaliningrad/turkey/tury-v-turciyu-v-dekabre/' },
+                                { label: 'Дешевые туры в Турцию из Калининграда', href: '/kaliningrad/turkey/deshevye-tury-v-turciyu/' },
+                                { label: 'Путевки в Турцию из Калининграда', href: '/kaliningrad/turkey/putevki-v-turciyu/' },
+                            ]
+                        },
+                        {
+                            heading: 'Россия',
+                            links: [
+                                { label: 'Туры по России из Калининграда', href: '/main/russia/' },
+                            ]
+                        },
+                        {
+                            heading: 'Египет из Москвы',
+                            links: [
+                                { label: 'Туры в Египет из Москвы', href: '/main/egypt/' },
+                            ]
+                        },
+                        {
+                            heading: 'ОАЭ из Москвы',
+                            links: [
+                                { label: 'Туры в ОАЭ из Москвы', href: '/main/uae/' },
+                            ]
+                        },
+                        {
+                            heading: 'Мальдивы из Москвы',
+                            links: [
+                                { label: 'Туры на Мальдивы из Москвы', href: '/main/maldives/' },
+                            ]
+                        },
+                        {
+                            heading: 'Шри-Ланка из Москвы',
+                            links: [
+                                { label: 'Туры на Шри-Ланку из Москвы', href: '/main/srilanka/' },
+                            ]
+                        },
+                    ],
+                    destinations: [
+                        {
+                            button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                            }
+                        },
+                        {
+                            button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
+                            }
+                        },
+                    ]
                 },
-                {
-                    description: 'Летняя коллекция отелей по России',
-                    visual: '/site/coral.ru/assets/hot-promos/russia-summer-collection.jpg',
-                    href: 'https://www.coral.ru/poleznaya-informatsiya/info/concepts/letnyaya-kollektsiya-oteley-po-rossii/'
+                krasnoyarsk: {
+                    h2: 'Из Красноярска без пересадок',
+                    h3: 'Выбирай и лети',
+                    name: 'Красноярск',
+                    url: '/krasnoyarsk/',
+                    logoDecor: '/site/coral.ru/assets/logo-decor-krasnoyarsk.png',
+                    dictionary: {
+                        wording_fromCityName: 'из Красноярска'
+                    },
+                    xlinks: [
+                        {
+                            heading: 'Турция',
+                            links: [
+                                { label: 'Туры в Турцию из Красноярска', href: '/krasnoyarsk/turkey/' },
+                            ]
+                        },
+                        {
+                            heading: 'Россия',
+                            links: [
+                                { label: 'Туры по России из Красноярска', href: '/main/russia/' },
+                            ]
+                        },
+                        {
+                            heading: 'Египет из Москвы',
+                            links: [
+                                { label: 'Туры в Египет из Москвы', href: '/main/egypt/' },
+                            ]
+                        },
+                        {
+                            heading: 'ОАЭ из Москвы',
+                            links: [
+                                { label: 'Туры в ОАЭ из Москвы', href: '/main/uae/' },
+                            ]
+                        },
+                        {
+                            heading: 'Мальдивы из Москвы',
+                            links: [
+                                { label: 'Туры на Мальдивы из Москвы', href: '/main/maldives/' },
+                            ]
+                        },
+                        {
+                            heading: 'Туры по предпочтениям',
+                            links: [
+                                { label: 'Горящие туры из Красноярска', href: '/krasnoyarsk/goryashchie-tury/' },
+                            ]
+                        },
+                    ],
+                    destinations: [
+                        {
+                            button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                            }
+                        },
+                        {
+                            button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
+                            }
+                        },
+                    ]
                 },
-                {
-                    description: 'Туры в рассрочку и кредит',
-                    visual: '/site/coral.ru/assets/hot-promos/tours-credits.jpg',
-                    href: 'https://www.coral.ru/poleznaya-informatsiya/onlinetour/payment/'
+                mineralnyevody: {
+                    h2: 'Из Минеральных Вод без пересадок',
+                    h3: 'Выбирай и лети',
+                    name: 'Минеральные Воды',
+                    url: '/mineralnye-vody/',
+                    logoDecor: '/site/coral.ru/assets/logo-decor-mineralnyevody.png',
+                    dictionary: {
+                        wording_fromCityName: 'из Минеральных Вод'
+                    },
+                    xlinks: [
+                        {
+                            heading: 'Турция',
+                            links: [
+                                { label: 'Туры в Турцию из Минеральных Вод', href: '/mineralnye-vody/turkey/' },
+                            ]
+                        },
+                        {
+                            heading: 'Россия',
+                            links: [
+                                { label: 'Туры по России из Минеральных Вод', href: '/main/russia/' },
+                            ]
+                        },
+                        {
+                            heading: 'ОАЭ',
+                            links: [
+                                { label: 'Туры в ОАЭ из Минеральных Вод', href: '/main/uae/' },
+                            ]
+                        },
+                        {
+                            heading: 'Египет из Москвы',
+                            links: [
+                                { label: 'Туры в Египет из Москвы', href: '/main/egypt/' },
+                            ]
+                        },
+                        {
+                            heading: 'Шри-Ланка',
+                            links: [
+                                { label: 'Туры на Шри-Ланку из Минеральных Вод', href: '/main/srilanka/' },
+                            ]
+                        },
+                        {
+                            heading: 'Мальдивы из Москвы',
+                            links: [
+                                { label: 'Туры на Мальдивы из Москвы', href: '/main/maldives/' },
+                            ]
+                        },
+                    ],
+                    destinations: [
+                        {
+                            button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                            }
+                        },
+                        {
+                            button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
+                            }
+                        },
+                    ]
                 },
-            ],
-            leasureGuides: [
-                {
-                    visual: 'https://cdn.coral.ru/content/img/gid_po_otdyhu/coral_tc_for_main-4.jpg',
-                    href: 'https://www.coral.ru/poleznaya-informatsiya/gid-po-otdyhu/kuda-poehat-prazdniki/?banner_on_site=gid-prazd'
+                nnovgorod: {
+                    h2: 'Из Нижнего Новгорода без пересадок',
+                    h3: 'Выбирай и лети',
+                    name: 'Нижний Новгород',
+                    url: '/nnovgorod/',
+                    logoDecor: '/site/coral.ru/assets/logo-decor-nnovgorod.png',
+                    dictionary: {
+                        wording_fromCityName: 'из Нижнего Новгорода'
+                    },
+                    xlinks: [
+                        {
+                            heading: 'Турция',
+                            links: [
+                                { label: 'Туры в Турцию из Нижнего Новгорода', href: '/nnovgorod/turkey/' },
+                                { label: 'Горящие туры в Турцию из Нижнего Новгорода', href: '/nnovgorod/turkey/goryashchie-tury-v-turciyu/' },
+                                { label: 'Туры в Турцию из Нижнего Новгорода в июле', href: '/nnovgorod/turkey/tury-v-turciyu-v-iyule/' },
+                                { label: 'Туры в Турцию из Нижнего Новгорода в августе', href: '/nnovgorod/turkey/tury-v-turciyu-v-avguste/' },
+                                { label: 'Туры в Турцию из Нижнего Новгорода в сентябре', href: '/nnovgorod/turkey/tury-v-turciyu-v-sentyabre/' },
+                                { label: 'Путевки в Турцию из Нижнего Новгорода', href: '/nnovgorod/turkey/putevki-v-turciyu/' },
+                            ]
+                        },
+                        {
+                            heading: 'Египет',
+                            links: [
+                                { label: 'Туры в Турцию из Нижнего Новгорода', href: '/nnovgorod/egypt/' },
+                            ]
+                        },
+                        {
+                            heading: 'ОАЭ из Москвы',
+                            links: [
+                                { label: 'Туры в ОАЭ из Москвы', href: '/main/uae/' },
+                            ]
+                        },
+                        {
+                            heading: 'Россия',
+                            links: [
+                                { label: 'Туры по России из Нижнего Новгорода', href: '/nnovgorod/russia/' },
+                                { label: 'Туры в Казань из Нижнего Новгорода', href: '/nnovgorod/russia/kazan/' },
+                                { label: 'Туры в Санкт-Петербург из Нижнего Новгорода', href: '/nnovgorod/russia/peterburg/' },
+                                { label: 'Туры в Сочи из Нижнего Новгорода', href: '/nnovgorod/russia/sochi/' },
+                            ]
+                        },
+                        {
+                            heading: 'Мальдивы',
+                            links: [
+                                { label: 'Туры на Мальдивы из Нижнего Новгорода', href: '/nnovgorod/maldives/' },
+                            ]
+                        },
+                        {
+                            heading: 'Шри-Ланка из Москвы',
+                            links: [
+                                { label: 'Туры на Шри-Ланку из Москвы', href: '/main/srilanka/' },
+                            ]
+                        },
+                    ],
+                    destinations: [
+                        {
+                            button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                            }
+                        },
+                        {
+                            button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
+                            }
+                        },
+                    ]
                 },
-                {
-                    visual: 'https://cdn.coral.ru/content/img/gid_po_otdyhu/327x217_gid_thai_3.jpg',
-                    href: 'https://www.coral.ru/amazing-tayland/?banner_on_site=gid-tayland'
+                omsk: {
+                    h2: 'Из Омска без пересадок',
+                    h3: 'Выбирай и лети',
+                    name: 'Омск',
+                    url: '/omsk/',
+                    logoDecor: '/site/coral.ru/assets/logo-decor-omsk.png',
+                    dictionary: {
+                        wording_fromCityName: 'из Омска'
+                    },
+                    xlinks: [
+                        {
+                            heading: 'Турция',
+                            links: [
+                                { label: 'Туры в Турцию из Омска', href: '/omsk/turkey/' },
+                            ]
+                        },
+                        {
+                            heading: 'Россия',
+                            links: [
+                                { label: 'Туры по России из Омска', href: '/main/russia/' },
+                            ]
+                        },
+                        {
+                            heading: 'Египет из Москвы',
+                            links: [
+                                { label: 'Туры в Египет из Москвы', href: '/main/egypt/' },
+                            ]
+                        },
+                        {
+                            heading: 'ОАЭ из Москвы',
+                            links: [
+                                { label: 'Туры в ОАЭ из Москвы', href: '/main/uae/' },
+                            ]
+                        },
+                        {
+                            heading: 'Мальдивы из Москвы',
+                            links: [
+                                { label: 'Туры на Мальдивы из Москвы', href: '/main/maldives/' },
+                            ]
+                        },
+                        {
+                            heading: 'Шри-Ланка из Москвы',
+                            links: [
+                                { label: 'Туры на Шри-Ланку из Москвы', href: '/main/srilanka/' },
+                            ]
+                        },
+                    ],
+                    destinations: [
+                        {
+                            button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                            }
+                        },
+                        {
+                            button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
+                            }
+                        },
+                    ]
                 },
-                {
-                    visual: 'https://cdn.coral.ru/content/img/gid_po_otdyhu/327x217_bahrain.jpg',
-                    href: 'https://www.coral.ru/packagetours/moskva-to-bahreyn-tours/?q=%7b%22Bgn%22%3a%2210.04.2023%22%2c%22End%22%3a%2216.04.2023%22%2c%22Dr%22%3a%223%22%2c%22Acc%22%3a%227%2c8%2c9%2c10%2c11%2c12%2c13%2c14%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%2221%2b6cO3TqxiPH7gQlR64eXMC%2bzp7zCzLPm%2bhIHnR5yHsoiD1vjs7OJS1u3SSGdiATwNrzBdDlqyicuMwNfrBrkjjL7G3aWpD65kcA3ArQGi0Fv41IyASb%2b8kgZ8XHbU%2bfXj7KzznHEKdLQbdfW3JmQ%3d%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d&f={%22Rh%22:false,%22Ao%22:[%22available%22]}&page=1&banner_on_site=gid-bahreyn'
+                orenburg: {
+                    h2: 'Из Оренбурга без пересадок',
+                    h3: 'Выбирай и лети',
+                    name: 'Оренбург',
+                    url: '/orenburg/',
+                    dictionary: {
+                        wording_fromCityName: 'из Оренбурга'
+                    },
+                    xlinks: [
+                        {
+                            heading: 'Турция',
+                            links: [
+                                { label: 'Туры в Турцию из Оренбурга', href: '/orenburg/turkey/' },
+                            ]
+                        },
+                        {
+                            heading: 'Россия',
+                            links: [
+                                { label: 'Туры в Египет из Москвы', href: '/main/egypt/' },
+                            ]
+                        },
+                        {
+                            heading: 'Египет из Москвы',
+                            links: [
+                                { label: 'Туры в Египет из Москвы', href: '/main/egypt/' },
+                            ]
+                        },
+                        {
+                            heading: 'ОАЭ из Москвы',
+                            links: [
+                                { label: 'Туры в ОАЭ из Москвы', href: '/main/uae/' },
+                            ]
+                        },
+                        {
+                            heading: 'Мальдивы из Москвы',
+                            links: [
+                                { label: 'Туры на Мальдивы из Москвы', href: '/main/maldives/' },
+                            ]
+                        },
+                        {
+                            heading: 'Шри-Ланка из Москвы',
+                            links: [
+                                { label: 'Туры на Шри-Ланку из Москвы', href: '/main/srilanka/' },
+                            ]
+                        },
+                    ],
+                    destinations: [
+                        {
+                            button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                            }
+                        },
+                        {
+                            button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
+                            }
+                        },
+                    ]
                 },
-                {
-                    visual: 'https://cdn.coral.ru/content/img/gid_po_otdyhu/327x217_turkiye.jpg',
-                    href: 'https://www.coral.ru/visit-turkey/regions-antalia/?banner_on_site=gid-antalia'
+                perm: {
+                    h2: 'Из Перми без пересадок',
+                    h3: 'Выбирай и лети',
+                    name: 'Пермь',
+                    url: '/perm/',
+                    logoDecor: '/site/coral.ru/assets/logo-decor-perm.png',
+                    dictionary: {
+                        wording_fromCityName: 'из Перми'
+                    },
+                    xlinks: [
+                        {
+                            heading: 'Турция',
+                            links: [
+                                { label: 'Туры в Турцию из Перми', href: '/perm/turkey/' },
+                                { label: 'Туры в Турцию из Перми все включено', href: '/perm/turkey/vse-vklucheno/' },
+                                { label: 'Горящие туры в Турцию из Перми', href: '/perm/turkey/goryashchie-tury-v-turciyu/' },
+                                { label: 'Туры в Турцию из Перми в июле', href: '/perm/turkey/tury-v-turciyu-v-iyule/' },
+                                { label: 'Туры в Турцию из Перми в августе', href: '/perm/turkey/tury-v-turciyu-v-avguste/' },
+                                { label: 'Туры в Турцию из Перми в сентябре', href: '/perm/turkey/tury-v-turciyu-v-sentyabre/' },
+                                { label: 'Туры в Турцию из Перми в октябре', href: '/perm/turkey/tury-v-turciyu-v-oktyabre/' },
+                                { label: 'Туры в Турцию из Перми в ноябре', href: '/perm/turkey/tury-v-turciyu-v-noyabre/' },
+                                { label: 'Туры в Турцию из Перми в декабре', href: '/perm/turkey/tury-v-turciyu-v-dekabre/' },
+                                { label: 'Отдых в Турции из Перми', href: '/perm/turkey/otdyh-v-turciyu/' },
+                                { label: 'Путевки в Турцию из Перми', href: '/perm/turkey/putevki-v-turciyu/' },
+                                { label: 'Дешевые туры в Турцию из Перми', href: '/perm/turkey/deshevye-tury-v-turciyu/' },
+                            ]
+                        },
+                        {
+                            heading: 'Россия',
+                            links: [
+                                { label: 'Туры по России из Перми', href: '/perm/russia/' },
+                                { label: 'Туры в Казань из Перми', href: '/perm/russia/kazan/' },
+                                { label: 'Туры в Санкт-Петербург из Перми', href: '/perm/russia/peterburg/' },
+                                { label: 'Туры в Сочи из Перми', href: '/perm/russia/sochi/' },
+                            ]
+                        },
+                        {
+                            heading: 'Египет',
+                            links: [
+                                { label: 'Туры в Египет из Перми', href: '/perm/egypt/' },
+                            ]
+                        },
+                        {
+                            heading: 'ОАЭ',
+                            links: [
+                                { label: 'Туры в ОАЭ из Перми', href: '/perm/uae/' },
+                            ]
+                        },
+                        {
+                            heading: 'Мальдивы',
+                            links: [
+                                { label: 'Туры на Мальдивы из Перми', href: '/perm/maldives/' },
+                            ]
+                        },
+                        {
+                            heading: 'Шри-Ланка из Москвы',
+                            links: [
+                                { label: 'Туры на Шри-Ланку из Москвы', href: '/main/srilanka/' },
+                            ]
+                        },
+                    ],
+                    destinations: [
+                        {
+                            button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                            }
+                        },
+                        {
+                            button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
+                            }
+                        },
+                    ]
                 },
-            ],
-            payAttention: [
-                {
-                    visual: '/site/coral.ru/assets/pay-attention/coral-bonus.jpg',
-                    href: 'https://www.coral.ru/poleznaya-informatsiya/offers/coralbonus/?banner_on_site=coralbonus'
+                samara: {
+                    h2: 'Из Самары без пересадок',
+                    h3: 'Выбирай и лети',
+                    name: 'Самара',
+                    url: '/samara/',
+                    logoDecor: '/site/coral.ru/assets/logo-decor-samara.png',
+                    dictionary: {
+                        wording_fromCityName: 'из Самары'
+                    },
+                    xlinks: [
+                        {
+                            heading: 'Турция',
+                            links: [
+                                { label: 'Туры в Турцию из Самары 2023', href: '/samara/turkey/' },
+                                { label: 'Туры в Турцию из Самары все включено', href: '/samara/turkey/vse-vklucheno/' },
+                                { label: 'Горящие туры в Турцию из Самары', href: '/samara/turkey/goryashchie-tury-v-turciyu/' },
+                                { label: 'Туры в Турцию из Самары в июле', href: '/samara/turkey/tury-v-turciyu-v-iyule/' },
+                                { label: 'Туры в Турцию из Самары в августе', href: '/samara/turkey/tury-v-turciyu-v-avguste/' },
+                                { label: 'Туры в Турцию из Самары в сентябре', href: '/samara/turkey/tury-v-turciyu-v-sentyabre/' },
+                                { label: 'Туры в Турцию из Самары в октябре', href: '/samara/turkey/tury-v-turciyu-v-oktyabre/' },
+                                { label: 'Туры в Турцию из Самары в ноябре', href: '/samara/turkey/tury-v-turciyu-v-noyabre/' },
+                                { label: 'Туры в Турцию из Самары в декабре', href: '/samara/turkey/tury-v-turciyu-v-dekabre/' },
+                                { label: 'Отдых в Турции из Самары', href: '/samara/turkey/otdyh-v-turciyu/' },
+                                { label: 'Путевки в Турцию из Самары', href: '/samara/turkey/putevki-v-turciyu/' },
+                                { label: 'Дешевые туры в Турцию из Самара', href: '/samara/turkey/deshevye-tury-v-turciyu/' },
+                            ]
+                        },
+                        {
+                            heading: 'Россия',
+                            links: [
+                                { label: 'Туры по России из Самары', href: '/samara/russia/' },
+                                { label: 'Туры в Санкт-Петербург из Самары', href: '/samara/russia/peterburg/' },
+                                { label: 'Туры в Сочи из Самары', href: '/samara/russia/sochi/' },
+                            ]
+                        },
+                        {
+                            heading: 'Египет',
+                            links: [
+                                { label: 'Туры в Египет из Самары', href: '/samara/egypt/' },
+                            ]
+                        },
+                        {
+                            heading: 'ОАЭ',
+                            links: [
+                                { label: 'Туры в ОАЭ из Самары', href: '/samara/uae/' },
+                                { label: 'Туры в Дубай из Самары', href: '/samara/uae/dubai/' },
+                            ]
+                        },
+                        {
+                            heading: 'Мальдивы',
+                            links: [
+                                { label: 'Туры на Мальдивы из Самары', href: '/samara/maldives/' },
+                            ]
+                        },
+                        {
+                            heading: 'Шри-Ланка из Москвы',
+                            links: [
+                                { label: 'Туры на Шри-Ланку из Москвы', href: '/main/srilanka/' },
+                            ]
+                        },
+                    ],
+                    destinations: [
+                        {
+                            button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                            }
+                        },
+                        {
+                            button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
+                            }
+                        },
+                    ]
                 },
-                {
-                    visual: '/site/coral.ru/assets/pay-attention/gift-cards.jpg',
-                    href: 'https://www.coral.ru/podarochnye-karty/?banner_on_site=giftcard'
+                sochi: {
+                    h2: 'Из Сочи без пересадок',
+                    h3: 'Выбирай и лети',
+                    name: 'Сочи',
+                    url: '/sochi/',
+                    logoDecor: '/site/coral.ru/assets/logo-decor-sochi.png',
+                    dictionary: {
+                        wording_fromCityName: 'из Сочи'
+                    },
+                    xlinks: [
+                        {
+                            heading: 'Турция',
+                            links: [
+                                { label: 'Туры в Турцию из Сочи', href: '/main/turkey/' },
+                            ]
+                        },
+                        {
+                            heading: 'Россия',
+                            links: [
+                                { label: 'Туры по России из Сочи', href: '/main/russia/' },
+                            ]
+                        },
+                        {
+                            heading: 'Египет из Москвы',
+                            links: [
+                                { label: 'Туры в Египет из Сочи', href: '/main/egypt/' },
+                            ]
+                        },
+                        {
+                            heading: 'ОАЭ',
+                            links: [
+                                { label: 'Туры в ОАЭ из Сочи', href: '/main/uae/' },
+                            ]
+                        },
+                        {
+                            heading: 'Мальдивы из Москвы',
+                            links: [
+                                { label: 'Туры на Мальдивы из Москвы', href: '/main/maldives/' },
+                            ]
+                        },
+                        {
+                            heading: 'Шри-Ланка из Москвы',
+                            links: [
+                                { label: 'Туры на Шри-Ланку из Москвы', href: '/main/srilanka/' },
+                            ]
+                        },
+                    ],
+                    destinations: [
+                        {
+                            button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                            }
+                        },
+                        {
+                            button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
+                            }
+                        },
+                    ]
                 },
-            ]
+                tyumen: {
+                    h2: 'Из Тюмени без пересадок',
+                    h3: 'Выбирай и лети',
+                    name: 'Тюмень',
+                    url: '/tyumen/',
+                    logoDecor: '/site/coral.ru/assets/logo-decor-tyumen.png',
+                    dictionary: {
+                        wording_fromCityName: 'из Тюмени'
+                    },
+                    xlinks: [
+                        {
+                            heading: 'Турция',
+                            links: [
+                                { label: 'Туры в Турцию из Тюмени', href: '/tyumen/turkey/' },
+                            ]
+                        },
+                        {
+                            heading: 'Россия',
+                            links: [
+                                { label: 'Туры по России из Сочи', href: '/main/russia/' },
+                            ]
+                        },
+                        {
+                            heading: 'ОАЭ',
+                            links: [
+                                { label: 'Туры в ОАЭ из Тюмени', href: '/tyumen/uae/' },
+                            ]
+                        },
+                        {
+                            heading: 'Египет из Москвы',
+                            links: [
+                                { label: 'Туры в Египет из Москвы', href: '/main/egypt/' },
+                            ]
+                        },
+                        {
+                            heading: 'Шри-Ланка',
+                            links: [
+                                { label: 'Туры на Шри-Ланку из Тюмени', href: '/tyumen/srilanka/' },
+                            ]
+                        },
+                        {
+                            heading: 'Мальдивы из Москвы',
+                            links: [
+                                { label: 'Туры на Мальдивы из Москвы', href: '/main/maldives/' },
+                            ]
+                        },
+                    ],
+                    destinations: [
+                        {
+                            button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                            }
+                        },
+                        {
+                            button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
+                            }
+                        },
+                    ]
+                },
+            }
         },
-        cities: {
-            kazan: {
-                h2: 'Из Казани без пересадок',
-                h3: 'Выбирай и лети',
-                name: 'Казань',
-                url: '/kazan/',
-                logoDecor: '/site/coral.ru/assets/logo-decor-kazan.png',
-                dictionary: {
-                    wording_fromCityName: 'из Казани'
-                },
-                destinations: [
-                    {
-                        button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
-                        }
-                    },
-                    {
-                        button: {label: 'Эгейское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[29, 17, 18, 210, 209, 30, 19, 10732, 20, 21, 22, 32, 23, 24, 33, 25, 28, 27, 42, 63, 46, 8995, 55, 57, 11080, 130, 59, 60, 58, 14551, 61]'},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-aegean-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-aegean-mobile.jpg'
-                        }
-                    },
-                    {
-                        button: {label: 'ОАЭ', data_lookup_destination: 'ОАЭ', data_lookup_depth_days: 12},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-uae-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-uae-mobile.jpg'
-                        }
-                    },
-                    {
-                        button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
-                        }
-                    },
-                ],
-                xlinks: [
-                    {
-                        heading: 'Египет из Москвы',
-                        links: [
-                            {label: 'Туры в Египет из Москвы', href: '/main/egypt/'},
-                        ]
-                    },
-                    {
-                        heading: 'ОАЭ из Казани',
-                        links: [
-                            {label: 'Туры в ОАЭ из Казани', href: '/kazan/uae/'},
-                            {label: 'Туры в Дубай из Казани', href: '/kazan/uae/dubai/'},
-                        ]
-                    },
-                    {
-                        heading: 'Мальдивы из Москвы',
-                        links: [
-                            {label: 'Туры на Мальдивы из Москвы', href: '/main/maldives/'},
-                        ]
-                    },
-                    {
-                        heading: 'Россия из Казани',
-                        links: [
-                            {label: 'Туры по России из Казани', href: '/kazan/russia/'},
-                            {label: 'Туры в Санкт-Петербург из Казани', href: '/kazan/russia/peterburg/'},
-                            {label: 'Туры в Сочи из Казани', href: '/kazan/russia/sochi/'},
-                            {label: 'Горящие туры в Сочи из Казани', href: '/kazan/russia/goryashchie-tury-v-sochi/'},
-                        ]
-                    },
-                    {
-                        heading: 'Турция из Казани',
-                        links: [
-                            {label: 'Туры в Турцию из Казани', href: '/kazan/turkey/'},
-                            {label: 'Дешевые туры в Турцию из Казани', href: '/kazan/turkey/deshevye-tury-v-turciyu/'},
-                            {label: 'Туры в Турцию из Казани всё включено', href: '/kazan/turkey/vse-vklucheno/'},
-                            {label: 'Туры в Турцию из Казани в июле', href: '/kazan/turkey/tury-v-turciyu-v-iyule/'},
-                            {label: 'Туры в Турцию из Казани в августе', href: '/kazan/turkey/tury-v-turciyu-v-avguste/'},
-                            {label: 'Туры в Турцию из Казани в сентябре', href: '/kazan/turkey/tury-v-turciyu-v-sentyabre/'},
-                            {label: 'Туры в Турцию из Казани в октябре', href: '/kazan/turkey/tury-v-turciyu-v-oktyabre/'},
-                            {label: 'Туры в Турцию из Казани в ноябре', href: '/kazan/turkey/tury-v-turciyu-v-noyabre/'},
-                            {label: 'Туры в Турцию из Казани в декабре', href: '/kazan/turkey/tury-v-turciyu-v-dekabre/'},
-                        ]
-                    },
-                    {
-                        heading: 'Туры по предпочтениям',
-                        links: [
-                            {label: 'Горящие туры в Турцию из Казани', href: '/kazan/turkey/goryashchie-tury-v-turciyu/'},
-                        ]
-                    },
-                ]
-            },
-            spb: {
-                h2: 'Из Санкт-Петербурга без пересадок',
-                h3: 'Выбирай и лети',
-                name: 'Санкт-Петербург',
-                url: '/spb/',
-                logoDecor: '/site/coral.ru/assets/logo-decor-spb.png',
-                dictionary: {
-                    wording_fromCityName: 'из Санкт-Петербурга'
-                },
-                destinations: [
-                    {
-                        button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
-                        }
-                    },
-                    {
-                        button: {label: 'Эгейское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[29, 17, 18, 210, 209, 30, 19, 10732, 20, 21, 22, 32, 23, 24, 33, 25, 28, 27, 42, 63, 46, 8995, 55, 57, 11080, 130, 59, 60, 58, 14551, 61]'},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-aegean-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-aegean-mobile.jpg'
-                        }
-                    },
-                    {
-                        button: {label: 'ОАЭ', data_lookup_destination: 'ОАЭ', data_lookup_depth_days: 12},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-uae-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-uae-mobile.jpg'
-                        }
-                    },
-                    {
-                        button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
-                        }
-                    },
-                ],
-                xlinks: [
-                    {
-                        heading: 'Турция из Санкт-Петербурга',
-                        links: [
-                            { label: 'Туры в Турцию из Санкт-Петербурга', href: '/spb/turkey/' },
-                            { label: 'Туры в Турцию из Санкт-Петербурга все включено', href: '/spb/turkey/vse-vklucheno/' },
-                            { label: 'Горящие туры в Турцию из Санкт-Петербурга', href: '/spb/turkey/goryashchie-tury-v-turciyu/' },
-                            { label: 'Туры в Турцию из Санкт-Петербурга в июне', href: '/spb/turkey/tury-v-turciyu-v-iyune/' },
-                            { label: 'Туры в Турцию из Санкт-Петербурга в июле', href: '/spb/turkey/tury-v-turciyu-v-iyule/' },
-                            { label: 'Туры в Турцию из Санкт-Петербурга в августе', href: '/spb/turkey/tury-v-turciyu-v-avguste/' },
-                            { label: 'Туры в Турцию из Санкт-Петербурга в сентябре', href: '/spb/turkey/tury-v-turciyu-v-sentyabre/' },
-                            { label: 'Туры в Турцию из Санкт-Петербурга в октябре', href: '/spb/turkey/tury-v-turciyu-v-oktyabre/' },
-                            { label: 'Туры в Турцию из Санкт-Петербурга в ноябре', href: '/spb/turkey/tury-v-turciyu-v-noyabre/' },
-                            { label: 'Путевки в Турцию из Санкт-Петербурга', href: '/spb/turkey/putevki-v-turciyu/' },
-                            { label: 'Отдых в Турции из Санкт-Петербурга', href: '/spb/turkey/otdyh-v-turciyu/' },
-                            { label: 'Дешевые туры в Турцию из Санкт-Петербурга', href: '/spb/turkey/deshevye-tury-v-turciyu/' },
-                        ]
-                    },
-                    {
-                        heading: 'Египет из Москвы',
-                        links: [
-                            { label: 'Туры в Египет из Москвы', href: '/main/egypt/' }
-                        ]
-                    },
-                    {
-                        heading: 'ОАЭ из Санкт-Петербурга',
-                        links: [
-                            { label: 'Туры в ОАЭ из Санкт-Петербурга', href: '/spb/uae/' },
-                            { label: 'Туры в Дубай из Санкт-Петербурга', href: '/spb/uae/dubai/' }
-                        ]
-                    },
-                    {
-                        heading: 'Мальдивы из Москвы',
-                        links: [
-                            { label: 'Туры на Мальдивы из Москвы', href: '/main/maldives/' }
-                        ]
-                    },
-                    {
-                        heading: 'Таиланд из Москвы',
-                        links: [
-                            { label: 'Туры в Таиланд из Москвы', href: '/main/thailand/' }
-                        ]
-                    },
-                    {
-                        heading: 'Россия из Санкт-Петербурга',
-                        links: [
-                            { label: 'Туры по России из Санкт-Петербурга', href: '/spb/russia/' },
-                            { label: 'Туры в Казань из Санкт-Петербурга', href: '/spb/russia/kazan/' },
-                            { label: 'Туры в Шерегеш из Санкт-Петербурга', href: '/spb/russia/sheregesh/' },
-                            { label: 'Туры в Сочи из Санкт-Петербурга', href: '/spb/russia/sochi/' },
-                        ]
-                    },
-                ]
-            },
-            novosibirsk: {
-                h2: 'Из Новосибирска без пересадок',
-                h3: 'Выбирай и лети',
-                name: 'Новосибирск',
-                url: '/novosibirsk/',
-                logoDecor: '/site/coral.ru/assets/logo-decor-novosib.png',
-                dictionary: {
-                    wording_fromCityName: 'из Новосибирска'
-                },
-                xlinks: [
-                    {
-                        heading: 'Турция из Новосибирска',
-                        links: [
-                            { label: 'Туры в Турцию из Новосибирска', href: '/novosibirsk/turkey/' },
-                            { label: 'Горящие туры в Турцию из Новосибирска', href: '/novosibirsk/turkey/goryashchie-tury-v-turciyu/' },
-                            { label: 'Туры в Турцию из Новосибирска все включено', href: '/novosibirsk/turkey/vse-vklucheno/' },
-                            { label: 'Туры в Турцию из Новосибирска в июле', href: '/novosibirsk/turkey/tury-v-turciyu-v-iyule/' },
-                            { label: 'Туры в Турцию из Новосибирска в августе', href: '/novosibirsk/turkey/tury-v-turciyu-v-avguste/' },
-                            { label: 'Туры в Турцию из Новосибирска в сентябре', href: '/novosibirsk/turkey/tury-v-turciyu-v-sentyabre/' },
-                            { label: 'Туры в Турцию из Новосибирска в октябре', href: '/novosibirsk/turkey/tury-v-turciyu-v-oktyabre/' },
-                            { label: 'Туры в Турцию из Новосибирска в ноябре', href: '/novosibirsk/turkey/tury-v-turciyu-v-noyabre/' },
-                            { label: 'Туры в Турцию из Новосибирска в декабре', href: '/novosibirsk/turkey/tury-v-turciyu-v-dekabre/' },
-                            { label: 'Дешевые туры в Турцию из Новосибирска', href: '/novosibirsk/turkey/deshevye-tury-v-turciyu/' },
-                            { label: 'Отдых в Турции из Новосибирска', href: '/novosibirsk/turkey/otdyh-v-turciyu/' },
-                            { label: 'Путевки в Турцию из Новосибирскf', href: '/novosibirsk/turkey/putevki-v-turciyu/' },
-                        ]
-                    },
-                    {
-                        heading: 'Египет из Москвы',
-                        links: [
-                            { label: 'Туры в Египет из Москвы', href: '/main/egypt/' },
-                        ]
-                    },
-                    {
-                        heading: 'ОАЭ из Москвы',
-                        links: [
-                            { label: 'Туры в ОАЭ из Москвы', href: '/main/uae/' },
-                        ]
-                    },
-                    {
-                        heading: 'Таиланд из Новосибирска',
-                        links: [
-                            { label: 'Туры в Таиланд из Новосибирска', href: '/main/thailand/' },
-                        ]
-                    },
-                    {
-                        heading: 'Шри-Ланка из Новосибирска',
-                        links: [
-                            { label: 'Туры на Шри-Ланку из Новосибирска', href: '/main/srilanka/' },
-                        ]
-                    },
-                    {
-                        heading: 'Россия из Новосибирска',
-                        links: [
-                            { label: 'Туры по России из Новосибирска', href: '/novosibirsk/russia/' },
-                            { label: 'Горящие туры в Сочи из Новосибирска', href: '/novosibirsk/russia/goryashchie-tury-v-sochi/' },
-                            { label: 'Туры в Санкт-Петербург из Новосибирска', href: '/novosibirsk/russia/peterburg/' },
-                            { label: 'Туры в Сочи из Новосибирска', href: '/novosibirsk/russia/sochi/' },
-                        ]
-                    },
-                ],
-            },
-            ekb: {
-                h2: 'Из Екатеринбурга без пересадок',
-                h3: 'Выбирай и лети',
-                name: 'Екатеринбург',
-                url: '/ekb/',
-                logoDecor: '/site/coral.ru/assets/logo-decor-ekb.png',
-                dictionary: {
-                    wording_fromCityName: 'из Екатеринбурга'
-                },
-                destinations: [
-                    {
-                        button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
-                        }
-                    },
-                    {
-                        button: {label: 'Эгейское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[29, 17, 18, 210, 209, 30, 19, 10732, 20, 21, 22, 32, 23, 24, 33, 25, 28, 27, 42, 63, 46, 8995, 55, 57, 11080, 130, 59, 60, 58, 14551, 61]'},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-aegean-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-aegean-mobile.jpg'
-                        }
-                    },
-                    {
-                        button: {label: 'ОАЭ', data_lookup_destination: 'ОАЭ', data_lookup_depth_days: 12},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-uae-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-uae-mobile.jpg'
-                        }
-                    },
-                    {
-                        button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
-                        }
-                    },
-                ],
-                xlinks: [
-                    {
-                        heading: 'Турция из Екатеринбурга',
-                        links: [
-                            { label: 'Туры в Турцию из Екатеринбурга', href: '/ekaterinburg/turkey/' },
-                            { label: 'Туры в Турцию из Екатеринбурга всё включено', href: '/ekaterinburg/turkey/vse-vklucheno/' },
-                            { label: 'Туры в Турцию из Екатеринбурга в июне', href: '/ekaterinburg/turkey/tury-v-turciyu-v-iyune/' },
-                            { label: 'Туры в Турцию из Екатеринбурга в июле', href: '/ekaterinburg/turkey/tury-v-turciyu-v-iyule/' },
-                            { label: 'Туры в Турцию из Екатеринбурга в августе', href: '/ekaterinburg/turkey/tury-v-turciyu-v-avguste/' },
-                            { label: 'Туры в Турцию из Екатеринбурга в сентябре', href: '/ekaterinburg/turkey/tury-v-turciyu-v-sentyabre/' },
-                            { label: 'Туры в Турцию из Екатеринбурга в октябре', href: '/ekaterinburg/turkey/tury-v-turciyu-v-oktyabre/' },
-                            { label: 'Туры в Турцию из Екатеринбурга в ноябре', href: '/ekaterinburg/turkey/tury-v-turciyu-v-noyabre/' },
-                            { label: 'Туры в Турцию из Екатеринбурга в декабре', href: '/ekaterinburg/turkey/tury-v-turciyu-v-dekabre/' },
-                            { label: 'Путевки в Турцию из Екатеринбургf', href: '/ekaterinburg/turkey/putevki-v-turciyu/' },
-                        ]
-                    },
-                    {
-                        heading: 'Египет из Москвы',
-                        links: [
-                            { label: 'Туры в Египет из Москвы', href: '/main/egypt/' },
-                        ]
-                    },
-                    {
-                        heading: 'ОАЭ из Екатеринбурга',
-                        links: [
-                            { label: 'Туры в ОАЭ из Екатеринбурга', href: '/ekb/uae/' },
-                            { label: 'Туры в Дубай из Екатеринбурга', href: '/ekb/uae/dubai/' },
-                            { label: 'Туры в Шарджу из Екатеринбурга', href: '/ekb/uae/sharjah/' },
-                        ]
-                    },
-                    {
-                        heading: 'Таиланд из Москвы',
-                        links: [
-                            { label: 'Туры в Таиланд из Москвы', href: '/main/thailand/' },
-                        ]
-                    },
-                    {
-                        heading: 'Шри-Ланка из Москвы',
-                        links: [
-                            { label: 'Туры на Шри-Ланку из Москвы', href: '/main/srilanka/' },
-                        ]
-                    },
-                    {
-                        heading: 'Россия из Екатеринбурга',
-                        links: [
-                            { label: 'Туры по России из Екатеринбурга', href: '/ekb/russia/' },
-                            { label: 'Туры в Сочи из Екатеринбурга', href: '/ekb/russia/sochi/' },
-                            { label: 'Горящие туры в Сочи из Екатеринбурга', href: '/ekb/russia/goryashchie-tury-v-sochi/' },
-                            { label: 'Туры в Казань из Екатеринбурга', href: '/ekb/russia/kazan/' },
-                            { label: 'Туры в Санкт-Петербург из Екатеринбурга', href: '/ekb/russia/peterburg/' },
-                        ]
-                    },
-                ]
-            },
-            ufa: {
-                h2: 'Из Уфы без пересадок',
-                h3: 'Выбирай и лети',
-                name: 'Уфа',
-                url: '/ufa/',
-                logoDecor: '/site/coral.ru/assets/logo-decor-ufa.png',
-                dictionary: {
-                    wording_fromCityName: 'из Уфы'
-                },
-                xlinks: [
-                    {
-                        heading: 'Турция из Уфы',
-                        links: [
-                            { label: 'Туры в Турцию из Уфы', href: '/ufa/turkey/' },
-                            { label: 'Туры в Турцию из Уфы все включено', href: '/ufa/turkey/vse-vklucheno/' },
-                            { label: 'Горящие туры в Турцию из Уфы', href: '/ufa/turkey/goryashchie-tury-v-turciyu/' },
-                            { label: 'Туры в Турцию в мае из Уфы', href: '/ufa/turkey/tury-v-turciyu-v-mae/' },
-                            { label: 'Туры в Турцию в июне из Уфы', href: '/ufa/turkey/tury-v-turciyu-v-iyune/' },
-                            { label: 'Туры в Турцию в июле из Уфы', href: '/ufa/turkey/tury-v-turciyu-v-iyule/' },
-                            { label: 'Туры в Турцию в августе из Уфы', href: '/ufa/turkey/tury-v-turciyu-v-avguste/' },
-                            { label: 'Туры в Турцию в сентябре из Уфы', href: '/ufa/turkey/tury-v-turciyu-v-sentyabre/' },
-                            { label: 'Туры в Турцию в октябре из Уфы', href: '/ufa/turkey/tury-v-turciyu-v-oktyabre/' },
-                            { label: 'Туры в Турцию из Уфы в ноябре', href: '/ufa/turkey/tury-v-turciyu-v-noyabre/' },
-                            { label: 'Туры в Турцию из Уфы в декабре', href: '/ufa/turkey/tury-v-turciyu-v-dekabre/' },
-                            { label: 'Дешевые туры в Турцию из Уфы', href: '/ufa/turkey/deshevye-tury-v-turciyu/' },
-                            { label: 'Отдых в Турции из Уфы', href: '/ufa/turkey/otdyh-v-turciyu/' },
-                            { label: 'Путевки в Турцию из Уфы', href: '/ufa/turkey/putevki-v-turciyu/' },
-                        ]
-                    },
-                    {
-                        heading: 'Египет из Москвы',
-                        links: [
-                            { label: 'Туры в Египет из Москвы', href: '/main/egypt/' },
-                        ]
-                    },
-                    {
-                        heading: 'ОАЭ из Уфы',
-                        links: [
-                            { label: 'Туры в ОАЭ из Уфы', href: '/ufa/uae/' },
-                            { label: 'Туры в Дубай из Уфы', href: '/ufa/uae/dubai/' },
-                            { label: 'Туры в Шарджу из Уфы', href: '/ufa/uae/sharjah/' },
-                        ]
-                    },
-                    {
-                        heading: 'Таиланд из Москвы',
-                        links: [
-                            { label: 'Туры в Таиланд из Москвы', href: '/main/thailand/' },
-                        ]
-                    },
-                    {
-                        heading: 'Мальдивы из Москвы',
-                        links: [
-                            { label: 'Туры на Мальдивы из Москвы', href: '/main/maldives/' },
-                        ]
-                    },
-                    {
-                        heading: 'Россия из Уфы',
-                        links: [
-                            { label: 'Туры в Санкт-Петербург из Уфы', href: '/ufa/peterburg/' },
-                            { label: 'Туры в Казань из Уфы', href: '/ufa/russia/kazan/' },
-                            { label: 'Туры в Сочи из Уфы', href: '/ufa/russia/sochi/' },
-                        ]
-                    },
-                ],
-            },
-            chelyabinsk: {
-                h2: 'Из Челябинска без пересадок',
-                h3: 'Выбирай и лети',
-                name: 'Челябинск',
-                url: '/chelyabinsk/',
-                logoDecor: '/site/coral.ru/assets/logo-decor-chelyabinsk.png',
-                dictionary: {
-                    wording_fromCityName: 'из Челябинска'
-                },
-                xlinks: [
-                    {
-                        heading: 'Турция',
-                        links: [
-                            { label: 'Туры в Турцию из Челябинска', href: '/chelyabinsk/turkey/' },
-                            { label: 'Туры в Анталью из Челябинска', href: '/chelyabinsk/turkey/antalya/' },
-                            { label: 'Туры в Турцию из Челябинска все включено', href: '/chelyabinsk/turkey/vse-vklucheno/' },
-                            { label: 'Горящие туры в Турцию из Челябинска', href: '/chelyabinsk/turkey/goryashchie-tury-v-turciyu/' },
-                            { label: 'Отдых в Турции из Челябинска', href: '/chelyabinsk/turkey/otdyh-v-turciyu/' },
-                            { label: 'Путевки в Турцию из Челябинска', href: '/chelyabinsk/turkey/putevki-v-turciyu/' },
-                            { label: 'Туры в Турцию из Челябинска в сентябре', href: '/chelyabinsk/turkey/tury-v-turciyu-v-sentyabre/' },
-                            { label: 'Туры в Турцию из Челябинска в октябре', href: '/chelyabinsk/turkey/tury-v-turciyu-v-oktyabre/' },
-                            { label: 'Туры в Турцию из Челябинска в ноябре', href: '/chelyabinsk/turkey/tury-v-turciyu-v-noyabre/' },
-                            { label: 'Туры в Турцию из Челябинска в декабре', href: '/chelyabinsk/turkey/tury-v-turciyu-v-dekabre/' },
-                            { label: 'Дешевые туры в Турцию из Челябинска', href: '/chelyabinsk/turkey/deshevye-tury-v-turciyu/' },
-                            { label: 'Туры в ОАЭ из Челябинска', href: '/chelyabinsk/uae/' },
-                        ]
-                    },
-                    {
-                        heading: 'Египет из Москвы',
-                        links: [
-                            { label: 'Туры в Египет из Москвы', href: '/main/egypt/' },
-                        ]
-                    },
-                    {
-                        heading: 'ОАЭ',
-                        links: [
-                            { label: 'Туры в ОАЭ из Челябинска', href: '/chelyabinsk/uae/' },
-                        ]
-                    },
-                    {
-                        heading: 'Мальдивы из Москвы',
-                        links: [
-                            { label: 'Туры на Мальдивы из Москвы', href: '/main/maldives/' },
-                        ]
-                    },
-                    {
-                        heading: 'Россия',
-                        links: [
-                            { label: 'Туры в Казань из Челябинска', href: '/chelyabinsk/russia/kazan/' },
-                            { label: 'Туры в Санкт-Петербург из Челябинска', href: '/chelyabinsk/russia/peterburg/' },
-                        ]
-                    },
-                    {
-                        heading: 'Шри-Ланка из Москвы',
-                        links: [
-                            { label: 'Туры на Шри-Ланку из Москвы', href: '/main/srilanka/' },
-                        ]
-                    },
-                ],
-                destinations: [
-                    {
-                        button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
-                        }
-                    },
-                    {
-                        button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
-                        }
-                    },
-                ]
-            },
-            irkutsk: {
-                h2: 'Из Иркутска без пересадок',
-                h3: 'Выбирай и лети',
-                name: 'Иркутск',
-                url: '/irkutsk/',
-                logoDecor: '/site/coral.ru/assets/logo-decor-irkutsk.png',
-                dictionary: {
-                    wording_fromCityName: 'из Иркутска'
-                },
-                xlinks: [
-                    {
-                        heading: 'Турция',
-                        links: [
-                            { label: 'Туры в Турцию из Иркутска', href: '/irkutsk/turkey/' },
-                            { label: 'Туры в Анталью из Иркутска', href: '/irkutsk/turkey/antalya/' },
-                        ]
-                    },
-                    {
-                        heading: 'Россия',
-                        links: [
-                            { label: 'Туры по России из Иркутска', href: '/main/russia/' },
-                        ]
-                    },
-                    {
-                        heading: 'Египет из Москвы',
-                        links: [
-                            { label: 'Туры в Египет из Москвы', href: '/main/egypt/' },
-                        ]
-                    },
-                ],
-                destinations: [
-                    {
-                        button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
-                        }
-                    },
-                    {
-                        button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
-                        }
-                    },
-                ]
-            },
-            kaliningrad: {
-                h2: 'Из Калининграда без пересадок',
-                h3: 'Выбирай и лети',
-                name: 'Калининград',
-                url: '/kaliningrad/',
-                logoDecor: '/site/coral.ru/assets/logo-decor-kaliningrad.png',
-                dictionary: {
-                    wording_fromCityName: 'из Калининграда'
-                },
-                xlinks: [
-                    {
-                        heading: 'Турция',
-                        links: [
-                            { label: 'Туры в Турцию из Калининграда', href: '/kaliningrad/turkey/' },
-                            { label: 'Туры в Турцию из Калининграда все включено', href: '/kaliningrad/turkey/vse-vklucheno/' },
-                            { label: 'Горящие туры в Турцию из Калининграда', href: '/kaliningrad/turkey/goryashchie-tury-v-turciyu/' },
-                            { label: 'Отдых в Турции из Калининграда', href: '/kaliningrad/turkey/otdyh-v-turciyu/' },
-                            { label: 'Туры в Турцию из Калининграда в октябре', href: '/kaliningrad/turkey/tury-v-turciyu-v-oktyabre/' },
-                            { label: 'Туры в Турцию из Калининграда в ноябре', href: '/kaliningrad/turkey/tury-v-turciyu-v-noyabre/' },
-                            { label: 'Туры в Турцию из Калининграда в декабре', href: '/kaliningrad/turkey/tury-v-turciyu-v-dekabre/' },
-                            { label: 'Дешевые туры в Турцию из Калининграда', href: '/kaliningrad/turkey/deshevye-tury-v-turciyu/' },
-                            { label: 'Путевки в Турцию из Калининграда', href: '/kaliningrad/turkey/putevki-v-turciyu/' },
-                        ]
-                    },
-                    {
-                        heading: 'Россия',
-                        links: [
-                            { label: 'Туры по России из Калининграда', href: '/main/russia/' },
-                        ]
-                    },
-                    {
-                        heading: 'Египет из Москвы',
-                        links: [
-                            { label: 'Туры в Египет из Москвы', href: '/main/egypt/' },
-                        ]
-                    },
-                    {
-                        heading: 'ОАЭ из Москвы',
-                        links: [
-                            { label: 'Туры в ОАЭ из Москвы', href: '/main/uae/' },
-                        ]
-                    },
-                    {
-                        heading: 'Мальдивы из Москвы',
-                        links: [
-                            { label: 'Туры на Мальдивы из Москвы', href: '/main/maldives/' },
-                        ]
-                    },
-                    {
-                        heading: 'Шри-Ланка из Москвы',
-                        links: [
-                            { label: 'Туры на Шри-Ланку из Москвы', href: '/main/srilanka/' },
-                        ]
-                    },
-                ],
-                destinations: [
-                    {
-                        button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
-                        }
-                    },
-                    {
-                        button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
-                        }
-                    },
-                ]
-            },
-            krasnoyarsk: {
-                h2: 'Из Красноярска без пересадок',
-                h3: 'Выбирай и лети',
-                name: 'Красноярск',
-                url: '/krasnoyarsk/',
-                logoDecor: '/site/coral.ru/assets/logo-decor-krasnoyarsk.png',
-                dictionary: {
-                    wording_fromCityName: 'из Красноярска'
-                },
-                xlinks: [
-                    {
-                        heading: 'Турция',
-                        links: [
-                            { label: 'Туры в Турцию из Красноярска', href: '/krasnoyarsk/turkey/' },
-                        ]
-                    },
-                    {
-                        heading: 'Россия',
-                        links: [
-                            { label: 'Туры по России из Красноярска', href: '/main/russia/' },
-                        ]
-                    },
-                    {
-                        heading: 'Египет из Москвы',
-                        links: [
-                            { label: 'Туры в Египет из Москвы', href: '/main/egypt/' },
-                        ]
-                    },
-                    {
-                        heading: 'ОАЭ из Москвы',
-                        links: [
-                            { label: 'Туры в ОАЭ из Москвы', href: '/main/uae/' },
-                        ]
-                    },
-                    {
-                        heading: 'Мальдивы из Москвы',
-                        links: [
-                            { label: 'Туры на Мальдивы из Москвы', href: '/main/maldives/' },
-                        ]
-                    },
-                    {
-                        heading: 'Туры по предпочтениям',
-                        links: [
-                            { label: 'Горящие туры из Красноярска', href: '/krasnoyarsk/goryashchie-tury/' },
-                        ]
-                    },
-                ],
-                destinations: [
-                    {
-                        button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
-                        }
-                    },
-                    {
-                        button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
-                        }
-                    },
-                ]
-            },
-            mineralnyevody: {
-                h2: 'Из Минеральных Вод без пересадок',
-                h3: 'Выбирай и лети',
-                name: 'Минеральные Воды',
-                url: '/mineralnye-vody/',
-                logoDecor: '/site/coral.ru/assets/logo-decor-mineralnyevody.png',
-                dictionary: {
-                    wording_fromCityName: 'из Минеральных Вод'
-                },
-                xlinks: [
-                    {
-                        heading: 'Турция',
-                        links: [
-                            { label: 'Туры в Турцию из Минеральных Вод', href: '/mineralnye-vody/turkey/' },
-                        ]
-                    },
-                    {
-                        heading: 'Россия',
-                        links: [
-                            { label: 'Туры по России из Минеральных Вод', href: '/main/russia/' },
-                        ]
-                    },
-                    {
-                        heading: 'ОАЭ',
-                        links: [
-                            { label: 'Туры в ОАЭ из Минеральных Вод', href: '/main/uae/' },
-                        ]
-                    },
-                    {
-                        heading: 'Египет из Москвы',
-                        links: [
-                            { label: 'Туры в Египет из Москвы', href: '/main/egypt/' },
-                        ]
-                    },
-                    {
-                        heading: 'Шри-Ланка',
-                        links: [
-                            { label: 'Туры на Шри-Ланку из Минеральных Вод', href: '/main/srilanka/' },
-                        ]
-                    },
-                    {
-                        heading: 'Мальдивы из Москвы',
-                        links: [
-                            { label: 'Туры на Мальдивы из Москвы', href: '/main/maldives/' },
-                        ]
-                    },
-                ],
-                destinations: [
-                    {
-                        button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
-                        }
-                    },
-                    {
-                        button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
-                        }
-                    },
-                ]
-            },
-            nnovgorod: {
-                h2: 'Из Нижнего Новгорода без пересадок',
-                h3: 'Выбирай и лети',
-                name: 'Нижний Новгород',
-                url: '/nnovgorod/',
-                logoDecor: '/site/coral.ru/assets/logo-decor-nnovgorod.png',
-                dictionary: {
-                    wording_fromCityName: 'из Нижнего Новгорода'
-                },
-                xlinks: [
-                    {
-                        heading: 'Турция',
-                        links: [
-                            { label: 'Туры в Турцию из Нижнего Новгорода', href: '/nnovgorod/turkey/' },
-                            { label: 'Горящие туры в Турцию из Нижнего Новгорода', href: '/nnovgorod/turkey/goryashchie-tury-v-turciyu/' },
-                            { label: 'Туры в Турцию из Нижнего Новгорода в июле', href: '/nnovgorod/turkey/tury-v-turciyu-v-iyule/' },
-                            { label: 'Туры в Турцию из Нижнего Новгорода в августе', href: '/nnovgorod/turkey/tury-v-turciyu-v-avguste/' },
-                            { label: 'Туры в Турцию из Нижнего Новгорода в сентябре', href: '/nnovgorod/turkey/tury-v-turciyu-v-sentyabre/' },
-                            { label: 'Путевки в Турцию из Нижнего Новгорода', href: '/nnovgorod/turkey/putevki-v-turciyu/' },
-                        ]
-                    },
-                    {
-                        heading: 'Египет',
-                        links: [
-                            { label: 'Туры в Турцию из Нижнего Новгорода', href: '/nnovgorod/egypt/' },
-                        ]
-                    },
-                    {
-                        heading: 'ОАЭ из Москвы',
-                        links: [
-                            { label: 'Туры в ОАЭ из Москвы', href: '/main/uae/' },
-                        ]
-                    },
-                    {
-                        heading: 'Россия',
-                        links: [
-                            { label: 'Туры по России из Нижнего Новгорода', href: '/nnovgorod/russia/' },
-                            { label: 'Туры в Казань из Нижнего Новгорода', href: '/nnovgorod/russia/kazan/' },
-                            { label: 'Туры в Санкт-Петербург из Нижнего Новгорода', href: '/nnovgorod/russia/peterburg/' },
-                            { label: 'Туры в Сочи из Нижнего Новгорода', href: '/nnovgorod/russia/sochi/' },
-                        ]
-                    },
-                    {
-                        heading: 'Мальдивы',
-                        links: [
-                            { label: 'Туры на Мальдивы из Нижнего Новгорода', href: '/nnovgorod/maldives/' },
-                        ]
-                    },
-                    {
-                        heading: 'Шри-Ланка из Москвы',
-                        links: [
-                            { label: 'Туры на Шри-Ланку из Москвы', href: '/main/srilanka/' },
-                        ]
-                    },
-                ],
-                destinations: [
-                    {
-                        button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
-                        }
-                    },
-                    {
-                        button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
-                        }
-                    },
-                ]
-            },
-            omsk: {
-                h2: 'Из Омска без пересадок',
-                h3: 'Выбирай и лети',
-                name: 'Омск',
-                url: '/omsk/',
-                logoDecor: '/site/coral.ru/assets/logo-decor-omsk.png',
-                dictionary: {
-                    wording_fromCityName: 'из Омска'
-                },
-                xlinks: [
-                    {
-                        heading: 'Турция',
-                        links: [
-                            { label: 'Туры в Турцию из Омска', href: '/omsk/turkey/' },
-                        ]
-                    },
-                    {
-                        heading: 'Россия',
-                        links: [
-                            { label: 'Туры по России из Омска', href: '/main/russia/' },
-                        ]
-                    },
-                    {
-                        heading: 'Египет из Москвы',
-                        links: [
-                            { label: 'Туры в Египет из Москвы', href: '/main/egypt/' },
-                        ]
-                    },
-                    {
-                        heading: 'ОАЭ из Москвы',
-                        links: [
-                            { label: 'Туры в ОАЭ из Москвы', href: '/main/uae/' },
-                        ]
-                    },
-                    {
-                        heading: 'Мальдивы из Москвы',
-                        links: [
-                            { label: 'Туры на Мальдивы из Москвы', href: '/main/maldives/' },
-                        ]
-                    },
-                    {
-                        heading: 'Шри-Ланка из Москвы',
-                        links: [
-                            { label: 'Туры на Шри-Ланку из Москвы', href: '/main/srilanka/' },
-                        ]
-                    },
-                ],
-                destinations: [
-                    {
-                        button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
-                        }
-                    },
-                    {
-                        button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
-                        }
-                    },
-                ]
-            },
-            orenburg: {
-                h2: 'Из Оренбурга без пересадок',
-                h3: 'Выбирай и лети',
-                name: 'Оренбург',
-                url: '/orenburg/',
-                dictionary: {
-                    wording_fromCityName: 'из Оренбурга'
-                },
-                xlinks: [
-                    {
-                        heading: 'Турция',
-                        links: [
-                            { label: 'Туры в Турцию из Оренбурга', href: '/orenburg/turkey/' },
-                        ]
-                    },
-                    {
-                        heading: 'Россия',
-                        links: [
-                            { label: 'Туры в Египет из Москвы', href: '/main/egypt/' },
-                        ]
-                    },
-                    {
-                        heading: 'Египет из Москвы',
-                        links: [
-                            { label: 'Туры в Египет из Москвы', href: '/main/egypt/' },
-                        ]
-                    },
-                    {
-                        heading: 'ОАЭ из Москвы',
-                        links: [
-                            { label: 'Туры в ОАЭ из Москвы', href: '/main/uae/' },
-                        ]
-                    },
-                    {
-                        heading: 'Мальдивы из Москвы',
-                        links: [
-                            { label: 'Туры на Мальдивы из Москвы', href: '/main/maldives/' },
-                        ]
-                    },
-                    {
-                        heading: 'Шри-Ланка из Москвы',
-                        links: [
-                            { label: 'Туры на Шри-Ланку из Москвы', href: '/main/srilanka/' },
-                        ]
-                    },
-                ],
-                destinations: [
-                    {
-                        button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
-                        }
-                    },
-                    {
-                        button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
-                        }
-                    },
-                ]
-            },
-            perm: {
-                h2: 'Из Перми без пересадок',
-                h3: 'Выбирай и лети',
-                name: 'Пермь',
-                url: '/perm/',
-                logoDecor: '/site/coral.ru/assets/logo-decor-perm.png',
-                dictionary: {
-                    wording_fromCityName: 'из Перми'
-                },
-                xlinks: [
-                    {
-                        heading: 'Турция',
-                        links: [
-                            { label: 'Туры в Турцию из Перми', href: '/perm/turkey/' },
-                            { label: 'Туры в Турцию из Перми все включено', href: '/perm/turkey/vse-vklucheno/' },
-                            { label: 'Горящие туры в Турцию из Перми', href: '/perm/turkey/goryashchie-tury-v-turciyu/' },
-                            { label: 'Туры в Турцию из Перми в июле', href: '/perm/turkey/tury-v-turciyu-v-iyule/' },
-                            { label: 'Туры в Турцию из Перми в августе', href: '/perm/turkey/tury-v-turciyu-v-avguste/' },
-                            { label: 'Туры в Турцию из Перми в сентябре', href: '/perm/turkey/tury-v-turciyu-v-sentyabre/' },
-                            { label: 'Туры в Турцию из Перми в октябре', href: '/perm/turkey/tury-v-turciyu-v-oktyabre/' },
-                            { label: 'Туры в Турцию из Перми в ноябре', href: '/perm/turkey/tury-v-turciyu-v-noyabre/' },
-                            { label: 'Туры в Турцию из Перми в декабре', href: '/perm/turkey/tury-v-turciyu-v-dekabre/' },
-                            { label: 'Отдых в Турции из Перми', href: '/perm/turkey/otdyh-v-turciyu/' },
-                            { label: 'Путевки в Турцию из Перми', href: '/perm/turkey/putevki-v-turciyu/' },
-                            { label: 'Дешевые туры в Турцию из Перми', href: '/perm/turkey/deshevye-tury-v-turciyu/' },
-                        ]
-                    },
-                    {
-                        heading: 'Россия',
-                        links: [
-                            { label: 'Туры по России из Перми', href: '/perm/russia/' },
-                            { label: 'Туры в Казань из Перми', href: '/perm/russia/kazan/' },
-                            { label: 'Туры в Санкт-Петербург из Перми', href: '/perm/russia/peterburg/' },
-                            { label: 'Туры в Сочи из Перми', href: '/perm/russia/sochi/' },
-                        ]
-                    },
-                    {
-                        heading: 'Египет',
-                        links: [
-                            { label: 'Туры в Египет из Перми', href: '/perm/egypt/' },
-                        ]
-                    },
-                    {
-                        heading: 'ОАЭ',
-                        links: [
-                            { label: 'Туры в ОАЭ из Перми', href: '/perm/uae/' },
-                        ]
-                    },
-                    {
-                        heading: 'Мальдивы',
-                        links: [
-                            { label: 'Туры на Мальдивы из Перми', href: '/perm/maldives/' },
-                        ]
-                    },
-                    {
-                        heading: 'Шри-Ланка из Москвы',
-                        links: [
-                            { label: 'Туры на Шри-Ланку из Москвы', href: '/main/srilanka/' },
-                        ]
-                    },
-                ],
-                destinations: [
-                    {
-                        button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
-                        }
-                    },
-                    {
-                        button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
-                        }
-                    },
-                ]
-            },
-            samara: {
-                h2: 'Из Самары без пересадок',
-                h3: 'Выбирай и лети',
-                name: 'Самара',
-                url: '/samara/',
-                logoDecor: '/site/coral.ru/assets/logo-decor-samara.png',
-                dictionary: {
-                    wording_fromCityName: 'из Самары'
-                },
-                xlinks: [
-                    {
-                        heading: 'Турция',
-                        links: [
-                            { label: 'Туры в Турцию из Самары 2023', href: '/samara/turkey/' },
-                            { label: 'Туры в Турцию из Самары все включено', href: '/samara/turkey/vse-vklucheno/' },
-                            { label: 'Горящие туры в Турцию из Самары', href: '/samara/turkey/goryashchie-tury-v-turciyu/' },
-                            { label: 'Туры в Турцию из Самары в июле', href: '/samara/turkey/tury-v-turciyu-v-iyule/' },
-                            { label: 'Туры в Турцию из Самары в августе', href: '/samara/turkey/tury-v-turciyu-v-avguste/' },
-                            { label: 'Туры в Турцию из Самары в сентябре', href: '/samara/turkey/tury-v-turciyu-v-sentyabre/' },
-                            { label: 'Туры в Турцию из Самары в октябре', href: '/samara/turkey/tury-v-turciyu-v-oktyabre/' },
-                            { label: 'Туры в Турцию из Самары в ноябре', href: '/samara/turkey/tury-v-turciyu-v-noyabre/' },
-                            { label: 'Туры в Турцию из Самары в декабре', href: '/samara/turkey/tury-v-turciyu-v-dekabre/' },
-                            { label: 'Отдых в Турции из Самары', href: '/samara/turkey/otdyh-v-turciyu/' },
-                            { label: 'Путевки в Турцию из Самары', href: '/samara/turkey/putevki-v-turciyu/' },
-                            { label: 'Дешевые туры в Турцию из Самара', href: '/samara/turkey/deshevye-tury-v-turciyu/' },
-                        ]
-                    },
-                    {
-                        heading: 'Россия',
-                        links: [
-                            { label: 'Туры по России из Самары', href: '/samara/russia/' },
-                            { label: 'Туры в Санкт-Петербург из Самары', href: '/samara/russia/peterburg/' },
-                            { label: 'Туры в Сочи из Самары', href: '/samara/russia/sochi/' },
-                        ]
-                    },
-                    {
-                        heading: 'Египет',
-                        links: [
-                            { label: 'Туры в Египет из Самары', href: '/samara/egypt/' },
-                        ]
-                    },
-                    {
-                        heading: 'ОАЭ',
-                        links: [
-                            { label: 'Туры в ОАЭ из Самары', href: '/samara/uae/' },
-                            { label: 'Туры в Дубай из Самары', href: '/samara/uae/dubai/' },
-                        ]
-                    },
-                    {
-                        heading: 'Мальдивы',
-                        links: [
-                            { label: 'Туры на Мальдивы из Самары', href: '/samara/maldives/' },
-                        ]
-                    },
-                    {
-                        heading: 'Шри-Ланка из Москвы',
-                        links: [
-                            { label: 'Туры на Шри-Ланку из Москвы', href: '/main/srilanka/' },
-                        ]
-                    },
-                ],
-                destinations: [
-                    {
-                        button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
-                        }
-                    },
-                    {
-                        button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
-                        }
-                    },
-                ]
-            },
-            sochi: {
-                h2: 'Из Сочи без пересадок',
-                h3: 'Выбирай и лети',
-                name: 'Сочи',
-                url: '/sochi/',
-                logoDecor: '/site/coral.ru/assets/logo-decor-sochi.png',
-                dictionary: {
-                    wording_fromCityName: 'из Сочи'
-                },
-                xlinks: [
-                    {
-                        heading: 'Турция',
-                        links: [
-                            { label: 'Туры в Турцию из Сочи', href: '/main/turkey/' },
-                        ]
-                    },
-                    {
-                        heading: 'Россия',
-                        links: [
-                            { label: 'Туры по России из Сочи', href: '/main/russia/' },
-                        ]
-                    },
-                    {
-                        heading: 'Египет из Москвы',
-                        links: [
-                            { label: 'Туры в Египет из Сочи', href: '/main/egypt/' },
-                        ]
-                    },
-                    {
-                        heading: 'ОАЭ',
-                        links: [
-                            { label: 'Туры в ОАЭ из Сочи', href: '/main/uae/' },
-                        ]
-                    },
-                    {
-                        heading: 'Мальдивы из Москвы',
-                        links: [
-                            { label: 'Туры на Мальдивы из Москвы', href: '/main/maldives/' },
-                        ]
-                    },
-                    {
-                        heading: 'Шри-Ланка из Москвы',
-                        links: [
-                            { label: 'Туры на Шри-Ланку из Москвы', href: '/main/srilanka/' },
-                        ]
-                    },
-                ],
-                destinations: [
-                    {
-                        button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
-                        }
-                    },
-                    {
-                        button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
-                        }
-                    },
-                ]
-            },
-            tyumen: {
-                h2: 'Из Тюмени без пересадок',
-                h3: 'Выбирай и лети',
-                name: 'Тюмень',
-                url: '/tyumen/',
-                logoDecor: '/site/coral.ru/assets/logo-decor-tyumen.png',
-                dictionary: {
-                    wording_fromCityName: 'из Тюмени'
-                },
-                xlinks: [
-                    {
-                        heading: 'Турция',
-                        links: [
-                            { label: 'Туры в Турцию из Тюмени', href: '/tyumen/turkey/' },
-                        ]
-                    },
-                    {
-                        heading: 'Россия',
-                        links: [
-                            { label: 'Туры по России из Сочи', href: '/main/russia/' },
-                        ]
-                    },
-                    {
-                        heading: 'ОАЭ',
-                        links: [
-                            { label: 'Туры в ОАЭ из Тюмени', href: '/tyumen/uae/' },
-                        ]
-                    },
-                    {
-                        heading: 'Египет из Москвы',
-                        links: [
-                            { label: 'Туры в Египет из Москвы', href: '/main/egypt/' },
-                        ]
-                    },
-                    {
-                        heading: 'Шри-Ланка',
-                        links: [
-                            { label: 'Туры на Шри-Ланку из Тюмени', href: '/tyumen/srilanka/' },
-                        ]
-                    },
-                    {
-                        heading: 'Мальдивы из Москвы',
-                        links: [
-                            { label: 'Туры на Мальдивы из Москвы', href: '/main/maldives/' },
-                        ]
-                    },
-                ],
-                destinations: [
-                    {
-                        button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
-                        }
-                    },
-                    {
-                        button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
-                        visual: {
-                            desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
-                            mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
-                        }
-                    },
-                ]
-            },
+        sunmar: {
+
         }
     }
 }

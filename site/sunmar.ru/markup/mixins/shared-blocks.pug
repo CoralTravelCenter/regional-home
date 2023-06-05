@@ -120,11 +120,6 @@ mixin why-us()
                             .label
                                 :typo
                                     Персональные цены для постоянных туристов и выгодные предложения
-                .faq-on-buying
-                    .inhalt
-                        h3 Популярные вопросы о покупке тура
-                        .actions
-                            a(href='https://www.sunmar.ru/poleznaya-informatsiya/faq-po-pokupke-tura-onlayn/', target='_blank') Узнать подробнее
 
 mixin recommended-tours(city, commons)
     section.hero
@@ -132,18 +127,6 @@ mixin recommended-tours(city, commons)
             .contenu
                 h2 Рекомендованные туры
                 h4 прямым рейсом #{ city.dictionary.wording_fromCityName }
-
-mixin leasure-guide(city, commons)
-    section.hero.leasure-guide
-        article
-            .contenu
-                h2 Гид по отдыху
-                a(href='https://www.sunmar.ru/poleznaya-informatsiya/gid-po-otdyhu/?banner_on_site=gid-all', target='_blank')
-                    h4 Все статьи
-                .leasure-guides-grid
-                    - var guides = city.leasureGuides || commons.leasureGuides
-                    for guide in guides
-                        a(href=guide.href, target='_blank', style={ 'background-image': `url(${ guide.visual })` }): span &nbsp;
 
 mixin pay-attention(city, commons)
     section.hero.pay-attention
@@ -153,16 +136,25 @@ mixin pay-attention(city, commons)
                 .banners-grid
                     - var banners = city.payAttention || commons.payAttention
                     for banner in banners
-                        a(href=banner.href, target='_blank', style={ 'background-image': `url(${ banner.visual })` }): span &nbsp;
+                        .banner-cell
+                            .visual(style={ 'background-image': `url(${ banner.visual })` })
+                            .info
+                                .line!= banner.line
+                                .subline!= banner.subline
+                                a.arrlink(href=banner.href, target='_blank')= banner.linkText
+    script(type='module', src='/site/sunmar.ru/js/pay-attention.coffee')
 
 mixin xlinks-drawer(xlinks)
-    .xlinks
-        - var tmpid = 'toggler-' + Math.round(Math.random() * 100000)
-        input(type='checkbox', id=tmpid)
-        label.heading(for=tmpid)!= xlinks.heading
-        ul.drawer
-            for l in xlinks.links
-                li: a(href=l.href, target='_blank')!= l.label
+    - if (Array.isArray(xlinks.links))
+        .xlinks
+            - var tmpid = 'toggler-' + Math.round(Math.random() * 100000)
+                input(type='checkbox', id=tmpid)
+                label.heading(for=tmpid)!= xlinks.heading
+                ul.drawer
+                    for l in xlinks.links
+                        li: a(href=l.href, target='_blank')!= l.label
+    - else
+        a.arrlink(href=xlinks.links, target='_blank')= xlinks.heading
 
 mixin xlinks(city, commons)
     - var xlinks = city.xlinks || commons.xlinks
@@ -178,8 +170,8 @@ mixin reviews-and-thanks()
     section.hero.reviews-and-thanks
         article
             .contenu
-                h2 Благодарности
-                a(href='https://www.sunmar.ru/otzyv/', target='_blank')
+                h2 Отзывы и благодарности
+                a.arrlink(href='https://www.sunmar.ru/otzyv/', target='_blank')
                     h4 Все отзывы
 
                 .reviews-wrap

@@ -1,6 +1,7 @@
 local_cache_get =
     '/': '/site/sunmar.ru/assets/dev-cache/coral-home.html'
     '/main/coral/reviewsvotes/': '/site/sunmar.ru/assets/dev-cache/coral-reviewsvotes.html'
+    '/otzyv/': '/site/sunmar.ru/assets/dev-cache/sunmar-otzyv.html'
     '/v1/geography/tocountryfilter?areaid=2529': '/site/sunmar.ru/assets/dev-cache/tocountryfilter-2529.json'
     '/v1/geography/tocountryfilter?areaid=2705': '/site/sunmar.ru/assets/dev-cache/tocountryfilter-2705.json'
     '/v1/geography/tocountryfilter?areaid=2504': '/site/sunmar.ru/assets/dev-cache/tocountryfilter-2504.json'

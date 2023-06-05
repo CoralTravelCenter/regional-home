@@ -51,7 +51,10 @@ ASAP ->
         .on 'mouseleave', '.intro .eternal-package-search > *', (e) => do_auto_play = yes
 
     $flickityReady = $.Deferred()
-    preload 'https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.pkgd.min.js', -> $flickityReady.resolve()
+    if $.fn.flickity
+        $flickityReady.resolve()
+    else
+        preload 'https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.pkgd.min.js', -> $flickityReady.resolve()
 
     $scrolltoReady = $.Deferred()
     preload 'https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.3/jquery.scrollTo.min.js', -> $scrolltoReady.resolve()

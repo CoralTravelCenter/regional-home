@@ -8,10 +8,9 @@
         '/site/sunmar.ru/markup/mixins/why-us.pug',
         '/site/sunmar.ru/markup/kazan/recommended-tours.pug',
         '/site/sunmar.ru/dev-markup/hotels-block-kazan.html',
-        '/site/sunmar.ru/markup/kazan/leasure-guide.pug',
         '/site/sunmar.ru/markup/kazan/pay-attention.pug',
         '/site/sunmar.ru/markup/kazan/xlinks.pug',
-//        '/site/sunmar.ru/markup/mixins/reviews-and-thanks.pug',
+        '/site/sunmar.ru/markup/mixins/reviews-and-thanks.pug',
         '/site/sunmar.ru/markup/mixins/main-scripts.pug'
     ]
 }

@@ -1310,8 +1310,8 @@
         },
         sunmar: {
             commons: {
-                bestDealsBox_HomePageSet_TabName: 'Эксклюзивно у Sunmar',
-                preferredDestinationOrder: ['Эксклюзивно у Sunmar', 'Турция', 'ОАЭ', 'Бахрейн', 'Россия', 'Египет', 'Мальдивы'],
+                bestDealsBox_HomePageSet_TabName: 'Эксклюзивные отели',
+                preferredDestinationOrder: ['Эксклюзивные отели', 'Турция', 'ОАЭ', 'Бахрейн', 'Россия', 'Египет', 'Мальдивы'],
                 preferredDestination: 'Турция',
                 destinations: [
                     {

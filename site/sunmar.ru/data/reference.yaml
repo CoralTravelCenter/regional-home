@@ -37,14 +37,14 @@ cities:
     - name: Махачкала
       eeID: 8995
       latlng: [42.98, 47.5]
-    - name: Минеральные воды
+    - name: Минеральные Воды
       eeID: 2662
       pathname: /mrv/
       latlng: [44.21, 43.14]
-    - name: Н. Новгород
+    - name: Н.Новгород
       correctName: Нижний Новгород
       eeID: 2679
-      _pathname: /nnovgorod/
+      _pathname: /goj/
       latlng: [56.33, 44]
     - name: Нижневартовск
       eeID: 2707

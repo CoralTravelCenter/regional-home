@@ -2071,7 +2071,635 @@
                             ]
                         },
                     ]
-                }
+                },
+                chelyabinsk: {
+                    h2: 'Из Челябинска без пересадок',
+                    h3: 'Выбирай и лети',
+                    name: 'Челябинск',
+                    url: '/chelyabinsk/',
+                    dictionary: {
+                        wording_fromCityName: 'из Челябинска'
+                    },
+                    xlinks: [
+                        {
+                            heading: 'Турция',
+                            links: [
+                                {label: 'Туры в Турцию из Челябинска', href: '/chelyabinsk/tury-turkey/'},
+                                {label: 'Дешевые туры в Турцию из Челябинска', href: '/chelyabinsk/tury-turkey-deshevye/'},
+                                {label: 'Отдых в Турции из Челябинска', href: '/chelyabinsk/otdyh-turkey/'},
+                                {label: 'Путевки в Турцию из Челябинска', href: '/chelyabinsk/putevki-turkey/'},
+                                {label: 'Туры в Турцию из Челябинска все включено', href: '/chelyabinsk/tury-turkey-vse-vklucheno/'},
+                                {label: 'Туры в Турцию из Челябинска на двоих', href: '/chelyabinsk/tury-turkey-na-dvoih/'},
+                                {label: 'Туры в Турцию из Челябинска на троих', href: '/chelyabinsk/tury-turkey-na-troih/'},
+                                {label: 'Туры в Турцию из Челябинска на весну', href: '/chelyabinsk/tury-turkey-na-vesny/'},
+                                {label: 'Туры в Турцию из Челябинска на лето', href: '/chelyabinsk/tury-turkey-na-leto/'},
+                                {label: 'Туры в Турцию из Челябинска на осень', href: '/chelyabinsk/tury-turkey-na-osen/'},
+                                {label: 'Туры в Турцию из Челябинска зимой', href: '/chelyabinsk/tury-turkey-zimoy/'},
+                                {label: 'Туры в Турцию из Челябинска на Новый год', href: '/chelyabinsk/tury-turkey-na-ng/'},
+                                {label: 'Раннее бронирование туров в Турцию', href: '/chelyabinsk/rb-turkey/'},
+                                {label: 'Туры в Турцию из Челябинска на 3 дня', href: '/chelyabinsk/tury-turkey-na-3-dnay/'},
+                                {label: 'Туры в Турцию из Челябинска на 4 дня', href: '/chelyabinsk/tury-turkey-na-4-dnay/'},
+                                {label: 'Туры в Турцию из Челябинска на 5 дней', href: '/chelyabinsk/tury-turkey-na-5-dney/'},
+                                {label: 'Туры в Турцию из Челябинска на 7 дней', href: '/chelyabinsk/tury-turkey-na-7-dney/'},
+                                {label: 'Туры в Турцию из Челябинска на 10 дней', href: '/chelyabinsk/tury-turkey-na-10-dney/'},
+                                {label: 'Туры в Турцию из Челябинска на 12 дней', href: '/chelyabinsk/tury-turkey-na-12-dney/'},
+                                {label: 'Туры в Турцию из Челябинска на 14 дней', href: '/chelyabinsk/tury-turkey-na-14-dney/'},
+                                {label: 'Туры в Турцию из Челябинска в январе', href: '/chelyabinsk/tury-turkey-yanvar/'},
+                                {label: 'Туры в Турцию из Челябинска в феврале', href: '/chelyabinsk/tury-turkey-fevral/'},
+                                {label: 'Туры в Турцию из Челябинска в марте', href: '/chelyabinsk/tury-turkey-mart/'},
+                                {label: 'Туры в Турцию из Челябинска в апреле', href: '/chelyabinsk/tury-turkey-aprel/'},
+                                {label: 'Туры в Турцию в мае из Челябинска', href: '/chelyabinsk/tury-turkey-may/'},
+                                {label: 'Туры в Турцию в июне из Челябинска', href: '/chelyabinsk/tury-turkey-iyun/'},
+                                {label: 'Туры в Турцию в июле из Челябинска', href: '/chelyabinsk/tury-turkey-iyul/'},
+                                {label: 'Туры в Турцию в августе из Челябинска', href: '/chelyabinsk/tury-turkey-avgust/'},
+                                {label: 'Туры в Турцию в сентябре из Челябинска', href: '/chelyabinsk/tury-turkey-sentyabr/'},
+                                {label: 'Туры в Турцию в октябре из Челябинска', href: '/chelyabinsk/tury-turkey-oktyabr/'},
+                                {label: 'Туры в Турцию в ноябре из Челябинска', href: '/chelyabinsk/tury-turkey-noyabr/'},
+                                {label: 'Туры в Турцию в декабре из Челябинска', href: '/chelyabinsk/tury-turkey-dekabr/'},
+                                {label: 'Горящие туры в Аланью из Челябинска', href: '/chelyabinsk/tury-turkey-alanya/'},
+                                {label: 'Горящие туры в Анталию из Челябинска', href: '/chelyabinsk/tury-turkey-antalya/'},
+                                {label: 'Горящие туры в Белек из Челябинска', href: '/chelyabinsk/tury-turkey-belek/'},
+                                {label: 'Горящие туры в Кемер из Челябинска', href: '/chelyabinsk/tury-turkey-kemer/'},
+                                {label: 'Горящие туры в Мармарис из Челябинска', href: '/chelyabinsk/tury-turkey-marmaris/'},
+                                {label: 'Горящие туры в Сиде из Челябинска', href: '/chelyabinsk/tury-turkey-side/'},
+                                {label: 'Горящие туры в Стамбул из Челябинска', href: '/chelyabinsk/tury-turkey-stambul/'},
+                            ]
+                        },
+                        {
+                            heading: 'Египет из Москвы',
+                            links: [
+                                {label: 'Туры в Египет', href: '/chelyabinsk/tury-egypt/'},
+                                {label: 'Горящие туры в Египет', href: '/chelyabinsk/goryashie-tury-egypt/'},
+                                {label: 'Путевки в Египет все включено', href: '/chelyabinsk/tury-egypt-vse-vklyucheno/'},
+                                {label: 'Туры в Египет на Новый год', href: '/chelyabinsk/tury-egypt-na-ng/'},
+                                {label: 'Туры в Египет зимой', href: '/chelyabinsk/tury-egypt-zimoy/'},
+                                {label: 'Туры в Египет в октябре', href: '/chelyabinsk/tury-egypt-oktyabr/'},
+                                {label: 'Туры в Египет в ноябре', href: '/chelyabinsk/tury-egypt-noyabr/'},
+                                {label: 'Туры в Шарм-эш-Шейх', href: '/chelyabinsk/tury-egypt-sharm-el-sheikh/'},
+                                {label: 'Туры в Хургаду', href: '/chelyabinsk/tury-egypt-hurgada/'},
+                            ]
+                        },
+                        {
+                            heading: 'ОАЭ',
+                            links: [
+                                {label: 'Туры в ОАЭ из Челябинска', href: '/chelyabinsk/tury-oae/'},
+                                {label: 'Туры в Дубай из Челябинска', href: '/chelyabinsk/tury-oae-dubai/'},
+                                {label: 'Туры в ОАЭ из Челябинска на Новый год', href: '/chelyabinsk/tury-oae-na-ng/'},
+                                {label: 'Туры в ОАЭ из Челябинска зимой', href: '/chelyabinsk/tury-oae-zimoy/'},
+                            ]
+                        },
+                        {
+                            heading: 'Мальдивы',
+                            links: [
+                                {label: 'Туры на Мальдивы из Челябинска', href: '/chelyabinsk/maldives/'},
+                                {label: 'Туры на Мальдивы из Челябинска зимой', href: '/chelyabinsk/maldives-zimoy/'},
+                                {label: 'Туры на Мальдивы из Челябинска на Новый год', href: '/chelyabinsk/maldives-na-ng/'},
+                            ]
+                        },
+                        {
+                            heading: 'Россия',
+                            links: [
+                                {label: 'Туры по России из Челябинска', href: '/chelyabinsk/tury-russia/'},
+                                {label: 'Туры в Адлер из Челябинска', href: '/chelyabinsk/tury-russia-adler/'},
+                                {label: 'Туры на Алтай из Челябинска', href: '/chelyabinsk/tury-russia-altay/'},
+                                {label: 'Туры в Анапу из Челябинска', href: '/chelyabinsk/tury-russia-anapa/'},
+                                {label: 'Туры на Байкал из Челябинска', href: '/chelyabinsk/tury-russia-baykal/'},
+                                {label: 'Туры в Геленджик из Челябинска', href: '/chelyabinsk/tury-russia-gelendgik/'},
+                                {label: 'Туры по Золотому кольцу России из Челябинска', href: '/chelyabinsk/tury-russia-goldenring/'},
+                                {label: 'Туры в Калининград из Челябинска', href: '/chelyabinsk/tury-russia-kaliningrad/'},
+                                {label: 'Туры на Камчатку из Челябинска', href: '/chelyabinsk/tury-russia-kamchatka/'},
+                                {label: 'Туры в Карелию из Челябинска', href: '/chelyabinsk/tury-russia-karelia/'},
+                                {label: 'Туры в Казань из Челябинска', href: '/chelyabinsk/tury-russia-kazan/'},
+                                {label: 'Туры в Хосту из Челябинска', href: '/chelyabinsk/tury-russia-khosta/'},
+                                {label: 'Туры в Лазаревское из Челябинска', href: '/chelyabinsk/tury-russia-lazarevskoe/'},
+                                {label: 'Туры на Северный Кавказ из Челябинска', href: '/chelyabinsk/tury-russia-severny-kavkaz/'},
+                                {label: 'Туры в Сочи из Челябинска', href: '/chelyabinsk/tury-russia-sochi/'},
+                                {label: 'Туры в Туапсе из Челябинска', href: '/chelyabinsk/tury-russia-tuapse/'},
+                            ]
+                        },
+                        {
+                            heading: 'Таиланд из Москвы',
+                            links: [
+                                {label: 'Туры в Таиланд ', href: '/tours/tailand/'},
+                            ]
+                        },
+                        {
+                            heading: 'Бахрейн из Москвы',
+                            links: [
+                                {label: 'Туры в Бахрейн', href: '/tours/bahreyn/'},
+                            ]
+                        },
+                        {
+                            heading: 'Шри-Ланка из Москвы',
+                            links: [
+                                {label: 'Туры на Шри-Ланку', href: '/tours/rilanka/'},
+                            ]
+                        },
+                        {
+                            heading: 'Кипр из Москвы',
+                            links: [
+                                {label: 'Туры на Кипр', href: '/cyprus/'},
+                            ]
+                        },
+                    ]
+                },
+                tyumen: {
+                    h2: 'Из Тюмени без пересадок',
+                    h3: 'Выбирай и лети',
+                    name: 'Тюмень',
+                    url: '/tjm/',
+                    dictionary: {
+                        wording_fromCityName: 'из Тюмени'
+                    },
+                    xlinks: [
+                        {
+                            heading: 'Турция',
+                            links: [
+                                {label: 'Путевки в Турцию из Тюмени', href: '/tjm/tury-turkey/'},
+                                {label: 'Туры в Аланию из Тюмени', href: '/tours/tyumen/turtsiya/alanyya/'},
+                                {label: 'Туры в Анталию из Тюмени', href: '/tours/tyumen/turtsiya/antalyya/'},
+                                {label: 'Туры в Белек из Тюмени', href: '/tours/tyumen/turtsiya/belek/'},
+                                {label: 'Туры в Кемер из Тюмени', href: '/tours/tyumen/turtsiya/kemer/'},
+                                {label: 'Туры в Сиде из Тюмени', href: '/tours/tyumen/turtsiya/side/'},
+                                {label: 'Туры в Стамбул из Тюмени', href: '/tours/tyumen/turtsiya/stambul/'},
+                            ]
+                        },
+                        {
+                            heading: 'ОАЭ',
+                            links: [
+                                {label: 'Туры в ОАЭ из Тюмени', href: '/tours/tyumen/oae/'},
+                                {label: 'Туры в Дубай из Тюмени', href: '/tours/tyumen/oae/dubay/'},
+                            ]
+                        },
+                        {
+                            heading: 'Россия',
+                            links: [
+                                {label: 'Туры по России из Тюмени', href: '/tours/tyumen/rossiya/'},
+                                {label: 'Туры в Адлер из Тюмени', href: '/tours/tyumen/rossiya/adler/'},
+                                {label: 'Туры в Казань из Тюмени', href: '/tjm/tury-russia-kazan/'},
+                                {label: 'Туры в Сочи из Тюмени', href: '/tours/tyumen/rossiya/sochi/'},
+                            ]
+                        },
+                        {
+                            heading: 'Египет из Москвы',
+                            links: [
+                                {label: 'Туры в Египет', href: '/aer/tury-egypt/'},
+                                {label: 'Туры в Хургаду', href: '/tours/egipet/hurgada/'},
+                                {label: 'Туры в Шарм-эш-Шейх', href: '/tours/egipet/armelyeyh/'},
+                            ]
+                        },
+                        {
+                            heading: 'Мальдивы из Москвы',
+                            links: [
+                                {label: 'Туры на Мальдивы', href: '/tours/malydivy/'},
+                            ]
+                        },
+                        {
+                            heading: 'Бахрейн из Москвы',
+                            links: [
+                                {label: 'Туры в Бахрейн', href: '/tours/bahreyn/'},
+                            ]
+                        },
+                        {
+                            heading: 'Таиланд из Москвы',
+                            links: [
+                                {label: 'Туры в Таиланд ', href: '/tours/tailand/'},
+                            ]
+                        },
+                        {
+                            heading: 'Шри-Ланка из Москвы',
+                            links: [
+                                {label: 'Туры на Шри-Ланку', href: '/tours/rilanka/'},
+                            ]
+                        },
+                        {
+                            heading: 'Кипр из Москвы',
+                            links: [
+                                {label: 'Туры на Кипр', href: '/cyprus/'},
+                            ]
+                        },
+                    ]
+                },
+                perm: {
+                    h2: 'Из Перми без пересадок',
+                    h3: 'Выбирай и лети',
+                    name: 'Пермь',
+                    url: '/pee/',
+                    dictionary: {
+                        wording_fromCityName: 'из Перми'
+                    },
+                    xlinks: [
+                        {
+                            heading: 'Турция',
+                            links: [
+                                {label: 'Туры в Турцию из Перми', href: '/pee/tury-turkey/'},
+                                {label: 'Туры в Аланию из Перми', href: '/tours/perm/turtsiya/alanyya/'},
+                                {label: 'Туры в Анталию из Перми', href: '/tours/perm/turtsiya/antalyya/'},
+                                {label: 'Туры в Белек из Перми', href: '/tours/perm/turtsiya/belek/'},
+                                {label: 'Туры в Кемер из Перми', href: '/tours/perm/turtsiya/kemer/'},
+                                {label: 'Туры в Сиде из Перми', href: '/pee/tury-turkey-side/'},
+                                {label: 'Туры в Стамбул из Перми', href: '/tours/perm/turtsiya/stambul/'},
+                            ]
+                        },
+                        {
+                            heading: 'Россия',
+                            links: [
+                                {label: 'Путевки в Адлер из Перми', href: '/pee/putevki-russia-adler/'},
+                                {label: 'Туры на Алтай из Перми', href: '/pee/tury-russia-altay/'},
+                                {label: 'Туры в Анапу из Перми 2023', href: '/pee/tury-russia-anapa/'},
+                                {label: 'Туры в Геленджик из Перми', href: '/pee/tury-russia-gelendgik/'},
+                                {label: 'Туры в Калининград из Перми', href: '/pee/tury-russia-kaliningrad/'},
+                                {label: 'Туры в Карелию из Перми', href: '/pee/tury-russia-karelia/'},
+                                {label: 'Туры в Сочи из Перми', href: '/tours/perm/rossiya/sochi/'},
+                                {label: 'Туры в Туапсе из Перми', href: '/pee/tury-russia-tuapse/'},
+                                {label: 'Туры в Хосту из Перми', href: '/pee/tury-russia-khosta/'},
+                            ]
+                        },
+                        {
+                            heading: 'Египет из Москвы',
+                            links: [
+                                {label: 'Туры в Египет', href: '/pee/tury-egypt/'},
+                                {label: 'Горящие туры в Египет', href: '/pee/goryashie-tury-egypt/'},
+                                {label: 'Путевки в Египет все включено', href: '/pee/tury-egypt-vse-vklyucheno/'},
+                                {label: 'Туры в Египет в октябре', href: '/pee/tury-egypt-oktyabr/'},
+                                {label: 'Туры в Египет в ноябре', href: '/pee/tury-egypt-noyabr/'},
+                                {label: 'Туры в Хургаду', href: '/pee/tury-egypt-hurgada/'},
+                                {label: 'Туры в Шарм-эш-Шейх', href: '/pee/tury-egypt-sharm-el-sheikh/'},
+                            ]
+                        },
+                        {
+                            heading: 'ОАЭ из Москвы',
+                            links: [
+                                {label: 'Туры в ОАЭ', href: '/tours/oae/'},
+                                {label: 'Туры в Дубай', href: '/tours/oae/dubay/'},
+                            ]
+                        },
+                        {
+                            heading: 'Мальдивы из Москвы',
+                            links: [
+                                {label: 'Туры на Мальдивы', href: '/tours/malydivy/'},
+                            ]
+                        },
+                        {
+                            heading: 'Шри-Ланка из Москвы',
+                            links: [
+                                {label: 'Туры на Шри-Ланку', href: '/tours/rilanka/'},
+                            ]
+                        },
+                        {
+                            heading: 'Бахрейн из Москвы',
+                            links: [
+                                {label: 'Туры в Бахрейн', href: '/tours/bahreyn/'},
+                            ]
+                        },
+                        {
+                            heading: 'Таиланд из Москвы',
+                            links: [
+                                {label: 'Туры в Таиланд ', href: '/tours/tailand/'},
+                            ]
+                        },
+                        {
+                            heading: 'Кипр из Москвы',
+                            links: [
+                                {label: 'Туры на Кипр', href: '/cyprus/'},
+                            ]
+                        },
+                    ]
+                },
+                orenburg: {
+                    h2: 'Из Оренбурга без пересадок',
+                    h3: 'Выбирай и лети',
+                    name: 'Оренбург',
+                    url: '/ren/',
+                    dictionary: {
+                        wording_fromCityName: 'из Оренбурга'
+                    },
+                    xlinks: [
+                        {
+                            heading: 'Турция',
+                            links: [
+                                {label: 'Туры в Турцию из Оренбурга', href: '/ren/tury-turkey/'},
+                                {label: 'Туры в Аланию из Оренбурга', href: '/tours/orenburg/turtsiya/alanyya/'},
+                                {label: 'Туры в Анталию из Оренбурга', href: '/tours/orenburg/turtsiya/antalyya/'},
+                                {label: 'Туры в Белек из Оренбурга', href: '/tours/orenburg/turtsiya/belek/'},
+                                {label: 'Туры в Кемер из Оренбурга', href: '/tours/orenburg/turtsiya/kemer/'},
+                                {label: 'Туры в Сиде из Оренбурга', href: '/tours/orenburg/turtsiya/side/'},
+                            ]
+                        },
+                        {
+                            heading: 'Россия',
+                            links: [
+                                {label: 'Туры по России из Оренбурга', href: '/tours/orenburg/rossiya/'},
+                                {label: 'Туры в Адлер из Оренбурга', href: '/tours/orenburg/rossiya/adler/'},
+                                {label: 'Туры в Сочи из Оренбурга', href: '/tours/orenburg/rossiya/sochi/'},
+                            ]
+                        },
+                        {
+                            heading: 'ОАЭ из Москвы',
+                            links: [
+                                {label: 'Туры в ОАЭ', href: '/tours/oae/'},
+                                {label: 'Туры в Дубай', href: '/tours/oae/dubay/'},
+                            ]
+                        },
+                        {
+                            heading: 'Египет из Москвы',
+                            links: [
+                                {label: 'Туры в Египет', href: '/ren/tury-egypt/'},
+                                {label: 'Горящие туры в Египет', href: '/ren/goryashie-tury-egypt/'},
+                                {label: 'Туры в Шарм-эш-Шейх', href: '/ren/tury-egypt-sharm-el-sheikh/'},
+                                {label: 'Туры в Хургаду', href: '/ren/tury-egypt-hurgada/'},
+                            ]
+                        },
+                        {
+                            heading: 'Мальдивы из Москвы',
+                            links: [
+                                {label: 'Туры на Мальдивы', href: '/tours/malydivy/'},
+                            ]
+                        },
+                        {
+                            heading: 'Шри-Ланка из Москвы',
+                            links: [
+                                {label: 'Туры на Шри-Ланку', href: '/tours/rilanka/'},
+                            ]
+                        },
+                        {
+                            heading: 'Бахрейн из Москвы',
+                            links: [
+                                {label: 'Туры в Бахрейн', href: '/tours/bahreyn/'},
+                            ]
+                        },
+                        {
+                            heading: 'Таиланд из Москвы',
+                            links: [
+                                {label: 'Туры в Таиланд ', href: '/tours/tailand/'},
+                            ]
+                        },
+                        {
+                            heading: 'Кипр из Москвы',
+                            links: [
+                                {label: 'Туры на Кипр', href: '/cyprus/'},
+                            ]
+                        },
+                    ]
+                },
+                omsk: {
+                    h2: 'Из Омска без пересадок',
+                    h3: 'Выбирай и лети',
+                    name: 'Омск',
+                    url: '/oms/',
+                    dictionary: {
+                        wording_fromCityName: 'из Омска'
+                    },
+                    xlinks: [
+                        {
+                            heading: 'Турция',
+                            links: [
+                                {label: 'Туры в Турцию из Омска', href: '/oms/tury-turkey/'},
+                                {label: 'Туры в Аланию из Омска', href: '/tours/omsk/turtsiya/alanyya/'},
+                                {label: 'Туры в Анталию из Омска', href: '/tours/omsk/turtsiya/antalyya/'},
+                                {label: 'Туры в Белек из Омска', href: '/tours/omsk/turtsiya/belek/'},
+                                {label: 'Туры в Кемер из Омска', href: '/tours/omsk/turtsiya/kemer/'},
+                                {label: 'Туры в Сиде из Омска', href: '/tours/omsk/turtsiya/side/'},
+                                {label: 'Туры в Стамбул из Омска', href: '/tours/omsk/turtsiya/stambul/'},
+                            ]
+                        },
+                        {
+                            heading: 'Россия',
+                            links: [
+                                {label: 'Туры по России из Омска', href: '/tours/omsk/rossiya/'},
+                                {label: 'Туры на Алтай из Омска', href: '/oms/tury-russia-altay/'},
+                                {label: 'Туры в Сочи из Омска', href: '/tours/omsk/rossiya/sochi/'},
+                            ]
+                        },
+                        {
+                            heading: 'ОАЭ из Москвы',
+                            links: [
+                                {label: 'Туры в ОАЭ', href: '/tours/oae/'},
+                                {label: 'Туры в Дубай', href: '/tours/oae/dubay/'},
+                            ]
+                        },
+                        {
+                            heading: 'Египет из Москвы',
+                            links: [
+                                {label: 'Туры в Египет', href: '/oms/tury-egypt/'},
+                                {label: 'Горящие туры в Египет', href: '/oms/goryashie-tury-egypt/'},
+                                {label: 'Туры в Хургаду', href: '/oms/tury-egypt-hurgada/'},
+                                {label: 'Туры в Шарм-эш-Шейх', href: '/oms/tury-egypt-sharm-el-sheikh/'},
+                            ]
+                        },
+                        {
+                            heading: 'Мальдивы из Москвы',
+                            links: [
+                                {label: 'Туры на Мальдивы', href: '/tours/malydivy/'},
+                            ]
+                        },
+                        {
+                            heading: 'Шри-Ланка из Москвы',
+                            links: [
+                                {label: 'Туры на Шри-Ланку', href: '/tours/rilanka/'},
+                            ]
+                        },
+                        {
+                            heading: 'Бахрейн из Москвы',
+                            links: [
+                                {label: 'Туры в Бахрейн', href: '/tours/bahreyn/'},
+                            ]
+                        },
+                        {
+                            heading: 'Таиланд из Москвы',
+                            links: [
+                                {label: 'Туры в Таиланд ', href: '/tours/tailand/'},
+                            ]
+                        },
+                        {
+                            heading: 'Кипр из Москвы',
+                            links: [
+                                {label: 'Туры на Кипр', href: '/cyprus/'},
+                            ]
+                        },
+                    ]
+                },
+                minvody: {
+                    h2: 'Из Минеральных Вод без пересадок',
+                    h3: 'Выбирай и лети',
+                    name: 'Минеральные Воды',
+                    url: '/oms/',
+                    dictionary: {
+                        wording_fromCityName: 'из Минеральных Вод'
+                    },
+                    xlinks: [
+                        {
+                            heading: 'Турция',
+                            links: [
+                                {label: 'Туры в Турцию из Минеральных Вод', href: '/mrv/tury-turkey/'},
+                                {label: 'Туры в Аланию из Минеральных Вод', href: '/tours/kaliningrad/turtsiya/alanyya/'},
+                                {label: 'Туры в Анталию из Минеральных Вод', href: '/tours/kaliningrad/turtsiya/antalyya/'},
+                                {label: 'Туры в Белек из Минеральных Вод', href: '/tours/kaliningrad/turtsiya/belek/'},
+                                {label: 'Туры в Кемер из Минеральных Вод', href: '/tours/kaliningrad/turtsiya/kemer/'},
+                                {label: 'Туры в Сиде из Минеральных Вод', href: '/tours/kaliningrad/turtsiya/side/'},
+                            ]
+                        },
+                        {
+                            heading: 'Россия',
+                            links: [
+                                {label: 'Туры по России из Минеральных Вод', href: '/tours/mineralynyevody/rossiya/'},
+                                {label: 'Туры в Сочи из Минеральных Вод', href: '/tours/mineralynyevody/rossiya/sochi/'},
+                            ]
+                        },
+                        {
+                            heading: 'ОАЭ',
+                            links: [
+                                {label: 'Туры в ОАЭ из Минеральных Вод', href: '/tours/mineralynyevody/oae/'},
+                                {label: 'Туры в Дубай из Минеральных Вод', href: '/tours/mineralynyevody/oae/dubay/'},
+                            ]
+                        },
+                        {
+                            heading: 'Египет из Москвы',
+                            links: [
+                                {label: 'Туры в Египет', href: '/tours/egipet/'},
+                                {label: 'Туры в Хургаду', href: '/tours/egipet/hurgada/'},
+                                {label: 'Туры в Шарм-эш-Шейх', href: '/tours/egipet/armelyeyh/'},
+                            ]
+                        },
+                        {
+                            heading: 'Мальдивы из Москвы',
+                            links: [
+                                {label: 'Туры на Мальдивы', href: '/tours/malydivy/'},
+                            ]
+                        },
+                        {
+                            heading: 'Шри-Ланка из Москвы',
+                            links: [
+                                {label: 'Туры на Шри-Ланку', href: '/tours/rilanka/'},
+                            ]
+                        },
+                        {
+                            heading: 'Бахрейн из Москвы',
+                            links: [
+                                {label: 'Туры в Бахрейн', href: '/tours/bahreyn/'},
+                            ]
+                        },
+                        {
+                            heading: 'Таиланд из Москвы',
+                            links: [
+                                {label: 'Туры в Таиланд ', href: '/tours/tailand/'},
+                            ]
+                        },
+                        {
+                            heading: 'Кипр из Москвы',
+                            links: [
+                                {label: 'Туры на Кипр', href: '/cyprus/'},
+                            ]
+                        },
+                    ]
+                },
+                samara: {
+                    h2: 'Из Самары без пересадок',
+                    h3: 'Выбирай и лети',
+                    name: 'Самара',
+                    url: '/samara/',
+                    dictionary: {
+                        wording_fromCityName: 'из Самары'
+                    },
+                    xlinks: [
+                        {
+                            heading: 'Турция',
+                            links: [
+                                {label: 'Туры в Турцию из Самары', href: '/samara/tury-turkey/'},
+                                {label: 'Туры в Турцию из Самары в октябре', href: '/samara/tury-turkey-oktyabr/'},
+                                {label: 'Туры в Турцию из Самары в ноябре', href: '/samara/tury-turkey-noyabr/'},
+                                {label: 'Туры в Турцию из Самары в декабре', href: '/samara/tury-turkey-dekabr/'},
+                                {label: 'Туры в Турцию из Самары на зиму', href: '/samara/tury-turkey-zimoy/'},
+                                {label: 'Туры в Турцию из Самары на Новый год', href: '/samara/tury-turkey-na-ng/'},
+                                {label: 'Туры в Аланию из Самары', href: '/tours/samara/turtsiya/alanyya/'},
+                                {label: 'Туры в Анталию из Самары', href: '/tours/samara/turtsiya/antalyya/'},
+                                {label: 'Туры в Белек из Самары', href: '/tours/samara/turtsiya/belek/'},
+                                {label: 'Туры в Кемер из Самары', href: '/tours/samara/turtsiya/kemer/'},
+                                {label: 'Туры в Стамбул из Самары', href: '/tours/samara/turtsiya/stambul/'},
+                            ]
+                        },
+                        {
+                            heading: 'ОАЭ',
+                            links: [
+                                {label: 'Туры в ОАЭ из Самары', href: '/samara/tury-oae/'},
+                                {label: 'Туры в ОАЭ из Самары в октябре', href: '/samara/tury-oae-oktyabr/'},
+                                {label: 'Туры в ОАЭ из Самары в ноябре', href: '/samara/tury-oae-noyabr/'},
+                                {label: 'Туры в ОАЭ из Самары в декабре', href: '/samara/tury-oae-dekabr/'},
+                                {label: 'Туры в ОАЭ из Самары зимой', href: '/samara/tury-oae-zimoy/'},
+                                {label: 'Туры в ОАЭ из Самары на Новый год', href: '/samara/tury-oae-na-ng/'},
+                                {label: 'Туры в Дубай из Самары', href: '/samara/tury-oae-dubai/'},
+                            ]
+                        },
+                        {
+                            heading: 'Россия',
+                            links: [
+                                {label: 'Путевки в Адлер из Самары', href: '/samara/putevki-russia-adler/'},
+                                {label: 'Туры на Алтай из Самары', href: '/samara/tury-russia-altay/'},
+                                {label: 'Туры в Анапу из Самары', href: '/samara/tury-russia-anapa/'},
+                                {label: 'Туры на Байкал из Самары', href: '/samara/tury-russia-baykal/'},
+                                {label: 'Туры в Геленджик из Самары', href: '/samara/tury-russia-gelendgik/'},
+                                {label: 'Туры по Золотому кольцу России из Самары', href: '/samara/tury-russia-goldenring/'},
+                                {label: 'Туры в Калининград из Самары', href: '/samara/tury-russia-kaliningrad/'},
+                                {label: 'Туры на Камчатку из Самары', href: '/samara/tury-russia-kamchatka/'},
+                                {label: 'Туры в Карелию из Самары', href: '/samara/tury-russia-karelia/'},
+                                {label: 'Туры в Казань из Самары', href: '/samara/tury-russia-kazan/'},
+                                {label: 'Туры в Хосту из Самары', href: '/samara/tury-russia-khosta/'},
+                                {label: 'Туры в Лазаревское из Самары', href: '/samara/tury-russia-lazarevskoe/'},
+                                {label: 'Туры в Лоо из Самары', href: '/samara/tury-russia-loo/'},
+                                {label: 'Туры по Северному Кавказу из Самары', href: '/samara/tury-russia-severny-kavkaz/'},
+                                {label: 'Туры в Сочи из Самары', href: '/samara/tury-russia-sochi/'},
+                                {label: 'Туры в Туапсе из Самары', href: '/samara/tury-russia-tuapse/'},
+                            ]
+                        },
+                        {
+                            heading: 'Египет из Москвы',
+                            links: [
+                                {label: 'Туры в Египет', href: '/samara/tury-egypt/'},
+                                {label: 'Горящие туры в Египет', href: '/samara/goryashie-tury-egypt/'},
+                                {label: 'Туры в Египет все включено', href: '/samara/tury-egypt-vse-vklyucheno/'},
+                                {label: 'Туры в Египет в ноябре', href: '/samara/tury-egypt-noyabr/'},
+                                {label: 'Туры в Египет в октябре', href: '/samara/tury-egypt-oktyabr/'},
+                                {label: 'Туры в Египет зимой', href: '/samara/tury-egypt-zimoy/'},
+                                {label: 'Туры в Египет на Новый год', href: '/samara/tury-egypt-na-ng/'},
+                                {label: 'Туры в Шарм-эш-Шейх', href: '/samara/tury-egypt-sharm-el-sheikh/'},
+                                {label: 'Туры в Хургады', href: '/samara/tury-egypt-hurgada/'},
+                                {label: 'Горящие туры в Хургаду', href: '/samara/goryashie-tury-egypt-hurgada/'},
+                            ]
+                        },
+                        {
+                            heading: 'Мальдивы',
+                            links: [
+                                {label: 'Туры на Мальдивы из Самары', href: '/samara/maldives/'},
+                                {label: 'Туры на Мальдивы из Самары зимой', href: '/samara/maldives-zimoy/'},
+                                {label: 'Туры на Мальдивы из Самары на Новый год', href: '/samara/maldives-na-ng/'},
+                            ]
+                        },
+                        {
+                            heading: 'Шри-Ланка из Москвы',
+                            links: [
+                                {label: 'Туры на Шри-Ланку', href: '/tours/rilanka/'},
+                            ]
+                        },
+                        {
+                            heading: 'Бахрейн из Москвы',
+                            links: [
+                                {label: 'Туры в Бахрейн', href: '/tours/bahreyn/'},
+                            ]
+                        },
+                        {
+                            heading: 'Таиланд из Москвы',
+                            links: [
+                                {label: 'Туры в Таиланд ', href: '/tours/tailand/'},
+                            ]
+                        },
+                        {
+                            heading: 'Кипр из Москвы',
+                            links: [
+                                {label: 'Туры на Кипр', href: '/cyprus/'},
+                            ]
+                        },
+                    ]
+                },
             }
         }
     }

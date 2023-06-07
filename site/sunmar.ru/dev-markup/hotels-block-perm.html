@@ -1,0 +1,1103 @@
+<body>
+<style type="text/css">
+    .reset {
+        position: static;
+        left: auto;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        width: auto;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none;
+        background: none;
+    }
+    .bbox,
+    .bbox * {
+        box-sizing: border-box;
+    }
+    .interactive {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .interactive:active {
+        -webkit-transform: translateY(2px);
+        -moz-transform: translateY(2px);
+        -ms-transform: translateY(2px);
+        -o-transform: translateY(2px);
+        transform: translateY(2px);
+    }
+    .abs100x100 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .centering {
+        display: table !important;
+        width: 100%;
+        height: 100%;
+    }
+    .centering > *:first-child {
+        width: 100%;
+        height: 100%;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+    }
+    .centering > *:first-child > *:first-child {
+        display: inline-block;
+    }
+    @media screen and (max-width: 768px) {
+        .hidden-on-mobile {
+            display: none !important;
+        }
+    }
+    @media screen and (min-width: 769px) {
+        .hidden-on-desktop {
+            display: none !important;
+        }
+    }
+    .rur:not(:empty):after {
+        content: ' \20BD ';
+    }
+    .rur.per-person:not(:empty):after {
+        content: ' \20BD / чел.';
+    }
+    .flex-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #hotels-set {
+        opacity: 0;
+        transform: translateY(10vh);
+        -webkit-transition: opacity 0.5s, transform 0.5s;
+        -moz-transition: opacity 0.5s, transform 0.5s;
+        -ms-transition: opacity 0.5s, transform 0.5s;
+        -o-transition: opacity 0.5s, transform 0.5s;
+        transition: opacity 0.5s, transform 0.5s;
+        overflow: hidden;
+    }
+    #hotels-set,
+    #hotels-set * {
+        box-sizing: border-box;
+    }
+    #hotels-set .buttonlike {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        outline: none;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        line-height: 1;
+        font-size: inherit;
+        height: 2.6em;
+        padding: 0 2em;
+        border: 0;
+        text-decoration: none;
+        border-radius: 0.25em;
+    }
+    #hotels-set .buttonlike:active {
+        -webkit-transform: translateY(2px);
+        -moz-transform: translateY(2px);
+        -ms-transform: translateY(2px);
+        -o-transform: translateY(2px);
+        transform: translateY(2px);
+    }
+    #hotels-set .buttonlike.transparent {
+        color: inherit;
+        border: 1px solid currentColor;
+    }
+    #hotels-set .buttonlike.yellow {
+        color: white;
+        background-color: #F0AB00;
+    }
+    #hotels-set .buttonlike.white {
+        color: inherit;
+        background-color: white;
+    }
+    #hotels-set .buttonlike.blue {
+        color: white;
+        background-color: #0093D0;
+    }
+    #hotels-set .buttonlike.deepblue {
+        color: white;
+        background-color: #0F2855;
+    }
+    #hotels-set .buttonlike.red {
+        color: white;
+        background-color: #D7232A;
+    }
+    #hotels-set.shown {
+        opacity: 1;
+        transform: none;
+    }
+    #hotels-set .group-filters {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    #hotels-set .group-filters > * {
+        flex: 0 1 auto;
+        margin: 0.5em 1em;
+        -webkit-transition: color 0.5s, bacgground 0.5s;
+        -moz-transition: color 0.5s, bacgground 0.5s;
+        -ms-transition: color 0.5s, bacgground 0.5s;
+        -o-transition: color 0.5s, bacgground 0.5s;
+        transition: color 0.5s, bacgground 0.5s;
+        cursor: pointer;
+    }
+    #hotels-set .group-filters > *[data-group='*'] {
+        flex-grow: 1;
+    }
+    #hotels-set .group-filters > *.selected {
+        pointer-events: none;
+        color: white;
+        background-color: #0E2855;
+    }
+    #hotels-set .cards-grid .card-cell {
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        padding: 1em;
+        min-height: 0;
+    }
+    @media screen and (max-width: 1280px) {
+        #hotels-set .cards-grid .card-cell {
+            width: 33.33333333%;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        #hotels-set .cards-grid .card-cell {
+            width: 50%;
+        }
+    }
+    @media screen and (max-width: 576px) {
+        #hotels-set .cards-grid .card-cell {
+            width: 100%;
+        }
+    }
+    #hotels-set .cards-grid .card-cell > .pad {
+        position: relative;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        border-radius: 1em;
+        overflow: hidden;
+    }
+    #hotels-set .cards-grid .card-cell > .pad > * {
+        max-width: 100%;
+    }
+    #hotels-set .cards-grid .card-cell > .pad .visual {
+        width: 100%;
+        position: relative;
+        background: center no-repeat;
+        background-size: cover;
+        border-radius: 1em;
+    }
+    #hotels-set .cards-grid .card-cell > .pad .visual:before {
+        content: '';
+        display: block;
+        padding-top: 56.25%;
+    }
+    #hotels-set .cards-grid .card-cell > .pad .visual > * {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    #hotels-set .cards-grid .card-cell > .pad .visual [is="hotel-stars"] {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        filter: drop-shadow(0px -2px 2px #0E2855);
+    }
+    #hotels-set .cards-grid .card-cell > .pad .visual [is="hotel-stars"] .star {
+        width: 1.5em;
+        height: 100%;
+        margin: 0 2px;
+        background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjkiIGhlaWdodD0iMjkiIHZpZXdCb3g9IjAgMCAyOSAyOSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTkuNjEwMiA4LjIyMDIxTDI3LjUwMTEgOS4zNzk0NUMyNy44MjMzIDkuNDI2NDIgMjguMTI2IDkuNTYxOCAyOC4zNzUyIDkuNzcwNDFDMjguNjI0NSA5Ljk3OTAyIDI4LjgxMDUgMTAuMjUyNiAyOC45MTI0IDEwLjU2MDZDMjkuMDE0MiAxMC44NzAyIDI5LjAyNzUgMTEuMjAxOSAyOC45NTA5IDExLjUxODZDMjguODc0MyAxMS44MzUzIDI4LjcxMDggMTIuMTI0NiAyOC40Nzg2IDEyLjM1NDFMMjIuNzU2NyAxNy45NDI1TDI0LjEwNzUgMjUuOTU4N0MyNC4xNjI2IDI2LjI4MTUgMjQuMTI1NCAyNi42MTMxIDI0LjAwMDIgMjYuOTE1OEMyMy44NzQ5IDI3LjIxODUgMjMuNjY2NiAyNy40Nzk5IDIzLjM5OTIgMjcuNjcwM0MyMy4xMzMgMjcuODYwNyAyMi44MTg4IDI3Ljk3MzMgMjIuNDkxOCAyNy45OTU1QzIyLjE2NDkgMjguMDE3NyAyMS44MzgyIDI3Ljk0ODYgMjEuNTQ4NiAyNy43OTZMMTQuNDk3OCAyNC4wNTMxTDcuNDUyNDYgMjcuNzk4OEM3LjE2MTg3IDI3Ljk1MTUgNi44MzQzMiAyOC4wMjA2IDYuNTA2NDkgMjcuOTk4NEM2LjE3ODY3IDI3Ljk3NjIgNS44NjM1NCAyNy44NjM1IDUuNTk2NDEgMjcuNjczQzUuMzI5NjUgMjcuNDgyMiA1LjEyMjI0IDI3LjIyMDUgNC45OTc5MyAyNi45MTc4QzQuODczNjIgMjYuNjE1MSA0LjgzNzQ0IDI2LjI4MzcgNC44OTM1MiAyNS45NjE1TDYuMjQ0MzggMTcuOTQ1MkwwLjUyMDgxNCAxMi4zNTQxQzAuMjg4ODI0IDEyLjEyNDUgMC4xMjU0NjcgMTEuODM1MiAwLjA0ODk2MzggMTEuNTE4NUMtMC4wMjc1Mzk3IDExLjIwMTggLTAuMDE0MTgyMSAxMC44NzAxIDAuMDg3NTUxIDEwLjU2MDZDMC4xODg5MDggMTAuMjUyIDAuMzc0OTU4IDkuOTc3ODYgMC42MjQ2NTQgOS43NjkxM0MwLjg3NDM1IDkuNTYwNCAxLjE3NzczIDkuNDI1NDEgMS41MDA0NiA5LjM3OTQ1TDkuMzg0ODUgOC4yMjAyMUwxMi45MjEyIDAuOTg0MjY1QzEzLjA2NDQgMC42ODkyNjIgMTMuMjg4MyAwLjQ0MDQzNiAxMy41NjcgMC4yNjYzNDJDMTMuODQ1OCAwLjA5MjI0ODEgMTQuMTY4MiAtNi4wNjA4OWUtMDUgMTQuNDk3MiA1LjY2NzUzZS0wNkMxNC44MjcyIC0wLjAwMDgzMTUyMyAxNS4xNTA2IDAuMDkxMDk3NiAxNS40MzA0IDAuMjY1MjIxQzE1LjcxMDIgMC40MzkzNDQgMTUuOTM0OSAwLjY4ODU4NiAxNi4wNzg3IDAuOTg0MjY1TDE5LjYxMDIgOC4yMjAyMVoiIGZpbGw9IiNEODI0MkEiLz48L3N2Zz4K") center no-repeat;
+        background-size: contain;
+    }
+    #hotels-set .cards-grid .card-cell > .pad .visual [is="hotel-stars"]:not([data-category*='*']) {
+        filter: none;
+    }
+    #hotels-set .cards-grid .card-cell > .pad .visual [is="hotel-stars"]:not([data-category*='*']):after {
+        content: attr(data-category);
+        font-size: 1.2em;
+        font-weight: bold;
+        letter-spacing: 0.05em;
+        color: #D7232A;
+        padding: 0 0.5em;
+        border-radius: 3px;
+        background: white;
+    }
+    #hotels-set .cards-grid .card-cell > .pad .visual .trait {
+        height: 1.5em;
+        top: 100%;
+        transform: translateY(-60%);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+    }
+    #hotels-set .cards-grid .card-cell > .pad .info {
+        width: 100%;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2em;
+    }
+    #hotels-set .cards-grid .card-cell > .pad .info > * {
+        max-width: 100%;
+    }
+    #hotels-set .cards-grid .card-cell > .pad .info > *:nth-child(n+2) {
+        margin-top: 1em;
+    }
+    #hotels-set .cards-grid .card-cell > .pad .info h3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2em;
+        line-height: 1.1;
+        height: 2.2em;
+        text-align: inherit;
+        margin: 0;
+    }
+    #hotels-set .cards-grid .card-cell > .pad .info h4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 1.2;
+        text-align: inherit;
+        margin: 0;
+    }
+    #hotels-set .cards-grid .card-cell > .pad .info .benefits {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        font-weight: normal;
+        margin-bottom: auto;
+    }
+    #hotels-set .cards-grid .card-cell > .pad .info .benefits > * {
+        max-width: 100%;
+    }
+    #hotels-set .cards-grid .card-cell > .pad .info .benefits > * {
+        display: flex;
+        font-size: 13px;
+        line-height: 1.1;
+    }
+    #hotels-set .cards-grid .card-cell > .pad .info .benefits > *:nth-child(n+2) {
+        margin-top: 0.25em;
+    }
+    #hotels-set .cards-grid .card-cell > .pad .info .benefits > *:before {
+        content: '\25CF';
+        margin-right: 0.5em;
+        color: #D7232A;
+    }
+    #hotels-set .cards-grid .card-cell > .pad .info .terms {
+        font-weight: normal;
+        line-height: 1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #hotels-set .cards-grid .card-cell > .pad .info .terms .term-badge {
+        flex: 0 1 auto;
+        display: inline-flex;
+        align-items: center;
+        font-size: 11px;
+        line-height: 1;
+        margin: 2px;
+    }
+    #hotels-set .cards-grid .card-cell > .pad .info .terms .term-badge .icon {
+        position: relative;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2.2em;
+        height: 2.2em;
+        background-color: #eaf2ff;
+        color: #0E2855;
+        font-weight: bold;
+        border-radius: 3px;
+    }
+    #hotels-set .cards-grid .card-cell > .pad .info .terms .term-badge .icon:before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    #hotels-set .cards-grid .card-cell > .pad .info .terms .term-badge .label {
+        display: inline-flex;
+        align-items: center;
+        text-align: left;
+        height: 2.2em;
+        padding: 0 0.5em;
+    }
+    #hotels-set .cards-grid .card-cell > .pad .info .terms .term-badge.depart-from .icon:before {
+        content: '';
+        background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM1IiBoZWlnaHQ9Ijg3IiB2aWV3Qm94PSIwIDAgMTM1IDg3IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xMzQuNDUxIDEzLjE2OTJDMTM0IDEyLjA5MzQgMTMzLjI5IDExLjEzOTEgMTMyLjMxOSAxMC4zMDYzQzEzMS4zNDkgOS40NzM0NyAxMzAuMjA1IDguODE0MTUgMTI4Ljg4OCA4LjMyODMzQzEyNy41NzEgNy44MDc4MSAxMjYuMTY3IDcuNTEyODUgMTI0LjY3NiA3LjQ0MzQ0QzEyMy4yMjEgNy4zNzQwNCAxMjEuNzk5IDcuNTEyODQgMTIwLjQxMyA3Ljg1OTg2TDg5LjU4MTkgMTUuNjE1NkwzNC40NzA2IDBMMjAuNjkyNyA1LjIwNTJMNjIuMDI2MiAyNi4wMjZMMzQuNDcwNiAzNi40MzY0TDYuOTE0OTEgMjYuMDI2TDAgMzEuMjMxMkwyNy41NTU3IDUyTDEyNy43OTYgMjMuNjMxNkMxMjkuMTEzIDIzLjI4NDYgMTMwLjMwOSAyMi43NDY3IDEzMS4zODMgMjIuMDE4QzEzMi40NTggMjEuMjU0NiAxMzMuMzA3IDIwLjM4NzEgMTMzLjkzMSAxOS40MTU0QzEzNC41NTUgMTguNDQzOCAxMzQuOTAxIDE3LjQyMDEgMTM0Ljk3MSAxNi4zNDQzQzEzNS4wNzUgMTUuMjMzOSAxMzQuOTAxIDE0LjE3NTUgMTM0LjQ1MSAxMy4xNjkyWiIgZmlsbD0iIzBFMjg1NSIvPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTM1IDg3SDBWODNIMTM1Vjg3WiIgZmlsbD0iIzBFMjg1NSIvPjwvc3ZnPgo=") center no-repeat;
+        background-size: 62%;
+    }
+    #hotels-set .cards-grid .card-cell > .pad .info .terms .term-badge.depart-date .icon:before {
+        content: '';
+        background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjciIGhlaWdodD0iNzUiIHZpZXdCb3g9IjAgMCA2NyA3NSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTUuNTkyMSAwSDEzLjcwODdDMTMuNDY4MyAwIDEzLjI0MDQgMC4wNTA0OTk4IDEzLjAxOTYgMC4xMjIyNTZDMTEuOTE2NCAwLjQ4MDA1NSAxMS4xMDA5IDEuNjU3ODkgMTEuMTAwOSAzLjA3MDc4VjQuMzY3MzFWNy42ODU5MlY5LjQxMjQ5QzExLjEwMDkgOS43MzMzMSAxMS4xNTQzIDEwLjAzNjQgMTEuMjMxOCAxMC4zMjY2QzExLjU2MzggMTEuNTczMyAxMi41NDA4IDEyLjQ4MzMgMTMuNzA4NyAxMi40ODMzSDE1LjU5MjFDMTcuMDMyNyAxMi40ODMzIDE4LjE5OTkgMTEuMTA4NiAxOC4xOTk5IDkuNDEyNDlWNy42ODU5MlY0LjM2NzMxVjMuMDcwNzhDMTguMTk5OSAxLjM3NDY3IDE3LjAzMjcgMCAxNS41OTIxIDBaIiBmaWxsPSIjMEUyODU1Ii8+PHBhdGggZD0iTTUyLjY2NDcgMEg1MC43ODEzQzQ5LjM0MDcgMCA0OC4xNzM0IDEuMzc0NjcgNDguMTczNCAzLjA3MDc4VjQuMzY3MzFWNy42ODU5MlY5LjQxMjQ5QzQ4LjE3MzQgMTEuMTA4NiA0OS4zNDA3IDEyLjQ4MzMgNTAuNzgxMyAxMi40ODMzSDUyLjY2NDdDNTQuMTA1MyAxMi40ODMzIDU1LjI3MjUgMTEuMTA4NiA1NS4yNzI1IDkuNDEyNDlWNy42ODU5MlY0LjM2NzMxVjMuMDcwNzhDNTUuMjcxOSAxLjM3NDY3IDU0LjEwNDcgMCA1Mi42NjQ3IDBaIiBmaWxsPSIjMEUyODU1Ii8+PHBhdGggZD0iTTYyLjI4NTIgNy42ODU5MUg1Ny42MjE4VjkuNDEyNDlDNTcuNjIxOCAxMi40MDE2IDU1LjM5NzYgMTQuODMzMiA1Mi42NjQxIDE0LjgzMzJINTAuNzgwNkM0OC4wNDcxIDE0LjgzMzIgNDUuODIyOSAxMi40MDE2IDQ1LjgyMjkgOS40MTI0OVY3LjY4NTkxSDIwLjU0OThWOS40MTI0OUMyMC41NDk4IDEyLjQwMTYgMTguMzI1NiAxNC44MzMyIDE1LjU5MjEgMTQuODMzMkgxMy43MDg3QzEwLjk3NSAxNC44MzMyIDguNzUwOTYgMTIuNDAxNiA4Ljc1MDk2IDkuNDEyNDlWNy42ODU5MUg0LjY4NzUxQzIuMDk5MTIgNy42ODU5MSAwIDkuNjUzOTMgMCAxMi4wODAzVjcwLjYwNTdDMCA3My4wMzY1IDIuMDk5IDc1IDQuNjg3NTEgNzVINjIuMjg0NkM2NC44NzU0IDc1IDY2Ljk3MiA3My4wMzYgNjYuOTcyIDcwLjYwNTdWMTIuMDgwOUM2Ni45NzI2IDkuNjU0NTQgNjQuODc2IDcuNjg1OTEgNjIuMjg1MiA3LjY4NTkxWk02MC44MzE4IDY4LjU0OTRMNS45Njk5MSA2OC41MjgzVjIxLjM0NDdINjAuODMxOFY2OC41NDk0WiIgZmlsbD0iIzBFMjg1NSIvPjxwYXRoIGQ9Ik0zOS4zNjE0IDMyLjcxNTNINTMuNzg5OUM1NS4wNDIzIDMyLjcxNTMgNTYuMDU1MiAzMS40NjQ2IDU2LjA1NTIgMjkuOTE4OEM1Ni4wNTUyIDI4LjM3MzEgNTUuMDQxOCAyNy4xMjI0IDUzLjc4OTkgMjcuMTIyNEgzOS4zNjE0QzM4LjEwOSAyNy4xMjI0IDM3LjA5NjEgMjguMzczMSAzNy4wOTYxIDI5LjkxODhDMzcuMDk2MSAzMS40NjM5IDM4LjEwODkgMzIuNzE1MyAzOS4zNjE0IDMyLjcxNTNaIiBmaWxsPSIjMEUyODU1Ii8+PHBhdGggZD0iTTM5LjM2MTQgNDIuODE2M0g1My43ODk5QzU1LjA0MjMgNDIuODE2MyA1Ni4wNTUyIDQxLjU2NTYgNTYuMDU1MiA0MC4wMTk5QzU2LjA1NTIgMzguNDc0MyA1NS4wNDE4IDM3LjIyMzYgNTMuNzg5OSAzNy4yMjM2SDM5LjM2MTRDMzguMTA5IDM3LjIyMzYgMzcuMDk2MSAzOC40NzQzIDM3LjA5NjEgNDAuMDE5OUMzNy4wOTYxIDQxLjU2NTYgMzguMTA4OSA0Mi44MTYzIDM5LjM2MTQgNDIuODE2M1oiIGZpbGw9IiMwRTI4NTUiLz48cGF0aCBkPSJNMzkuMzYxNCA1Mi45MTczSDUzLjc4OTlDNTUuMDQyMyA1Mi45MTczIDU2LjA1NTIgNTEuNjY2NSA1Ni4wNTUyIDUwLjEyMDlDNTYuMDU1MiA0OC41NzUzIDU1LjA0MTggNDcuMzI0NSA1My43ODk5IDQ3LjMyNDVIMzkuMzYxNEMzOC4xMDkgNDcuMzI0NSAzNy4wOTYxIDQ4LjU3NTMgMzcuMDk2MSA1MC4xMjA5QzM3LjA5NjEgNTEuNjY2NSAzOC4xMDg5IDUyLjkxNzMgMzkuMzYxNCA1Mi45MTczWiIgZmlsbD0iIzBFMjg1NSIvPjxwYXRoIGQ9Ik0zOS4zNjE0IDYzLjAxOUg1My43ODk5QzU1LjA0MjMgNjMuMDE5IDU2LjA1NTIgNjEuNzY4MiA1Ni4wNTUyIDYwLjIyMjZDNTYuMDU1MiA1OC42NzY5IDU1LjA0MTggNTcuNDI2MiA1My43ODk5IDU3LjQyNjJIMzkuMzYxNEMzOC4xMDkgNTcuNDI2MiAzNy4wOTYxIDU4LjY3NjkgMzcuMDk2MSA2MC4yMjI2QzM3LjA5NjEgNjEuNzY4MiAzOC4xMDg5IDYzLjAxOSAzOS4zNjE0IDYzLjAxOVoiIGZpbGw9IiMwRTI4NTUiLz48cGF0aCBkPSJNMTMuODA2MiAzMi43MTUzSDI4LjIzNDZDMjkuNDg3MSAzMi43MTUzIDMwLjQ5OTkgMzEuNDY0NiAzMC40OTk5IDI5LjkxODhDMzAuNDk5OSAyOC4zNzMxIDI5LjQ4NjQgMjcuMTIyNCAyOC4yMzQ2IDI3LjEyMjRIMTMuODA2MkMxMi41NTM3IDI3LjEyMjQgMTEuNTQwOCAyOC4zNzMxIDExLjU0MDggMjkuOTE4OEMxMS41NDEgMzEuNDYzOSAxMi41NTM3IDMyLjcxNTMgMTMuODA2MiAzMi43MTUzWiIgZmlsbD0iIzBFMjg1NSIvPjxwYXRoIGQ9Ik0xMy44MDYyIDQyLjgxNjNIMjguMjM0NkMyOS40ODcxIDQyLjgxNjMgMzAuNDk5OSA0MS41NjU2IDMwLjQ5OTkgNDAuMDE5OUMzMC40OTk5IDM4LjQ3NDMgMjkuNDg2NCAzNy4yMjM2IDI4LjIzNDYgMzcuMjIzNkgxMy44MDYyQzEyLjU1MzcgMzcuMjIzNiAxMS41NDA4IDM4LjQ3NDMgMTEuNTQwOCA0MC4wMTk5QzExLjU0MSA0MS41NjU2IDEyLjU1MzcgNDIuODE2MyAxMy44MDYyIDQyLjgxNjNaIiBmaWxsPSIjMEUyODU1Ii8+PHBhdGggZD0iTTEzLjgwNjIgNTIuOTE3M0gyOC4yMzQ2QzI5LjQ4NzEgNTIuOTE3MyAzMC40OTk5IDUxLjY2NjUgMzAuNDk5OSA1MC4xMjA5QzMwLjQ5OTkgNDguNTc1MyAyOS40ODY0IDQ3LjMyNDUgMjguMjM0NiA0Ny4zMjQ1SDEzLjgwNjJDMTIuNTUzNyA0Ny4zMjQ1IDExLjU0MDggNDguNTc1MyAxMS41NDA4IDUwLjEyMDlDMTEuNTQwOCA1MS42NjY1IDEyLjU1MzcgNTIuOTE3MyAxMy44MDYyIDUyLjkxNzNaIiBmaWxsPSIjMEUyODU1Ii8+PHBhdGggZD0iTTEzLjgwNjIgNjMuMDE5SDI4LjIzNDZDMjkuNDg3MSA2My4wMTkgMzAuNDk5OSA2MS43NjgyIDMwLjQ5OTkgNjAuMjIyNkMzMC40OTk5IDU4LjY3NjkgMjkuNDg2NCA1Ny40MjYyIDI4LjIzNDYgNTcuNDI2MkgxMy44MDYyQzEyLjU1MzcgNTcuNDI2MiAxMS41NDA4IDU4LjY3NjkgMTEuNTQwOCA2MC4yMjI2QzExLjU0MSA2MS43NjgyIDEyLjU1MzcgNjMuMDE5IDEzLjgwNjIgNjMuMDE5WiIgZmlsbD0iIzBFMjg1NSIvPjwvc3ZnPgo=") center no-repeat;
+        background-size: 50%;
+    }
+    #hotels-set .cards-grid .card-cell > .pad .info .terms .term-badge.meal .icon:before {
+        content: '';
+        background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDUiIGhlaWdodD0iNDMiIHZpZXdCb3g9IjAgMCA0NSA0MyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNDMuNjkwMiAzLjczNDM3QzQzLjI1IDMuMjk0MSA0Mi42NjQ0IDMuMDEyNjkgNDIuMDQ3MSAyLjk1MzY5QzQwLjg5ODggMi44NDAyMSAzNy43NTM0IDQuNjc4NDYgMzUuOTgzMiA1Ljc4NTk1QzMzLjQ0NiA3LjM3MDAyIDI5LjYyNDIgMTAuMDU3IDI1LjgyOTcgMTMuODUxNkwxNy41MjM1IDIyLjE1MzJDMTYuNDY2IDIzLjIxMDggMTYuNDY2IDI0LjkzMSAxNy41MjM1IDI1Ljk4ODZMMTcuNTY0NCAyNi4wMjQ5TDYuMTY3MjIgMzcuNDIyQzUuMTA5NjYgMzguNDc5NiA1LjEwOTY2IDQwLjE5OTggNi4xNjcyMiA0MS4yNTc0QzcuMjI0NzkgNDIuMzE0OSA4Ljk0NTAzIDQyLjMxNDkgMTAuMDAyNiA0MS4yNTc0TDQzLjY5MDIgNy41Njk3NEM0NC40MjU1IDYuODM0NDQgNDQuNjc1MiA1LjcyMjQxIDQ0LjMyNTcgNC43NDIwMUM0NC4xOTg2IDQuMzY1MjggNDMuOTc2MiA0LjAxNTc5IDQzLjY5MDIgMy43MzQzN1oiIGZpbGw9IiMwRTI4NTUiLz48cGF0aCBkPSJNMjguNzk4MSAyNS4yMzA1TDI0Ljk2MjggMjkuMDY1OUwzNi44NzI4IDQwLjk3NTlDMzcuOTMwNCA0Mi4wMzM1IDM5LjY1MDYgNDIuMDMzNSA0MC43MDM2IDQwLjk3NTlDNDEuNzYxMiAzOS45MTg0IDQxLjc2MTIgMzguMTk4MSA0MC43MDM2IDM3LjE0MDZMMjguNzk4MSAyNS4yMzA1WiIgZmlsbD0iIzBFMjg1NSIvPjxwYXRoIGQ9Ik0xMy40MjQ5IDE3LjQ0NjRMMTYuNDAyNCAyMC40MjM5TDIwLjE4MzMgMTYuNjQzTDE3LjM1MSAxMy44MTA3QzE3Ljg3MyAxMi4wMzYgMTcuNDM3MyAxMC4wMzQzIDE2LjAzOTMgOC42MzYzN0MxNi4wMjU3IDguNjIyNzYgMTYuMDA3NSA4LjYxMzY4IDE1Ljk5MzkgOC42MDAwNkMxNS45ODAzIDguNTg2NDQgMTUuOTcxMiA4LjU2ODI5IDE1Ljk1NzYgOC41NTQ2N0w3LjY2NTA1IDAuMjYyMTIxQzcuMzE1NTYgLTAuMDg3MzczNiA2Ljc1MjczIC0wLjA4NzM3MzYgNi40MDMyNCAwLjI2MjEyMUM2LjA1Mzc0IDAuNjExNjE1IDYuMDUzNzQgMS4xNzQ0NCA2LjQwMzI0IDEuNTIzOTNMMTQuMTA1NyA5LjIyMTg5QzE0LjEwNTcgOS4yMjE4OSAxNC4xMTAzIDkuMjI2NDMgMTQuMTE0OCA5LjIyNjQzQzE0LjMzMjcgOS40NDQyOSAxNC4zMzI3IDkuNzkzNzkgMTQuMTE0OCAxMC4wMTE3QzEzLjg5NjkgMTAuMjI5NSAxMy41NDc1IDEwLjIyOTUgMTMuMzI5NiAxMC4wMTE3TDEzLjMyNSAxMC4wMDcxTDUuNjE4MDEgMi4zMDQ2MkM1LjI2ODUyIDEuOTU1MTMgNC43MDU2OSAxLjk1NTEzIDQuMzU2MiAyLjMwNDYyQzQuMDA2NyAyLjY1NDEyIDQuMDA2NyAzLjIxNjk0IDQuMzU2MiAzLjU2NjQzTDEyLjA1ODcgMTEuMjczNUMxMi4wNTg3IDExLjI3MzUgMTIuMDYzMiAxMS4yNzM1IDEyLjA2MzIgMTEuMjc4QzEyLjI4MTEgMTEuNDk1OSAxMi4yODExIDExLjg0NTQgMTIuMDYzMiAxMi4wNjMyQzExLjg0NTQgMTIuMjgxMSAxMS40OTU5IDEyLjI4MTEgMTEuMjc4IDEyLjA2MzJDMTEuMjc4IDEyLjA2MzIgMTEuMjc4IDEyLjA1ODcgMTEuMjczNSAxMi4wNTg3TDMuNTcwOTcgNC4zNTE2NkMzLjIyMTQ4IDQuMDAyMTcgMi42NTg2NSA0LjAwMjE3IDIuMzA5MTYgNC4zNTE2NkMxLjk1OTY3IDQuNzAxMTUgMS45NTk2NyA1LjI2Mzk4IDIuMzA5MTYgNS42MTM0N0wxMC4wMTE3IDEzLjMxNkwxMC4wMTYyIDEzLjMyMDVDMTAuMjM0MSAxMy41Mzg0IDEwLjIzNDEgMTMuODg3OSAxMC4wMTYyIDE0LjEwNTdDOS43OTgzMyAxNC4zMjM2IDkuNDQ4ODMgMTQuMzIzNiA5LjIzMDk3IDE0LjEwNTdDOS4yMzA5NyAxNC4xMDU3IDkuMjMwOTcgMTQuMTAxMiA5LjIyNjQzIDE0LjEwMTJWMTQuMTA1N0wxLjUyMzkzIDYuMzk4N0MxLjE3ODk4IDYuMDQ5MiAwLjYxMTYxNSA2LjA0OTIgMC4yNjIxMjEgNi4zOTg3Qy0wLjA4NzM3MzYgNi43NDgxOSAtMC4wODczNzM2IDcuMzExMDIgMC4yNjIxMjEgNy42NjA1MUw4LjU1OTIxIDE1Ljk1NzZDOC41NzI4MyAxNS45NzEyIDguNTkwOTggMTUuOTgwMyA4LjYwNDYgMTUuOTkzOUM4LjYxODIyIDE2LjAwNzUgOC42MjcyOSAxNi4wMjU3IDguNjQwOTEgMTYuMDM5M0M5LjkzOTAzIDE3LjMzMjkgMTEuNzU0NiAxNy44MDA0IDEzLjQyNDkgMTcuNDQ2NFoiIGZpbGw9IiMwRTI4NTUiLz48cGF0aCBkPSJNNDAuMjA0NCAzNi42Njg2TDI5LjMyMDEgMjUuNzc5OEwyNS41MzkyIDI5LjU1NjFMMzYuNDI4IDQwLjQ0NDlDMzcuNDcyIDQxLjQ4ODkgMzkuMTY1IDQxLjQ4ODkgNDAuMjA4OSA0MC40NDQ5QzQxLjI0ODMgMzkuNDA1NSA0MS4yNDgzIDM3LjcwOCA0MC4yMDQ0IDM2LjY2ODZaIiBmaWxsPSIjMEUyODU1Ii8+PC9zdmc+Cg==") center no-repeat;
+        background-size: 62%;
+    }
+    #hotels-set .cards-grid .card-cell > .pad .info .price-info {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.5em;
+        padding-top: 0.66em;
+        margin-top: auto;
+    }
+    #hotels-set .cards-grid .card-cell > .pad .info .price-info.from:before {
+        content: 'от ';
+        font-weight: normal;
+        font-size: 66%;
+    }
+    #hotels-set .cards-grid .card-cell > .pad .info .price-info:after {
+        font-weight: normal;
+        font-size: 66%;
+    }
+    #hotels-set .cards-grid .card-cell > .pad .info .actions .buttonlike {
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+    @media screen and (max-width: 576px) {
+        #hotels-set .cards-grid .card-cell > .pad .info .actions .buttonlike {
+            font-size: 12px;
+        }
+    }
+</style>
+
+
+<div id="hotels-set" data-component-instance="0f6dc198-0b7a-44f5-b450-93b5178bbbf8">
+
+    <div class="group-filters">
+        <button class="buttonlike white selected" data-group="*">Все отели</button>
+        <button class="buttonlike white " data-group="Кемер">Кемер</button>
+        <button class="buttonlike white " data-group="Аланья">Аланья</button>
+        <button class="buttonlike white " data-group="Сиде">Сиде</button>
+        <button class="buttonlike white " data-group="Белек">Белек</button>
+    </div>
+
+    <div class="cards-grid">
+        <div class="card-cell" data-group="Кемер">
+            <div class="pad">
+                <div class="visual" style="background-image: url(https://content.sunmar.ru/resize/800x600/media/image/1/323/638197580907121669.jpg);">
+                    <div is="hotel-stars" class="trait" data-category="4 *">
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3 class="name">LIMS BONA DEA BEACH</h3>
+                    <h4 class="location">Кемер</h4>
+                    <div class="terms">
+                        <span class="term-badge depart-from">
+                            <span class="icon"></span><span class="label">Пермь</span>
+                        </span>
+                        <span class="term-badge depart-date">
+                            <span class="icon"></span><span class="label">14.06.23</span>
+                        </span>
+                        <span class="term-badge accomodation">
+                            <span class="icon">6</span><span class="label">ночей</span>
+                        </span>
+                        <span class="term-badge meal">
+                            <span class="icon"></span><span class="label">Все Включено</span>
+                        </span>
+                    </div>
+                    <div class="price-info from rur per-person">46 346</div>
+                    <div class="actions">
+                        <a href="https://www.sunmar.ru/hotels/turkey/lims-bona-dea-beach-kemer/?q=%7b%22Bgn%22%3a%2214.06.2023%22%2c%22End%22%3a%2214.06.2023%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%226%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22%2bmb%2bn3xCGGNWZVrH61esm2kk9Zo%2b68%2b3B4wOMJMzRnP9hzD1DrASGG9QZJqPN5DGGDqvgJV4u0WmcX%2fyWo7vf9Xwksh5oWJq8vw7kLz%2fOLv1tL0LAjgmILr%2fRDWpx9QteDxnucMQXiUOPrXAC7uUr2z7KPzrsh3LGXpA0nGJqYU%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d" class="buttonlike red" target="_blank">Выбрать тур</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-cell" data-group="Аланья">
+            <div class="pad">
+                <div class="visual" style="background-image: url(https://content.sunmar.ru/resize/800x600/media/image/1/21627/637034527326814902.jpg);">
+                    <div is="hotel-stars" class="trait" data-category="5 *">
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3 class="name">THE GARDEN BEACH HOTEL</h3>
+                    <h4 class="location">Аланья</h4>
+                    <div class="terms">
+                        <span class="term-badge depart-from">
+                            <span class="icon"></span><span class="label">Пермь</span>
+                        </span>
+                        <span class="term-badge depart-date">
+                            <span class="icon"></span><span class="label">18.06.23</span>
+                        </span>
+                        <span class="term-badge accomodation">
+                            <span class="icon">5</span><span class="label">ночей</span>
+                        </span>
+                        <span class="term-badge meal">
+                            <span class="icon"></span><span class="label">Все Включено</span>
+                        </span>
+                    </div>
+                    <div class="price-info from rur per-person">48 828</div>
+                    <div class="actions">
+                        <a href="https://www.sunmar.ru/hotels/turkey/the-garden-beach-hotel-alanya/?q=%7b%22Bgn%22%3a%2218.06.2023%22%2c%22End%22%3a%2218.06.2023%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%225%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22dICP1YczteQKTWok7itzFjzzMLY4oWPbafBVGEp6qcnihRmiCyPM8QUjcnpqzszDRPFrczoSCVngVZUgHUnscFwRtLo4b7xw8rxvEX7Hmc3U2ZSVIQGZu6mvprhgGC4eI9Ikw0JQnAhvs9brIsgdsil3Nfr343NrN8wziVGNrzM%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d" class="buttonlike red" target="_blank">Выбрать тур</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-cell" data-group="Аланья">
+            <div class="pad">
+                <div class="visual" style="background-image: url(https://content.sunmar.ru/resize/800x600/media/image/1/12823/637227191111399425.jpg);">
+                    <div is="hotel-stars" class="trait" data-category="5 *">
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3 class="name">CLUB SUN HEAVEN FAMILY</h3>
+                    <h4 class="location">Аланья</h4>
+                    <div class="terms">
+                        <span class="term-badge depart-from">
+                            <span class="icon"></span><span class="label">Пермь</span>
+                        </span>
+                        <span class="term-badge depart-date">
+                            <span class="icon"></span><span class="label">15.06.23</span>
+                        </span>
+                        <span class="term-badge accomodation">
+                            <span class="icon">6</span><span class="label">ночей</span>
+                        </span>
+                        <span class="term-badge meal">
+                            <span class="icon"></span><span class="label">Ультра Все Включено</span>
+                        </span>
+                    </div>
+                    <div class="price-info from rur per-person">50 275</div>
+                    <div class="actions">
+                        <a href="https://www.sunmar.ru/hotels/turkey/club-sun-heaven-family-alanya/?q=%7b%22Bgn%22%3a%2215.06.2023%22%2c%22End%22%3a%2215.06.2023%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%226%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22DBVi%2ftz1wp4TyiaxoXD1VFedfbTO%2fcBWcOL1N8ZP%2f85e88%2fzEIOD8yeM0jtSZc%2bP4OIicdfsF9xP2I2hyWH4gkYa5Z9RhWEuO7eSd%2f65EaJAaOIZlBw%2fjFUHk5mazD2OIUxmEQGhtUKXb%2fyLmDJjROAAADGrQmvR%2bHPbfpZG5rc%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d" class="buttonlike red" target="_blank">Выбрать тур</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-cell" data-group="Сиде">
+            <div class="pad">
+                <div class="visual" style="background-image: url(https://content.sunmar.ru/resize/800x600/media/image/1/25065/637800297145163649.jpg);">
+                    <div is="hotel-stars" class="trait" data-category="5 *">
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3 class="name">OTIUM FAMILY STONE PALACE</h3>
+                    <h4 class="location">Сиде</h4>
+                    <div class="terms">
+                        <span class="term-badge depart-from">
+                            <span class="icon"></span><span class="label">Пермь</span>
+                        </span>
+                        <span class="term-badge depart-date">
+                            <span class="icon"></span><span class="label">15.06.23</span>
+                        </span>
+                        <span class="term-badge accomodation">
+                            <span class="icon">6</span><span class="label">ночей</span>
+                        </span>
+                        <span class="term-badge meal">
+                            <span class="icon"></span><span class="label">Ультра Все Включено</span>
+                        </span>
+                    </div>
+                    <div class="price-info from rur per-person">50 633</div>
+                    <div class="actions">
+                        <a href="https://www.sunmar.ru/hotels/turkey/otium-family-stone-palace-side/?q=%7b%22Bgn%22%3a%2215.06.2023%22%2c%22End%22%3a%2215.06.2023%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%226%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22Pg23lbLnvwjvTJggxBY5%2fnr8HUnujzvrHQI3mlG5haclerG3XOFCj8ChlbVrTAOJ%2br66vYL5ZVpeGQbq2d1GWMGXi3ugH6fTiRDL%2foFFVi9%2fFnuaXupKlt%2fJ9XpXBeGOx3nLBN7TorYu7QGj%2bTj3Xtnxb2aeG8NcJcDXffiJL%2fg%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d" class="buttonlike red" target="_blank">Выбрать тур</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-cell" data-group="Аланья">
+            <div class="pad">
+                <div class="visual" style="background-image: url(https://content.sunmar.ru/resize/800x600/media/image/1/22140/637165017286136427.jpg);">
+                    <div is="hotel-stars" class="trait" data-category="5 *">
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3 class="name">PALMERAS BEACH HOTEL</h3>
+                    <h4 class="location">Аланья</h4>
+                    <div class="terms">
+                        <span class="term-badge depart-from">
+                            <span class="icon"></span><span class="label">Пермь</span>
+                        </span>
+                        <span class="term-badge depart-date">
+                            <span class="icon"></span><span class="label">16.06.23</span>
+                        </span>
+                        <span class="term-badge accomodation">
+                            <span class="icon">5</span><span class="label">ночей</span>
+                        </span>
+                        <span class="term-badge meal">
+                            <span class="icon"></span><span class="label">Ультра Все Включено</span>
+                        </span>
+                    </div>
+                    <div class="price-info from rur per-person">52 122</div>
+                    <div class="actions">
+                        <a href="https://www.sunmar.ru/hotels/turkey/palmeras-beach-hotel-alanya/?q=%7b%22Bgn%22%3a%2216.06.2023%22%2c%22End%22%3a%2216.06.2023%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%225%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22JxwapsqbLDPElWmJcTinshFUDGfr3MAXoykgLn7WE0H5lQG2JU%2fFPNYR%2fXH0%2fsB5emgPNqVXURMAq77I6RTP%2bWOx2vH5949UpbzuEKZ46YJ58ZeQwlIagSmgr7NNvgDKZXw813utMq4GyT%2fo3dYzMOorNYY86X%2fAfk%2bekDlmlK8%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d" class="buttonlike red" target="_blank">Выбрать тур</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-cell" data-group="Сиде">
+            <div class="pad">
+                <div class="visual" style="background-image: url(https://content.sunmar.ru/resize/800x600/media/image/1/30559/637177040212175294.jpg);">
+                    <div is="hotel-stars" class="trait" data-category="5 *">
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3 class="name">OTIUM FAMILY CLUB MARINE BEACH</h3>
+                    <h4 class="location">Сиде</h4>
+                    <div class="terms">
+                        <span class="term-badge depart-from">
+                            <span class="icon"></span><span class="label">Пермь</span>
+                        </span>
+                        <span class="term-badge depart-date">
+                            <span class="icon"></span><span class="label">08.06.23</span>
+                        </span>
+                        <span class="term-badge accomodation">
+                            <span class="icon">7</span><span class="label">ночей</span>
+                        </span>
+                        <span class="term-badge meal">
+                            <span class="icon"></span><span class="label">Ультра Все Включено</span>
+                        </span>
+                    </div>
+                    <div class="price-info from rur per-person">52 682</div>
+                    <div class="actions">
+                        <a href="https://www.sunmar.ru/hotels/turkey/otium-family-club-marine-beach-side/?q=%7b%22Bgn%22%3a%2208.06.2023%22%2c%22End%22%3a%2208.06.2023%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%227%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22cqDjwGYV1Uex5SE1nB3YCyVtW6H%2fuC%2bzUJUFWvKY%2fc0EtLC%2bqY6GvmdgJaui9RLbANSSdBo0uehZznUWyavDuMI%2bLBK0ZcbA2w6K9VI98xS8BmTxRAOAupjyCUx89iUKp0mfKMw5ZlIKAjUYMguqcZRLicDq8hvxW8tDJ6stY3A%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d" class="buttonlike red" target="_blank">Выбрать тур</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-cell" data-group="Аланья">
+            <div class="pad">
+                <div class="visual" style="background-image: url(https://content.sunmar.ru/resize/800x600/media/image/1/26682/636909420384150612.jpg);">
+                    <div is="hotel-stars" class="trait" data-category="5 *">
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3 class="name">MERIDIA BEACH HOTEL</h3>
+                    <h4 class="location">Аланья</h4>
+                    <div class="terms">
+                        <span class="term-badge depart-from">
+                            <span class="icon"></span><span class="label">Пермь</span>
+                        </span>
+                        <span class="term-badge depart-date">
+                            <span class="icon"></span><span class="label">18.06.23</span>
+                        </span>
+                        <span class="term-badge accomodation">
+                            <span class="icon">5</span><span class="label">ночей</span>
+                        </span>
+                        <span class="term-badge meal">
+                            <span class="icon"></span><span class="label">Ультра Все Включено</span>
+                        </span>
+                    </div>
+                    <div class="price-info from rur per-person">61 008</div>
+                    <div class="actions">
+                        <a href="https://www.sunmar.ru/hotels/turkey/meridia-beach-hotel-alanya/?q=%7b%22Bgn%22%3a%2218.06.2023%22%2c%22End%22%3a%2218.06.2023%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%225%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22IwR8LB6U7U9baKavGXB%2bV55dz45FeiWxMrD0dW%2fgVkvtV6J1ixkifFh5DZTYy0JhlPqLgDyrMeii7U2XxWZf9nwaa2FTul948eezlfH4wqZgnXzn6IkGdzyZW1%2bGMrsxqKcKiLBHtduGQ3lbienAUorOERdnKQ9D99App7L4taE%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d" class="buttonlike red" target="_blank">Выбрать тур</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-cell" data-group="Сиде">
+            <div class="pad">
+                <div class="visual" style="background-image: url(https://content.sunmar.ru/resize/800x600/media/image/1/6527/636776295377104023.jpg);">
+                    <div is="hotel-stars" class="trait" data-category="5 *">
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3 class="name">ROMA BEACH RESORT &amp; SPA</h3>
+                    <h4 class="location">Сиде</h4>
+                    <div class="terms">
+                        <span class="term-badge depart-from">
+                            <span class="icon"></span><span class="label">Пермь</span>
+                        </span>
+                        <span class="term-badge depart-date">
+                            <span class="icon"></span><span class="label">16.06.23</span>
+                        </span>
+                        <span class="term-badge accomodation">
+                            <span class="icon">5</span><span class="label">ночей</span>
+                        </span>
+                        <span class="term-badge meal">
+                            <span class="icon"></span><span class="label">Все Включено</span>
+                        </span>
+                    </div>
+                    <div class="price-info from rur per-person">61 213</div>
+                    <div class="actions">
+                        <a href="https://www.sunmar.ru/hotels/turkey/roma-beach-resort-spa-side/?q=%7b%22Bgn%22%3a%2216.06.2023%22%2c%22End%22%3a%2216.06.2023%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%225%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22cAs2Wl4EG992jfXRyul2lGP0Wqt3hglMy0EGWqbHrzxsmTea8pedDiB9mYDlY33K2g2q6fFtwEvOe6Qqki2vmn4J2KXh5u8ATZvRi4rJEuaS%2b%2ba83lGg8zti5JMc%2bt1zPv159LYGBrzYnEHSM3m8Y%2faPFsiIaRHOIkU%2ftXuAboU%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d" class="buttonlike red" target="_blank">Выбрать тур</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-cell" data-group="Аланья">
+            <div class="pad">
+                <div class="visual" style="background-image: url(https://content.sunmar.ru/resize/800x600/media/image/1/749/636471267196186725.jpg);">
+                    <div is="hotel-stars" class="trait" data-category="5 *">
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3 class="name">JUSTINIANO CLUB PARK CONTI</h3>
+                    <h4 class="location">Аланья</h4>
+                    <div class="terms">
+                        <span class="term-badge depart-from">
+                            <span class="icon"></span><span class="label">Пермь</span>
+                        </span>
+                        <span class="term-badge depart-date">
+                            <span class="icon"></span><span class="label">14.06.23</span>
+                        </span>
+                        <span class="term-badge accomodation">
+                            <span class="icon">6</span><span class="label">ночей</span>
+                        </span>
+                        <span class="term-badge meal">
+                            <span class="icon"></span><span class="label">Все Включено</span>
+                        </span>
+                    </div>
+                    <div class="price-info from rur per-person">61 546</div>
+                    <div class="actions">
+                        <a href="https://www.sunmar.ru/hotels/turkey/justiniano-club-park-conti-alanya/?q=%7b%22Bgn%22%3a%2214.06.2023%22%2c%22End%22%3a%2214.06.2023%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%226%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22RwflRAZQtqBQCRjOzxEyMRtkyPMKpoh9xKuuvqitBG0l2eu61kjuMMHoELTkDUFb4Rh5kOXoxM1NuNV4FV4Tsgy92NzSWGW4gUnccIp91p4PrBj4IkTPS5V9QysIFjQSE9z5GJxOjv8hcLDa40wY7aAu7c8vqF7QIDkaKP3zuqI%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d" class="buttonlike red" target="_blank">Выбрать тур</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-cell" data-group="Аланья">
+            <div class="pad">
+                <div class="visual" style="background-image: url(https://content.sunmar.ru/resize/800x600/media/image/1/10083/636484570722230515.jpg);">
+                    <div is="hotel-stars" class="trait" data-category="5 *">
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3 class="name">WHITE GOLD HOTEL &amp; SPA</h3>
+                    <h4 class="location">Аланья</h4>
+                    <div class="terms">
+                        <span class="term-badge depart-from">
+                            <span class="icon"></span><span class="label">Пермь</span>
+                        </span>
+                        <span class="term-badge depart-date">
+                            <span class="icon"></span><span class="label">13.06.23</span>
+                        </span>
+                        <span class="term-badge accomodation">
+                            <span class="icon">7</span><span class="label">ночей</span>
+                        </span>
+                        <span class="term-badge meal">
+                            <span class="icon"></span><span class="label">Все Включено</span>
+                        </span>
+                    </div>
+                    <div class="price-info from rur per-person">64 069</div>
+                    <div class="actions">
+                        <a href="https://www.sunmar.ru/hotels/turkey/white-gold-hotel-spa-alanya/?q=%7b%22Bgn%22%3a%2213.06.2023%22%2c%22End%22%3a%2213.06.2023%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%227%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22UXagGDUfwCUCuCEPak3uOFNNXzG9aCy0IB61DUPH3nHEhU1HAfTvB%2fkiwhY1YXdcQ7jkbjiaIFs7u9Ce0ldeup7w3giC1b2ULRgFzvBwruyDO8PwrF84OL6R5PMnjdjYiIOlAypy4PRbe%2b%2fm5LciyJHt5MKB2zdFfgN43OFKfDM%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d" class="buttonlike red" target="_blank">Выбрать тур</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-cell" data-group="Аланья">
+            <div class="pad">
+                <div class="visual" style="background-image: url(https://content.sunmar.ru/resize/800x600/media/image/1/8028/637466665474863247.jpg);">
+                    <div is="hotel-stars" class="trait" data-category="5 *">
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3 class="name">EFTALIA SPLASH RESORT</h3>
+                    <h4 class="location">Аланья</h4>
+                    <div class="terms">
+                        <span class="term-badge depart-from">
+                            <span class="icon"></span><span class="label">Пермь</span>
+                        </span>
+                        <span class="term-badge depart-date">
+                            <span class="icon"></span><span class="label">08.06.23</span>
+                        </span>
+                        <span class="term-badge accomodation">
+                            <span class="icon">7</span><span class="label">ночей</span>
+                        </span>
+                        <span class="term-badge meal">
+                            <span class="icon"></span><span class="label">Все Включено</span>
+                        </span>
+                    </div>
+                    <div class="price-info from rur per-person">64 593</div>
+                    <div class="actions">
+                        <a href="https://www.sunmar.ru/hotels/turkey/eftalia-splash-resort-alanya/?q=%7b%22Bgn%22%3a%2208.06.2023%22%2c%22End%22%3a%2208.06.2023%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%227%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22dJrNXcPe9KCARkQ%2bKZIk3jEFL0ZTMDkd6uuH6StB9Zy2K66m4x32izVVqtatYIbu0%2b5O1egwAGXM1F4ViWYj7RXNIevunNs0J%2faITw6Q3o%2br9cmNsu%2b1Cm9SVz4rdq6rjK1NWhWWo0UnB%2blkKapkJJDr%2f6hg1BgV2i8GXfh%2bKX0%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d" class="buttonlike red" target="_blank">Выбрать тур</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-cell" data-group="Сиде">
+            <div class="pad">
+                <div class="visual" style="background-image: url(https://content.sunmar.ru/resize/800x600/media/image/1/13448/636508344539003561.jpg);">
+                    <div is="hotel-stars" class="trait" data-category="5 *">
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3 class="name">KAMELYA FULYA HOTEL</h3>
+                    <h4 class="location">Сиде</h4>
+                    <div class="terms">
+                        <span class="term-badge depart-from">
+                            <span class="icon"></span><span class="label">Пермь</span>
+                        </span>
+                        <span class="term-badge depart-date">
+                            <span class="icon"></span><span class="label">08.06.23</span>
+                        </span>
+                        <span class="term-badge accomodation">
+                            <span class="icon">7</span><span class="label">ночей</span>
+                        </span>
+                        <span class="term-badge meal">
+                            <span class="icon"></span><span class="label">Ультра Все Включено</span>
+                        </span>
+                    </div>
+                    <div class="price-info from rur per-person">77 376</div>
+                    <div class="actions">
+                        <a href="https://www.sunmar.ru/hotels/turkey/kamelya-fulya-hotel-side/?q=%7b%22Bgn%22%3a%2208.06.2023%22%2c%22End%22%3a%2208.06.2023%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%227%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22S18vbHdx4RCe7Ew5LmuNPPR%2ftirAabhHgO9DFt2al0ttMtoJ2LtiV0Sei8B41Cto9i0eHW47lQVSAHWrG55XJZCTTlO0mlnPBg9o4StnxGEgLJe0tj4IzyCmP8vuzKFJImM0fsRm%2bJUqRSXsIo7Ul41lMWwifM8448mC0NM9WU4%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d" class="buttonlike red" target="_blank">Выбрать тур</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-cell" data-group="Сиде">
+            <div class="pad">
+                <div class="visual" style="background-image: url(https://content.sunmar.ru/resize/800x600/media/image/1/12879/638156950683132830.jpg);">
+                    <div is="hotel-stars" class="trait" data-category="5 *">
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3 class="name">KAMELYA AISHEN K CLUB</h3>
+                    <h4 class="location">Сиде</h4>
+                    <div class="terms">
+                        <span class="term-badge depart-from">
+                            <span class="icon"></span><span class="label">Пермь</span>
+                        </span>
+                        <span class="term-badge depart-date">
+                            <span class="icon"></span><span class="label">13.06.23</span>
+                        </span>
+                        <span class="term-badge accomodation">
+                            <span class="icon">7</span><span class="label">ночей</span>
+                        </span>
+                        <span class="term-badge meal">
+                            <span class="icon"></span><span class="label">Ультра Все Включено</span>
+                        </span>
+                    </div>
+                    <div class="price-info from rur per-person">91 314</div>
+                    <div class="actions">
+                        <a href="https://www.sunmar.ru/hotels/turkey/kamelya-aishen-k-club-side/?q=%7b%22Bgn%22%3a%2213.06.2023%22%2c%22End%22%3a%2213.06.2023%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%227%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22OMxEL%2bzZF2KsxOhV92TXITUgoNyUAEWtuyIQXSYfkVV1PFWKrKCj530vuJnaVAlaX8CVAstbAU7ghs0glyIe98ftAuCWJVpWjSZAnMYEHTpqm%2bC6J8NuNLfDoyccoPikSJV%2bCbM4egcjmwrCY7hrm935hq%2f1Dm3fg3qowaNvz6s%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d" class="buttonlike red" target="_blank">Выбрать тур</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-cell" data-group="Белек">
+            <div class="pad">
+                <div class="visual" style="background-image: url(https://content.sunmar.ru/resize/800x600/media/image/1/952/637326578738994424.jpg);">
+                    <div is="hotel-stars" class="trait" data-category="5 *">
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3 class="name">MEGASARAY CLUB BELEK</h3>
+                    <h4 class="location">Белек</h4>
+                    <div class="terms">
+                        <span class="term-badge depart-from">
+                            <span class="icon"></span><span class="label">Пермь</span>
+                        </span>
+                        <span class="term-badge depart-date">
+                            <span class="icon"></span><span class="label">14.06.23</span>
+                        </span>
+                        <span class="term-badge accomodation">
+                            <span class="icon">6</span><span class="label">ночей</span>
+                        </span>
+                        <span class="term-badge meal">
+                            <span class="icon"></span><span class="label">Ультра Все Включено</span>
+                        </span>
+                    </div>
+                    <div class="price-info from rur per-person">101 613</div>
+                    <div class="actions">
+                        <a href="https://www.sunmar.ru/hotels/turkey/megasaray-club-belek-belek/?q=%7b%22Bgn%22%3a%2214.06.2023%22%2c%22End%22%3a%2214.06.2023%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%226%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22%2fTJHkeSUukDbhxskZiY7QnePx1k7IcNVB0JJ%2f1%2bXmOnrAVtMNZZ%2fJcRWk420enAzI291g%2bd%2b%2bGchv7JJTW8Uw10fZgUUye7q4UDEpQ1UBAMxSnyfwQUZ8CB8t6exOJ3pDLU8BHdVaqBs8q3XMrz6hWpKXBvDfdkXB6p8cDzrsRM%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d" class="buttonlike red" target="_blank">Выбрать тур</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-cell" data-group="Белек">
+            <div class="pad">
+                <div class="visual" style="background-image: url(https://content.sunmar.ru/resize/800x600/media/image/1/10197/636580210309550673.jpg);">
+                    <div is="hotel-stars" class="trait" data-category="5 *">
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                        <span class="star"> </span>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3 class="name">PORT NATURE LUXURY RESORT HOTEL &amp; SPA</h3>
+                    <h4 class="location">Белек</h4>
+                    <div class="terms">
+                        <span class="term-badge depart-from">
+                            <span class="icon"></span><span class="label">Пермь</span>
+                        </span>
+                        <span class="term-badge depart-date">
+                            <span class="icon"></span><span class="label">13.06.23</span>
+                        </span>
+                        <span class="term-badge accomodation">
+                            <span class="icon">7</span><span class="label">ночей</span>
+                        </span>
+                        <span class="term-badge meal">
+                            <span class="icon"></span><span class="label">Ультра Все Включено</span>
+                        </span>
+                    </div>
+                    <div class="price-info from rur per-person">107 807</div>
+                    <div class="actions">
+                        <a href="https://www.sunmar.ru/hotels/turkey/port-nature-luxury-resort-hotel-spa-belek/?q=%7b%22Bgn%22%3a%2213.06.2023%22%2c%22End%22%3a%2213.06.2023%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%227%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22yetkfwoou%2fVYS%2b5GmIBVDnVsR9dvFWqsvpctHD6%2bIo%2fvjmJMwp7aMyUCek%2f1zfyOkcM8tvfe51G77HPu04HQMj8joXhn7zpi65CyCqPOngdU1fCltlMWFld8R4GYggXQdMWjiy44TogfmRbs0eolqTacLWXIISMvsfcSUuO%2fPdmfZ4kL3Y922Bc%2b2mhPK36z%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d" class="buttonlike red" target="_blank">Выбрать тур</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    window.ASAP || (window.ASAP = (function() {
+        var callall, fns;
+        fns = [];
+        callall = function() {
+            var f, results;
+            results = [];
+            while (f = fns.shift()) {
+                results.push(f());
+            }
+            return results;
+        };
+        if (document.addEventListener) {
+            document.addEventListener('DOMContentLoaded', callall, false);
+            window.addEventListener('load', callall, false);
+        } else if (document.attachEvent) {
+            document.attachEvent('onreadystatechange', callall);
+            window.attachEvent('onload', callall);
+        }
+        return function(fn) {
+            fns.push(fn);
+            if (document.readyState === 'complete') {
+                return callall();
+            }
+        };
+    })());
+
+    window.log || (window.log = function() {
+        if (window.console && window.DEBUG) {
+            if (typeof console.group === "function") {
+                console.group(window.DEBUG);
+            }
+            if (arguments.length === 1 && Array.isArray(arguments[0]) && console.table) {
+                console.table.apply(window, arguments);
+            } else {
+                console.log.apply(window, arguments);
+            }
+            return typeof console.groupEnd === "function" ? console.groupEnd() : void 0;
+        }
+    });
+
+    window.trouble || (window.trouble = function() {
+        var ref;
+        if (window.console) {
+            if (window.DEBUG) {
+                if (typeof console.group === "function") {
+                    console.group(window.DEBUG);
+                }
+            }
+            if ((ref = console.warn) != null) {
+                ref.apply(window, arguments);
+            }
+            if (window.DEBUG) {
+                return typeof console.groupEnd === "function" ? console.groupEnd() : void 0;
+            }
+        }
+    });
+
+    window.preload || (window.preload = function(what, fn) {
+        var lib;
+        if (!Array.isArray(what)) {
+            what = [what];
+        }
+        return $.when.apply($, (function() {
+            var j, len, results;
+            results = [];
+            for (j = 0, len = what.length; j < len; j++) {
+                lib = what[j];
+                results.push($.ajax(lib, {
+                    dataType: 'script',
+                    cache: true
+                }));
+            }
+            return results;
+        })()).done(function() {
+            return typeof fn === "function" ? fn() : void 0;
+        });
+    });
+
+    window.queryParam || (window.queryParam = function(p, nocase) {
+        var k, params, params_kv;
+        params_kv = location.search.substr(1).split('&');
+        params = {};
+        params_kv.forEach(function(kv) {
+            var k_v;
+            k_v = kv.split('=');
+            return params[k_v[0]] = k_v[1] || '';
+        });
+        if (p) {
+            if (nocase) {
+                for (k in params) {
+                    if (k.toUpperCase() === p.toUpperCase()) {
+                        return decodeURIComponent(params[k]);
+                    }
+                }
+                return void 0;
+            } else {
+                return decodeURIComponent(params[p]);
+            }
+        }
+        return params;
+    });
+
+    ASAP(function() {
+        var $ctx, libs;
+        libs = ['https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js'];
+        $ctx = $('#hotels-set');
+        $ctx = $('[data-component-instance="0f6dc198-0b7a-44f5-b450-93b5178bbbf8"]');
+
+        preload(libs, function() {
+            var $grid, group2select, initial_selector;
+            initial_selector = '*';
+            if (group2select = $('.group-filters > *.selected', $ctx).attr('data-group')) {
+                initial_selector = group2select !== '*' ? "[data-group*='" + group2select + "']" : '*';
+            }
+            $grid = $('.cards-grid', $ctx).on('layoutComplete', function(e, items) {
+                var by_top, els, max_height, results, row, t, tallest_item;
+                els = items.map(function(i) {
+                    return i.element;
+                });
+                by_top = _.groupBy(els, function(el) {
+                    return $(el).css('top');
+                });
+                results = [];
+                for (t in by_top) {
+                    row = by_top[t];
+                    tallest_item = _.maxBy(row, function(el) {
+                        return $(el).outerHeight();
+                    });
+                    max_height = $(tallest_item).outerHeight();
+                    results.push($(row).css({
+                        minHeight: max_height
+                    }));
+                }
+                return results;
+            }).isotope({
+                itemSelector: '.card-cell',
+                layoutMode: 'fitRows',
+                stagger: 30,
+                filter: initial_selector
+            });
+            $('.group-filters > [data-group]', $ctx).on('click', function() {
+                var $this, group, selector;
+                $this = $(this);
+                group = $this.attr('data-group');
+                selector = group !== '*' ? "[data-group*='" + group + "']" : '*';
+                $grid.find('.card-cell').css({
+                    minHeight: 0
+                });
+                $grid.isotope({
+                    filter: selector
+                });
+                return $this.addClass('selected').siblings('.selected').removeClass('selected');
+            });
+            return setTimeout(function() {
+                return $ctx.addClass('shown');
+            }, 0);
+        });
+    });
+</script>
+</body>

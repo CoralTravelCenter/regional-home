@@ -1,0 +1,16 @@
+{
+    contents: [
+        '/site/sunmar.ru/markup/mixins/main-styles.pug',
+        '/site/sunmar.ru/markup/minvody/intro.pug',
+        '/site/sunmar.ru/markup/region-redirect.pug',
+        '/site/sunmar.ru/markup/minvody/hot.pug',
+        '/site/sunmar.ru/markup/minvody/available-destinations.pug',
+        '/site/sunmar.ru/markup/mixins/why-us.pug',
+        '/site/sunmar.ru/markup/minvody/recommended-tours.pug',
+        '/site/sunmar.ru/dev-markup/hotels-block-minvody.html',
+        '/site/sunmar.ru/markup/minvody/pay-attention.pug',
+        '/site/sunmar.ru/markup/minvody/xlinks.pug',
+        '/site/sunmar.ru/markup/mixins/reviews-and-thanks.pug',
+        '/site/sunmar.ru/markup/mixins/main-scripts.pug'
+    ]
+}

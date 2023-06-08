@@ -1,0 +1,16 @@
+{
+    contents: [
+        '/site/sunmar.ru/markup/mixins/main-styles.pug',
+        '/site/sunmar.ru/markup/irkutsk/intro.pug',
+        '/site/sunmar.ru/markup/region-redirect.pug',
+        '/site/sunmar.ru/markup/irkutsk/hot.pug',
+        '/site/sunmar.ru/markup/irkutsk/available-destinations.pug',
+        '/site/sunmar.ru/markup/mixins/why-us.pug',
+        '/site/sunmar.ru/markup/irkutsk/recommended-tours.pug',
+        '/site/sunmar.ru/dev-markup/hotels-block-irkutsk.html',
+        '/site/sunmar.ru/markup/irkutsk/pay-attention.pug',
+        '/site/sunmar.ru/markup/irkutsk/xlinks.pug',
+        '/site/sunmar.ru/markup/mixins/reviews-and-thanks.pug',
+        '/site/sunmar.ru/markup/mixins/main-scripts.pug'
+    ]
+}

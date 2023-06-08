@@ -17,7 +17,7 @@ cities:
       latlng: [56.85, 60.61]
     - name: Иркутск
       eeID: 2498
-      _pathname: /irkutsk/
+      pathname: /ikt/
       latlng: [52.3, 104.3]
     - name: Казань
       eeID: 2529
@@ -25,14 +25,14 @@ cities:
       latlng: [55.79, 49.12]
     - name: Калининград
       eeID: 2512
-      _pathname: /kaliningrad/
+      pathname: /kaliningrad/
       latlng: [54.71, 20.51]
     - name: Кемерово
       eeID: 2531
       latlng: [55.33, 86.08]
     - name: Красноярск
       eeID: 2586
-      _pathname: /krasnoyarsk/
+      pathname: /kja/
       latlng: [56.02, 92.87]
     - name: Махачкала
       eeID: 8995
@@ -44,7 +44,7 @@ cities:
     - name: Н.Новгород
       correctName: Нижний Новгород
       eeID: 2679
-      _pathname: /goj/
+      pathname: /goj/
       latlng: [56.33, 44]
     - name: Нижневартовск
       eeID: 2707
@@ -81,7 +81,7 @@ cities:
       latlng: [51.54, 46.01]
     - name: Сочи
       eeID: 2873
-      _pathname: /sochi/
+      pathname: /aer/
       latlng: [43.6, 39.73]
     - name: Сургут
       eeID: 2897

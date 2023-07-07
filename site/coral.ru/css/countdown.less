@@ -13,7 +13,14 @@ section.countdown {
                     grid-gap: 20px;
                     font-size: 16px;
                     text-decoration: none;
+                    @media screen and (max-width: 1439px) {
+                        font-size: 13px;
+                    }
+                    @media screen and (max-width: 1006px) {
+                        font-size: 1.3vw;
+                    }
                     @media screen and (max-width: @mobile-breakpoint) {
+                        font-size: 3vw;
                         grid-template-columns: none;
                         grid-template-rows: 1fr 1fr 2fr;
                         padding: 1.5em 2.5em;

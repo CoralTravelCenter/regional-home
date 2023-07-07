@@ -1,0 +1,41 @@
+body
+    link(rel='stylesheet', href='/site/sunmar.ru/css/countdown.less')
+    section.hero.countdown
+        article
+            .contenu
+                .lets-count-down
+                    a.inhalt(href='https://www.sunmar.ru/action-den-semyi/', target='_blank')
+                        .info
+                            h3 Акция <br>«Семья &mdash; это когда вокруг все свои»
+                            p Только 5 дней. <br>Успейте забронировать тур выгодно!
+                        .countdown-widget
+                            div(data-units='days')
+                                .couple
+                                    .flipper-stack
+                                        .flipper(data-digit='X')
+                                    .flipper-stack
+                                        .flipper(data-digit='X')
+                                .label &dcy;
+                            div(data-units='hours')
+                                .couple
+                                    .flipper-stack
+                                        .flipper(data-digit='X')
+                                    .flipper-stack
+                                        .flipper(data-digit='X')
+                                .label &chcy;
+                            .always-visible(data-units='minutes')
+                                .couple
+                                    .flipper-stack
+                                        .flipper(data-digit='X')
+                                    .flipper-stack
+                                        .flipper(data-digit='X')
+                                .label &mcy;
+                            .always-visible(data-units='seconds')
+                                .couple
+                                    .flipper-stack
+                                        .flipper(data-digit='X')
+                                    .flipper-stack
+                                        .flipper(data-digit='X')
+                                .label &scy;
+
+        script(type='module', src='/site/sunmar.ru/js/countdown.coffee')

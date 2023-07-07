@@ -3,6 +3,7 @@
         '/site/sunmar.ru/markup/mixins/main-styles.pug',
         '/site/sunmar.ru/markup/kazan/intro.pug',
         '/site/sunmar.ru/markup/region-redirect.pug',
+        '/site/sunmar.ru/markup/countdown.pug',
         '/site/sunmar.ru/markup/kazan/hot.pug',
         '/site/sunmar.ru/markup/kazan/available-destinations.pug',
         '/site/sunmar.ru/markup/mixins/why-us.pug',

@@ -30,8 +30,12 @@ $parseResponseMarkup = (markup) ->
         tourists = ['','на одного', 'на двоих', 'на троих'][tourists_qty]
         n_stars = $stars.children().length
         stars = new Array(n_stars) if n_stars
+        displayed_name = $a.find('h3').html()?.replace(/\s*\(.+/,'')
+        if n_stars
+            unless displayed_name.indexOf(stars) > 0
+                displayed_name += " #{ n_stars }*"
         hotel_info =
-            name: $a.find('h3').html()?.replace(/\s*\(.+/,'')
+            name: displayed_name
             location: $a.find('h3 + p').text().split(/,\s*/).pop().replace(/\s*\(.*/,'')
             category: $stars.children().length or $stars.text()
             stars: stars

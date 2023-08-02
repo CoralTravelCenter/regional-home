@@ -1161,22 +1161,22 @@
                             ]
                         },
                     ],
-                    destinations: [
-                        {
-                            button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
-                            visual: {
-                                desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
-                                mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
-                            }
-                        },
-                        {
-                            button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
-                            visual: {
-                                desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
-                                mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
-                            }
-                        },
-                    ]
+//                    destinations: [
+//                        {
+//                            button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
+//                            visual: {
+//                                desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+//                                mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+//                            }
+//                        },
+//                        {
+//                            button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
+//                            visual: {
+//                                desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
+//                                mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
+//                            }
+//                        },
+//                    ]
                 },
                 sochi: {
                     h2: 'Из Сочи без пересадок',
@@ -2601,6 +2601,29 @@
                     dictionary: {
                         wording_fromCityName: 'из Самары'
                     },
+                    destinations: [
+                        {
+                            button: {label: 'Анталийское побережье', data_lookup_destination: 'Турция', data_lookup_depth_days: 14, data_lookup_regions: '[4, 3, 6, 8, 9, 67, 69, 70, 72, 10646, 2131, 79, 84, 87, 90, 91, 1948, 98, 100, 102, 1949, 1950, 1952, 1951, 10645, 107, 111, 106, 113, 114, 109, 10644, 128, 120, 121, 122, 123, 119, 124, 125, 10647, 127]'},
+                            visual: {
+                                desktop: '/site/sunmar.ru/assets/intro-turkey-desktop.jpg',
+                                mobile: '/site/sunmar.ru/assets/intro-turkey-mobile.jpg'
+                            }
+                        },
+                        {
+                            button: {label: 'ОАЭ', data_lookup_destination: 'ОАЭ', data_lookup_depth_days: 12},
+                            visual: {
+                                desktop: '/site/sunmar.ru/assets/intro-uae-desktop.jpg',
+                                mobile: '/site/sunmar.ru/assets/intro-uae-mobile.jpg'
+                            }
+                        },
+                        {
+                            button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
+                            visual: {
+                                desktop: '/site/sunmar.ru/assets/intro-russia-desktop.jpg',
+                                mobile: '/site/sunmar.ru/assets/intro-russia-mobile.jpg'
+                            }
+                        },
+                    ],
                     xlinks: [
                         {
                             heading: 'Турция',

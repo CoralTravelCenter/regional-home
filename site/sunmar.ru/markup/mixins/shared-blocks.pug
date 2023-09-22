@@ -137,12 +137,40 @@ mixin pay-attention(city, commons)
                     - var banners = city.payAttention || commons.payAttention
                     for banner in banners
                         .banner-cell
-                            .visual(style={ 'background-image': `url(${ banner.visual })` })
-                            .info
-                                .line!= banner.line
-                                .subline!= banner.subline
-                                a.arrlink(href=banner.href, target='_blank')= banner.linkText
+                            if banner.tolltip && banner.tolltip === true
+                                .visual(style={ 'background-image': `url(${ banner.visual })` }) 
+                                    #tooltip
+                                        .tooltip-btn
+                                            .tooltip-btn__text
+                                                |
+                                                svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 11 11' fill='none')
+                                                    path(d='M5.70261 1.14795C3.33542 1.14795 1.41602 3.06735 1.41602 5.43455C1.41602 7.80174 3.33542 9.72114 5.70261 9.72114C8.06981 9.72114 9.98921 7.80174 9.98921 5.43455C9.98921 3.06735 8.06981 1.14795 5.70261 1.14795ZM5.70261 8.99395C3.73728 8.99395 2.14321 7.39987 2.14321 5.43455C2.14321 3.46922 3.73728 1.87514 5.70261 1.87514C7.66794 1.87514 9.26202 3.46922 9.26202 5.43455C9.26202 7.39987 7.66794 8.99395 5.70261 8.99395Z')
+                                                    path(d='M5.24333 3.75053C5.24333 3.87233 5.29172 3.98915 5.37785 4.07528C5.46398 4.16142 5.5808 4.2098 5.70261 4.2098C5.82442 4.2098 5.94124 4.16142 6.02737 4.07528C6.1135 3.98915 6.16189 3.87233 6.16189 3.75053C6.16189 3.62872 6.1135 3.5119 6.02737 3.42577C5.94124 3.33964 5.82442 3.29125 5.70261 3.29125C5.5808 3.29125 5.46398 3.33964 5.37785 3.42577C5.29172 3.5119 5.24333 3.62872 5.24333 3.75053ZM5.93225 4.82217H5.47297C5.43087 4.82217 5.39643 4.85662 5.39643 4.89872V7.5013C5.39643 7.5434 5.43087 7.57784 5.47297 7.57784H5.93225C5.97435 7.57784 6.0088 7.5434 6.0088 7.5013V4.89872C6.0088 4.85662 5.97435 4.82217 5.93225 4.82217Z')
+                                                span Реклама
+                                            .tooltip-body
+                                                .tooltip-body__wrapper
+                                                    span#advertiser= banner.advertiser
+                                                        span#erid
+                                                            span.erid-desctop= banner.erid
+                                                    button.copy(data-copy)
+                                                        svg.copy__icon(viewbox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                            g(clip-path='url(#a)')
+                                                                path(d='M8.541 1.538H3.413a.077.077 0 0 0-.077.077v.535c0 .043.035.077.077.077h4.745V8.81c0 .042.035.077.077.077h.536a.077.077 0 0 0 .076-.077V1.844a.306.306 0 0 0-.306-.306ZM7.316 2.763H2.418a.306.306 0 0 0-.307.306v5.078c0 .081.033.159.09.216l1.658 1.658a.317.317 0 0 0 .071.053v.018h.04a.3.3 0 0 0 .106.02h3.24c.17 0 .307-.138.307-.307V3.07a.306.306 0 0 0-.307-.306ZM3.93 9.118l-.824-.825h.824v.825Zm3.005.304H4.542V8.064a.383.383 0 0 0-.383-.383H2.8V3.45h4.134v5.971Z')
+                                                            defs
+                                                                clippath#a
+                                                                    path(fill='#fff' d='M.581.926h9.798v9.798H.581z')
+                                .info
+                                    .line!= banner.line
+                                    .subline!= banner.subline
+                                    a.arrlink(href=banner.href, target='_blank')= banner.linkText
+                            else 
+                                .visual(style={ 'background-image': `url(${ banner.visual })` })
+                                .info
+                                    .line!= banner.line
+                                    .subline!= banner.subline
+                                    a.arrlink(href=banner.href, target='_blank')= banner.linkText
     script(type='module', src='/site/sunmar.ru/js/pay-attention.coffee')
+   
 
 mixin xlinks-drawer(xlinks)
     - if (Array.isArray(xlinks.links))

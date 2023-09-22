@@ -984,7 +984,6 @@ section.pay-attention {
 					.flex-column();
 					align-items: center;
 					text-align: center;
-					border-radius: .3em;
 					@media screen and (max-width: @mobile-breakpoint) {
 						width: 100%;
 						font-size: 1.3em;
@@ -999,6 +998,10 @@ section.pay-attention {
 						.proportional(896/600);
 						width: 100%;
 						background: center / cover no-repeat;
+						border-top-left-radius: 8px;
+    				border-top-right-radius: 8px;
+						display: flex;
+						justify-content: flex-end;
 					}
 
 					.info {
@@ -1008,6 +1011,8 @@ section.pay-attention {
 						text-align: center;
 						background: white;
 						padding: 1em 1.5em;
+						border-bottom-left-radius: 8px;
+    				border-bottom-right-radius: 8px;
 
 						.line {
 							font-size: (28/20em);
@@ -1287,3 +1292,132 @@ body .widgetcontainer.hero.new-submenu__wrapper {
 	}
 }
 
+#tooltip {
+	height: 1.5em;
+	max-height: 24px;
+	min-height: 24px;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	z-index: 2;
+	align-items: center;
+	gap: 8px;
+	margin: 10px 10px 10px auto;
+	display: flex;
+	position: relative;
+}
+
+#tooltip .tooltip-btn {
+	height: 100%;
+	z-index: 2;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	color: #fff;
+	background-color: rgba(85, 85, 85, 0.6);
+	border-radius: 8px;
+	padding-left: 0.8em;
+	padding-right: 0.8em;
+	font-size: min(0.8em, 10px);
+	transition: background-color 0.3s, color 0.3s;
+	position: relative;
+}
+
+#tooltip .tooltip-btn .tooltip-btn__text {
+	height: 100%;
+	align-items: center;
+	gap: 4px;
+	display: flex;
+}
+
+#tooltip .tooltip-btn .tooltip-btn__text svg {
+	width: 12px;
+	height: 12px;
+	fill: #fff;
+	transition: fill 0.3s;
+}
+
+#tooltip .tooltip-body {
+	transform-origin: 0;
+	height: 100%;
+	opacity: 0;
+	pointer-events: none;
+	width: -webkit-max-content;
+	width: -webkit-max-content;
+	width: max-content;
+	padding-right: 15px;
+	transition: transform 0.3s 0.1s, opacity 0.3s 0.1s;
+	position: absolute;
+	top: 0;
+	right: 90%;
+	transform: matrix(0.98, 0, 0, 1, 10, 0);
+}
+
+#tooltip .tooltip-body__wrapper {
+	color: #000;
+	height: 100%;
+	background-color: #fff;
+	border-radius: 8px;
+	align-items: center;
+	gap: 4px;
+	padding-left: 0.8em;
+	padding-right: 0.8em;
+	font-size: min(0.8em, 10px);
+	display: flex;
+	position: relative;
+}
+
+#tooltip .tooltip-body__wrapper:after {
+	content: "";
+	width: 8px;
+	height: 8px;
+	background-color: #fff;
+	position: absolute;
+	top: 50%;
+	right: -2px;
+	transform: translateY(-50%) rotate(135deg);
+}
+
+#tooltip .tooltip-body button.copy {
+	cursor: pointer;
+	width: 12px;
+	height: 12px;
+	background-color: transparent;
+	border: none;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+#tooltip .tooltip-body button.copy .copy__icon {
+	width: 12px;
+	height: 12px;
+	fill: #000;
+	transition: fill 0.1s;
+}
+
+#tooltip .tooltip-body button.copy.success .copy__icon {
+	fill: #8acb00;
+}
+
+#tooltip .tooltip-btn:hover {
+	cursor: pointer;
+	color: #000;
+	background-color: #fff;
+}
+
+#tooltip .tooltip-btn:hover .tooltip-btn__text svg {
+	fill: #000;
+}
+
+#tooltip .tooltip-btn:hover .tooltip-body {
+	opacity: 1;
+	pointer-events: all;
+	transform: matrix(1, 0, 0, 1, 0, 0);
+}

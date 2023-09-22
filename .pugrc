@@ -1363,30 +1363,33 @@
                     {
                         description: 'Туры в рассрочку и кредит',
                         visual: '/site/sunmar.ru/assets/hot-promos/installment-and-credit.jpg',
-                        href: 'https://www.sunmar.ru/directclient-rassrochka/'
+                        href: 'https://www.sunmar.ru/directclient-rassrochka-2/'
                     },
                 ],
                 payAttention: [
                     {
-                        visual: '/site/sunmar.ru/assets/pay-attention/whatsapp.jpg',
+                        visual: '/site/sunmar.ru/assets/pay-attention/whatsapp-2.jpg',
                         line: 'Можем забронировать тур через WhatsApp',
                         subline: 'Персональный менеджер-консультант может подобрать тур через приложение WhatsApp.',
                         linkText: 'Подобрать тур',
                         href: 'https://wa.me/74957301150'
                     },
                     {
-                        visual: '/site/sunmar.ru/assets/pay-attention/mobile-app.jpg',
+                        visual: '/site/sunmar.ru/assets/pay-attention/mobile-app-2.jpg',
                         line: 'Мобильное приложение Sunmar',
                         subline: 'Твой помощник по&nbsp;туру. Содержит всю информацию о&nbsp;туре и&nbsp;сообщает о&nbsp;каких-либо изменениях.',
                         linkText: 'Подробнее',
                         href: 'https://www.sunmar.ru/mobile-app/'
                     },
                     {
-                        visual: '/site/sunmar.ru/assets/pay-attention/gift-cards.jpg',
+                        visual: '/site/sunmar.ru/assets/pay-attention/gift-cards-2.jpg',
                         line: 'Подарочные карты и&nbsp;сертификаты',
                         subline: 'Дарите близким подарочные карты и&nbsp;электронные сертификаты на&nbsp;путешествия!',
                         linkText: 'Подробнее',
-                        href: 'https://www.sunmar.ru/podarochnye-karty/'
+                        href: 'https://www.sunmar.ru/podarochnye-karty/',
+												tolltip: true,
+												advertiser: 'ООО «Санмар Тур Центр» erid: ',
+												erid: 'LjN8JwbhW'
                     },
                 ]
             },

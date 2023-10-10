@@ -10,6 +10,7 @@ cities:
       latlng: [43.11, 131.87]
     - name: Волгоград
       eeID: 2989
+      pathname: /volgograd/
       latlng: [48.72, 44.5]
     - name: Екатеринбург
       eeID: 2449
@@ -39,6 +40,7 @@ cities:
       latlng: [56.02, 92.87]
     - name: Махачкала
       eeID: 8995
+      pathname: /mahachkala/
       latlng: [42.98, 47.5]
     - name: Минеральные воды
       eeID: 2662

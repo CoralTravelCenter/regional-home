@@ -1,0 +1,16 @@
+{
+    contents: [
+        '/site/sunmar.ru/markup/mixins/main-styles.pug',
+        '/site/sunmar.ru/markup/volgograd/intro.pug',
+        '/site/sunmar.ru/markup/region-redirect.pug',
+        '/site/sunmar.ru/markup/volgograd/hot.pug',
+        '/site/sunmar.ru/markup/volgograd/available-destinations.pug',
+        '/site/sunmar.ru/markup/mixins/why-us.pug',
+        '/site/sunmar.ru/markup/volgograd/recommended-tours.pug',
+        '/site/sunmar.ru/dev-markup/hotels-block-volgograd.html',
+        '/site/sunmar.ru/markup/volgograd/pay-attention.pug',
+        '/site/sunmar.ru/markup/volgograd/xlinks.pug',
+        '/site/sunmar.ru/markup/mixins/reviews-and-thanks.pug',
+        '/site/sunmar.ru/markup/mixins/main-scripts.pug'
+    ]
+}

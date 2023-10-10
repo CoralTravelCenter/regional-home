@@ -40,7 +40,7 @@ mixin hot(city, commons)
         article
             .contenu
                 .burning-hot-offers
-                    h3: span: span Горящие предложения
+                    //h3: span: span Горящие предложения
                     .burning-offers
                         .tabs-container
                             .scroll-left &laquo;
@@ -49,7 +49,7 @@ mixin hot(city, commons)
                                 // ...
                         .destinations-container
                             // ...
-                    h3: span: span Горячие Акции
+                    //h3: span: span Горячие Акции
                     .hot-promos
                         - var hot_promos = city.hotPromos || commons.hotPromos
                         .hot-slider(class={ 'single-slide': hot_promos.length === 1 })

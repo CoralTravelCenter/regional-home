@@ -1,0 +1,1415 @@
+<body>
+<style>
+    @font-face {
+        font-family: 'BlissPro';
+        src: url('https://font.static.useinsider.com/sunmar/BlissPro.ttf');
+        font-weight: normal;
+    }
+
+    @font-face {
+        font-family: 'BlissPro';
+        src: url('https://font.static.useinsider.com/sunmar/BlissPro-Bold.ttf');
+        font-weight: bold;
+    }
+
+    @font-face {
+        font-family: 'BlissPro';
+        src: url('https://font.static.useinsider.com/sunmar/BlissPro-Heavy.ttf');
+        font-weight: 900;
+    }
+
+    @font-face {
+        font-family: 'BlissPro-Italic';
+        src: url('https://font.static.useinsider.com/sunmar/BlissPro-Italic.ttf');
+    }
+
+    @font-face {
+        font-family: 'BlissPro';
+        src: url('https://font.static.useinsider.com/sunmar/BlissPro-Light.ttf');
+        font-weight: 300;
+    }
+
+    @font-face {
+        font-family: 'BlissPro';
+        src: url('https://font.static.useinsider.com/sunmar/BlissPro-Medium.ttf');
+        font-weight: 500;
+    }
+
+    :root {
+        --sunmar-red: #D8242A;
+        --sunmar-blue: #0E2855;
+        --sunmar-navy: #0E2855;
+        --sunmar-ramp: linear-gradient(225deg, #E7317D 0%, #D8242A 100%);
+        --sunmar-ramp-accent: linear-gradient(225deg, #e7317d 0%, #d8242a 100%);
+        --sunmar-page-bg: #FAFAFA;
+        --sunmar-grey: #656565;
+        --sunmar-gray: #656565;
+        --sunmar-font: 'BlissPro', sans-serif;
+        --sunmar-ramp-hover: linear-gradient(225deg,#c70053 0%,#b50b2d 100%);
+    }
+    body .contentLayout-BaseContainer .notcritical {
+        padding: 0;
+    }
+    body .contentLayout-BaseContainer .notcritical > .container {
+        margin: 0 auto !important;
+        padding: 0 !important;
+    }
+    body .contentLayout-BaseContainer .notcritical > .container > .row:nth-child(1):nth-last-child(3),
+    body .contentLayout-BaseContainer .notcritical > .container > .row:nth-child(3):nth-last-child(1),
+    body .contentLayout-BaseContainer .notcritical > .container .rightcol > h1 {
+        display: none;
+    }
+    .rur:not(:empty):after {
+        content: " ₽ ";
+    }
+    .flex-center {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    @media screen and (max-width: 768px) {
+        .hidden-on-mobile {
+            display: none !important;
+        }
+    }
+    @media screen and (min-width: 769px) {
+        .hidden-on-desktop {
+            display: none !important;
+        }
+    }
+    body.underbrow .contentLayout-BaseContainer {
+        position: relative;
+    }
+    body.underbrow .contentLayout-BaseContainer .subpage-search-bg {
+        position: absolute;
+    }
+    @media screen and (max-width: 1006px) {
+        body.underbrow .contentLayout-BaseContainer .subpage-search-bg {
+            position: relative;
+        }
+    }
+    body.underbrow .contentLayout-BaseContainer .subpage-search-bg > .bcrumb,
+    body.underbrow .contentLayout-BaseContainer .subpage-search-bg > .background {
+        display: none !important;
+    }
+    .widgetcontainer.hero {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0;
+        display: flex;
+    }
+    body:not(.underbrow) section.hero:first-of-type {
+        margin-top: 2.5em;
+    }
+    section,
+    section * {
+        box-sizing: border-box;
+    }
+    section.hero {
+        width: 100vw;
+        max-width: 1920px;
+        position: relative;
+        overflow: hidden;
+    }
+    section.hero > article {
+        max-width: 1370px;
+        margin: auto;
+        font-size: 20px;
+    }
+    @media screen and (max-width: 1439px) {
+        section.hero > article {
+            font-size: 16.6644px;
+        }
+    }
+    @media screen and (max-width: 1199px) {
+        section.hero > article {
+            font-size: 1.38985vw;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        section.hero > article {
+            font-size: 3.33333vw;
+        }
+    }
+    @media screen and (max-width: 1439px) {
+        section.hero > article {
+            max-width: 1130px;
+        }
+    }
+    @media screen and (max-width: 1199px) {
+        section.hero > article {
+            max-width: 100%;
+        }
+    }
+    section.hero > article > .contenu {
+        flex-direction: column;
+        padding: 0 15px;
+        display: flex;
+    }
+    section.hero > article > .contenu > * {
+        max-width: 100%;
+    }
+    @media screen and (max-width: 1439px) {
+        section.hero > article > .contenu {
+            padding: 0;
+        }
+    }
+    @media screen and (max-width: 1199px) {
+        section.hero > article > .contenu {
+            padding: 0 1.5em;
+        }
+    }
+    section.hero > article h1,
+    section.hero > article h2,
+    section.hero > article h3,
+    section.hero > article h4,
+    section.hero > article h5,
+    section.hero > article .h1,
+    section.hero > article .h2,
+    section.hero > article .h3,
+    section.hero > article .h4,
+    section.hero > article .h5 {
+        color: inherit;
+        margin: 0;
+        line-height: 1.1;
+    }
+    section.hero > article h1,
+    section.hero > article .h1 {
+        font-size: 2.8em;
+    }
+    section.hero > article h2,
+    section.hero > article .h2 {
+        font-size: 2em;
+    }
+    section.hero > article h3,
+    section.hero > article .h3 {
+        font-size: 1.6em;
+    }
+    section.hero > article h4,
+    section.hero > article .h4 {
+        font-size: 1.2em;
+    }
+    section.hero > article h5,
+    section.hero > article .h5 {
+        font-size: 1em;
+    }
+    section.hero > article p {
+        margin: 0;
+    }
+    section.hero > article ul {
+        padding: initial;
+    }
+    section.hero > article ul li:before,
+    section.hero > article ul li:after {
+        position: initial;
+        content: initial;
+        display: initial;
+    }
+    section.hero .vimeo-video-box {
+        pointer-events: none;
+    }
+    section.hero .vimeo-video-box .vimeo-player,
+    section.hero .vimeo-video-box [data-vimeo-vid] {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 1s;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    section.hero .vimeo-video-box .vimeo-player.playback,
+    section.hero .vimeo-video-box [data-vimeo-vid].playback {
+        opacity: 1;
+    }
+    section.hero .vimeo-video-box .vimeo-player iframe,
+    section.hero .vimeo-video-box [data-vimeo-vid] iframe {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    @media screen and (max-width: 1199px) {
+        section.underbrow {
+            margin-top: -2px;
+        }
+    }
+    @media screen and (max-width: 1006px) {
+        section.underbrow {
+            margin-top: 0;
+        }
+    }
+    section.underbrow > article > .contenu {
+        justify-content: center;
+        padding-bottom: 2vw;
+        padding-top: 120px !important;
+    }
+    section.underbrow > article > .contenu > :nth-child(n + 2) {
+        margin-top: 2vw;
+    }
+    @media screen and (max-width: 1006px) {
+        section.underbrow > article > .contenu {
+            padding-top: unset;
+        }
+    }
+    section:not(.underbrow) > article > .contenu {
+        align-items: center;
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+    section:not(.underbrow) > article > .contenu > h1,
+    section:not(.underbrow) > article > .contenu > .h1,
+    section:not(.underbrow) > article > .contenu > h2,
+    section:not(.underbrow) > article > .contenu > .h2,
+    section:not(.underbrow) > article > .contenu > h3,
+    section:not(.underbrow) > article > .contenu > .h3,
+    section:not(.underbrow) > article > .contenu > h4,
+    section:not(.underbrow) > article > .contenu > .h4,
+    section:not(.underbrow) > article > .contenu > h5,
+    section:not(.underbrow) > article > .contenu > .h5,
+    section:not(.underbrow) > article > .contenu > p {
+        text-align: center;
+        max-width: 75%;
+    }
+    section:not(.underbrow) > article > .contenu > :nth-child(n + 2) {
+        margin-top: 2.5%;
+    }
+    section.hero > article {
+        font-family: var(--sunmar-font);
+        font-weight: 300;
+    }
+    section.hero > article h1,
+    section.hero > article h2,
+    section.hero > article h3,
+    section.hero > article h4,
+    section.hero > article h5,
+    section.hero > article strong,
+    section.hero > article b {
+        font-weight: 700;
+    }
+    section.hero > article a {
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+        text-decoration: underline;
+    }
+    section.hero > article .actions > button,
+    section.hero > article .actions > a {
+        font-family: inherit;
+        line-height: inherit;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        height: 2.4em;
+        cursor: pointer;
+        background: var(--sunmar-ramp-accent) !important;
+        border: 0;
+        border-radius: 100px;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1.5em;
+        transition: background 0.5s;
+        display: inline-flex;
+        font-size: inherit !important;
+        color: #fff !important;
+        outline: none !important;
+    }
+    section.hero > article .actions > button:active,
+    section.hero > article .actions > a:active {
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px);
+    }
+    section.hero > article .actions > button:hover,
+    section.hero > article .actions > a:hover {
+        background: linear-gradient(225deg, #c70053 0%, #b50b2d 100%) !important;
+    }
+    section.hero > article .actions > button.with-down-arrow:after,
+    section.hero > article .actions > a.with-down-arrow:after {
+        content: "";
+        width: 0.75em;
+        height: 0.75em;
+        background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTEiIHZpZXdCb3g9IjAgMCAxOCAxMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE3IDFMOC41NjM2NCA5TDEgMSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+Cg==)
+        50% / contain no-repeat;
+        margin-left: 1em;
+    }
+    .code2me-hotels-set {
+        max-width: 1370px;
+        flex-direction: column;
+        margin: auto;
+        padding: 0 15px;
+        font-family: var(--sunmar-font);
+        font-size: 20px;
+        display: flex;
+    }
+    .code2me-hotels-set,
+    .code2me-hotels-set * {
+        box-sizing: border-box;
+    }
+    @media screen and (max-width: 1439px) {
+        .code2me-hotels-set {
+            font-size: 16.6644px;
+        }
+    }
+    @media screen and (max-width: 1199px) {
+        .code2me-hotels-set {
+            font-size: 1.38985vw;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .code2me-hotels-set {
+            font-size: 3.33333vw;
+        }
+    }
+    .code2me-hotels-set > * {
+        max-width: 100%;
+    }
+    @media screen and (max-width: 1439px) {
+        .code2me-hotels-set {
+            padding: 0;
+        }
+    }
+    @media screen and (max-width: 1199px) {
+        .code2me-hotels-set {
+            padding: 0 1.5em;
+        }
+    }
+    .code2me-hotels-set .filters-wrap {
+        background-color: #fff;
+        border-radius: 1em;
+        align-items: flex-start;
+        padding: 0.5em;
+        font-size: 14px;
+        border-radius: 8px;
+        display: flex;
+        font-family: var(--sunmar-font);
+        width: 100%;
+        box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.06);
+    }
+    @media screen and (max-width: 768px) {
+        .code2me-hotels-set .filters-wrap {
+            flex-direction: column;
+        }
+    }
+    .code2me-hotels-set .filters-wrap > * {
+        flex-wrap: wrap;
+        flex: auto;
+        display: flex;
+    }
+    .code2me-hotels-set .filters-wrap > :nth-child(n + 2) {
+        margin-left: 1em;
+    }
+    @media screen and (max-width: 768px) {
+        .code2me-hotels-set .filters-wrap > :nth-child(n + 2) {
+            margin-top: 1em;
+            margin-left: 0;
+        }
+    }
+    .code2me-hotels-set .filters-wrap > * > * {
+        cursor: pointer;
+        flex: 0 auto;
+        margin: 0.5em;
+        font-family: inherit;
+        /* transition: color 0.5s, background 0.5s; */
+        font-size: inherit !important;
+    }
+    .code2me-hotels-set .filters-wrap > * > :not(.heading) {
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        height: 2.3em;
+        border: 0;
+        border-radius: 0.5em;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1em;
+        line-height: 1;
+        display: inline-flex;
+        outline: none !important;
+        border: 1px solid #BEBEBE;
+        background-color: #ffffff;
+        border-radius: 100px;
+        color: var(--sunmar-blue);
+    }
+    .code2me-hotels-set .filters-wrap > * > :not(.heading):active {
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px);
+    }
+    .code2me-hotels-set .filters-wrap > * > [data-group="\*"] {
+        flex-grow: 1;
+    }
+    .code2me-hotels-set .filters-wrap > * > .selected {
+        pointer-events: none;
+        color: #fff;
+        background: var(--sunmar-ramp) !important;
+        border: none;
+    }
+    .code2me-hotels-set .filters-wrap > * .heading {
+        width: 100%;
+        text-transform: uppercase;
+        align-items: center;
+        font-weight: 700;
+        line-height: 1;
+        display: flex;
+        color: var(--sunmar-navy);
+    }
+    .code2me-hotels-set .filters-wrap > * .heading.region:before {
+        content: "";
+        height: 1.5em;
+        width: 1.17857em;
+        background: url("data:image/svg+xml,%3Csvg width='23' height='28' viewBox='0 0 23 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.1486 27.3C7.23038 23.7891 0.574694 15.2797 0.574694 10.5C0.574694 4.70094 5.46691 0 11.4969 0C17.5291 0 22.419 4.70094 22.419 10.5C22.419 15.2797 15.8145 23.7891 12.8451 27.3C12.1454 28.1367 10.8483 28.1367 10.1486 27.3ZM11.4984 25.7943C12.9594 24.0529 15.1828 21.2359 17.0604 18.2986C18.0392 16.7675 18.8988 15.2425 19.5077 13.8476C20.1316 12.4182 20.419 11.2885 20.419 10.5C20.419 5.87908 16.4995 2 11.4969 2C6.49617 2 2.57469 5.87934 2.57469 10.5C2.57469 11.2856 2.86347 12.4135 3.49146 13.8436C4.10411 15.2387 4.9684 16.764 5.95091 18.2962C7.83136 21.2287 10.0509 24.0418 11.4984 25.7943ZM5.85613 10.5C5.85613 13.6086 8.45923 16 11.4969 16C14.5345 16 17.1376 13.6086 17.1376 10.5C17.1376 7.39139 14.5345 5 11.4969 5C8.45923 5 5.85613 7.39139 5.85613 10.5ZM7.85613 10.5C7.85613 12.4305 9.48877 14 11.4969 14C13.5049 14 15.1376 12.4305 15.1376 10.5C15.1376 8.56953 13.5049 7 11.4969 7C9.48877 7 7.85613 8.56953 7.85613 10.5Z' fill='%230E2855'/%3E%3C/svg%3E")
+        50% / contain no-repeat;
+        margin-right: 0.7em;
+    }
+    .code2me-hotels-set .filters-wrap > * .heading.month:before {
+        content: "";
+        height: 1.5em;
+        width: 1.39286em;
+        background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjciIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyNyAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMjMuODEzNSAyNy44MTY3SDMuOTc0MTJDMi4yNzU3NiAyNy44MTY3IDAuODkzNzk5IDI2LjQzNDggMC44OTM3OTkgMjQuNzM2NFY0Ljg5NzA2QzAuODkzNzk5IDMuMTk2NjYgMi4yNzU3NiAxLjgxNDcgMy45NzQxMiAxLjgxNDdIMjMuODEzNUMyNS41MTE4IDEuODE0NyAyNi44OTM4IDMuMTk2NjYgMjYuODkzOCA0Ljg5NTAxVjI0LjczNjRDMjYuODkzOCAyNi40MzQ4IDI1LjUxMTggMjcuODE2NyAyMy44MTM1IDI3LjgxNjdaTTIuMzIyNzEgMjMuMDg1VjI0LjczNjRDMi4zMjI3MSAyNS42NDY4IDMuMDYzNyAyNi4zODc4IDMuOTc0MTIgMjYuMzg3OEgyMy44MTM1QzI0LjcyMzkgMjYuMzg3OCAyNS40NjQ5IDI1LjY0NjggMjUuNDY0OSAyNC43MzY0VjQuODk3MDZDMjUuNDY0OSAzLjk4NjY0IDI0LjcyMzkgMy4yNDU2NSAyMy44MTM1IDMuMjQ1NjVIMy45NzQxMkMzLjA2MzcgMy4yNDU2NSAyLjMyMjcxIDMuOTg2NjQgMi4zMjI3MSA0Ljg5NzA2VjIzLjA4NVoiIGZpbGw9ImJsYWNrIi8+PHBhdGggZD0iTTI2LjE4MTMgNi44NDg1NEgxLjYwODE1VjguMjc3NDVIMjYuMTgxM1Y2Ljg0ODU0WiIgZmlsbD0iYmxhY2siLz48cGF0aCBkPSJNNi43NTAzNCA1LjA2MDM4QzYuMzU2MzcgNS4wNjAzOCA2LjAzNTg5IDQuNzM5ODkgNi4wMzU4OSA0LjM0NTkyVjAuNzE0NDU0QzYuMDM1ODkgMC4zMjA0ODQgNi4zNTYzNyAwIDYuNzUwMzQgMEM3LjE0NDMxIDAgNy40NjQ4IDAuMzIwNDg0IDcuNDY0OCAwLjcxNDQ1NFY0LjM0NTkyQzcuNDY0OCA0LjczOTg5IDcuMTQ0MzEgNS4wNjAzOCA2Ljc1MDM0IDUuMDYwMzhWNS4wNjAzOFoiIGZpbGw9ImJsYWNrIi8+PHBhdGggZD0iTTIxLjAzOTQgNS4wNjAzOEMyMC42NDU0IDUuMDYwMzggMjAuMzI1IDQuNzM5ODkgMjAuMzI1IDQuMzQ1OTJWMC43MTQ0NTRDMjAuMzI1IDAuMzIwNDg0IDIwLjY0NTQgMCAyMS4wMzk0IDBDMjEuNDMzNCAwIDIxLjc1MzkgMC4zMjA0ODQgMjEuNzUzOSAwLjcxNDQ1NFY0LjM0NTkyQzIxLjc1MzkgNC43Mzk4OSAyMS40MzM0IDUuMDYwMzggMjEuMDM5NCA1LjA2MDM4WiIgZmlsbD0iYmxhY2siLz48cGF0aCBkPSJNMjIuMTM1NCAxNi4zNzEySDE5Ljk0MUMxOS4xMzg4IDE2LjM3MTIgMTguNDg1NiAxNS43MTggMTguNDg1NiAxNC45MTU4VjEyLjcyMTRDMTguNDg1NiAxMS45MTkxIDE5LjEzODggMTEuMjY1OSAxOS45NDEgMTEuMjY1OUgyMi4xMzU0QzIyLjkzNzcgMTEuMjY1OSAyMy41OTA5IDExLjkxOTEgMjMuNTkwOSAxMi43MjE0VjE0LjkxNThDMjMuNTkwOSAxNS43MTggMjIuOTM3NyAxNi4zNzEyIDIyLjEzNTQgMTYuMzcxMlpNMTkuOTQxIDEyLjY5MjhDMTkuOTI2OCAxMi42OTI4IDE5LjkxNDUgMTIuNzA1IDE5LjkxNDUgMTIuNzE5M1YxNC45MTM3QzE5LjkxNDUgMTQuOTI4IDE5LjkyNjggMTQuOTQwMyAxOS45NDEgMTQuOTQwM0gyMi4xMzU0QzIyLjE0OTcgMTQuOTQwMyAyMi4xNjIgMTQuOTI4IDIyLjE2MiAxNC45MTM3VjEyLjcxOTNDMjIuMTYyIDEyLjcwNSAyMi4xNDk3IDEyLjY5MjggMjIuMTM1NCAxMi42OTI4SDE5Ljk0MVYxMi42OTI4WiIgZmlsbD0iYmxhY2siLz48cGF0aCBkPSJNMTQuOTkxIDE2LjM3MTJIMTIuNzk2NkMxMS45OTQ0IDE2LjM3MTIgMTEuMzQxMiAxNS43MTggMTEuMzQxMiAxNC45MTU4VjEyLjcyMTRDMTEuMzQxMiAxMS45MTkxIDExLjk5NDQgMTEuMjY1OSAxMi43OTY2IDExLjI2NTlIMTQuOTkxQzE1Ljc5MzMgMTEuMjY1OSAxNi40NDY1IDExLjkxOTEgMTYuNDQ2NSAxMi43MjE0VjE0LjkxNThDMTYuNDQ2NSAxNS43MTggMTUuNzkzMyAxNi4zNzEyIDE0Ljk5MSAxNi4zNzEyWk0xMi43OTY2IDEyLjY5MjhDMTIuNzgyMyAxMi42OTI4IDEyLjc3MDEgMTIuNzA1IDEyLjc3MDEgMTIuNzE5M1YxNC45MTM3QzEyLjc3MDEgMTQuOTI4IDEyLjc4MjMgMTQuOTQwMyAxMi43OTY2IDE0Ljk0MDNIMTQuOTkxQzE1LjAwNTMgMTQuOTQwMyAxNS4wMTc2IDE0LjkyOCAxNS4wMTc2IDE0LjkxMzdWMTIuNzE5M0MxNS4wMTc2IDEyLjcwNSAxNS4wMDUzIDEyLjY5MjggMTQuOTkxIDEyLjY5MjhIMTIuNzk2NlYxMi42OTI4WiIgZmlsbD0iYmxhY2siLz48cGF0aCBkPSJNNy44NDYzNyAyMy43MjZINS42NTE5OEM0Ljg0OTc1IDIzLjcyNiA0LjE5NjUzIDIzLjA3MjggNC4xOTY1MyAyMi4yNzA2VjIwLjA3NjJDNC4xOTY1MyAxOS4yNzM5IDQuODQ5NzUgMTguNjIwNyA1LjY1MTk4IDE4LjYyMDdINy44NDYzN0M4LjY0ODYgMTguNjIwNyA5LjMwMTgyIDE5LjI3MzkgOS4zMDE4MiAyMC4wNzYyVjIyLjI3MDZDOS4zMDE4MiAyMy4wNzI4IDguNjQ4NiAyMy43MjYgNy44NDYzNyAyMy43MjZaTTUuNjUxOTggMjAuMDQ3NkM1LjYzNzY5IDIwLjA0NzYgNS42MjU0NCAyMC4wNTk4IDUuNjI1NDQgMjAuMDc0MVYyMi4yNjg1QzUuNjI1NDQgMjIuMjgyOCA1LjYzNzY5IDIyLjI5NTEgNS42NTE5OCAyMi4yOTUxSDcuODQ2MzdDNy44NjA2NiAyMi4yOTUxIDcuODcyOTEgMjIuMjgyOCA3Ljg3MjkxIDIyLjI2ODVWMjAuMDc0MUM3Ljg3MjkxIDIwLjA1OTggNy44NjA2NiAyMC4wNDc2IDcuODQ2MzcgMjAuMDQ3Nkg1LjY1MTk4WiIgZmlsbD0iYmxhY2siLz48cGF0aCBkPSJNMjIuMTM1NCAyMy43MjZIMTkuOTQxQzE5LjEzODggMjMuNzI2IDE4LjQ4NTYgMjMuMDcyOCAxOC40ODU2IDIyLjI3MDZWMjAuMDc2MkMxOC40ODU2IDE5LjI3MzkgMTkuMTM4OCAxOC42MjA3IDE5Ljk0MSAxOC42MjA3SDIyLjEzNTRDMjIuOTM3NyAxOC42MjA3IDIzLjU5MDkgMTkuMjczOSAyMy41OTA5IDIwLjA3NjJWMjIuMjcwNkMyMy41OTA5IDIzLjA3MjggMjIuOTM3NyAyMy43MjYgMjIuMTM1NCAyMy43MjZaTTE5Ljk0MSAyMC4wNDc2QzE5LjkyNjggMjAuMDQ3NiAxOS45MTQ1IDIwLjA1OTggMTkuOTE0NSAyMC4wNzQxVjIyLjI2ODVDMTkuOTE0NSAyMi4yODI4IDE5LjkyNjggMjIuMjk1MSAxOS45NDEgMjIuMjk1MUgyMi4xMzU0QzIyLjE0OTcgMjIuMjk1MSAyMi4xNjIgMjIuMjgyOCAyMi4xNjIgMjIuMjY4NVYyMC4wNzQxQzIyLjE2MiAyMC4wNTk4IDIyLjE0OTcgMjAuMDQ3NiAyMi4xMzU0IDIwLjA0NzZIMTkuOTQxWiIgZmlsbD0iYmxhY2siLz48cGF0aCBkPSJNMTQuOTkxIDIzLjcyNkgxMi43OTY2QzExLjk5NDQgMjMuNzI2IDExLjM0MTIgMjMuMDcyOCAxMS4zNDEyIDIyLjI3MDZWMjAuMDc2MkMxMS4zNDEyIDE5LjI3MzkgMTEuOTk0NCAxOC42MjA3IDEyLjc5NjYgMTguNjIwN0gxNC45OTFDMTUuNzkzMyAxOC42MjA3IDE2LjQ0NjUgMTkuMjczOSAxNi40NDY1IDIwLjA3NjJWMjIuMjcwNkMxNi40NDY1IDIzLjA3MjggMTUuNzkzMyAyMy43MjYgMTQuOTkxIDIzLjcyNlpNMTIuNzk2NiAyMC4wNDc2QzEyLjc4MjMgMjAuMDQ3NiAxMi43NzAxIDIwLjA1OTggMTIuNzcwMSAyMC4wNzQxVjIyLjI2ODVDMTIuNzcwMSAyMi4yODI4IDEyLjc4MjMgMjIuMjk1MSAxMi43OTY2IDIyLjI5NTFIMTQuOTkxQzE1LjAwNTMgMjIuMjk1MSAxNS4wMTc2IDIyLjI4MjggMTUuMDE3NiAyMi4yNjg1VjIwLjA3NDFDMTUuMDE3NiAyMC4wNTk4IDE1LjAwNTMgMjAuMDQ3NiAxNC45OTEgMjAuMDQ3NkgxMi43OTY2WiIgZmlsbD0iYmxhY2siLz48cGF0aCBkPSJNNi41NDYxOCAxNS45NjNDNi4zNzQ3MSAxNS45NjMgNi4yMDczMiAxNS44OTk3IDYuMDc0NjQgMTUuNzg1NEw0LjQzOTU2IDE0LjM1NDRDNC4xNDM1NyAxNC4wOTUyIDQuMTEyOTUgMTMuNjQ0MSA0LjM3MjE5IDEzLjM0NkM0LjYzMTQ0IDEzLjA1IDUuMDgyNTcgMTMuMDE5NCA1LjM4MDYgMTMuMjc4N0w2LjQ0MDAzIDE0LjIwNzVMOC4yMjQxMiAxMS44NzgzQzguNDYyOTUgMTEuNTY2IDguOTEyMDQgMTEuNTA0OCA5LjIyNjQgMTEuNzQ1NkM5LjUzODcyIDExLjk4NDUgOS41OTk5NiAxMi40MzM2IDkuMzU5MDggMTIuNzQ3OUw3LjExMTYxIDE1LjY4MzNDNi45OTExOCAxNS44NDA1IDYuODExNTQgMTUuOTQwNSA2LjYxNTU4IDE1Ljk2MDlDNi41OTEwOCAxNS45NjMgNi41Njg2MyAxNS45NjUgNi41NDQxMyAxNS45NjVMNi41NDYxOCAxNS45NjNaIiBmaWxsPSJibGFjayIvPjwvc3ZnPgo=)
+        50% / contain no-repeat;
+        margin-right: 0.7em;
+    }
+    .code2me-hotels-set .cards-grid {
+        grid-gap: 1.5em;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 1.5em;
+        font-size: 14px;
+        display: grid;
+    }
+    @media screen and (max-width: 1200px) {
+        .code2me-hotels-set .cards-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    @media screen and (max-width: 825px) {
+        .code2me-hotels-set .cards-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @media screen and (max-width: 576px) {
+        .code2me-hotels-set .cards-grid {
+            grid-template-columns: 1fr;
+            font-size: 1.2em;
+        }
+    }
+    .code2me-hotels-set .cards-grid.open + .actions {
+        display: none;
+    }
+    .code2me-hotels-set .cards-grid.no-match:after {
+        content: "Нет вариантов. \a Пожалуйста, выберите другие параметры фильтров";
+        white-space: pre;
+        text-align: center;
+        background: #ffffff;
+        border-radius: 8px;
+        grid-column: span 4;
+        padding: 2em;
+        font-family: var(--sunmar-font);
+        font-size: 1.1em;
+        color: var(--sunmar-blue);
+    }
+    .code2me-hotels-set .cards-grid .card-cell {
+        text-align: center;
+        background: #fff;
+        border-radius: 6px;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.06);
+    }
+    .code2me-hotels-set .cards-grid .card-cell > * {
+        max-width: 100%;
+    }
+    .code2me-hotels-set .cards-grid .card-cell:not(.shown) {
+        display: none;
+    }
+    .code2me-hotels-set .cards-grid .card-cell .visual {
+        width: 100%;
+        background: 50% / cover no-repeat;
+        border-radius: 6px 6px 0px 0px;
+        flex-shrink: 0;
+        position: relative;
+        min-height: 225px;
+    }
+    .code2me-hotels-set .cards-grid .card-cell .visual:before {
+        content: "";
+        padding-top: 56.25%;
+        display: block;
+    }
+    .code2me-hotels-set .cards-grid .card-cell .visual > * {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .code2me-hotels-set .cards-grid .card-cell .visual .badges-grid {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        word-spacing: 0;
+        text-align: left;
+        padding: 0.5em 1em 0.5em 0.5em;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 3em;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5em;
+    }
+    @media screen and (max-width: 1439px) {
+        .code2me-hotels-set .cards-grid .card-cell .visual .badges-grid {
+            font-size: 11px;
+        }
+    }
+    @media screen and (max-width: 1199px) {
+        .code2me-hotels-set .cards-grid .card-cell .visual .badges-grid {
+            font-size: 0.9vw;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .code2me-hotels-set .cards-grid .card-cell .visual .badges-grid {
+            font-size: 1.3vw;
+        }
+    }
+    @media screen and (max-width: 576px) {
+        .code2me-hotels-set .cards-grid .card-cell .visual .badges-grid {
+            font-size: 2.5vw;
+        }
+    }
+    .code2me-hotels-set .cards-grid .card-cell .visual .badges-grid .hotel-badge {
+        border-radius: 5px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0.5em;
+        line-height: 2.5;
+        display: inline-flex;
+    }
+    .code2me-hotels-set .cards-grid .card-cell .visual .badges-grid .hotel-badge.sfc {
+        width: 8.5em;
+        margin: 0;
+        background: #fff
+        url(data:image/svg+xml,%3Csvg%20width%3D%22126%22%20height%3D%2220%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M88.511%2010.02c-.059%202.312.91%204.348%203.123%205.257.89.376%201.68.396%202.036.396%201.344%200%202.372-.455%202.787-.732.711-.435.85-.929.85-1.324%200-.494-.257-.988-.672-1.206a1.026%201.026%200%200%200-.534-.138c-.356%200-.494.079-1.067.277-.158.059-.613.197-1.127.197-.454%200-.89-.118-1.284-.375-.455-.297-1.028-.89-1.028-2.174%200-.81.237-1.562.85-2.076a2.225%202.225%200%200%201%201.423-.533c.415%200%20.79.118.909.178.692.237.81.336%201.245.336.89%200%201.166-.692%201.245-1.008.04-.159.02-.238.02-.336%200-.771-.652-1.364-1.305-1.621-.83-.356-2.055-.376-2.213-.376-2.253%200-3.518%201.147-4.091%201.839-1.048%201.284-1.147%202.846-1.166%203.419ZM101.784%202.252c0-.276.059-1.205-.751-1.7a1.514%201.514%200%200%200-.771-.217c-.474%200-.83.257-.949.376-.612.533-.612%201.225-.593%201.996v10.89c.04.771.1%201.344.771%201.74.336.197.613.217.771.217.178%200%20.514-.04.87-.297.573-.434.612-1.008.652-1.759V2.252ZM106.636%206.58c-.039-.474-.059-.869-.375-1.225-.376-.454-.929-.514-1.127-.514-.415%200-.731.178-.85.257-.573.376-.652.91-.711%201.562v4.467c.02.75.039%201.344.316%202.035.079.158.178.435.455.791.869%201.146%202.45%201.72%203.874%201.72%201.838%200%203.735-.85%204.387-2.61.218-.592.218-1.205.237-1.857V6.58c-.019-.277%200-1.048-.731-1.502a1.506%201.506%200%200%200-.81-.238c-.415%200-.731.178-.83.257-.653.435-.692%201.048-.712%201.799v3.894c-.02.75-.039%201.304-.672%201.739-.277.178-.533.277-.869.277-.376%200-.672-.159-.791-.218-.652-.375-.731-.929-.791-1.66V6.581ZM114.68%2013.538c0%20.553%200%201.028.356%201.482.395.494.909.573%201.147.573.474%200%201.008-.257%201.264-.672.08-.158.139-.375.159-.415.197.218.454.475.691.633.791.573%201.641.534%201.977.534.415%200%20.81-.02%201.186-.139a4.336%204.336%200%200%200%201.798-.988c1.72-1.502%201.819-3.637%201.819-4.388%200-2.016-.87-3.973-2.708-4.941a4.523%204.523%200%200%200-2.056-.514c-1.363%200-2.134.593-2.569.89V2.37c-.02-.692-.04-1.285-.652-1.7a1.525%201.525%200%200%200-.83-.257c-.178%200-.554.04-.929.316-.633.475-.653%201.087-.653%201.838v10.97Zm2.985-3.518c.059-.89.454-1.76%201.245-2.155a2.03%202.03%200%200%201%20.969-.237c.573%200%20.948.237%201.126.356.988.692%201.048%201.799%201.048%202.174%200%20.376-.079%201.917-1.344%202.47a2.203%202.203%200%200%201-.85.179c-.593%200-1.008-.277-1.186-.396-.771-.553-1.067-1.462-1.008-2.391Z%22%20fill%3D%22%23E27300%22%2F%3E%3Cpath%20d%3D%22M36.39%207.786c.771.02%201.206%200%201.542-.178.593-.336.692-.968.692-1.185%200-.159-.04-.554-.316-.91C37.913%205%2037.518%205%2036.39%204.98c-.02-.613-.02-1.166.04-1.364.157-.573.77-.553.968-.593.89-.119%201.027-.949%201.027-1.225%200-.376-.138-.712-.395-.969-.237-.237-.593-.474-1.344-.474-1.087%200-1.996.277-2.727%201.186-.416.533-.613%201.067-.633%201.72-.04.572%200%201.146-.02%201.699-.632.04-1.205.099-1.62.692a1.26%201.26%200%200%200-.238.731c0%20.297.1.573.277.81.297.396.613.554%201.562.574l.02%205.81c0%20.732.02%201.305.671%201.72.356.217.672.257.85.257.336%200%20.652-.119.91-.316.573-.415.612-1.028.652-1.74V7.786ZM49.544%206.936c0-.612%200-1.087-.395-1.541a1.434%201.434%200%200%200-1.127-.534c-.75%200-1.106.435-1.502%201.028-.81-.712-1.383-1.146-2.49-1.146-1.087%200-1.937.434-2.253.612-2.352%201.364-2.55%204.032-2.55%204.902%200%202.253%201.068%203.558%201.72%204.15.375.376%201.423%201.246%202.984%201.246.988%200%201.62-.376%201.937-.613.218-.178.573-.534.593-.553.395.593.731%201.067%201.502%201.067.336%200%20.633-.099.93-.316.592-.435.632-.949.651-1.66V6.935Zm-7.253%203.084c.099-1.878%201.344-2.392%202.095-2.392.87%200%201.6.712%201.877%201.522.139.415.159.79.159.969-.02.909-.336%201.838-1.087%202.332-.139.079-.534.316-1.028.316-.534%200-.89-.257-1.068-.375-1.008-.771-.988-1.997-.948-2.372ZM54.466%205.77c-.415-.514-.751-.909-1.443-.909-.198%200-.534.02-.91.316-.572.475-.592%201.048-.612%201.305v7.056c0%20.731.02%201.265.672%201.72.119.098.415.296.85.296.178%200%20.474-.02.83-.257.652-.435.672-1.028.692-1.799v-4.21c.02-.79.099-1.087.336-1.403a1.582%201.582%200%200%201%201.245-.632c.316%200%20.672.118.93.316.553.415.572.988.592%201.7v4.23c.02.75.04%201.363.692%201.798.237.178.533.277.85.277.454%200%20.79-.218.909-.317.613-.474.632-1.027.632-1.759v-4.23c0-.039-.02-.493.06-.79.178-.692.77-1.186%201.462-1.186.277%200%20.593.1.83.257.692.435.712.988.712%201.76v4.21c.02.572.02%201.066.395%201.501.277.316.672.554%201.107.554.395%200%20.731-.198.83-.257.672-.435.692-1.048.731-1.799V8.755c-.059-.969-.118-1.384-.276-1.819-.356-.988-1.265-1.778-2.313-2.075a4.3%204.3%200%200%200-1.028-.138c-.909%200-1.818.277-2.569.79-.138.1-.336.238-.613.495-.533-.514-1.205-1.265-2.925-1.265-1.166%200-1.779.395-2.194.672l-.474.355ZM68.529%202.035c-.08%201.008.692%201.838%201.72%201.838.948%200%201.778-.751%201.778-1.72%200-.968-.77-1.739-1.72-1.739-.909%200-1.7.712-1.778%201.62Zm3.241%204.763c-.04-.672-.079-1.265-.652-1.68-.336-.237-.692-.257-.85-.277-.178%200-.534.04-.91.336-.592.455-.632%201.028-.651%201.76v6.779c.04.692.118.949.336%201.225.375.494.968.593%201.186.593.395%200%20.711-.178.83-.237.593-.395.652-.969.711-1.68V6.798ZM76.741%202.252c0-.276.06-1.205-.75-1.7a1.512%201.512%200%200%200-.772-.217c-.474%200-.83.257-.948.376-.613.533-.613%201.225-.593%201.996v10.89c.04.771.099%201.344.77%201.74.337.197.613.217.772.217.177%200%20.513-.04.87-.297.572-.434.612-1.008.651-1.759V2.252ZM82.74%2010.672l-1.68-4.328c-.217-.534-.435-1.048-.929-1.344-.296-.198-.533-.198-.672-.198-.593%200-1.205.356-1.462.91-.119.236-.119.434-.119.552%200%20.435.158.791.316%201.167l2.965%206.977-1.166%202.589c-.04.079-.376.711-.376%201.186%200%20.553.396%201.146.95%201.383.177.06.335.099.533.099.454%200%20.87-.178%201.146-.474.277-.297.435-.712.593-1.087L87.326%207.47c.04-.118.336-.672.336-1.146%200-.534-.336-1.127-.85-1.384a1.504%201.504%200%200%200-.613-.138c-.91%200-1.265.672-1.403.91-.099.177-.178.355-.257.533l-1.799%204.427Z%22%20fill%3D%22%230067B5%22%2F%3E%3Cpath%20d%3D%22M.39%2013.044c-.06.178-.06.336-.06.415%200%20.474.336.89.672%201.186.79.652%202.134.988%203.182.988%201.423%200%202.886-.573%203.617-1.858a3.023%203.023%200%200%200%20.395-1.482c0-.494-.178-1.502-1.205-2.313-.672-.533-1.503-.81-1.74-.909-.415-.158-1.008-.336-1.364-.632-.138-.119-.237-.257-.237-.435%200-.198.139-.593.692-.593.435%200%20.85.178%201.206.336.355.138.77.316%201.166.316.672%200%20.988-.534%201.087-.77.079-.179.099-.297.099-.475%200-.257-.06-.633-.475-1.087-.73-.77-2.035-.949-2.233-.988-.316-.04-.553-.04-.672-.04-.514%200-2.056.06-3.103%201.324-.672.81-.77%201.64-.77%202.056%200%20.296.078%201.225.73%201.897.455.475%201.127.751%202.313%201.226.593.237.83.276%201.067.474.099.06.395.316.395.652%200%20.257-.217.494-.494.593-.138.04-.257.04-.316.04-.415%200-.79-.139-1.522-.494-.356-.178-.711-.396-1.107-.396-.573%200-1.146.415-1.324.969ZM12.604%206.58c-.04-.474-.06-.869-.376-1.225-.376-.454-.929-.514-1.127-.514-.415%200-.73.178-.85.257-.573.376-.652.91-.711%201.562v4.467c.02.75.04%201.344.316%202.035.08.158.178.435.455.791.87%201.146%202.45%201.72%203.874%201.72%201.838%200%203.735-.85%204.388-2.61.217-.592.217-1.205.237-1.857V6.58c-.02-.277%200-1.048-.732-1.502a1.506%201.506%200%200%200-.81-.238c-.415%200-.731.178-.83.257-.652.435-.692%201.048-.712%201.799v3.894c-.02.75-.04%201.304-.672%201.739-.276.178-.533.277-.87.277-.375%200-.671-.159-.79-.218-.652-.375-.731-.929-.79-1.66V6.581ZM30.253%208.518c-.02-.158-.04-1.206-.336-1.878-.336-.731-1.364-1.917-3.439-1.917-1.205%200-1.818.395-2.806%201.087-.376-.514-.712-.929-1.404-.929a1.47%201.47%200%200%200-.87.277c-.632.454-.691%201.067-.73%201.779V13.3c0%20.75%200%201.383.652%201.877.118.1.474.336.909.336.316%200%20.632-.118.89-.296.572-.415.592-1.008.592-1.72V9.605c.04-.79.08-1.443.751-1.917.139-.119.494-.336.989-.336.355%200%20.73.118%201.027.336.652.454.672%201.027.692%201.818V13.4c.02.75.04%201.383.692%201.857.099.08.435.297.85.297.138%200%20.494-.04.85-.277.671-.474.691-1.087.691-1.858V8.518Z%22%20fill%3D%22%23F0AB00%22%2F%3E%3C%2Fsvg%3E)
+        50%/90% no-repeat;
+    }
+    .code2me-hotels-set .cards-grid .card-cell .visual .badges-grid .hotel-badge.usfc {
+        width: 11.3em;
+        background: #fff
+        url(data:image/svg+xml,%3Csvg%20width%3D%22174%22%20height%3D%2220%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M136.807%2010.194c-.059%202.312.91%204.348%203.123%205.257.89.376%201.68.395%202.036.395%201.344%200%202.372-.454%202.787-.73.711-.436.85-.93.85-1.325%200-.494-.257-.988-.672-1.206a1.026%201.026%200%200%200-.534-.138c-.356%200-.494.079-1.067.277-.158.059-.613.197-1.127.197-.454%200-.889-.118-1.285-.375-.454-.297-1.027-.89-1.027-2.174%200-.81.237-1.562.85-2.076a2.224%202.224%200%200%201%201.423-.533c.415%200%20.79.118.909.178.692.237.81.336%201.245.336.889%200%201.166-.692%201.245-1.008.04-.159.02-.238.02-.336%200-.771-.652-1.364-1.305-1.621-.83-.356-2.055-.376-2.213-.376-2.253%200-3.518%201.147-4.092%201.838-1.047%201.285-1.146%202.847-1.166%203.42ZM150.08%202.426c0-.276.059-1.205-.751-1.7a1.514%201.514%200%200%200-.771-.217c-.475%200-.83.257-.949.376-.613.533-.613%201.225-.593%201.996v10.89c.04.771.099%201.344.771%201.74.336.197.613.217.771.217.178%200%20.514-.04.869-.297.574-.434.613-1.008.653-1.759V2.426ZM154.932%206.755c-.039-.475-.059-.87-.375-1.226-.376-.454-.929-.514-1.127-.514-.415%200-.731.178-.85.257-.573.376-.652.91-.711%201.562V11.3c.019.75.039%201.344.316%202.035.079.158.178.435.455.79.869%201.147%202.45%201.72%203.873%201.72%201.839%200%203.736-.85%204.388-2.608.218-.593.218-1.206.237-1.858V6.755c-.019-.277%200-1.048-.731-1.502a1.506%201.506%200%200%200-.81-.238c-.415%200-.732.178-.83.257-.653.435-.692%201.048-.712%201.799v3.894c-.02.75-.039%201.304-.672%201.739-.277.178-.534.277-.87.277-.375%200-.672-.159-.79-.218-.652-.375-.731-.929-.791-1.66V6.755ZM162.976%2013.712c0%20.553%200%201.028.356%201.482.395.494.909.573%201.146.573.475%200%201.008-.257%201.265-.672.079-.158.139-.375.158-.415.198.218.455.475.692.633.791.573%201.641.533%201.977.533.415%200%20.81-.02%201.186-.138a4.338%204.338%200%200%200%201.798-.988c1.72-1.502%201.819-3.637%201.819-4.388%200-2.016-.87-3.973-2.708-4.941a4.523%204.523%200%200%200-2.056-.514c-1.363%200-2.134.593-2.569.89V2.544c-.02-.692-.04-1.285-.652-1.7a1.528%201.528%200%200%200-.831-.257c-.177%200-.553.04-.928.316-.633.475-.653%201.087-.653%201.838v10.97Zm2.985-3.518c.059-.89.454-1.76%201.245-2.155a2.03%202.03%200%200%201%20.968-.237c.574%200%20.949.237%201.127.356.988.692%201.048%201.799%201.048%202.174%200%20.376-.079%201.917-1.344%202.47a2.203%202.203%200%200%201-.85.179c-.593%200-1.008-.277-1.186-.396-.771-.553-1.068-1.462-1.008-2.391Z%22%20fill%3D%22%23E27300%22%2F%3E%3Cpath%20d%3D%22M84.686%207.96c.771.02%201.206%200%201.542-.178.593-.336.692-.968.692-1.185%200-.159-.04-.554-.316-.91-.396-.514-.79-.514-1.918-.533-.02-.613-.02-1.166.04-1.364.158-.573.77-.553.969-.593.889-.119%201.027-.949%201.027-1.225%200-.376-.138-.712-.395-.969C86.09.766%2085.734.53%2084.983.53c-1.087%200-1.996.277-2.728%201.186-.415.533-.612%201.067-.632%201.72-.04.572%200%201.146-.02%201.699-.632.04-1.205.099-1.62.692a1.26%201.26%200%200%200-.238.731c0%20.296.1.573.277.81.296.396.613.554%201.561.574l.02%205.81c0%20.732.02%201.305.672%201.72.356.217.672.257.85.257.336%200%20.652-.119.91-.316.573-.415.612-1.028.651-1.74V7.96ZM97.84%207.11c0-.612%200-1.087-.395-1.541a1.434%201.434%200%200%200-1.127-.534c-.75%200-1.106.435-1.502%201.028-.81-.712-1.383-1.146-2.49-1.146-1.087%200-1.937.434-2.253.612-2.352%201.364-2.55%204.032-2.55%204.902%200%202.253%201.067%203.558%201.72%204.15.375.376%201.423%201.246%202.984%201.246.988%200%201.62-.376%201.937-.613.217-.178.573-.534.593-.553.395.593.731%201.067%201.502%201.067.336%200%20.633-.099.929-.316.593-.435.632-.95.652-1.66V7.11Zm-7.253%203.084c.098-1.878%201.344-2.392%202.095-2.392.87%200%201.6.712%201.877%201.522.139.415.158.79.158.969-.02.909-.336%201.838-1.087%202.332-.138.079-.533.316-1.027.316-.534%200-.89-.257-1.068-.376-1.008-.77-.988-1.996-.948-2.371ZM102.762%205.944c-.415-.514-.751-.909-1.443-.909-.198%200-.534.02-.909.316-.573.475-.593%201.048-.613%201.305v7.056c0%20.731.02%201.265.672%201.72.119.098.415.296.85.296.178%200%20.474-.02.83-.257.652-.435.672-1.028.692-1.799v-4.21c.02-.79.099-1.087.336-1.403a1.582%201.582%200%200%201%201.245-.632c.316%200%20.672.118.929.316.553.415.573.988.593%201.7v4.23c.02.75.039%201.363.692%201.798.237.178.533.277.85.277.454%200%20.79-.218.909-.317.612-.474.632-1.027.632-1.759v-4.23c0-.039-.02-.493.06-.79.177-.692.77-1.186%201.462-1.186.277%200%20.593.099.83.257.692.435.712.988.712%201.76v4.21c.02.572.02%201.066.395%201.501.277.316.672.554%201.107.554.395%200%20.731-.198.83-.257.672-.435.692-1.048.731-1.799V8.93c-.059-.969-.118-1.384-.276-1.819-.356-.988-1.265-1.778-2.313-2.075a4.3%204.3%200%200%200-1.028-.138%204.58%204.58%200%200%200-2.569.79c-.138.1-.336.238-.613.494-.533-.513-1.205-1.264-2.925-1.264-1.166%200-1.779.395-2.194.672l-.474.355ZM116.825%202.209c-.079%201.008.691%201.838%201.719%201.838.949%200%201.779-.751%201.779-1.72%200-.968-.771-1.739-1.719-1.739-.91%200-1.7.712-1.779%201.62Zm3.241%204.763c-.039-.672-.079-1.265-.652-1.68-.336-.237-.692-.257-.85-.277-.178%200-.534.04-.909.336-.593.455-.633%201.028-.652%201.76v6.779c.039.691.118.948.336%201.225.375.494.968.593%201.185.593.396%200%20.712-.178.831-.237.593-.395.652-.969.711-1.68V6.972ZM125.037%202.426c0-.276.06-1.205-.751-1.7a1.511%201.511%200%200%200-.771-.217c-.474%200-.83.257-.948.376-.613.533-.613%201.225-.593%201.996v10.89c.039.771.099%201.344.771%201.74.336.197.612.217.77.217.178%200%20.514-.04.87-.297.573-.434.613-1.008.652-1.759V2.426ZM131.036%2010.846l-1.68-4.329c-.217-.533-.435-1.047-.929-1.344-.296-.197-.533-.197-.672-.197-.593%200-1.205.356-1.462.909-.119.237-.119.435-.119.553%200%20.435.158.791.316%201.167l2.965%206.976-1.166%202.59c-.04.079-.376.711-.376%201.186%200%20.553.396%201.146.949%201.383.178.06.336.099.534.099.454%200%20.869-.178%201.146-.474.277-.297.435-.712.593-1.087l4.487-10.634c.039-.119.336-.672.336-1.146%200-.534-.336-1.127-.85-1.384a1.504%201.504%200%200%200-.613-.138c-.909%200-1.265.672-1.403.909a6.494%206.494%200%200%200-.257.534l-1.799%204.427Z%22%20fill%3D%22%230067B5%22%2F%3E%3Cpath%20d%3D%22M48.685%2013.218c-.06.178-.06.336-.06.415%200%20.474.337.89.673%201.186.79.652%202.134.988%203.182.988%201.423%200%202.886-.573%203.617-1.858a3.023%203.023%200%200%200%20.395-1.482c0-.494-.178-1.502-1.206-2.313-.672-.533-1.502-.81-1.739-.909-.415-.158-1.008-.336-1.364-.632-.138-.119-.237-.257-.237-.435%200-.198.139-.593.692-.593.435%200%20.85.178%201.206.336.355.138.77.316%201.166.316.672%200%20.988-.534%201.087-.77.079-.179.099-.297.099-.475%200-.257-.06-.633-.475-1.087-.731-.771-2.035-.949-2.233-.988-.316-.04-.554-.04-.672-.04-.514%200-2.056.06-3.103%201.324-.672.81-.771%201.64-.771%202.056%200%20.296.079%201.225.731%201.897.455.475%201.127.751%202.313%201.226.593.237.83.276%201.067.474.099.06.395.316.395.652%200%20.257-.217.494-.494.593-.138.04-.257.04-.316.04-.415%200-.79-.139-1.522-.494-.356-.178-.711-.396-1.107-.396-.573%200-1.146.415-1.324.969ZM60.9%206.755c-.04-.475-.06-.87-.376-1.226-.376-.454-.929-.514-1.127-.514-.415%200-.731.178-.85.257-.573.376-.652.91-.711%201.562V11.3c.02.75.04%201.344.316%202.035.08.159.178.435.455.791.87%201.146%202.45%201.72%203.874%201.72%201.838%200%203.735-.85%204.387-2.61.218-.592.218-1.205.238-1.857V6.755c-.02-.277%200-1.048-.732-1.502a1.506%201.506%200%200%200-.81-.238c-.415%200-.731.178-.83.257-.652.435-.692%201.048-.712%201.799v3.894c-.02.75-.04%201.304-.672%201.739-.276.178-.533.277-.87.277-.375%200-.671-.159-.79-.218-.652-.375-.731-.929-.79-1.66V6.755ZM78.55%208.692c-.02-.158-.04-1.206-.337-1.878-.336-.731-1.364-1.917-3.439-1.917-1.206%200-1.818.395-2.806%201.087-.376-.514-.712-.929-1.404-.929a1.47%201.47%200%200%200-.87.277c-.632.454-.691%201.067-.73%201.778v6.365c0%20.75%200%201.383.651%201.877.12.1.475.336.91.336.316%200%20.632-.118.89-.296.572-.415.592-1.008.592-1.72V9.78c.04-.79.08-1.443.751-1.917.139-.119.494-.336.988-.336.356%200%20.732.118%201.028.336.652.454.672%201.027.692%201.818v3.893c.02.752.04%201.384.692%201.858.099.08.434.297.85.297.138%200%20.494-.04.85-.277.671-.474.691-1.087.691-1.858V8.692Z%22%20fill%3D%22%23F0AB00%22%2F%3E%3Cpath%20d%3D%22M3.393%206.755c-.04-.475-.059-.87-.375-1.226-.376-.454-.93-.514-1.127-.514-.415%200-.731.178-.85.257-.573.376-.652.91-.711%201.562V11.3c.02.75.04%201.344.316%202.035.08.158.178.435.455.79.87%201.147%202.45%201.72%203.874%201.72%201.838%200%203.735-.85%204.387-2.608.218-.593.218-1.206.237-1.858V6.755c-.02-.277%200-1.048-.73-1.502a1.506%201.506%200%200%200-.811-.238c-.415%200-.731.178-.83.257-.653.435-.692%201.048-.712%201.799v3.894c-.02.75-.04%201.304-.672%201.739-.277.178-.533.277-.87.277-.375%200-.671-.159-.79-.218-.652-.375-.731-.929-.79-1.66V6.755Z%22%20fill%3D%22url%28%27%23paint0_linear_4813_58524%27%29%22%2F%3E%3Cpath%20d%3D%22M14.56%202.426c0-.276.06-1.205-.75-1.7a1.512%201.512%200%200%200-.772-.217c-.474%200-.83.257-.948.376-.613.533-.613%201.225-.593%201.996v10.89c.04.771.099%201.344.77%201.74.337.197.613.217.771.217.178%200%20.514-.04.87-.297.573-.434.613-1.008.652-1.759V2.426Z%22%20fill%3D%22url%28%27%23paint1_linear_4813_58524%27%29%22%2F%3E%3Cpath%20d%3D%22M20.56%205.134c-.02-.296-.02-.593-.02-.91%200-.315.02-.632.02-.948%200-.079%200-.375-.08-.613-.178-.573-.79-1.008-1.423-1.027-.593%200-1.245.434-1.462.968-.178.395-.1%201.067-.1%201.146%200%20.455%200%20.91-.02%201.364-.651.04-1.165.099-1.54.692a1.268%201.268%200%200%200-.238.751c0%20.138.02.435.218.751.375.573.909.613%201.56.652v5.752c.02.731.04%201.324.693%201.74.257.177.514.256.83.256.316%200%20.632-.119.89-.316.612-.455.632-1.067.651-1.799V7.96c.81%200%201.246%200%201.582-.197.395-.237.691-.732.691-1.206.02-.435-.197-.751-.276-.87-.376-.494-.87-.553-1.463-.553h-.514Z%22%20fill%3D%22url%28%27%23paint2_linear_4813_58524%27%29%22%2F%3E%3Cpath%20d%3D%22M26.815%2010.372c.02-.653.04-1.107.474-1.562.494-.514%201.226-.75%201.423-.83.554-.178%201.186-.296%201.582-.77.217-.277.237-.554.237-.692%200-.574-.356-1.147-.87-1.404a1.93%201.93%200%200%200-.672-.138c-.85%200-1.541.613-2.134%201.146-.257-.435-.495-.85-.969-1.008a1.319%201.319%200%200%200-.534-.099c-.178%200-.533.02-.909.277-.593.415-.632.969-.652%201.226-.02.197-.02.395-.02.592v6.641c0%20.712.02%201.246.652%201.68.257.159.554.277.87.277.316%200%20.652-.119.91-.316.553-.435.592-1.048.612-1.76v-3.26Z%22%20fill%3D%22url%28%27%23paint3_linear_4813_58524%27%29%22%2F%3E%3Cpath%20d%3D%22M41.135%207.11c0-.612%200-1.087-.395-1.541a1.434%201.434%200%200%200-1.127-.534c-.751%200-1.107.435-1.502%201.028-.81-.712-1.384-1.146-2.49-1.146-1.088%200-1.937.434-2.254.612-2.352%201.364-2.55%204.032-2.55%204.902%200%202.253%201.068%203.558%201.72%204.15.376.376%201.423%201.246%202.985%201.246.988%200%201.62-.376%201.937-.613.217-.178.573-.534.592-.553.396.593.732%201.067%201.503%201.067.336%200%20.632-.099.929-.316.593-.435.632-.95.652-1.66V7.11Zm-7.254%203.084c.099-1.878%201.344-2.392%202.095-2.392.87%200%201.601.712%201.878%201.522.138.415.158.79.158.969-.02.909-.336%201.838-1.087%202.332-.138.079-.534.316-1.028.316-.533%200-.89-.257-1.067-.376-1.008-.77-.988-1.996-.949-2.371Z%22%20fill%3D%22url%28%27%23paint4_linear_4813_58524%27%29%22%2F%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22paint0_linear_4813_58524%22%20x1%3D%22.33%22%20y1%3D%2215.846%22%20x2%3D%2210.712%22%20y2%3D%22-11.178%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20stop-color%3D%22%23FB7099%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23F0AB13%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22paint1_linear_4813_58524%22%20x1%3D%22.33%22%20y1%3D%2215.846%22%20x2%3D%2210.712%22%20y2%3D%22-11.178%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20stop-color%3D%22%23FB7099%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23F0AB13%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22paint2_linear_4813_58524%22%20x1%3D%22.33%22%20y1%3D%2215.846%22%20x2%3D%2210.712%22%20y2%3D%22-11.178%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20stop-color%3D%22%23FB7099%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23F0AB13%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22paint3_linear_4813_58524%22%20x1%3D%22.33%22%20y1%3D%2215.846%22%20x2%3D%2210.712%22%20y2%3D%22-11.178%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20stop-color%3D%22%23FB7099%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23F0AB13%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22paint4_linear_4813_58524%22%20x1%3D%22.33%22%20y1%3D%2215.846%22%20x2%3D%2210.712%22%20y2%3D%22-11.178%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20stop-color%3D%22%23FB7099%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23F0AB13%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3C%2Fsvg%3E)
+        50%/90% no-repeat;
+    }
+    .code2me-hotels-set .cards-grid .card-cell .visual .badges-grid .hotel-badge.elite,
+    .code2me-hotels-set .cards-grid .card-cell .visual .badges-grid .hotel-badge.eliteservice {
+        color: #fff;
+        background: #5f6062;
+        padding: 0 1em;
+    }
+    .code2me-hotels-set .cards-grid .card-cell .visual .badges-grid .hotel-badge.elite:after,
+    .code2me-hotels-set .cards-grid .card-cell .visual .badges-grid .hotel-badge.eliteservice:after {
+        content: "ELITE SERVICE";
+        letter-spacing: 0.27em;
+        word-spacing: normal;
+        font-weight: 500;
+    }
+    .code2me-hotels-set .cards-grid .card-cell .visual .badges-grid .hotel-badge.text-only {
+        letter-spacing: normal;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 0 1em;
+        box-shadow: inset 0 0 1px 1px #fff;
+    }
+    .code2me-hotels-set .cards-grid .card-cell .info {
+        width: 100%;
+        color: var(--sunmar-navy);
+        flex-direction: column;
+        flex-grow: 1;
+        align-items: flex-start;
+        padding: 1.1em 1.45em 1.65em;
+        font-weight: 300;
+        display: flex;
+        font-family: var(--sunmar-font);
+        line-height: 1;
+    }
+    .code2me-hotels-set .cards-grid .card-cell .info > * {
+        width: 100%;
+    }
+    .code2me-hotels-set .cards-grid .card-cell .info .stars-name-location {
+        min-height: 7em;
+        flex-direction: column;
+        align-content: stretch;
+        display: grid;
+        margin-bottom: 1.1em;
+        grid-template-rows: auto min-content auto;
+        grid-auto-rows: auto;
+    }
+    .code2me-hotels-set .cards-grid .card-cell .info .stars-name-location > * {
+        max-width: 100%;
+    }
+    .code2me-hotels-set .cards-grid .card-cell .info .stars-name-location [is="hotel-stars"] {
+        height: 1.3em;
+        justify-content: flex-start;
+        align-items: center;
+        display: flex;
+        margin-bottom: 1.45em;
+    }
+    .code2me-hotels-set .cards-grid .card-cell .info .stars-name-location [is="hotel-stars"] .star {
+        width: 1.7em;
+        height: 1.7em;
+        background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.8749 7.8717L21.8612 8.69898C22.3561 8.76557 22.7735 9.09447 22.9328 9.54241C23.092 9.99641 22.9629 10.4867 22.6035 10.8237L18.2634 14.8148L19.2876 20.5413C19.3716 21.0094 19.1671 21.4856 18.7497 21.764C18.3365 22.0405 17.7921 22.0768 17.3467 21.8548L11.9974 19.1793L6.65233 21.8548C6.20261 22.0768 5.65606 22.0425 5.24506 21.764C4.83192 21.4876 4.62535 21.0094 4.71142 20.5413L5.73567 14.8148L1.39551 10.8257C1.03616 10.4908 0.909207 9.99843 1.06629 9.54443C1.22337 9.09447 1.63866 8.76759 2.13788 8.701L8.11985 7.87372L10.801 2.7042C11.0226 2.27442 11.4874 2 11.9974 2C12.5074 2 12.9764 2.2724 13.1981 2.7042L15.8771 7.87372L15.8749 7.8717Z' fill='url(%23paint0_linear_3837_3056)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_3837_3056' x1='1' y1='2' x2='20.5687' y2='23.868' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FFE896'/%3E%3Cstop offset='1' stop-color='%23FFC700'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A")
+        50% / contain no-repeat;
+        margin: 0 2px;
+    }
+    .code2me-hotels-set .cards-grid .card-cell .info .stars-name-location [is="hotel-stars"]:not([data-category*="\*"]) {
+        -webkit-filter: none;
+        -webkit-filter: none;
+        filter: none;
+    }
+    .code2me-hotels-set .cards-grid .card-cell .info .stars-name-location [is="hotel-stars"]:not([data-category*="\*"]):after {
+        content: attr(data-category);
+        letter-spacing: 0.05em;
+        color: #f0ab00;
+        background: #fff;
+        border-radius: 3px;
+        padding: 0 0.5em;
+        font-size: 1.2em;
+        font-weight: 700;
+    }
+    .code2me-hotels-set .cards-grid .card-cell .info .stars-name-location h3.name {
+        text-align: left;
+        margin: 0;
+        font-size: 1.45em;
+        font-weight: 700;
+        line-height: 1.1;
+        text-transform: capitalize;
+        min-height: 2.3em;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        margin-bottom: 0.6em;
+    }
+
+    @media (max-width: 576px) {
+        .code2me-hotels-set .cards-grid .card-cell .info .stars-name-location h3.name {
+            min-height: unset;
+        }
+
+        .code2me-hotels-set .cards-grid .card-cell {
+            font-size: 14px;
+        }
+    }
+    .code2me-hotels-set .cards-grid .card-cell .info .stars-name-location h4.location {
+        text-align: center;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+        font-size: 1em;
+        font-weight: 500;
+        line-height: 1;
+        display: flex;
+        position: relative;
+        padding-left: 2em;
+        min-height: 1.7em;
+    }
+
+    .code2me-hotels-set .cards-grid .card-cell .info .stars-name-location h4.location::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1.7em;
+        height: 1.7em;
+        background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.04352 4.83768C8.40389 3.6117 10.057 3 12 3C13.943 3 15.5932 3.6117 16.9565 4.83768C18.3198 6.06367 19 7.55033 19 9.2951C19 10.1675 18.7575 11.1689 18.2725 12.2968C17.7875 13.4247 17.199 14.4804 16.5099 15.4663C15.8209 16.4523 15.1407 17.3763 14.4664 18.2332C13.7921 19.0926 13.2214 19.7766 12.7512 20.2825L12 21C11.8107 20.8038 11.5623 20.5432 11.2488 20.218C10.9354 19.8953 10.3705 19.2449 9.55725 18.2744C8.74398 17.3014 8.03126 16.3593 7.4191 15.4431C6.80693 14.5268 6.25095 13.4918 5.75116 12.3355C5.25137 11.1844 5 10.1701 5 9.29768C5 7.55033 5.68019 6.06367 7.04352 4.83768ZM10.2374 10.8824C10.7224 11.3186 11.3109 11.538 12 11.538C12.6891 11.538 13.2746 11.3212 13.7626 10.8824C14.2476 10.4462 14.4901 9.91712 14.4901 9.29768C14.4901 8.67823 14.2476 8.14913 13.7626 7.71293C13.2776 7.27674 12.6891 7.05736 12 7.05736C11.3109 7.05736 10.7224 7.27674 10.2374 7.71293C9.75243 8.14913 9.50993 8.67823 9.50993 9.29768C9.50993 9.91712 9.75243 10.4462 10.2374 10.8824V10.8824Z' stroke='%230E2855' stroke-width='1.6'/%3E%3C/svg%3E%0A") 50% / contain no-repeat;
+    }
+
+    .code2me-hotels-set .cards-grid .card-cell .info .benefits {
+        text-align: left;
+        flex-direction: column;
+        margin: 0 0 1.1em 0;
+        padding-bottom: 0;
+        display: flex;
+    }
+    .code2me-hotels-set .cards-grid .card-cell .info .benefits > * {
+        max-width: 100%;
+        align-items: center;
+        font-size: 0.857143em;
+        line-height: 1.1;
+        display: flex;
+    }
+    .code2me-hotels-set .cards-grid .card-cell .info .benefits > :nth-child(n + 2) {
+        margin-top: 1em;
+    }
+    .code2me-hotels-set .cards-grid .card-cell .info .benefits > :before {
+        content: "●";
+        color: var(--sunmar-red);
+        margin-right: 0.5em;
+    }
+    .code2me-hotels-set .cards-grid .card-cell .info .terms {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.85em;
+        line-height: 1;
+        display: flex;
+        justify-content: space-between;
+        margin-top: auto;
+    }
+    .code2me-hotels-set .cards-grid .card-cell .info .terms .term-badge {
+        flex: 0 auto;
+        align-items: center;
+        font-size: 1em;
+        line-height: 1;
+        display: inline-flex;
+        font-weight: 400;
+    }
+
+    .code2me-hotels-set .cards-grid .card-cell .info .terms .term-badge .icon {
+        width: 2.2em;
+        height: 2.2em;
+        color: var(--sunmar-blue);
+        background-color: #ebf9ff;
+        border-radius: 3px;
+        flex-shrink: 0;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        display: flex;
+        position: relative;
+        display: none;
+    }
+    .code2me-hotels-set .cards-grid .card-cell .info .terms .term-badge .icon:before {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .code2me-hotels-set .cards-grid .card-cell .info .terms .term-badge .label {
+        text-align: left;
+        align-items: center;
+        display: inline-flex;
+        font-size: 1.1em;
+    }
+    .code2me-hotels-set .cards-grid .card-cell .info .terms .term-badge.depart-from .icon:before {
+        content: "";
+        background: url("data:image/svg+xml,%3Csvg width='135' height='87' viewBox='0 0 135 87' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M134.451 13.1692C134 12.0934 133.29 11.1391 132.319 10.3063C131.349 9.47347 130.205 8.81415 128.888 8.32833C127.571 7.80781 126.167 7.51285 124.676 7.44344C123.221 7.37404 121.799 7.51284 120.413 7.85986L89.5819 15.6156L34.4706 0L20.6927 5.2052L62.0262 26.026L34.4706 36.4364L6.91491 26.026L0 31.2312L27.5557 52L127.796 23.6316C129.113 23.2846 130.309 22.7467 131.383 22.018C132.458 21.2546 133.307 20.3871 133.931 19.4154C134.555 18.4438 134.901 17.4201 134.971 16.3443C135.075 15.2339 134.901 14.1755 134.451 13.1692Z' fill='%230e2855'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M135 87H0V83H135V87Z' fill='%230e2855'/%3E%3C/svg%3E%0A")
+        50%/62% no-repeat;
+    }
+    .code2me-hotels-set .cards-grid .card-cell .info .terms .term-badge.depart-date .icon:before {
+        content: "";
+        background: url("data:image/svg+xml,%3Csvg width='67' height='75' viewBox='0 0 67 75' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.5921 0H13.7087C13.4683 0 13.2404 0.0504998 13.0196 0.122256C11.9164 0.480055 11.1009 1.65789 11.1009 3.07078V4.36731V7.68592V9.41249C11.1009 9.73331 11.1543 10.0364 11.2318 10.3266C11.5638 11.5733 12.5408 12.4833 13.7087 12.4833H15.5921C17.0327 12.4833 18.1999 11.1086 18.1999 9.41249V7.68592V4.36731V3.07078C18.1999 1.37467 17.0327 0 15.5921 0Z' fill='%230E2855'/%3E%3Cpath d='M52.6647 0H50.7813C49.3407 0 48.1734 1.37467 48.1734 3.07078V4.36731V7.68592V9.41249C48.1734 11.1086 49.3407 12.4833 50.7813 12.4833H52.6647C54.1053 12.4833 55.2725 11.1086 55.2725 9.41249V7.68592V4.36731V3.07078C55.2719 1.37467 54.1047 0 52.6647 0Z' fill='%230E2855'/%3E%3Cpath d='M62.2852 7.68591H57.6218V9.41249C57.6218 12.4016 55.3976 14.8332 52.6641 14.8332H50.7806C48.0471 14.8332 45.8229 12.4016 45.8229 9.41249V7.68591H20.5498V9.41249C20.5498 12.4016 18.3256 14.8332 15.5921 14.8332H13.7087C10.975 14.8332 8.75096 12.4016 8.75096 9.41249V7.68591H4.68751C2.09912 7.68591 0 9.65393 0 12.0803V70.6057C0 73.0365 2.099 75 4.68751 75H62.2846C64.8754 75 66.972 73.036 66.972 70.6057V12.0809C66.9726 9.65454 64.876 7.68591 62.2852 7.68591ZM60.8318 68.5494L5.96991 68.5283V21.3447H60.8318V68.5494Z' fill='%230E2855'/%3E%3Cpath d='M39.3614 32.7153H53.7899C55.0423 32.7153 56.0552 31.4646 56.0552 29.9188C56.0552 28.3731 55.0418 27.1224 53.7899 27.1224H39.3614C38.109 27.1224 37.0961 28.3731 37.0961 29.9188C37.0961 31.4639 38.1089 32.7153 39.3614 32.7153Z' fill='%230E2855'/%3E%3Cpath d='M39.3614 42.8163H53.7899C55.0423 42.8163 56.0552 41.5656 56.0552 40.0199C56.0552 38.4743 55.0418 37.2236 53.7899 37.2236H39.3614C38.109 37.2236 37.0961 38.4743 37.0961 40.0199C37.0961 41.5656 38.1089 42.8163 39.3614 42.8163Z' fill='%230E2855'/%3E%3Cpath d='M39.3614 52.9173H53.7899C55.0423 52.9173 56.0552 51.6665 56.0552 50.1209C56.0552 48.5753 55.0418 47.3245 53.7899 47.3245H39.3614C38.109 47.3245 37.0961 48.5753 37.0961 50.1209C37.0961 51.6665 38.1089 52.9173 39.3614 52.9173Z' fill='%230E2855'/%3E%3Cpath d='M39.3614 63.019H53.7899C55.0423 63.019 56.0552 61.7682 56.0552 60.2226C56.0552 58.6769 55.0418 57.4262 53.7899 57.4262H39.3614C38.109 57.4262 37.0961 58.6769 37.0961 60.2226C37.0961 61.7682 38.1089 63.019 39.3614 63.019Z' fill='%230E2855'/%3E%3Cpath d='M13.8062 32.7153H28.2346C29.4871 32.7153 30.4999 31.4646 30.4999 29.9188C30.4999 28.3731 29.4864 27.1224 28.2346 27.1224H13.8062C12.5537 27.1224 11.5408 28.3731 11.5408 29.9188C11.541 31.4639 12.5537 32.7153 13.8062 32.7153Z' fill='%230E2855'/%3E%3Cpath d='M13.8062 42.8163H28.2346C29.4871 42.8163 30.4999 41.5656 30.4999 40.0199C30.4999 38.4743 29.4864 37.2236 28.2346 37.2236H13.8062C12.5537 37.2236 11.5408 38.4743 11.5408 40.0199C11.541 41.5656 12.5537 42.8163 13.8062 42.8163Z' fill='%230E2855'/%3E%3Cpath d='M13.8062 52.9173H28.2346C29.4871 52.9173 30.4999 51.6665 30.4999 50.1209C30.4999 48.5753 29.4864 47.3245 28.2346 47.3245H13.8062C12.5537 47.3245 11.5408 48.5753 11.5408 50.1209C11.5408 51.6665 12.5537 52.9173 13.8062 52.9173Z' fill='%230E2855'/%3E%3Cpath d='M13.8062 63.019H28.2346C29.4871 63.019 30.4999 61.7682 30.4999 60.2226C30.4999 58.6769 29.4864 57.4262 28.2346 57.4262H13.8062C12.5537 57.4262 11.5408 58.6769 11.5408 60.2226C11.541 61.7682 12.5537 63.019 13.8062 63.019Z' fill='%230E2855'/%3E%3C/svg%3E%0A")
+        50%/50% no-repeat;
+    }
+    .code2me-hotels-set .cards-grid .card-cell .info .terms .term-badge.meal .icon:before {
+        content: "";
+        background: url("data:image/svg+xml,%3Csvg width='45' height='43' viewBox='0 0 45 43' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M43.6902 3.73437C43.25 3.2941 42.6644 3.01269 42.0471 2.95369C40.8988 2.84021 37.7534 4.67846 35.9832 5.78595C33.446 7.37002 29.6242 10.057 25.8297 13.8516L17.5235 22.1532C16.466 23.2108 16.466 24.931 17.5235 25.9886L17.5644 26.0249L6.16722 37.422C5.10966 38.4796 5.10966 40.1998 6.16722 41.2574C7.22479 42.3149 8.94503 42.3149 10.0026 41.2574L43.6902 7.56974C44.4255 6.83444 44.6752 5.72241 44.3257 4.74201C44.1986 4.36528 43.9762 4.01579 43.6902 3.73437Z' fill='%230E2855'/%3E%3Cpath d='M28.7981 25.2305L24.9628 29.0659L36.8728 40.9759C37.9304 42.0335 39.6506 42.0335 40.7036 40.9759C41.7612 39.9184 41.7612 38.1981 40.7036 37.1406L28.7981 25.2305Z' fill='%230E2855'/%3E%3Cpath d='M13.4249 17.4464L16.4024 20.4239L20.1833 16.643L17.351 13.8107C17.873 12.036 17.4373 10.0343 16.0393 8.63637C16.0257 8.62276 16.0075 8.61368 15.9939 8.60006C15.9803 8.58644 15.9712 8.56829 15.9576 8.55467L7.66505 0.262121C7.31556 -0.0873736 6.75273 -0.0873736 6.40324 0.262121C6.05374 0.611615 6.05374 1.17444 6.40324 1.52393L14.1057 9.22189C14.1057 9.22189 14.1103 9.22643 14.1148 9.22643C14.3327 9.44429 14.3327 9.79379 14.1148 10.0117C13.8969 10.2295 13.5475 10.2295 13.3296 10.0117L13.325 10.0071L5.61801 2.30462C5.26852 1.95513 4.70569 1.95513 4.3562 2.30462C4.0067 2.65412 4.0067 3.21694 4.3562 3.56643L12.0587 11.2735C12.0587 11.2735 12.0632 11.2735 12.0632 11.278C12.2811 11.4959 12.2811 11.8454 12.0632 12.0632C11.8454 12.2811 11.4959 12.2811 11.278 12.0632C11.278 12.0632 11.278 12.0587 11.2735 12.0587L3.57097 4.35166C3.22148 4.00217 2.65865 4.00217 2.30916 4.35166C1.95967 4.70115 1.95967 5.26398 2.30916 5.61347L10.0117 13.316L10.0162 13.3205C10.2341 13.5384 10.2341 13.8879 10.0162 14.1057C9.79833 14.3236 9.44883 14.3236 9.23097 14.1057C9.23097 14.1057 9.23097 14.1012 9.22643 14.1012V14.1057L1.52393 6.3987C1.17898 6.0492 0.611615 6.0492 0.262121 6.3987C-0.0873736 6.74819 -0.0873736 7.31102 0.262121 7.66051L8.55921 15.9576C8.57283 15.9712 8.59098 15.9803 8.6046 15.9939C8.61822 16.0075 8.62729 16.0257 8.64091 16.0393C9.93903 17.3329 11.7546 17.8004 13.4249 17.4464Z' fill='%230E2855'/%3E%3Cpath d='M40.2044 36.6686L29.3201 25.7798L25.5392 29.5561L36.428 40.4449C37.472 41.4889 39.165 41.4889 40.2089 40.4449C41.2483 39.4055 41.2483 37.708 40.2044 36.6686Z' fill='%230E2855'/%3E%3C/svg%3E%0A")
+        50%/62% no-repeat;
+    }
+
+    .code2me-hotels-set .cards-grid .card-cell .info .terms .term-badge.depart-from .label {
+        display: inline-block;
+    }
+
+    .code2me-hotels-set .cards-grid .card-cell .info .terms .term-badge.depart-from .label strong {
+        font-size: 1.32em;
+    }
+
+    .term-badge.depart-date {
+        width: 100%;
+    }
+
+    .term-badge.depart-date .label {
+        font-size: 1.43em !important;
+        font-weight: 700;
+    }
+
+    .term-badge.meal {
+        width: 100% !important;
+    }
+
+    .term-badge.meal .label {
+        line-height: 1.3 !important;
+    }
+
+    .code2me-hotels-set .cards-grid .card-cell .info .terms .term-badge.accomodation .label {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+
+    .code2me-hotels-set .cards-grid .card-cell .info .terms .term-badge.accomodation .label strong {
+        font-size: 1.32em;
+    }
+
+    .code2me-hotels-set .cards-grid .card-cell .info .price-info {
+        align-items: baseline;
+        margin: 0.87em auto 0.73em;
+        font-size: 2em;
+        font-weight: 900;
+        display: flex;
+    }
+    .code2me-hotels-set .cards-grid .card-cell .info .price-info.from:before {
+        content: "от ";
+        font-size: 0.833333em;
+        font-weight: 500;
+    }
+    .code2me-hotels-set .cards-grid .card-cell .info .price-info:after {
+        content: "/ чел";
+        background: url("data:image/svg+xml,%3Csvg width='24' height='30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.608 29.065V.505h9.12c3.68 0 6.36.747 8.04 2.24 1.706 1.493 2.56 3.547 2.56 6.16 0 1.547-.347 3-1.04 4.36-.694 1.36-1.854 2.453-3.48 3.28-1.6.827-3.787 1.24-6.56 1.24h-2.6v11.28h-6.04Zm-3.2-4.28v-3.88h15.4v3.88H.408Zm0-7v-4.96h11.72v4.96H.408Zm11.24-4.96c1.146 0 2.133-.12 2.96-.36.826-.267 1.466-.68 1.92-1.24.453-.56.68-1.267.68-2.12 0-1.227-.387-2.133-1.16-2.72-.773-.613-1.987-.92-3.64-.92h-2.76v7.36h2Z' fill='%230E2855'/%3E%3C/svg%3E")
+        0 / contain no-repeat;
+        margin-left: 0.3em;
+        padding-left: 0.8em;
+        font-size: 0.833333em;
+        font-weight: 400;
+        line-height: 0.83;
+    }
+    .code2me-hotels-set .cards-grid .card-cell .actions > button,
+    .code2me-hotels-set .cards-grid .card-cell .actions > a {
+        min-width: 10em;
+        font-weight: 700;
+        font-size: 1.42857em !important;
+    }
+    .code2me-hotels-set .cards-grid + .actions {
+        justify-content: center;
+        padding: 1em;
+        display: flex;
+    }
+    @media screen and (max-width: 576px) {
+        .code2me-hotels-set .cards-grid + .actions {
+            font-size: 1.5em;
+        }
+    }
+    .code2me-hotels-set .cards-grid + .actions > button {
+        background: 0 0;
+        box-shadow: inset 0 0 0 2px;
+        color: #000 !important;
+    }
+    .code2me-hotels-set .cards-grid + .actions > button:after {
+        -webkit-filter: invert();
+        -webkit-filter: invert();
+        filter: invert();
+    }
+    .code2me-hotels-set .cards-grid + .actions > button:hover {
+        background: inherit;
+    }
+    .code2me-hotels-set .actions > button,
+    .code2me-hotels-set .actions > a {
+        width: 100%;
+        font-family: inherit;
+        line-height: inherit;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        height: 2.4em;
+        cursor: pointer;
+        background: var(--sunmar-ramp);
+        border: 0;
+        border-radius: 0.5em;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1.5em;
+        text-decoration: none;
+        transition: background 0.5s;
+        display: inline-flex;
+        font-size: inherit !important;
+        color: #fff !important;
+        outline: none !important;
+        border-radius: 100px;
+    }
+    .code2me-hotels-set .actions > button:active,
+    .code2me-hotels-set .actions > a:active {
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px);
+    }
+    .code2me-hotels-set .actions > button:hover,
+    .code2me-hotels-set .actions > a:hover {
+        background: var(--sunmar-ramp-hover);
+    }
+    .code2me-hotels-set .actions > button.with-down-arrow:after,
+    .code2me-hotels-set .actions > a.with-down-arrow:after {
+        content: "";
+        width: 0.75em;
+        height: 0.75em;
+        background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTEiIHZpZXdCb3g9IjAgMCAxOCAxMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE3IDFMOC41NjM2NCA5TDEgMSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+Cg==)
+        50% / contain no-repeat;
+        margin-left: 1em;
+    }
+
+    .with-down-arrow {
+        width: fit-content !important;
+    }
+
+    .with-down-arrow span {
+        font-family: var(--sunmar-font);
+        font-weight: 400;
+    }
+
+    .code2me-hotels-set .cards-grid .card-cell .visual .badges-grid {
+        color: white;
+        border-radius: 30px;
+        bottom: 1em;
+        left: 1em;
+        top: unset;
+        font-family: var(--sunmar-font);
+        font-size: 1em;
+        line-height: 1;
+    }
+
+    .code2me-hotels-set .cards-grid .card-cell .visual .badges-grid .hotel-badge.text-only {
+        letter-spacing: normal;
+        color: #fff;
+        background-color: unset;
+        padding: 0.5em 1em;
+        box-shadow: unset;
+        line-height: 1;
+        background: #0E2855;
+        margin: 0;
+        border-radius: 2em;
+        font-size: 11px;
+    }
+
+    .month-filters {
+        flex: 1 0 40% !important;
+    }
+</style>
+<div class="code2me-hotels-set" data-component-instance="df338352-0b82-4de0-b287-5174a56b0d86" id="hotels-set">
+    <div class="filters-wrap">
+        <div class="group-filters">
+            <div class="heading region">Выберите регион</div>
+            <button class="buttonlike white selected" data-group="*">Все отели</button>  <button class="buttonlike white " data-group="Абу-Даби">Абу-Даби</button>  <button class="buttonlike white " data-group="Шарджа">Шарджа</button>  <button class="buttonlike white " data-group="Аджман">Аджман</button>  <button class="buttonlike white " data-group="Дубай">Дубай</button>  <button class="buttonlike white " data-group="Джебель Али">Джебель Али</button>
+        </div>
+    </div>
+    <div class="cards-grid">
+        <div class="card-cell" data-group="Абу-Даби" data-year-month="2023-10">
+            <div class="visual" style="background-image:url(https://content.sunmar.ru/resize/800x600/media/image/31/20647/636695035126619346.jpg)">
+                <div class="badges-grid">
+                    <div class="hotel-badge text-only">специальная цена!</div>
+                </div>
+            </div>
+            <div class="info">
+                <div class="stars-name-location">
+                    <div is="hotel-stars" class="trait" data-category="5 *"> <span class="star">&nbsp;</span>  <span class="star">&nbsp;</span>  <span class="star">&nbsp;</span>  <span class="star">&nbsp;</span>  <span class="star">&nbsp;</span> </div>
+                    <h3 class="name">BAB AL QASR BEACH RESORT &amp; SPA</h3>
+                    <h4 class="location">Абу-Даби</h4>
+                </div>
+                <div class="terms">
+                    <span class="term-badge meal">
+                        <span class="icon"></span>
+                        <span class="label">Завтрак</span>
+                    </span>
+                    <span class="term-badge depart-date">
+                        <span class="icon"></span>
+                        <span class="label">31.10.23</span>
+                    </span>
+
+                    <span class="term-badge depart-from">
+                        <span class="icon"></span>
+                        <span class="label">
+													<strong>Волгоград</strong>
+													<br>
+													перелет включен</span>
+												</span>
+                    <span class="term-badge accomodation">
+                        <span class="icon"></span>
+                        <span class="label">
+                            <strong>7</strong>
+                            <span class="label__night">ночей</span>
+                        </span>
+                    </span>
+                </div>
+                <div class="price-info from rur per-person">112 726</div>
+                <div class="actions ">
+                    <a href="https://www.sunmar.ru/hotels/united-arab-emirates/bab-al-qasr-beach-resort-spa-abu-dhabi/?q=%7b%22Bgn%22%3a%2231.10.2023%22%2c%22End%22%3a%2231.10.2023%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%227%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22sz9PbxIlGDPK6sqBPSFgYiNa7U0mzgPFNEkJ9wMn9PfrMOznjjrqd0iJzB4%2bwyq8xTZCLw%2bTVRUDZh4NWnFAC76z6a9oxxFbk97q8hFhjaUOFbhb24uHMYR8UtV1v68b%2bjPllXLusBoVP3z%2ffSia3Bk7o9Kba9N7QtAJ4f02AUCMtEOJyp0NlYzBLYc2i%2bkf%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d" class="buttonlike yellow" target="_blank">
+                        Купить тур
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card-cell" data-group="Шарджа" data-year-month="2023-10">
+            <div class="visual" style="background-image:url(https://content.sunmar.ru/resize/800x600/media/image/31/2018/636350306833781268.jpg)">
+                <div class="badges-grid">
+                    <div class="hotel-badge text-only">специальная цена!</div>
+                </div>
+            </div>
+            <div class="info">
+                <div class="stars-name-location">
+                    <div is="hotel-stars" class="trait" data-category="4 *"> <span class="star">&nbsp;</span>  <span class="star">&nbsp;</span>  <span class="star">&nbsp;</span>  <span class="star">&nbsp;</span> </div>
+                    <h3 class="name">CORAL BEACH RESORT SHARJAH</h3>
+                    <h4 class="location">Шарджа</h4>
+                </div>
+                <div class="terms">
+                    <span class="term-badge meal">
+                        <span class="icon"></span>
+                        <span class="label">Завтрак</span>
+                    </span>
+                    <span class="term-badge depart-date">
+                        <span class="icon"></span>
+                        <span class="label">31.10.23</span>
+                    </span>
+
+                    <span class="term-badge depart-from">
+                        <span class="icon"></span>
+                        <span class="label">
+													<strong>Волгоград</strong>
+													<br>
+													перелет включен</span>
+												</span>
+                    <span class="term-badge accomodation">
+                        <span class="icon"></span>
+                        <span class="label">
+                            <strong>7</strong>
+                            <span class="label__night">ночей</span>
+                        </span>
+                    </span>
+                </div>
+                <div class="price-info from rur per-person">119 571</div>
+                <div class="actions ">
+                    <a href="https://www.sunmar.ru/hotels/united-arab-emirates/coral-beach-resort-sharjah-sharjah/?q=%7b%22Bgn%22%3a%2231.10.2023%22%2c%22End%22%3a%2231.10.2023%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%227%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22ekV6qxnPc1E1rfe0DKFYEAju9o1eeghw2WB%2fHMQxi9%2bn2%2fd7DE2TBKra1n8kHBjYCEdjjVhyIn2a8PHllXZQx2q56yfXRsvxo%2bQ6AHS4lMxKAVdIe9UIYVKErZHTEWQQZYoVHkbAzLyvJni4bw05%2f%2blJ2yOufhynVrkzv2vBELjTj4JdUowzBbn1EGWVag0Z%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d" class="buttonlike yellow" target="_blank">
+                        Купить тур
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card-cell" data-group="Аджман" data-year-month="2023-10">
+            <div class="visual" style="background-image:url(https://content.sunmar.ru/resize/800x600/media/image/31/8230/636823041951882446.jpg)">
+                <div class="badges-grid">
+                    <div class="hotel-badge text-only">специальная цена!</div>
+                </div>
+            </div>
+            <div class="info">
+                <div class="stars-name-location">
+                    <div is="hotel-stars" class="trait" data-category="5 *"> <span class="star">&nbsp;</span>  <span class="star">&nbsp;</span>  <span class="star">&nbsp;</span>  <span class="star">&nbsp;</span>  <span class="star">&nbsp;</span> </div>
+                    <h3 class="name">BAHI AJMAN PALACE HOTEL</h3>
+                    <h4 class="location">Аджман</h4>
+                </div>
+                <div class="terms">
+                    <span class="term-badge meal">
+                        <span class="icon"></span>
+                        <span class="label">Завтрак</span>
+                    </span>
+                    <span class="term-badge depart-date">
+                        <span class="icon"></span>
+                        <span class="label">31.10.23</span>
+                    </span>
+
+                    <span class="term-badge depart-from">
+                        <span class="icon"></span>
+                        <span class="label">
+													<strong>Волгоград</strong>
+													<br>
+													перелет включен</span>
+												</span>
+                    <span class="term-badge accomodation">
+                        <span class="icon"></span>
+                        <span class="label">
+                            <strong>7</strong>
+                            <span class="label__night">ночей</span>
+                        </span>
+                    </span>
+                </div>
+                <div class="price-info from rur per-person">122 394</div>
+                <div class="actions ">
+                    <a href="https://www.sunmar.ru/hotels/united-arab-emirates/bahi-ajman-palace-hotel-ajman/?q=%7b%22Bgn%22%3a%2231.10.2023%22%2c%22End%22%3a%2231.10.2023%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%227%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22KTLsuiD82OFhTH3iPfqbm27ZLo5%2bCUB%2fbSAUxnEk7eXkv1vh5ij7se2JTS%2bh0BvghRBHnpJK4CnaNDLEC9eoybxg9PvMoVmMsRmbpuo55hsocv1ptrZQi%2b4wNf7gD5vjV1qIo7MyYhxKupWli5ow8lN0x3xpgNcOviIE9AZQx7k%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d" class="buttonlike yellow" target="_blank">
+                        Купить тур
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card-cell" data-group="Аджман" data-year-month="2023-10">
+            <div class="visual" style="background-image:url(https://content.sunmar.ru/resize/800x600/media/image/31/1982/636613981464610828.jpeg)">
+                <div class="badges-grid">
+                    <div class="hotel-badge text-only">специальная цена!</div>
+                </div>
+            </div>
+            <div class="info">
+                <div class="stars-name-location">
+                    <div is="hotel-stars" class="trait" data-category="5 *"> <span class="star">&nbsp;</span>  <span class="star">&nbsp;</span>  <span class="star">&nbsp;</span>  <span class="star">&nbsp;</span>  <span class="star">&nbsp;</span> </div>
+                    <h3 class="name">AJMAN HOTEL</h3>
+                    <h4 class="location">Аджман</h4>
+                </div>
+                <div class="terms">
+                    <span class="term-badge meal">
+                        <span class="icon"></span>
+                        <span class="label">Завтрак</span>
+                    </span>
+                    <span class="term-badge depart-date">
+                        <span class="icon"></span>
+                        <span class="label">31.10.23</span>
+                    </span>
+
+                    <span class="term-badge depart-from">
+                        <span class="icon"></span>
+                        <span class="label">
+													<strong>Волгоград</strong>
+													<br>
+													перелет включен</span>
+												</span>
+                    <span class="term-badge accomodation">
+                        <span class="icon"></span>
+                        <span class="label">
+                            <strong>7</strong>
+                            <span class="label__night">ночей</span>
+                        </span>
+                    </span>
+                </div>
+                <div class="price-info from rur per-person">152 758</div>
+                <div class="actions ">
+                    <a href="https://www.sunmar.ru/hotels/united-arab-emirates/ajman-hotel-ajman/?q=%7b%22Bgn%22%3a%2231.10.2023%22%2c%22End%22%3a%2231.10.2023%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%227%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22A%2bsc13QZEw3rBtu7cantF7W5mE3z7iZPSSEkP4QJ8B6l1rPhFdh2naowSWaYqHOsjb5W3lra3iiY27UUkXsZMpGm1%2fexQlUIKICeEboYMSbYeSaiWx8Ba2s1PqgvCqksbY6zDG2zhgDyT2N2EJbH4qcC8N%2bX6hprKtw%2foj01yxo%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d" class="buttonlike yellow" target="_blank">
+                        Купить тур
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card-cell" data-group="Дубай" data-year-month="2023-10">
+            <div class="visual" style="background-image:url(https://content.sunmar.ru/resize/800x600/media/image/31/18317/636917234823891585.jpg)">
+                <div class="badges-grid">
+                    <div class="hotel-badge text-only">специальная цена!</div>
+                </div>
+            </div>
+            <div class="info">
+                <div class="stars-name-location">
+                    <div is="hotel-stars" class="trait" data-category="4 *"> <span class="star">&nbsp;</span>  <span class="star">&nbsp;</span>  <span class="star">&nbsp;</span>  <span class="star">&nbsp;</span> </div>
+                    <h3 class="name">WYNDHAM DUBAI MARINA</h3>
+                    <h4 class="location">Дубай</h4>
+                </div>
+                <div class="terms">
+                    <span class="term-badge meal">
+                        <span class="icon"></span>
+                        <span class="label">Завтрак</span>
+                    </span>
+                    <span class="term-badge depart-date">
+                        <span class="icon"></span>
+                        <span class="label">31.10.23</span>
+                    </span>
+
+                    <span class="term-badge depart-from">
+                        <span class="icon"></span>
+                        <span class="label">
+													<strong>Волгоград</strong>
+													<br>
+													перелет включен</span>
+												</span>
+                    <span class="term-badge accomodation">
+                        <span class="icon"></span>
+                        <span class="label">
+                            <strong>7</strong>
+                            <span class="label__night">ночей</span>
+                        </span>
+                    </span>
+                </div>
+                <div class="price-info from rur per-person">159 570</div>
+                <div class="actions ">
+                    <a href="https://www.sunmar.ru/hotels/united-arab-emirates/wyndham-dubai-marina-dubai/?q=%7b%22Bgn%22%3a%2231.10.2023%22%2c%22End%22%3a%2231.10.2023%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%227%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22eol0bqIMWVjiuHpxTh02sGRPHSTCZJE8QNs9Oe7RasOeaTVXT6ba0Q1PqBQYpE%2bcKRO6pywWaDWyrSKDbe%2b3SNWgnsOSNhVGQQAq3GE4n%2b3xeKaOaqdkupmNo2FT49QFJw7OhvwDHM94MNXf8IB7DPduOVRWE0LOVmuusq95f4U%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d" class="buttonlike yellow" target="_blank">
+                        Купить тур
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card-cell" data-group="Абу-Даби" data-year-month="2023-10">
+            <div class="visual" style="background-image:url(https://content.sunmar.ru/resize/800x600/media/image/31/50797/637934970108353904.jpg)">
+                <div class="badges-grid">
+                    <div class="hotel-badge text-only">специальная цена!</div>
+                </div>
+            </div>
+            <div class="info">
+                <div class="stars-name-location">
+                    <div is="hotel-stars" class="trait" data-category="5 *"> <span class="star">&nbsp;</span>  <span class="star">&nbsp;</span>  <span class="star">&nbsp;</span>  <span class="star">&nbsp;</span>  <span class="star">&nbsp;</span> </div>
+                    <h3 class="name">RIXOS MARINA ABU DHABI</h3>
+                    <h4 class="location">Абу-Даби</h4>
+                </div>
+                <div class="terms">
+                    <span class="term-badge meal">
+                        <span class="icon"></span>
+                        <span class="label">Завтрак</span>
+                    </span>
+                    <span class="term-badge depart-date">
+                        <span class="icon"></span>
+                        <span class="label">31.10.23</span>
+                    </span>
+
+                    <span class="term-badge depart-from">
+                        <span class="icon"></span>
+                        <span class="label">
+													<strong>Волгоград</strong>
+													<br>
+													перелет включен</span>
+												</span>
+                    <span class="term-badge accomodation">
+                        <span class="icon"></span>
+                        <span class="label">
+                            <strong>7</strong>
+                            <span class="label__night">ночей</span>
+                        </span>
+                    </span>
+                </div>
+                <div class="price-info from rur per-person">171 465</div>
+                <div class="actions ">
+                    <a href="https://www.sunmar.ru/hotels/united-arab-emirates/rixos-marina-abu-dhabi-abu-dhabi/?q=%7b%22Bgn%22%3a%2231.10.2023%22%2c%22End%22%3a%2231.10.2023%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%227%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22y7rhww84sYH5XqFm4P5lw%2futnBI7a4UPiEuGKBhuTQg7kaJye9d9lgEhTAo8jG35jFVWKgHgwTr43cTq2srVdzmSDWHjHdMNkemEQszO7P8bnISN4gAQh9mLckpZ9gkPcn7ZGSeQEQj8WiSvXCp1c%2fKCfIkxs6v62mMxrif%2fYDc%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d" class="buttonlike yellow" target="_blank">
+                        Купить тур
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card-cell" data-group="Джебель Али" data-year-month="2023-10">
+            <div class="visual" style="background-image:url(https://content.sunmar.ru/resize/800x600/media/image/31/2067/636963625657368988.jpg)">
+                <div class="badges-grid">
+                    <div class="hotel-badge text-only">специальная цена!</div>
+                </div>
+            </div>
+            <div class="info">
+                <div class="stars-name-location">
+                    <div is="hotel-stars" class="trait" data-category="5 *"> <span class="star">&nbsp;</span>  <span class="star">&nbsp;</span>  <span class="star">&nbsp;</span>  <span class="star">&nbsp;</span>  <span class="star">&nbsp;</span> </div>
+                    <h3 class="name">JA BEACH HOTEL</h3>
+                    <h4 class="location">Джебель Али</h4>
+                </div>
+                <div class="terms">
+                    <span class="term-badge meal">
+                        <span class="icon"></span>
+                        <span class="label">Завтрак</span>
+                    </span>
+                    <span class="term-badge depart-date">
+                        <span class="icon"></span>
+                        <span class="label">31.10.23</span>
+                    </span>
+
+                    <span class="term-badge depart-from">
+                        <span class="icon"></span>
+                        <span class="label">
+													<strong>Волгоград</strong>
+													<br>
+													перелет включен</span>
+												</span>
+                    <span class="term-badge accomodation">
+                        <span class="icon"></span>
+                        <span class="label">
+                            <strong>7</strong>
+                            <span class="label__night">ночей</span>
+                        </span>
+                    </span>
+                </div>
+                <div class="price-info from rur per-person">187 841</div>
+                <div class="actions ">
+                    <a href="https://www.sunmar.ru/hotels/united-arab-emirates/ja-beach-hotel-jebel-ali/?q=%7b%22Bgn%22%3a%2231.10.2023%22%2c%22End%22%3a%2231.10.2023%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%227%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22aldHJ3rFUqu08SJ%2bpMtcq%2fbrFcIGGSZ7PRDX0oW57C3JRBZVPo4XZXM0Cw90SDDM47V8GuDLoOqr98cycM%2b9fE9F6Cp83F3hhs%2boUavkkMZn3Ik7w6RGvUQe7WHrtIaN97sPd3RWYaZfX0mdR4oLFl2tTf5W2UvJXeWixeB5%2fE4%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d" class="buttonlike yellow" target="_blank">
+                        Купить тур
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card-cell" data-group="Дубай" data-year-month="2023-10">
+            <div class="visual" style="background-image:url(https://content.sunmar.ru/resize/800x600/media/image/31/2047/637115917505635076.jpg)">
+                <div class="badges-grid">
+                    <div class="hotel-badge text-only">специальная цена!</div>
+                </div>
+            </div>
+            <div class="info">
+                <div class="stars-name-location">
+                    <div is="hotel-stars" class="trait" data-category="5 *"> <span class="star">&nbsp;</span>  <span class="star">&nbsp;</span>  <span class="star">&nbsp;</span>  <span class="star">&nbsp;</span>  <span class="star">&nbsp;</span> </div>
+                    <h3 class="name">GROSVENOR HOUSE DUBAI</h3>
+                    <h4 class="location">Дубай</h4>
+                </div>
+                <div class="terms">
+                    <span class="term-badge meal">
+                        <span class="icon"></span>
+                        <span class="label">Полупансион</span>
+                    </span>
+                    <span class="term-badge depart-date">
+                        <span class="icon"></span>
+                        <span class="label">31.10.23</span>
+                    </span>
+
+                    <span class="term-badge depart-from">
+                        <span class="icon"></span>
+                        <span class="label">
+													<strong>Волгоград</strong>
+													<br>
+													перелет включен</span>
+												</span>
+                    <span class="term-badge accomodation">
+                        <span class="icon"></span>
+                        <span class="label">
+                            <strong>7</strong>
+                            <span class="label__night">ночей</span>
+                        </span>
+                    </span>
+                </div>
+                <div class="price-info from rur per-person">268 496</div>
+                <div class="actions ">
+                    <a href="https://www.sunmar.ru/hotels/united-arab-emirates/grosvenor-house-dubai-dubai/?q=%7b%22Bgn%22%3a%2231.10.2023%22%2c%22End%22%3a%2231.10.2023%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%227%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22OAZubIRFZ%2fprzhHZmAXNOQOIGfQ6Fp1CmQFN%2bvLvRKoMj3TnvfIUrjedS7UNkCWp%2ff%2bEdLfZX2RmqMtjxw%2fSBFTrq5T8kURArgO6IL07F56%2bid5I1RUeFLTMM3VY%2ftAw2iHBnC8QD%2ffCkuBBehakRkU3cigQH3umcLkLniXJmwk%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d" class="buttonlike yellow" target="_blank">
+                        Купить тур
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="actions">
+        <button class="with-down-arrow" data-action="show-all">
+            <span>Показать все (<span class="cards-count">...</span>)</span>
+        </button>
+    </div>
+</div>
+
+<script type="text/javascript">
+    (function () {
+        var n, t;
+        (t = function (n) {
+            var t, e;
+            return (
+                (t = ["data-group", "data-year-month"]),
+                    (e = {}),
+                    n.find(".selected").map(function (n, a) {
+                        var c, d, r, o, s;
+                        for (c = $(a), s = [], r = 0, o = t.length; r < o; r++) (d = t[r]), c.attr(d) && "*" !== c.attr(d) && s.push((e[d] = c.attr(d)));
+                        return s;
+                    }),
+                    e
+            );
+        }),
+            (n = function (n, t, e, a) {
+                var c, d;
+                return (
+                    (d = (c = t.filter(function (n, t) {
+                        var e;
+                        return (
+                            (e = $(t)),
+                                _.every(Object.keys(a), function (n) {
+                                    return e.attr(n) === a[n];
+                                })
+                        );
+                    })).length),
+                        c.length > 12 ? n.hasClass("open") || ((c = c.slice(0, 8)), e.show()) : e.hide(),
+                        t.removeClass("shown"),
+                        c.addClass("shown"),
+                        e.find(".cards-count").text(d),
+                        n.toggleClass("no-match", 0 === c.length)
+                );
+            }),
+            document.addEventListener(
+                "DOMContentLoaded",
+                function () {
+                    var e, a, c, d, r, o;
+                    return (
+                        ($.fn.isotope = function () {}),
+                            "df338352-0b82-4de0-b287-5174a56b0d86",
+                            (o = "[data-component-instance='".concat("df338352-0b82-4de0-b287-5174a56b0d86", "']")),
+                            (a = $(o)),
+                            (d = a.find(".cards-grid")),
+                            (e = d.find(".card-cell")),
+                            (c = a.find(".filters-wrap")),
+                            (r = a.find(".cards-grid + .actions")),
+                            $(document).on("click", "".concat(o, " .filters-wrap button"), function () {
+                                return $(this).addClass("selected").siblings(".selected").removeClass("selected"), n(d, e, r, t(c));
+                            }),
+                            $(document).on("click", "".concat(o, " [data-action='show-all']"), function () {
+                                return d.addClass("open"), n(d, e, r, t(c));
+                            }),
+                            n(d, e, r, t(c))
+                    );
+                },
+                { once: !0 }
+            );
+    }.call(this));
+</script>
+</body>

@@ -2,8 +2,8 @@
     locals: {
         coral: {
             commons: {
-                bestDealsBox_HomePageSet_TabName: 'Эксклюзивно у Coral Travel',
-                preferredDestinationOrder: ['Эксклюзивно у Coral Travel', 'Турция', 'ОАЭ', 'Бахрейн', 'Россия', 'Египет', 'Мальдивы'],
+                bestDealsBox_HomePageSet_TabName: 'Отели Coral Travel Group',
+                preferredDestinationOrder: ['Турция', 'ОАЭ', 'Египет', 'Таиланд', 'Отели Coral Travel Group'],
                 preferredDestination: 'Турция',
                 destinations: [
                     {
@@ -69,29 +69,29 @@
                 ],
                 leasureGuides: [
                     {
-                        visual: 'https://cdn.coral.ru/content/img/gid_po_otdyhu/coral_tc_for_main-4.jpg',
-                        href: 'https://www.coral.ru/poleznaya-informatsiya/gid-po-otdyhu/kuda-poehat-prazdniki/?banner_on_site=gid-prazd'
+                        visual: 'https://cdn.coral.ru/content/img/gid_po_otdyhu/327x217_gid_egypt_23.jpg',
+                        href: 'https://www.coral.ru/main/egypt/travel-egypt/?banner_on_site=gid-egypt'
                     },
                     {
-                        visual: 'https://cdn.coral.ru/content/img/gid_po_otdyhu/327x217_gid_thai_3.jpg',
-                        href: 'https://www.coral.ru/amazing-tayland/?banner_on_site=gid-tayland'
+                        visual: 'https://cdn.coral.ru/content/img/gid_po_otdyhu/327x217_gid_turkiye_aegean_23.jpg',
+                        href: 'https://www.coral.ru/main/turkey/open-new-turkey/?banner_on_site=gid-aegean'
                     },
                     {
-                        visual: 'https://cdn.coral.ru/content/img/gid_po_otdyhu/327x217_bahrain.jpg',
-                        href: 'https://www.coral.ru/packagetours/moskva-to-bahreyn-tours/?q=%7b%22Bgn%22%3a%2210.04.2023%22%2c%22End%22%3a%2216.04.2023%22%2c%22Dr%22%3a%223%22%2c%22Acc%22%3a%227%2c8%2c9%2c10%2c11%2c12%2c13%2c14%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%2221%2b6cO3TqxiPH7gQlR64eXMC%2bzp7zCzLPm%2bhIHnR5yHsoiD1vjs7OJS1u3SSGdiATwNrzBdDlqyicuMwNfrBrkjjL7G3aWpD65kcA3ArQGi0Fv41IyASb%2b8kgZ8XHbU%2bfXj7KzznHEKdLQbdfW3JmQ%3d%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d&f={%22Rh%22:false,%22Ao%22:[%22available%22]}&page=1&banner_on_site=gid-bahreyn'
+                        visual: 'https://cdn.coral.ru/content/img/gid_po_otdyhu/327x217_gid_uae_23.jpg',
+                        href: 'https://www.coral.ru/main/uae/?banner_on_site=gid-uae'
                     },
                     {
-                        visual: 'https://cdn.coral.ru/content/img/gid_po_otdyhu/327x217_turkiye.jpg',
-                        href: 'https://www.coral.ru/visit-turkey/regions-antalia/?banner_on_site=gid-antalia'
+                        visual: 'https://cdn.coral.ru/content/img/gid_po_otdyhu/327x217_gid_bahrain_23.jpg',
+                        href: 'https://www.coral.ru/main/bahrein/otdyh-v-bahrein/?banner_on_site=gid-bahrein'
                     },
                 ],
                 payAttention: [
                     {
-                        visual: '/site/coral.ru/assets/pay-attention/coral-bonus.jpg',
+                        visual: 'https://cdn.coral.ru/content/img/coralbonus_660%D1%85440_ljn8krbhm.jpg',
                         href: 'https://www.coral.ru/poleznaya-informatsiya/offers/coralbonus/?banner_on_site=coralbonus'
                     },
                     {
-                        visual: '/site/coral.ru/assets/pay-attention/gift-cards.jpg',
+                        visual: 'https://cdn.coral.ru/content/img/gift_card_660%D1%85440_ljn8jtmab.jpg',
                         href: 'https://www.coral.ru/podarochnye-karty/?banner_on_site=giftcard'
                     },
                 ]
@@ -1306,12 +1306,173 @@
                         },
                     ]
                 },
+                volgograd: {
+                    h2: 'Из Волгограда без пересадок',
+                    h3: 'Выбирай и лети',
+                    name: 'Волгоград',
+                    url: '/volgograd/',
+                    logoDecor: '/site/coral.ru/assets/logo-decor-volgograd.png',
+                    dictionary: {
+                        wording_fromCityName: 'из Волгограда'
+                    },
+                    hotPromos: [
+                        {
+                            visual: 'https://cdn.coral.ru/content/img/621x420_turkey_autumn_reg_ljn8kcnjf.jpeg',
+                            href: 'https://www.coral.ru/visit-turkey/'
+                        },
+                        {
+                            visual: 'https://cdn.coral.ru/content/cms/russia/regional-home/hot-promos/flydubai_coral_volgograd_621x420_ljn8kwhod.jpg',
+                            href: 'https://www.coral.ru/packagetours/volgograd-to-dubaydubai-tours/?q=%7b%22Bgn%22%3a%2230.10.2023%22%2c%22End%22%3a%2205.11.2023%22%2c%22Dr%22%3a%223%22%2c%22Acc%22%3a%226%2c9%2c10%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%227vXXfzxBO26JIzhHbEbHvsCQOe4e3TiubiCLCFtgPNLYzuqn%2fFm5ave8S4DqCxiVZGGLyQeHBG4qI0H7SaAwp32O3a%2fdGgeTwlxuR0jYmF11xYIWutCgFSykNRR%2fDanKw8owgE%2bSgnTYQDJ823sgDmg%2bxhFzzFBRi6Hv%2bKVm5Gg%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d&f={%22Rh%22:false,%22Ao%22:[%22available%22]}&page=1'
+                        },
+                        {
+                            visual: 'https://cdn.coral.ru/content/img/621x420_booking_tours_in_autumn_reg_ljn8kecsp.jpeg',
+                            href: 'https://www.coral.ru/top-tours/osen/'
+                        },
+                        {
+                            visual: 'https://cdn.coral.ru/content/img/621x420_winter_uae_reg_ljn8jxwde.jpeg',
+                            href: 'https://www.coral.ru/packagetours/samara-to-shardzhasharjah-tours/?q=%7b%22Bgn%22%3a%2227.10.2023%22%2c%22End%22%3a%2202.11.2023%22%2c%22Dr%22%3a%223%22%2c%22Acc%22%3a%228%2c9%2c10%2c11%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22dNeuhdUDtYyLT4Lw1smIYEKZ3sUsGgr9PVuUXmU0q6L86hm6KNVoQz7MYul3MBnrhPIiLlRUP8CEOTJvW40JZ6I4He%2b8TTabgxBTTkQpVX85K6%2bMYiZMHvcP1LYe%2fBd2u4EnZ8%2bp6MNUaU7vZ9UCyuSg72a%2bx1c0hVvjROl8eGE%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d&amp;f={%22Rh%22:false,%22Ao%22:[%22available%22]}&amp;page=1'
+                        },
+                        {
+                            visual: 'https://cdn.coral.ru/content/img/621x420_egyptautumn_reg_ljn8k8vky.jpeg',
+                            href: 'https://www.coral.ru/main/egypt/travel-egypt/'
+                        },
+                        {
+                            visual: 'https://cdn.coral.ru/content/img/621x420_aegean_reg_ljn8kwzsx.jpeg',
+                            href: 'https://www.coral.ru/visit-turkey/regions-aegean/'
+                        },
+                        {
+                            visual: 'https://cdn.coral.ru/content/img/621x420_cgh_reg_ljn8jx5q7.jpeg',
+                            href: 'https://www.coral.ru/concepts/coralgroup-hotels-and-resorts/'
+                        },
+                        {
+                            visual: 'https://cdn.coral.ru/content/img/621x420_thai_reg_ljn8kvqhe.jpeg',
+                            href: 'https://www.coral.ru/packagetours/moskva-to-tailand-tours/?q=%7b%22Bgn%22%3a%2228.10.2023%22%2c%22End%22%3a%2203.11.2023%22%2c%22Dr%22%3a%223%22%2c%22Acc%22%3a%228%2c11%2c12%2c15%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22EwKMRwv%2fmUTos6DmTDwr%2bpfEJ1adPcQnyKQU%2bXzLsJHdx0Xgo7AHwc11lhBji3UYxCP01PjYgaeqTpZ0vnmRMPzZAOGx5kNWb8CVxIkyCdbwpOGuPTFsbOP8p22n7fHLGdehTmUNAv5C%2fYoEAZM56Q%3d%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d&amp;f={%22Rh%22:false,%22Ao%22:[%22available%22]}&amp;page=1'
+                        },
+                        {
+                            visual: 'https://cdn.coral.ru/content/img/credit_desk.jpg',
+                            href: 'https://www.coral.ru/poleznaya-informatsiya/onlinetour/payment/'
+                        },
+                    ],
+                    xlinks: [
+                        {
+                            heading: 'Туры в Турцию из Волгограда',
+                            links: [{ label: 'Туры в Турцию из Волгограда', href: '/volgograd/turkey/' },]
+                        },
+                        {
+                            heading: 'Туры в ОАЭ из Волгограда',
+                            links: [{ label: 'Туры в ОАЭ из Волгограда', href: '/main/uae/' }]
+                        },
+                        {
+                            heading: 'Туры по России из Волгограда',
+                            links: [{ label: 'Туры по России из Волгограда', href: '/main/russia/' }]
+                        },
+                        {
+                            heading: 'Туры в Египет из Москвы',
+                            links: [{ label: 'Туры в Египет из Москвы', href: '/main/egypt/' }]
+                        },
+                        {
+                            heading: 'Туры в Таиланд из Москвы',
+                            links: [{ label: 'Туры в Таиланд из Москвы', href: '/main/thailand/' }]
+                        },
+                        {
+                            heading: 'Туры на Кубу из Москвы',
+                            links: [{ label: 'Туры на Кубу из Москвы', href: '/main/cuba/' }]
+                        },
+                    ],
+                    destinations: [
+                        {
+                            button: {label: 'ОАЭ', data_lookup_destination: 'ОАЭ', data_lookup_depth_days: 12},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-uae-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-uae-mobile.jpg'
+                            }
+                        },
+                        {
+                            button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
+                            }
+                        },
+                    ]
+                },
+                mahachkala: {
+                    h2: 'Из Махачкалы без пересадок',
+                    h3: 'Выбирай и лети',
+                    name: 'Махачкала',
+                    url: '/mahachkala/',
+                    logoDecor: '/site/coral.ru/assets/logo-decor-mahachkala.png',
+                    dictionary: {
+                        wording_fromCityName: 'из Махачкалы'
+                    },
+                    hotPromos: [
+                        {
+                            visual: 'https://cdn.coral.ru/content/img/621x420_turkey_autumn_reg_ljn8kcnjf.jpeg',
+                            href: 'https://www.coral.ru/visit-turkey/'
+                        },
+                        {
+                            visual: 'https://cdn.coral.ru/content/cms/russia/regional-home/hot-promos/flydubai_coral_mhch_621x420_ljn8kwhod.jpg',
+                            href: 'https://www.coral.ru/packagetours/mahachkala-to-oae-tours/?q=%7b%22Bgn%22%3a%2217.10.2023%22%2c%22End%22%3a%2217.10.2023%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%227%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%222KFk9%2bGYBQpPxTxiaUdMSIwkZ4xlLTjH281y7vsjIT94TqcwjFKqP%2fETVUvgk2nFjP%2bf8VTnK9wVz6cURaMKPw%2fgiBURRqlkkz788KbVcxGeaBYOan1o7WimB34Qnsb9nvNw6vB8bK7pU8T6c13AhQ%3d%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3afalse%2c%22Rglr%22%3atrue%2c%22Srt%22%3a1%7d&f={%22Rh%22:false,%22Ao%22:[%22available%22]}&page=1'
+                        },
+                        {
+                            visual: 'https://cdn.coral.ru/content/img/621x420_booking_tours_in_autumn_reg_ljn8kecsp.jpeg',
+                            href: 'https://www.coral.ru/top-tours/osen/'
+                        },
+                        {
+                            visual: 'https://cdn.coral.ru/content/img/621x420_winter_uae_reg_ljn8jxwde.jpeg',
+                            href: 'https://www.coral.ru/packagetours/samara-to-shardzhasharjah-tours/?q=%7b%22Bgn%22%3a%2227.10.2023%22%2c%22End%22%3a%2202.11.2023%22%2c%22Dr%22%3a%223%22%2c%22Acc%22%3a%228%2c9%2c10%2c11%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22dNeuhdUDtYyLT4Lw1smIYEKZ3sUsGgr9PVuUXmU0q6L86hm6KNVoQz7MYul3MBnrhPIiLlRUP8CEOTJvW40JZ6I4He%2b8TTabgxBTTkQpVX85K6%2bMYiZMHvcP1LYe%2fBd2u4EnZ8%2bp6MNUaU7vZ9UCyuSg72a%2bx1c0hVvjROl8eGE%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d&amp;f={%22Rh%22:false,%22Ao%22:[%22available%22]}&amp;page=1'
+                        },
+                        {
+                            visual: 'https://cdn.coral.ru/content/img/621x420_egyptautumn_reg_ljn8k8vky.jpeg',
+                            href: 'https://www.coral.ru/main/egypt/travel-egypt/'
+                        },
+                        {
+                            visual: 'https://cdn.coral.ru/content/img/621x420_aegean_reg_ljn8kwzsx.jpeg',
+                            href: 'https://www.coral.ru/visit-turkey/regions-aegean/'
+                        },
+                        {
+                            visual: 'https://cdn.coral.ru/content/img/621x420_cgh_reg_ljn8jx5q7.jpeg',
+                            href: 'https://www.coral.ru/concepts/coralgroup-hotels-and-resorts/'
+                        },
+                        {
+                            visual: 'https://cdn.coral.ru/content/img/621x420_thai_reg_ljn8kvqhe.jpeg',
+                            href: 'https://www.coral.ru/packagetours/moskva-to-tailand-tours/?q=%7b%22Bgn%22%3a%2228.10.2023%22%2c%22End%22%3a%2203.11.2023%22%2c%22Dr%22%3a%223%22%2c%22Acc%22%3a%228%2c11%2c12%2c15%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22EwKMRwv%2fmUTos6DmTDwr%2bpfEJ1adPcQnyKQU%2bXzLsJHdx0Xgo7AHwc11lhBji3UYxCP01PjYgaeqTpZ0vnmRMPzZAOGx5kNWb8CVxIkyCdbwpOGuPTFsbOP8p22n7fHLGdehTmUNAv5C%2fYoEAZM56Q%3d%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d&amp;f={%22Rh%22:false,%22Ao%22:[%22available%22]}&amp;page=1'
+                        },
+                        {
+                            visual: 'https://cdn.coral.ru/content/img/credit_desk.jpg',
+                            href: 'https://www.coral.ru/poleznaya-informatsiya/onlinetour/payment/'
+                        },
+                    ],
+                    xlinks: [
+                        {
+                            heading: 'Туры в Турцию из Махачкалы',
+                            links: [{ label: 'Туры в Турцию из Махачкалы', href: '/main/turkey/' },]
+                        },
+                        {
+                            heading: 'Туры в ОАЭ из Махачкалы',
+                            links: [{ label: 'Туры в ОАЭ из Махачкалы', href: '/main/uae/' },]
+                        },
+                        {
+                            heading: 'Бронирование отелей в России',
+                            links: [{ label: 'Бронирование отелей в России', href: '/bronirovanie-otelei/russia/' },]
+                        },
+                    ],
+                    destinations: [
+                        {
+                            button: {label: 'ОАЭ', data_lookup_destination: 'ОАЭ', data_lookup_depth_days: 12},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-uae-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-uae-mobile.jpg'
+                            }
+                        },
+                    ]
+                },
             }
         },
         sunmar: {
             commons: {
-                bestDealsBox_HomePageSet_TabName: 'Эксклюзивные отели',
-                preferredDestinationOrder: ['Эксклюзивные отели', 'Турция', 'ОАЭ', 'Бахрейн', 'Россия', 'Египет', 'Мальдивы'],
+//                bestDealsBox_HomePageSet_TabName: 'Эксклюзивные отели',
+                preferredDestinationOrder: ['Турция', 'ОАЭ', 'Россия', 'Египет', 'Таиланд', 'Мальдивы'],
                 preferredDestination: 'Турция',
                 destinations: [
                     {
@@ -3117,6 +3278,165 @@
                             heading: 'Кипр из Москвы',
                             links: [
                                 {label: 'Туры на Кипр', href: '/cyprus/'},
+                            ]
+                        },
+                    ]
+                },
+                volgograd: {
+                    h2: 'Из Волгограда без пересадок',
+                    h3: 'Выбирай и лети',
+                    name: 'Волгоград',
+                    url: '/vog/',
+                    dictionary: {
+                        wording_fromCityName: 'из Волгограда'
+                    },
+                    destinations: [
+                        {
+                            button: {label: 'ОАЭ', data_lookup_destination: 'ОАЭ', data_lookup_depth_days: 12},
+                            visual: {
+                                desktop: '/site/sunmar.ru/assets/intro-uae-desktop.jpg',
+                                mobile: '/site/sunmar.ru/assets/intro-uae-mobile.jpg'
+                            }
+                        },
+                        {
+                            button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 12},
+                            visual: {
+                                desktop: '/site/sunmar.ru/assets/intro-russia-desktop.jpg',
+                                mobile: '/site/sunmar.ru/assets/intro-russia-mobile.jpg'
+                            }
+                        },
+                    ],
+                    hotPromos: [
+                        {
+                            visual: 'https://cdn.sunmar.ru/content/img/621x420_egean_ljn8k92c4.jpeg',
+                            href: 'https://www.sunmar.ru/turkey-tours/regions-aegean/'
+                        },
+                        {
+                            visual: 'https://cdn.sunmar.ru/content/cms/russia/regional-home/hot-promos/flydubai_sunmar_volgograd_621x420_ljn8k8opb.jpg',
+                            href: 'https://www.sunmar.ru/packagetours/volgograd-to-dubay-tours/?q=%7b%22Bgn%22%3a%2202.11.2023%22%2c%22End%22%3a%2202.11.2023%22%2c%22Dr%22%3a%223%22%2c%22Acc%22%3a%226%2c9%2c10%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%229a3cCroL8IqwaU76C0BpeMAEj2zjPSNPilhGR4Fr4ALlMwNu0bGwbcSEtqS5M2FKq4%2bxM3sTKvkfFI6aQT7k7I9%2fJgGQsCcCh%2f8XPMBfyG%2b3E0a6L3gfI4v0w9l1LHMaqvtFiUtwMCu283KqitiwWVT0uhkPx9J4bo9v448%2bv%2bI%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d&f={%22Rh%22:false,%22Ao%22:[%22available%22]}&page=1'
+                        },
+                        {
+                            visual: 'https://cdn.sunmar.ru/content/img/621x420_uae_ljn8kfkeg.jpeg',
+                            href: 'https://www.sunmar.ru/packagetours/samara-to-shardzha-tours/?q=%7b%22Bgn%22%3a%2227.11.2023%22%2c%22End%22%3a%2203.12.2023%22%2c%22Dr%22%3a%223%22%2c%22Acc%22%3a%226%2c8%2c9%2c10%2c11%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22K0It%2bi4OIZgCtS%2bd25if8mUK87FRaFaiKomHus7cGouhYPdcAJ%2fRbgDM%2fQ74enONasL%2fvl9L1Y0UXehaGUuDYUIDc27iW89Mh4Mpvj1WkZl5ON53JDC663%2bldY3nmQwbJZHc2QAKImPJE%2bkvVySG1w%3d%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d&amp;f={%22Rh%22:false,%22Ao%22:[%22available%22]}&amp;page=1'
+                        },
+                        {
+                            visual: 'https://cdn.sunmar.ru/content/img/621x420_egypt_ljn8ka33r.jpeg',
+                            href: 'https://www.sunmar.ru/packagetours/moskva-to-egipet-tours/?q=%7b%22Bgn%22%3a%2231.10.2023%22%2c%22End%22%3a%2231.10.2023%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%225%2c7%2c10%2c12%2c14%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22f9D0o1eZL6VAbdnlQSCGbQmV7b4S8aaQqiS4aTLpHqyGnRAFyEk5lwiJyJGdTWYYxcwjXm86ged3W3aZvSDD5L4Z8p2aD1Ezu11P%2f2ut2T39FgJIK32n4oKxOPDCD6ivj91BDsG%2fg5yjb5ZjZBiUkA%3d%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d&amp;f={%22Rh%22:false,%22Ao%22:[%22available%22]}&amp;page=1'
+                        },
+                        {
+                            visual: 'https://cdn.sunmar.ru/content/img/621x420_turkeyautumn_ljn8ke4q2.jpeg',
+                            href: 'https://www.sunmar.ru/turkey-tours/'
+                        },
+                        {
+                            visual: 'https://cdn.sunmar.ru/content/img/621x420_bargatniy_sezon_ljn8k82ag.jpeg',
+                            href: 'https://www.sunmar.ru/vacation-autumn-season/'
+                        },
+                        {
+                            visual: 'https://cdn.sunmar.ru/content/img/621x420_russia_ljn8kdpsa.jpeg',
+                            href: 'https://www.sunmar.ru/russia/'
+                        },
+                        {
+                            visual: 'https://cdn.sunmar.ru/content/img/621x420_cgh_ljn8kgrcy.jpeg',
+                            href: 'https://www.sunmar.ru/coralgroup-hotels-and-resort/'
+                        },
+                        {
+                            visual: 'https://cdn.sunmar.ru/content/cms/russia/regional-home/hot-promos/installment-and-credit.jpg',
+                            href: 'https://www.sunmar.ru/directclient-rassrochka/'
+                        },
+                    ],
+                    xlinks: [
+                        {
+                            heading: 'Туры в Турцию из Волгограда',
+                            links: [
+                                { label: 'Туры в Турцию из Волгограда', href: '/tours/volgograd/turtsiya/' },
+                            ]
+                        },
+                        {
+                            heading: 'Туры в ОАЭ из Волгограда',
+                            links: [
+                                { label: 'Туры в ОАЭ из Волгограда', href: '/tours/volgograd/oae/' },
+                            ]
+                        },
+                        {
+                            heading: 'Туры по России из Волгограда',
+                            links: [
+                                { label: 'Туры по России из Волгограда', href: '/tours/volgograd/rossiya/' },
+                            ]
+                        },
+                    ]
+                },
+                mahachkala: {
+                    h2: 'Из Махачкалы без пересадок',
+                    h3: 'Выбирай и лети',
+                    name: 'Махачкала',
+                    url: '/mcx/',
+                    dictionary: {
+                        wording_fromCityName: 'из Махачкалы'
+                    },
+                    destinations: [
+                        {
+                            button: {label: 'ОАЭ', data_lookup_destination: 'ОАЭ', data_lookup_depth_days: 12},
+                            visual: {
+                                desktop: '/site/sunmar.ru/assets/intro-uae-desktop.jpg',
+                                mobile: '/site/sunmar.ru/assets/intro-uae-mobile.jpg'
+                            }
+                        },
+                    ],
+                    hotPromos: [
+                        {
+                            visual: 'https://cdn.sunmar.ru/content/img/621x420_egean_ljn8k92c4.jpeg',
+                            href: 'https://www.sunmar.ru/turkey-tours/regions-aegean/'
+                        },
+                        {
+                            visual: 'https://cdn.sunmar.ru/content/cms/russia/regional-home/hot-promos/flydubai_sunmar_mhch_621x420_ljn8k8opb.jpg',
+                            href: 'https://www.sunmar.ru/packagetours/mahachkala-to-oae-tours/?q=%7b%22Bgn%22%3a%2217.10.2023%22%2c%22End%22%3a%2217.10.2023%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%227%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%222KFk9%2bGYBQpPxTxiaUdMSIwkZ4xlLTjH281y7vsjIT94TqcwjFKqP%2fETVUvgk2nFjP%2bf8VTnK9wVz6cURaMKPw%2fgiBURRqlkkz788KbVcxGeaBYOan1o7WimB34Qnsb9nvNw6vB8bK7pU8T6c13AhQ%3d%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3afalse%2c%22Rglr%22%3atrue%2c%22Srt%22%3a1%7d&f={%22Rh%22:false,%22Ao%22:[%22available%22]}&page=1'
+                        },
+                        {
+                            visual: 'https://cdn.sunmar.ru/content/img/621x420_uae_ljn8kfkeg.jpeg',
+                            href: 'https://www.sunmar.ru/packagetours/samara-to-shardzha-tours/?q=%7b%22Bgn%22%3a%2227.11.2023%22%2c%22End%22%3a%2203.12.2023%22%2c%22Dr%22%3a%223%22%2c%22Acc%22%3a%226%2c8%2c9%2c10%2c11%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22K0It%2bi4OIZgCtS%2bd25if8mUK87FRaFaiKomHus7cGouhYPdcAJ%2fRbgDM%2fQ74enONasL%2fvl9L1Y0UXehaGUuDYUIDc27iW89Mh4Mpvj1WkZl5ON53JDC663%2bldY3nmQwbJZHc2QAKImPJE%2bkvVySG1w%3d%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d&amp;f={%22Rh%22:false,%22Ao%22:[%22available%22]}&amp;page=1'
+                        },
+                        {
+                            visual: 'https://cdn.sunmar.ru/content/img/621x420_egypt_ljn8ka33r.jpeg',
+                            href: 'https://www.sunmar.ru/packagetours/moskva-to-egipet-tours/?q=%7b%22Bgn%22%3a%2231.10.2023%22%2c%22End%22%3a%2231.10.2023%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%225%2c7%2c10%2c12%2c14%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22f9D0o1eZL6VAbdnlQSCGbQmV7b4S8aaQqiS4aTLpHqyGnRAFyEk5lwiJyJGdTWYYxcwjXm86ged3W3aZvSDD5L4Z8p2aD1Ezu11P%2f2ut2T39FgJIK32n4oKxOPDCD6ivj91BDsG%2fg5yjb5ZjZBiUkA%3d%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d&amp;f={%22Rh%22:false,%22Ao%22:[%22available%22]}&amp;page=1'
+                        },
+                        {
+                            visual: 'https://cdn.sunmar.ru/content/img/621x420_turkeyautumn_ljn8ke4q2.jpeg',
+                            href: 'https://www.sunmar.ru/turkey-tours/'
+                        },
+                        {
+                            visual: 'https://cdn.sunmar.ru/content/img/621x420_bargatniy_sezon_ljn8k82ag.jpeg',
+                            href: 'https://www.sunmar.ru/vacation-autumn-season/'
+                        },
+                        {
+                            visual: 'https://cdn.sunmar.ru/content/img/621x420_russia_ljn8kdpsa.jpeg',
+                            href: 'https://www.sunmar.ru/russia/'
+                        },
+                        {
+                            visual: 'https://cdn.sunmar.ru/content/img/621x420_cgh_ljn8kgrcy.jpeg',
+                            href: 'https://www.sunmar.ru/coralgroup-hotels-and-resort/'
+                        },
+                        {
+                            visual: 'https://cdn.sunmar.ru/content/cms/russia/regional-home/hot-promos/installment-and-credit.jpg',
+                            href: 'https://www.sunmar.ru/directclient-rassrochka/'
+                        },
+                    ],
+                    xlinks: [
+                        {
+                            heading: 'Туры в Турцию из Махачкалы',
+                            links: [
+                                { label: 'Туры в Турцию из Махачкалы', href: '/tours/mahachkala/turtsiya/' },
+                            ]
+                        },
+                        {
+                            heading: 'Туры в ОАЭ из Махачкалы',
+                            links: [
+                                { label: 'Туры в ОАЭ из Махачкалы', href: '/tours/mahachkala/oae/' },
+                            ]
+                        },
+                        {
+                            heading: 'Бронирование отелей в России',
+                            links: [
+                                { label: 'Бронирование отелей в России', href: '/bookinghotel/russia/' },
                             ]
                         },
                     ]

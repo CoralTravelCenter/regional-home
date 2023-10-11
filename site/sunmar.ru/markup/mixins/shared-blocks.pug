@@ -1,5 +1,5 @@
 mixin intro(city, commons)
-    - var destinations = city.destinations || commons.destinations
+    - var destinations = commons.destinations
     style
         if city.logoDecor
             | header.site-header .container-logo {
@@ -170,7 +170,6 @@ mixin pay-attention(city, commons)
                                     .subline!= banner.subline
                                     a.arrlink(href=banner.href, target='_blank')= banner.linkText
     script(type='module', src='/site/sunmar.ru/js/pay-attention.coffee')
-   
 
 mixin xlinks-drawer(xlinks)
     - if (Array.isArray(xlinks.links))

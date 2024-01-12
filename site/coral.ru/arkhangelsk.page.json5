@@ -1,0 +1,17 @@
+{
+    contents: [
+        '/site/coral.ru/markup/mixins/main-styles.pug',
+        '/site/coral.ru/markup/arkhangelsk/intro.pug',
+        '/site/coral.ru/markup/region-redirect.pug',
+        '/site/coral.ru/markup/arkhangelsk/hot.pug',
+        '/site/coral.ru/markup/arkhangelsk/available-destinations.pug',
+        '/site/coral.ru/markup/mixins/why-us.pug',
+        '/site/coral.ru/markup/arkhangelsk/recommended-tours.pug',
+//        '/site/coral.ru/dev-markup/hotels-block-arkhangelsk.html',
+        '/site/coral.ru/markup/arkhangelsk/leasure-guide.pug',
+        '/site/coral.ru/markup/arkhangelsk/pay-attention.pug',
+        '/site/coral.ru/markup/arkhangelsk/xlinks.pug',
+        '/site/coral.ru/markup/mixins/reviews-and-thanks.pug',
+        '/site/coral.ru/markup/mixins/main-scripts.pug'
+    ]
+}

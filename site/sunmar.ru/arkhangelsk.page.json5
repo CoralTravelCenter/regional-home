@@ -1,0 +1,16 @@
+{
+    contents: [
+        '/site/sunmar.ru/markup/mixins/main-styles.pug',
+        '/site/sunmar.ru/markup/arkhangelsk/intro.pug',
+        '/site/sunmar.ru/markup/region-redirect.pug',
+        '/site/sunmar.ru/markup/arkhangelsk/hot.pug',
+        '/site/sunmar.ru/markup/arkhangelsk/available-destinations.pug',
+        '/site/sunmar.ru/markup/mixins/why-us.pug',
+        '/site/sunmar.ru/markup/arkhangelsk/recommended-tours.pug',
+//        '/site/sunmar.ru/dev-markup/hotels-block-arkhangelsk.html',
+        '/site/sunmar.ru/markup/arkhangelsk/pay-attention.pug',
+        '/site/sunmar.ru/markup/arkhangelsk/xlinks.pug',
+        '/site/sunmar.ru/markup/mixins/reviews-and-thanks.pug',
+        '/site/sunmar.ru/markup/mixins/main-scripts.pug'
+    ]
+}

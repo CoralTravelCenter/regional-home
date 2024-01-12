@@ -1,5 +1,5 @@
 mixin intro(city, commons)
-    - var destinations = commons.destinations
+    - var destinations = city.destinations || commons.destinations
     style
         if city.logoDecor
             | header.site-header .container-logo {

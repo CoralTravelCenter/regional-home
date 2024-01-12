@@ -1471,6 +1471,162 @@
                         },
                     ]
                 },
+                arkhangelsk: {
+                    h2: 'Из Архангельска без пересадок',
+                    h3: 'Выбирай и лети',
+                    name: 'Архангельск',
+                    url: '/mahachkala/',
+                    logoDecor: '/site/coral.ru/assets/logo-decor-arkhangelsk.png',
+                    dictionary: {
+                        wording_fromCityName: 'из Архангельска'
+                    },
+                    hotPromos: [
+                        {
+                            visual: 'https://cdn.coral.ru/content/img/621x420_winter_uae_reg_ljn8jxwde.jpeg',
+                            href: 'https://www.coral.ru/packagetours/moskva-to-shardzhasharjah-tours/?q=%7b%22Bgn%22%3a%2202.02.2024%22%2c%22End%22%3a%2202.02.2024%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%227%2c8%2c9%2c10%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%220nTLuJz0mVu3A3LIx97DUVkVJEClmtsflOtKGn6lyheWkV8saRELkPGqJ0t14eEP4bXxU1s7RNMuRDnoDhKfOMm9V3mhI3d0kxcezqoHdxi40DeyRje3nZM3nmp3%2fFypvBVA714F0j3mlx6NFsQq7UDCdC3InglXEMwEwldLX2M%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d&amp;f=%7b%22Rh%22%3afalse%2c%22Ao%22%3a%5b%22available%22%5d%7d&amp;page=1'
+                        },
+                        {
+                            visual: 'https://cdn.coral.ru/content/img/coral_dubaiparks&resort_620x420_reg.png',
+                            href: 'https://www.coral.ru/main/uae/dubai-parks-and-resorts/'
+                        },
+                        {
+                            visual: 'https://cdn.coral.ru/content/img/621x420_egyptautumn_reg_ljn8k8vky.jpeg',
+                            href: 'https://www.coral.ru/main/egypt/travel-egypt/'
+                        },
+                        {
+                            visual: 'https://cdn.coral.ru/content/img/621x420_thai_reg_ljn8kvqhe.jpeg',
+                            href: 'https://www.coral.ru/packagetours/moskva-to-tailand-tours/?q=%7b%22Bgn%22%3a%2204.02.2024%22%2c%22End%22%3a%2204.02.2024%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%229%2c10%2c11%2c12%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22yrwCLbP%2bLxtYx9PpaG%2bZs8MvfdCbRRaTtL9vttAKU3ha67Lr6ETkl9twN%2fKoS9AHr1hHB%2flOhCEryir4d1EQhp%2b2HYPmoeDvY4viCCHWjO48jZE4dFglvPfyKeyO5ZlUKZaURVkeR%2bRulS8mHWV%2fKw%3d%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d&amp;f=%7b%22Rh%22%3afalse%2c%22Ao%22%3a%5b%22available%22%5d%7d&amp;page=1'
+                        },
+                        {
+                            visual: 'https://cdn.coral.ru/content/img/russia/621x420_ru_ljn8k1rcl.jpg',
+                            href: 'https://www.coral.ru/main/russia/'
+                        },
+                        {
+                            visual: 'https://cdn.coral.ru/content/img/credit_desk.jpg',
+                            href: 'https://www.coral.ru/poleznaya-informatsiya/onlinetour/payment/'
+                        },
+                    ],
+                    xlinks: [
+                        {
+                            heading: 'Турция',
+                            links:[{label: 'Туры в Турцию из Архангельска', href: '/arhangelsk/turkey/' }],
+                        },
+                        {
+                            heading: 'Россия',
+                            links: [{label: 'Туры по России из Архангельска', href: '/main/russia/' }],
+                        },
+                        {
+                            heading: 'ОАЭ',
+                            links: [{label: 'Туры в ОАЭ с вылетом из Москвы', href: '/main/uae/' }],
+                        },
+                        {
+                            heading: 'Египет',
+                            links: [{label: 'Туры в Египет с вылетом из Москвы', href: '/main/egypt/travel-egypt/' }],
+                        },
+                        {
+                            heading: 'Таиланд',
+                            links: [{label: 'Туры в Таиланд с вылетом из Москвы', href: '/main/thailand/' }],
+                        },
+                        {
+                            heading: 'Мальдивы',
+                            links: [{label: 'Туры на Мальдивы с вылетом из Москвы', href: '/main/maldives/' }],
+                        },
+                    ],
+                    destinations: [
+                        {
+                            button: {label: 'Турция', data_lookup_destination: 'Турция', data_lookup_depth_days: 150},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                            }
+                        },
+                        {
+                            button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 30},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
+                            }
+                        },
+                    ]
+                },
+                syktyvkar: {
+                    h2: 'Из Сыктывкара без пересадок',
+                    h3: 'Выбирай и лети',
+                    name: 'Сыктывкар',
+                    url: '/mahachkala/',
+                    logoDecor: '/site/coral.ru/assets/logo-decor-syktyvkar.png',
+                    dictionary: {
+                        wording_fromCityName: 'из Сыктывкара'
+                    },
+                    hotPromos: [
+                        {
+                            visual: 'https://cdn.coral.ru/content/img/621x420_winter_uae_reg_ljn8jxwde.jpeg',
+                            href: 'https://www.coral.ru/packagetours/moskva-to-shardzhasharjah-tours/?q=%7b%22Bgn%22%3a%2202.02.2024%22%2c%22End%22%3a%2202.02.2024%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%227%2c8%2c9%2c10%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%220nTLuJz0mVu3A3LIx97DUVkVJEClmtsflOtKGn6lyheWkV8saRELkPGqJ0t14eEP4bXxU1s7RNMuRDnoDhKfOMm9V3mhI3d0kxcezqoHdxi40DeyRje3nZM3nmp3%2fFypvBVA714F0j3mlx6NFsQq7UDCdC3InglXEMwEwldLX2M%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d&amp;f=%7b%22Rh%22%3afalse%2c%22Ao%22%3a%5b%22available%22%5d%7d&amp;page=1'
+                        },
+                        {
+                            visual: 'https://cdn.coral.ru/content/img/coral_dubaiparks&resort_620x420_reg.png',
+                            href: 'https://www.coral.ru/main/uae/dubai-parks-and-resorts/'
+                        },
+                        {
+                            visual: 'https://cdn.coral.ru/content/img/621x420_egyptautumn_reg_ljn8k8vky.jpeg',
+                            href: 'https://www.coral.ru/main/egypt/travel-egypt/'
+                        },
+                        {
+                            visual: 'https://cdn.coral.ru/content/img/621x420_thai_reg_ljn8kvqhe.jpeg',
+                            href: 'https://www.coral.ru/packagetours/moskva-to-tailand-tours/?q=%7b%22Bgn%22%3a%2204.02.2024%22%2c%22End%22%3a%2204.02.2024%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%229%2c10%2c11%2c12%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22yrwCLbP%2bLxtYx9PpaG%2bZs8MvfdCbRRaTtL9vttAKU3ha67Lr6ETkl9twN%2fKoS9AHr1hHB%2flOhCEryir4d1EQhp%2b2HYPmoeDvY4viCCHWjO48jZE4dFglvPfyKeyO5ZlUKZaURVkeR%2bRulS8mHWV%2fKw%3d%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d&amp;f=%7b%22Rh%22%3afalse%2c%22Ao%22%3a%5b%22available%22%5d%7d&amp;page=1'
+                        },
+                        {
+                            visual: 'https://cdn.coral.ru/content/img/russia/621x420_ru_ljn8k1rcl.jpg',
+                            href: 'https://www.coral.ru/main/russia/'
+                        },
+                        {
+                            visual: 'https://cdn.coral.ru/content/img/credit_desk.jpg',
+                            href: 'https://www.coral.ru/poleznaya-informatsiya/onlinetour/payment/'
+                        },
+                    ],
+                    xlinks: [
+                        {
+                            heading: 'Турция',
+                            links:[{label: 'Туры в Турцию из Сыктывкара', href: '/arhangelsk/turkey/' }],
+                        },
+                        {
+                            heading: 'Россия',
+                            links:[{label: 'Туры по России из Сыктывкара', href: '/main/russia/' }],
+                        },
+                        {
+                            heading: 'ОАЭ',
+                            links:[{label: 'Туры в ОАЭ с вылетом из Москвы', href: '/main/uae/' }],
+                        },
+                        {
+                            heading: 'Египет',
+                            links:[{label: 'Туры в Египет с вылетом из Москвы', href: '/main/egypt/travel-egypt/' }],
+                        },
+                        {
+                            heading: 'Таиланд',
+                            links:[{label: 'Туры в Таиланд с вылетом из Москвы', href: '/main/thailand/' }],
+                        },
+                        {
+                            heading: 'Мальдивы',
+                            links:[{label: 'Туры на Мальдивы с вылетом из Москвы', href: '/main/maldives/' }],
+                        },
+                    ],
+                    destinations: [
+                        {
+                            button: {label: 'Турция', data_lookup_destination: 'Турция', data_lookup_depth_days: 150},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-turkey-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-turkey-mobile.jpg'
+                            }
+                        },
+                        {
+                            button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 30},
+                            visual: {
+                                desktop: '/site/coral.ru/assets/intro-russia-desktop.jpg',
+                                mobile: '/site/coral.ru/assets/intro-russia-mobile.jpg'
+                            }
+                        },
+                    ]
+                },
             }
         },
         sunmar: {
@@ -3452,6 +3608,168 @@
                         },
                     ]
                 },
+                arkhangelsk: {
+                    h2: 'Из Архангельска без пересадок',
+                    h3: 'Выбирай и лети',
+                    name: 'Архангельск',
+                    url: '/arh/',
+                    dictionary: {
+                        wording_fromCityName: 'из Архангельска'
+                    },
+                    hotPromos: [
+                        {
+                            visual: 'https://cdn.sunmar.ru/content/img/sm_template_620x420.png',
+                            href: 'https://www.sunmar.ru/idei-otdykha/rekomenduemye-oteli-leto/?erid=LjN8KZfzi'
+                        },
+                        {
+                            visual: 'https://cdn.sunmar.ru/content/img/sm_eb_kaliningrad.jpg',
+                            href: 'https://www.sunmar.ru/packagetours/kaliningrad-to-turtsiya-tours/?q=%7b%22Bgn%22%3a%2225.04.2024%22%2c%22End%22%3a%2201.05.2024%22%2c%22Dr%22%3a%223%22%2c%22Acc%22%3a%226%2c7%2c8%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22Mr8x4HYfvDoI%2frF0CQWUu76NWA%2bIrH6BGTYStr%2bIOI4nCeJpocgD%2fOEvc6A6s6tp5v6HepdKK6Mdkm%2f08Fwf6C%2fTPkk4Bzrl0jNbldYs1IYQpCPkmMcCq2nI2k0%2fdc23abyCIW8%2bz7wkcXqH8fF1u0Z%2bHcrc5A22VME1W7OzFdk%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d&amp;f=%7b%22Rh%22%3afalse%2c%22Ao%22%3a%5b%22available%22%5d%7d&amp;page=1'
+                        },
+                        {
+                            visual: 'https://cdn.sunmar.ru/content/img/621x420_egypt_ljn8ka33r.jpeg',
+                            href: 'https://www.sunmar.ru/packagetours/moskva-to-egipet-tours/?q=%7b%22Bgn%22%3a%2204.02.2024%22%2c%22End%22%3a%2204.02.2024%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%227%2c8%2c9%2c10%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22EFFaLx8uhRaYiZI7ivVPRwv9AuOsnbSa8E5jMUgKYxW%2fQ01S0DKgaSPL%2b0XDCDdI5507Kn1SAEnOOTOgqpM8Y3mndnfPkKF1pqwV37XZc3C4GkcUV5ftPokLFsBFLG34u8oJJnOKmiVSjOI3WmREVw%3d%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d&amp;f=%7b%22Rh%22%3afalse%2c%22Ao%22%3a%5b%22available%22%5d%7d&amp;page=1'
+                        },
+                        {
+                            visual: 'https://cdn.sunmar.ru/content/img/621x420_thai_reg.jpg',
+                            href: 'https://www.sunmar.ru/packagetours/moskva-to-tailand-tours/?q=%7b%22Bgn%22%3a%2204.02.2024%22%2c%22End%22%3a%2204.02.2024%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%228%2c10%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22rpF9lypKV7CqpeQ0TAiD%2beHxCd1LUvOtuFVvQ9kX2Q9lmpg%2bs%2bjlxl%2beWsCGjstbPnM%2fxj51p7TBGQo0ucO%2b7IXqVfF%2fDDrxLSrrn8W0ZbO3xwl1hEiZ3fI%2bdZnvcUHFUnL%2bnoM%2bBjNLFQQqwytvIg%3d%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d&amp;f=%7b%22Rh%22%3afalse%2c%22Ao%22%3a%5b%22available%22%5d%7d&amp;page=1'
+                        },
+                        {
+                            visual: 'https://cdn.sunmar.ru/content/img/621x420_uae_ljn8kfkeg.jpeg',
+                            href: 'https://www.sunmar.ru/packagetours/moskva-to-shardzha-tours/?q=%7b%22Bgn%22%3a%2204.02.2024%22%2c%22End%22%3a%2204.02.2024%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%226%2c7%2c8%2c9%2c10%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22EqfaU9K4W7BOFrFojkq0FxRTS5gkJEYZbhyE5QG%2boNE7aVydlt06W2ei2StC7Nk7tTS0rHtx6etIiFCMLBo9qXypnVvw3dHPEyhUHmkLK%2f45dzsRB7Xr1PQ4HHcyaygh88Di6W6Q51ofUZadxKEQ3Q%3d%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d&amp;f=%7b%22Rh%22%3afalse%2c%22Ao%22%3a%5b%22available%22%5d%7d&amp;page=1'
+                        },
+                        {
+                            visual: 'https://cdn.sunmar.ru/content/img/sm_621x420_ru.jpg',
+                            href: 'https://www.sunmar.ru/russia/'
+                        },
+                        {
+                            visual: 'https://cdn.sunmar.ru/content/cms/russia/regional-home/hot-promos/installment-and-credit.jpg',
+                            href: 'https://www.sunmar.ru/directclient-rassrochka/'
+                        },
+                    ],
+                    xlinks: [
+                        {
+                            heading: 'Турция',
+                            links:[{label: 'Туры в Турцию из Архангельска', href: '/tours/arhangelysk/turtsiya/' }],
+                        },
+                        {
+                            heading: 'Россия',
+                            links:[{label: 'Туры по России из Архангельска', href: '/tours/arhangelysk/rossiya/' }],
+                        },
+                        {
+                            heading: 'ОАЭ',
+                            links:[{label: 'Туры в ОАЭ с вылетом из Москвы', href: '/tours/oae/' }],
+                        },
+                        {
+                            heading: 'Египет',
+                            links:[{label: 'Туры в Египет с вылетом из Москвы', href: '/tours/egipet/' }],
+                        },
+                        {
+                            heading: 'Таиланд',
+                            links:[{label: 'Туры в Таиланд с вылетом из Москвы', href: '/tours/tailand/' }],
+                        },
+                        {
+                            heading: 'Куба',
+                            links:[{label: 'Туры на Кубу с вылетом из Москвы', href: '/tours/kuba/' }],
+                        },
+                    ],
+                    destinations: [
+                        {
+                            button: {label: 'Турция', data_lookup_destination: 'Турция', data_lookup_depth_days: 150},
+                            visual: {
+                                desktop: '/site/sunmar.ru/assets/intro-turkey-desktop.jpg',
+                                mobile: '/site/sunmar.ru/assets/intro-turkey-mobile.jpg'
+                            }
+                        },
+                        {
+                            button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 30},
+                            visual: {
+                                desktop: '/site/sunmar.ru/assets/intro-russia-desktop.jpg',
+                                mobile: '/site/sunmar.ru/assets/intro-russia-mobile.jpg'
+                            }
+                        },
+                    ]
+                },
+                syktyvkar: {
+                    h2: 'Из Сыктывкара без пересадок',
+                    h3: 'Выбирай и лети',
+                    name: 'Сыктывкар',
+                    url: '/scw/',
+                    dictionary: {
+                        wording_fromCityName: 'из Сыктывкара'
+                    },
+                    hotPromos: [
+                        {
+                            visual: 'https://cdn.sunmar.ru/content/img/sm_template_620x420.png',
+                            href: 'https://www.sunmar.ru/idei-otdykha/rekomenduemye-oteli-leto/?erid=LjN8KZfzi'
+                        },
+                        {
+                            visual: 'https://cdn.sunmar.ru/content/img/sm_eb_kaliningrad.jpg',
+                            href: 'https://www.sunmar.ru/packagetours/kaliningrad-to-turtsiya-tours/?q=%7b%22Bgn%22%3a%2225.04.2024%22%2c%22End%22%3a%2201.05.2024%22%2c%22Dr%22%3a%223%22%2c%22Acc%22%3a%226%2c7%2c8%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22Mr8x4HYfvDoI%2frF0CQWUu76NWA%2bIrH6BGTYStr%2bIOI4nCeJpocgD%2fOEvc6A6s6tp5v6HepdKK6Mdkm%2f08Fwf6C%2fTPkk4Bzrl0jNbldYs1IYQpCPkmMcCq2nI2k0%2fdc23abyCIW8%2bz7wkcXqH8fF1u0Z%2bHcrc5A22VME1W7OzFdk%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d&amp;f=%7b%22Rh%22%3afalse%2c%22Ao%22%3a%5b%22available%22%5d%7d&amp;page=1'
+                        },
+                        {
+                            visual: 'https://cdn.sunmar.ru/content/img/621x420_egypt_ljn8ka33r.jpeg',
+                            href: 'https://www.sunmar.ru/packagetours/moskva-to-egipet-tours/?q=%7b%22Bgn%22%3a%2204.02.2024%22%2c%22End%22%3a%2204.02.2024%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%227%2c8%2c9%2c10%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22EFFaLx8uhRaYiZI7ivVPRwv9AuOsnbSa8E5jMUgKYxW%2fQ01S0DKgaSPL%2b0XDCDdI5507Kn1SAEnOOTOgqpM8Y3mndnfPkKF1pqwV37XZc3C4GkcUV5ftPokLFsBFLG34u8oJJnOKmiVSjOI3WmREVw%3d%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d&amp;f=%7b%22Rh%22%3afalse%2c%22Ao%22%3a%5b%22available%22%5d%7d&amp;page=1'
+                        },
+                        {
+                            visual: 'https://cdn.sunmar.ru/content/img/621x420_thai_reg.jpg',
+                            href: 'https://www.sunmar.ru/packagetours/moskva-to-tailand-tours/?q=%7b%22Bgn%22%3a%2204.02.2024%22%2c%22End%22%3a%2204.02.2024%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%228%2c10%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22rpF9lypKV7CqpeQ0TAiD%2beHxCd1LUvOtuFVvQ9kX2Q9lmpg%2bs%2bjlxl%2beWsCGjstbPnM%2fxj51p7TBGQo0ucO%2b7IXqVfF%2fDDrxLSrrn8W0ZbO3xwl1hEiZ3fI%2bdZnvcUHFUnL%2bnoM%2bBjNLFQQqwytvIg%3d%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d&amp;f=%7b%22Rh%22%3afalse%2c%22Ao%22%3a%5b%22available%22%5d%7d&amp;page=1'
+                        },
+                        {
+                            visual: 'https://cdn.sunmar.ru/content/img/621x420_uae_ljn8kfkeg.jpeg',
+                            href: 'https://www.sunmar.ru/packagetours/moskva-to-shardzha-tours/?q=%7b%22Bgn%22%3a%2204.02.2024%22%2c%22End%22%3a%2204.02.2024%22%2c%22Dr%22%3a%220%22%2c%22Acc%22%3a%226%2c7%2c8%2c9%2c10%22%2c%22Gest%22%3a%222%22%2c%22Q%22%3a%22EqfaU9K4W7BOFrFojkq0FxRTS5gkJEYZbhyE5QG%2boNE7aVydlt06W2ei2StC7Nk7tTS0rHtx6etIiFCMLBo9qXypnVvw3dHPEyhUHmkLK%2f45dzsRB7Xr1PQ4HHcyaygh88Di6W6Q51ofUZadxKEQ3Q%3d%3d%22%2c%22Ts%22%3a0%2c%22Las%22%3afalse%2c%22AcId%22%3a0%2c%22FDate%22%3a%220001-01-01T00%3a00%3a00Z%22%2c%22Ref%22%3afalse%2c%22Pstatus%22%3afalse%2c%22TransferPrice%22%3a0.0%2c%22Chr%22%3atrue%2c%22Rglr%22%3afalse%2c%22Srt%22%3a1%7d&amp;f=%7b%22Rh%22%3afalse%2c%22Ao%22%3a%5b%22available%22%5d%7d&amp;page=1'
+                        },
+                        {
+                            visual: 'https://cdn.sunmar.ru/content/img/sm_621x420_ru.jpg',
+                            href: 'https://www.sunmar.ru/russia/'
+                        },
+                        {
+                            visual: 'https://cdn.sunmar.ru/content/cms/russia/regional-home/hot-promos/installment-and-credit.jpg',
+                            href: 'https://www.sunmar.ru/directclient-rassrochka/'
+                        },
+                    ],
+                    xlinks: [
+                        {
+                            heading: 'Турция',
+                            links:[{label: 'Туры в Турцию из Сыктывкара', href: '/scw/tury-turkey/' }],
+                        },
+                        {
+                            heading: 'Россия',
+                            links:[{label: 'Туры по России из Сыктывкара', href: '/tours/syktyvkar/rossiya/' }],
+                        },
+                        {
+                            heading: 'ОАЭ',
+                            links:[{label: 'Туры в ОАЭ с вылетом из Москвы', href: '/tours/oae/' }],
+                        },
+                        {
+                            heading: 'Египет',
+                            links:[{label: 'Туры в Египет с вылетом из Москвы', href: '/tours/egipet/' }],
+                        },
+                        {
+                            heading: 'Таиланд',
+                            links:[{label: 'Туры в Таиланд с вылетом из Москвы', href: '/tours/tailand/' }],
+                        },
+                        {
+                            heading: 'Куба',
+                            links:[{label: 'Туры на Кубу с вылетом из Москвы', href: '/tours/kuba/' }],
+                        },
+                    ],
+                    destinations: [
+                        {
+                            button: {label: 'Турция', data_lookup_destination: 'Турция', data_lookup_depth_days: 150},
+                            visual: {
+                                desktop: '/site/sunmar.ru/assets/intro-turkey-desktop.jpg',
+                                mobile: '/site/sunmar.ru/assets/intro-turkey-mobile.jpg'
+                            }
+                        },
+                        {
+                            button: {label: 'Россия', data_lookup_destination: 'Россия', data_lookup_depth_days: 30},
+                            visual: {
+                                desktop: '/site/sunmar.ru/assets/intro-russia-desktop.jpg',
+                                mobile: '/site/sunmar.ru/assets/intro-russia-mobile.jpg'
+                            }
+                        },
+                    ]
+                }
             }
         }
     }

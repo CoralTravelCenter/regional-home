@@ -2,6 +2,10 @@ cities:
     - name: Москва
       eeID: 2671
       latlng: [55.75, 37.62]
+    - name: Архангельск
+      eeID: 2349
+      pathname: /arh/
+      latlng: [64.5401, 40.5433]
     - name: Барнаул
       eeID: 2370
       latlng: [53.36, 83.76]
@@ -88,6 +92,10 @@ cities:
     - name: Сургут
       eeID: 2897
       latlng: [61.25, 73.42]
+    - name: Сыктывкар
+      eeID: 2861
+      pathname: /scw/
+      latlng: [61.6764, 50.8099]
     - name: Тюмень
       eeID: 2927
       pathname: /tjm/

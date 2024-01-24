@@ -27,7 +27,8 @@ $parseResponseMarkup = (markup) ->
         old_price = price * 1.1
         [from, nights, date, tourists] = $a.find('h3 ~ em').text().split(/\s+-\s+/)
         tourists_qty = parseInt tourists
-        tourists = ['','на одного', 'на двоих', 'на троих'][tourists_qty]
+#        tourists = ['','на одного', 'на двоих', 'на троих'][tourists_qty]
+        tourists = 'за одного'
         n_stars = $stars.children().length
         stars = new Array(n_stars) if n_stars
         displayed_name = $a.find('h3').html()?.replace(/\s*\(.+/,'')
@@ -43,8 +44,8 @@ $parseResponseMarkup = (markup) ->
             tourists: tourists
             transfer_info: $a.find('.flight').html()
             visual: $a.find('img[data-src]').attr('data-src')
-            price_formatted: price.formatPrice()
-            old_price_formatted: old_price.formatPrice()
+            price_formatted: (price / tourists_qty).formatPrice()
+            old_price_formatted: (old_price / tourists_qty).formatPrice()
             xlink: $a.attr('href')
     .toArray()
 

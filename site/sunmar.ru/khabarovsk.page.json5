@@ -1,0 +1,16 @@
+{
+    contents: [
+        '/site/sunmar.ru/markup/mixins/main-styles.pug',
+        '/site/sunmar.ru/markup/khabarovsk/intro.pug',
+        '/site/sunmar.ru/markup/region-redirect.pug',
+        '/site/sunmar.ru/markup/khabarovsk/hot.pug',
+        '/site/sunmar.ru/markup/khabarovsk/available-destinations.pug',
+        '/site/sunmar.ru/markup/mixins/why-us.pug',
+        '/site/sunmar.ru/markup/khabarovsk/recommended-tours.pug',
+//        '/site/sunmar.ru/dev-markup/hotels-block-khabarovsk.html',
+        '/site/sunmar.ru/markup/khabarovsk/pay-attention.pug',
+        '/site/sunmar.ru/markup/khabarovsk/xlinks.pug',
+        '/site/sunmar.ru/markup/mixins/reviews-and-thanks.pug',
+        '/site/sunmar.ru/markup/mixins/main-scripts.pug'
+    ]
+}

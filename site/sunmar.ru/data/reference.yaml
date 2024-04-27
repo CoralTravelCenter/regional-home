@@ -91,6 +91,7 @@ cities:
       latlng: [43.6, 39.73]
     - name: Сургут
       eeID: 2897
+      pathname: /sgc/
       latlng: [61.25, 73.42]
     - name: Сыктывкар
       eeID: 2861
@@ -106,6 +107,7 @@ cities:
       latlng: [54.74, 55.97]
     - name: Хабаровск
       eeID: 2533
+      pathname: /khv/
       latlng: [48.48, 135.08]
     - name: Челябинск
       eeID: 2416
